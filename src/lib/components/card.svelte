@@ -60,7 +60,7 @@ on:click={() => modalIndex = index}
 
 
 img {
-    border-width: 15px;
+    border-width: 10px;
     /* border-color: #B1C29E; */
     /* border-color: #F0A04B; */
 

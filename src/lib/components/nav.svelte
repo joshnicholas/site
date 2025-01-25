@@ -20,7 +20,7 @@
 <style>
 
     #navblock {
-        border-top: 1px solid;
+        border-top: 2px solid;
     }
 
     a {

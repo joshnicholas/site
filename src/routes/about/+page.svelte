@@ -14,7 +14,7 @@
       <!-- <img alt='about image' src='/new_about.jpg' class="max-h-[15rem] text-wrap  mx-auto rounded sm:rounded-2xl"/> -->
       <!-- <img alt='about image' src='/yellow.jpg' class=" md:max-h-[25rem] mx-auto rounded rounded-2xl"/> -->
 
-      <img alt='about image' src='/blueyellow.jpg' class=" md:max-h-[25rem] mx-auto" style='border-color:#DC5F00;border-width: 15px;'/>
+      <img alt='about image' src='/blueyellow.jpg' class=" md:max-h-[25rem] mx-auto" style='border-color:#DC5F00;border-width: 10px;'/>
 
     </div>
 
