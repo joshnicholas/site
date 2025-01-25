@@ -52,14 +52,14 @@ $: hasNextPage = lastImage >= lenno ? false: true;
 </script>
 
 
-{#key modalOpen}
+<!-- {#key modalOpen}
 {#if modalOpen}
 {#if containerWidth > 600}
 
 
-<div id="myModal" class="fixed z-40 {modalShow} max-w-[800px] flex justify-center items-center text-center align-middle" style="background-color:#FADA7A" >
+<div id="myModal" class="fixed z-40 {modalShow} max-w-[800px] flex inline justify-center items-center text-center align-middle" style="background-color:#FADA7A" >
 
-    <div class='margin-auto min-w-min' on:click={() => modalOpen = false}>
+    <div class='margin-auto min-w-min justify-center items-center text-center' on:click={() => modalOpen = false}>
     <Bigcard {rows} {modalImage} />
 
     <span class="{modalShow}" on:click={() => modalOpen= false}>Close</span>
@@ -70,7 +70,7 @@ $: hasNextPage = lastImage >= lenno ? false: true;
 
 {/if}
 {/if}
-{/key}
+{/key} -->
 
 
     <!-- <Radio {options} fontSize={16} legend='Sort by' bind:userSelected={sortBy}/> -->

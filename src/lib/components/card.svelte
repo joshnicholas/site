@@ -5,6 +5,7 @@ export let modalOpen
 export let modalImage
 export let modalIndex
 export let index
+import { timeParse, timeFormat } from 'd3-time-format'
 
 $: modalShow = modalOpen == false ? "none" : 'block'
 
@@ -19,6 +20,9 @@ let i = Math.floor(Math.random() * colours.length);
 // let r = a[i];
 
 // $: console.log("modalRow: ", modalRow)
+
+let dateParse = timeParse("%Y-%M-%d")
+let dateFormat = timeFormat("%d %b %Y")
 
 
 </script>
@@ -36,9 +40,9 @@ on:click={() => modalIndex = index}
 
 >
 
-<!-- <span>{row["Title"]}</span><br>
+<span>{row["Title"]}</span><br>
 
-<span>{row["Date"]}</span> -->
+<span>{dateFormat(dateParse(row["Date"]))}</span>
 
 </div>
 
