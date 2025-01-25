@@ -93,6 +93,9 @@ combo.drop_duplicates(subset=['img_path'], inplace=True)
 
 # dumper('/Users/josh/Github/site/static', 'scribbles', combo)
 
+for thingo in ['#scribbles', '#scribble']:
+    combo['Title'] = combo['Title'].str.replace(thingo, '', regex=False)
+
 
 combo['img_path'] = combo['img_path'].str.replace("/", '')
 combo.sort_values(by=['Date'], ascending=False, inplace=True)

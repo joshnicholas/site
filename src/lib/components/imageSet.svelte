@@ -87,7 +87,7 @@ $: showNext = !hasNextPage ?  'hidden' : "visible"
         <div id='left' on:click={() => firstImage -= pageLimit} on:click={() => lastImage -= pageLimit} style='visibility: {showPrev}'>Prev</div>
         <!-- {/if} -->
 
-        <span class='text-xs'>{lastImage}/{lenno}</span>
+        <span class='text-xs font-semibold'>{lastImage}/{lenno}</span>
     
         <div id='right' on:click={() => firstImage += pageLimit} on:click={() => lastImage += pageLimit} style='visibility: {showNext}'>Next</div>
     
@@ -121,7 +121,7 @@ $: showNext = !hasNextPage ?  'hidden' : "visible"
     <div id='left' on:click={() => firstImage -= pageLimit} on:click={() => lastImage -= pageLimit} style='visibility: {showPrev}'>Prev</div>
     <!-- {/if} -->
 
-    <span class='text-xs'>{lastImage}/{lenno}</span>
+    <span class='text-xs font-semibold'>{lastImage}/{lenno}</span>
 
     <div id='right' on:click={() => firstImage += pageLimit} on:click={() => lastImage += pageLimit} style='visibility: {showNext}'>Next</div>
 </div>
