@@ -1,8 +1,7 @@
 <script>
   
     export let options;
-    export let legend;
-    export let userSelected
+    export let sortBy
 
       
       const uniqueID = Math.floor(Math.random() * 100)
@@ -15,13 +14,12 @@
 
 <div id='sortRow' class="flex justify-start text-l pb-5">
 
-  <!-- <span>{legend}</span> -->
   {#each options as option}
   <input
     class="sr-only mr-5"
     type="radio"
     id={slugify(option)}
-    bind:group={userSelected}
+    bind:group={sortBy}
     value={option} />
   <label for={slugify(option)}> {option} </label>
 {/each}
