@@ -25,7 +25,13 @@ const options = ['Random', 'Newest', 'Oldest', 'Favs']
 
 let containerWidth = $state();
 
+let feature = ["240711_last-full-day_0.jpg","240714_escaping-the-hu_0.jpg","240117-misty-sydney-cbd.jpg",
+        "240719_pretty-sparkling-day_0.jpg","uncle_e.jpg","240425_its-getting-cold_0.jpg","240725_sending-a-whoooooole_0.jpg",
+        '240711_last-full-day_0.jpg','40402_decided-to-challenge_counter.jpg','230620-escaping-the-heat.jpeg',
+        '231008_streetball.jpeg','240124-sydney-ferry.jpg','purple_head.jpg',
+        '230613-ipoh-french-patisserie.jpeg'
 
+        ]
 
 function sorter(array, how){
     // console.log("how: ", how)
@@ -47,11 +53,8 @@ function sorter(array, how){
     return outty
     
     } else if (how.toLowerCase() == 'favs'){
-        let keep = ["/240711_last-full-day_0.jpg","240714_escaping-the-hu_0.jpg","240117-misty-sydney-cbd.jpg",
-        "240719_pretty-sparkling-day_0.jpg","uncle_e.jpg","240425_its-getting-cold_0.jpg","240725_sending-a-whoooooole_0.jpg",
-        '240711_last-full-day_0.jpg','40402_decided-to-challenge_counter.jpg','230620-escaping-the-heat.jpeg',
-
-        ]
+        
+        let keep = [... new Set(feature.map(d => d))]
 
         return shuffle(array.filter(row => keep.includes(row['img_path'])))
     

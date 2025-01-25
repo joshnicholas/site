@@ -14,10 +14,11 @@ let lastImage = firstImage + pageLimit
 
 let modalOpen = false;
 let modalImage
-$: modalShow = modalOpen == false ? "invisible" : 'visible'
+$: modalShow = modalOpen == false ? "hidden" : 'visible'
 
 
 let modalRow 
+
 
 
 let lenno
@@ -39,6 +40,11 @@ onMount(() => {
 
 $: isFirstPage = lastImage - pageLimit == 0 ? true : false;
 $: hasNextPage = lastImage >= lenno ? false: true;
+$: showPrev = isFirstPage ? "hidden" : 'visible'
+$: showNext = !hasNextPage ?  'hidden' : "visible"
+// $: console.log("isFirstPage: ", isFirstPage)
+
+
 // $: console.log("firstImage: ", firstImage)
 
 
@@ -75,6 +81,18 @@ $: hasNextPage = lastImage >= lenno ? false: true;
 
     <!-- <Radio {options} fontSize={16} legend='Sort by' bind:userSelected={sortBy}/> -->
 
+    <div id='pagination' class='mx-auto flex items-center justify-between text-xl pb-5 pt-5'>
+
+        <!-- {#if !isFirstPage} -->
+        <div id='left' on:click={() => firstImage -= pageLimit} on:click={() => lastImage -= pageLimit} style='visibility: {showPrev}'>Prev</div>
+        <!-- {/if} -->
+
+        <span class='text-xs'>{lastImage}/{lenno}</span>
+    
+        <div id='right' on:click={() => firstImage += pageLimit} on:click={() => lastImage += pageLimit} style='visibility: {showNext}'>Next</div>
+    
+    </div>
+
 
 <div class="container grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto items-center text-center">
 
@@ -97,18 +115,22 @@ $: hasNextPage = lastImage >= lenno ? false: true;
 
 
 
-<div id='pagination' class='mx-auto flex items-center justify-between text-xl pt-10 pb-10'>
+<div id='pagination' class='mx-auto flex items-center justify-between text-xl pt-10'>
 
-    <div id='left' on:click={() => firstImage -= pageLimit} on:click={() => lastImage -= pageLimit}>{#if !isFirstPage}Previous{/if}</div>
-    <div id='right' class='justify-end' on:click={() => firstImage += pageLimit} on:click={() => lastImage += pageLimit}>{#if hasNextPage}Next{/if}</div>
+    <!-- {#if !isFirstPage} -->
+    <div id='left' on:click={() => firstImage -= pageLimit} on:click={() => lastImage -= pageLimit} style='visibility: {showPrev}'>Prev</div>
+    <!-- {/if} -->
 
+    <span class='text-xs'>{lastImage}/{lenno}</span>
+
+    <div id='right' on:click={() => firstImage += pageLimit} on:click={() => lastImage += pageLimit} style='visibility: {showNext}'>Next</div>
 </div>
 
-<div class='items-center mx-auto text-xl text-center'>
+<!-- <div class='items-center mx-auto text-xl text-center'>
 
 <span>{lastImage}/{lenno} scribbles</span>
 
-</div>
+</div> -->
 
 
 

@@ -42,7 +42,7 @@ on:click={() => modalIndex = index}
 
 <span>{row["Title"]}</span><br>
 
-<span>{dateFormat(dateParse(row["Date"]))}</span>
+<span class='text-xs'>{dateFormat(dateParse(row["Date"]))}</span>
 <!-- <span>{row["Date"]}</span> -->
 
 

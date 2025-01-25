@@ -12,7 +12,7 @@
       // $:console.log(userSelected)
   </script>
 
-<div id='sortRow' class="flex justify-start text-l pb-5">
+<div id='sortRow' class="flex justify-between text-l pb-5">
 
   {#each options as option}
   <input
@@ -30,6 +30,13 @@
 
   
   <style>
+
+#sortRow {
+  border-bottom: 1px solid
+}
+
+
+
               :root {
           --accent-color: black;
           --gray: black;
