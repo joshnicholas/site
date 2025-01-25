@@ -1,0 +1,15 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+/* #E1C12F  */
+
+body {
+    background-color: #FADA7A;
+    /* background-color: #373A40; */
+}
+
+a {
+    color: #DC5F00;
+}
