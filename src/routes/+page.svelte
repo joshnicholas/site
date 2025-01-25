@@ -29,7 +29,8 @@ let feature = ["240711_last-full-day_0.jpg","240714_escaping-the-hu_0.jpg","2401
         "240719_pretty-sparkling-day_0.jpg","uncle_e.jpg","240425_its-getting-cold_0.jpg","240725_sending-a-whoooooole_0.jpg",
         '240711_last-full-day_0.jpg','40402_decided-to-challenge_counter.jpg','230620-escaping-the-heat.jpeg',
         '231008_streetball.jpeg','240124-sydney-ferry.jpg','purple_head.jpg',
-        '230613-ipoh-french-patisserie.jpeg'
+        '230613-ipoh-french-patisserie.jpeg', '230621-penang-town-hall.jpeg',
+        '230623-the-hotel.jpeg','240726_food-here-has_0.jpg','240710_had-another-crack_0.jpg'
 
         ]
 
