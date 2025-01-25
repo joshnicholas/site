@@ -5,7 +5,7 @@
 
 </script>
 
-<div class='mx-auto max-w-[800px] min-h-[600px] mt-10'>
+<div class='mx-auto max-w-[800px] min-h-[600px]'>
 
   <div class="block max-w-3xl display:block">
     <!-- class="prose w-full rounded" -->
@@ -23,7 +23,7 @@
   <div class="block max-w-3xl mx-auto display:block">  
     <div class=''>
 
-      <p>Ello.</p><br>
+      <p class='mt-5'>Ello.</p><br>
       <!-- , <a href='https://joshnicholas.com/projects'>projects</a> I'm working on -->
       <p>My name is <span class="font-semibold">Josh</span> and I'm a scribbler and <a href='https://www.theguardian.com/profile/josh-nicholas' target='_blank' rel="me">journalist</a>.</p><br>
 

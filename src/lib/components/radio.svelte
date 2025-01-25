@@ -15,6 +15,7 @@
 <div id='sortRow' class="flex justify-between text-l pb-5">
 
   {#each options as option}
+  <!-- <div> -->
   <input
     class="sr-only mr-5"
     type="radio"
@@ -22,6 +23,7 @@
     bind:group={sortBy}
     value={option} />
   <label for={slugify(option)}> {option} </label>
+  <!-- </div> -->
 {/each}
 </div>
   

@@ -1,7 +1,7 @@
 
 <div id='navblock' class='mt-5'>
 
-    <ul id='navynav' class='space-x-6 flex justify-start text-xs mt-2 font-semibold'>
+    <ul id='navynav' class='space-x-6 flex justify-start text-xl mt-2 font-semibold'>
         <li class="mr-0">
             <a href='/'>scribbles</a>
         </li >
