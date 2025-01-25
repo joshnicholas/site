@@ -21,7 +21,7 @@ let i = Math.floor(Math.random() * colours.length);
 
 // $: console.log("modalRow: ", modalRow)
 
-let dateParse = timeParse("%Y-%M-%d")
+let dateParse = timeParse("%Y-%m-%d")
 let dateFormat = timeFormat("%d %b %Y")
 
 
@@ -43,6 +43,8 @@ on:click={() => modalIndex = index}
 <span>{row["Title"]}</span><br>
 
 <span>{dateFormat(dateParse(row["Date"]))}</span>
+<!-- <span>{row["Date"]}</span> -->
+
 
 </div>
 
