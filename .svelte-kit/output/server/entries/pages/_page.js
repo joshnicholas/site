@@ -1,5 +1,17 @@
 const data = [
   {
+    "Date": "2025-01-26",
+    Title: "She made a dress. ",
+    img_path: "bafkreielepiii3lhuzunv6bhhrgc3kstq2ta7azgks7bywkf3w27gu7ine.jpg",
+    Caption: null,
+    Colours: "(['Black', 'Grey (through line density)', 'White (paper)', 'Warm beige/cream (paper tone)'],)",
+    Style: "(['Quick sketch', 'Observational drawing', 'Gestural', 'Linear', 'Urban sketching'],)",
+    Subject: "('An interior scene showing a person working at what appears to be a sewing machine, captured from behind in a casual, documentary style. The composition includes the working environment with furniture and floor details.',)",
+    Keywords: "['sketch', 'sewing', 'interior', 'workspace', 'domestic scene', 'craftwork', 'drawing', 'pen and ink', 'observation', 'daily life', 'working', 'furniture', 'studio', 'creative space']",
+    Category: "Bsky",
+    img_alt: "A pen and ink drawing of a woman. It is drawn from behind and shows her sitting at a table and sewing "
+  },
+  {
     "Date": "2025-01-23",
     Title: "Two for the price of one #officestilllife ",
     img_path: "bafkreieyj3wi5k5lzrjdo6wjq52crjdklhvjwypffpblyvon5teuawl37e.jpg",
@@ -8,7 +20,8 @@ const data = [
     Style: "(['Sketch art', 'Observational drawing', 'Still life', 'Cross-hatching technique', 'Gestural drawing'],)",
     Subject: "('Two separate still life studies of fruit arrangements - a bunch of bananas and a collection of round fruits (likely apples), each placed in shallow dishes or plates',)",
     Keywords: "['still life', 'fruit sketch', 'bananas', 'apples', 'pen drawing', 'hatching', 'black and white', 'observational art', 'kitchen art', 'food illustration', 'fruit bowl', 'study drawing']",
-    Category: "Bsky"
+    Category: "Bsky",
+    img_alt: null
   },
   {
     "Date": "2025-01-22",
@@ -19,7 +32,8 @@ const data = [
     Style: "('Sketchy illustration combining realistic still life with surreal elements; loose, expressive line work with cross-hatching and tonal shading',)",
     Subject: "('A halved citrus fruit (likely an orange) with miniature figures, combining still life with imaginative elements to create a sense of scale play and whimsy',)",
     Keywords: "['citrus', 'orange', 'fruit', 'sketch', 'ink drawing', 'cross-hatching', 'surreal', 'miniature figures', 'still life', 'black and white', 'food illustration', 'perspective', 'whimsical', 'botanical', 'scale play']",
-    Category: "Bsky"
+    Category: "Bsky",
+    img_alt: null
   },
   {
     "Date": "2025-01-21",
@@ -30,7 +44,8 @@ const data = [
     Style: `("Quick sketch/observational drawing with elements of cross-hatching technique. It's a casual, informal still life drawing with an emphasis on capturing form through line work.",)`,
     Subject: "('A bunch of bananas arranged on a circular plate, depicted from a slightly elevated angle showing the natural curves and grouping of the fruit',)",
     Keywords: "['bananas', 'still life', 'sketch', 'fruit', 'crosshatching', 'pencil drawing', 'monochrome', 'plate', 'food illustration', 'kitchen art', 'observational drawing', 'produce sketch']",
-    Category: "Bsky"
+    Category: "Bsky",
+    img_alt: null
   },
   {
     "Date": "2025-01-19",
@@ -41,7 +56,8 @@ const data = [
     Style: "(['Gestural sketch', 'Urban sketching', 'Quick observational drawing', 'Loose line work', 'Minimalist'],)",
     Subject: `("Stadium crowd scene captured in quick, gestural strokes showing people seated in rows at what appears to be a cricket or sports match, with the venue's architecture providing context",)`,
     Keywords: "['Urban sketching', 'Stadium art', 'Live drawing', 'Sports venue', 'Crowd scene', 'Gestural drawing', 'Quick sketch', 'Observational art', 'Black and white drawing', 'Melbourne', 'Sports illustration', 'Stadium crowd']",
-    Category: "Bsky"
+    Category: "Bsky",
+    img_alt: null
   },
   {
     "Date": "2025-01-18",
@@ -52,7 +68,8 @@ const data = [
     Style: "(['Gestural sketch', 'Quick observational drawing', 'Loose line work', 'Contemporary sketch', 'Urban sketching'],)",
     Subject: "('A figure viewed from behind while seated at what appears to be a desk or table, captured in a casual everyday moment. The composition emphasizes the back view and posture of the subject.',)",
     Keywords: "['sketch', 'figure drawing', 'monochrome', 'gestural', 'observational', 'interior scene', 'casual moment', 'desk', 'seated figure', 'back view', 'quick drawing', 'urban sketch']",
-    Category: "Bsky"
+    Category: "Bsky",
+    img_alt: null
   },
   {
     "Date": "2025-01-18",
@@ -63,7 +80,8 @@ const data = [
     Style: "(['Quick sketch', 'Gestural drawing', 'Live illustration', 'Line drawing', 'Minimalist'],)",
     Subject: "('A tennis player in ready position, drawn in profile view, holding a tennis racquet. The figure is rendered with simple lines showing the basic form and posture typical of a tennis player preparing to receive or play a shot.',)",
     Keywords: "['tennis', 'sketch', 'live drawing', 'sports illustration', 'stadium art', 'Australian Open', 'tennis court', 'athletic figure', 'sports venue', 'action pose', 'gestural sketch', 'field drawing']",
-    Category: "Bsky"
+    Category: "Bsky",
+    img_alt: null
   },
   {
     "Date": "2025-01-15",
@@ -74,7 +92,8 @@ const data = [
     Style: "('Quick sketch/Study drawing',)",
     Subject: "('A decorative glass or crystal bowl, likely empty, shown from a slight elevated angle to demonstrate its circular form and cut glass pattern',)",
     Keywords: "['bowl', 'sketch', 'glassware', 'crystal', 'still life', 'home decor', 'kitchenware', 'black and white', 'line drawing', 'curved lines', 'perspective drawing', 'tableware']",
-    Category: "Bsky"
+    Category: "Bsky",
+    img_alt: null
   },
   {
     "Date": "2025-01-14",
@@ -85,7 +104,8 @@ const data = [
     Style: "('Quick sketch/Still life drawing with an expressive, loose line art style utilizing hatching and cross-hatching techniques',)",
     Subject: "('A bunch of bananas arranged in a simple bowl or dish, creating a classic still life composition',)",
     Keywords: "['bananas', 'fruit', 'still life', 'sketch', 'ink drawing', 'black and white', 'cross-hatching', 'bowl', 'kitchen art', 'produce', 'line art', 'food illustration', 'quick sketch', 'monochrome']",
-    Category: "Bsky"
+    Category: "Bsky",
+    img_alt: null
   },
   {
     "Date": "2025-01-14",
@@ -96,7 +116,8 @@ const data = [
     Style: "(['Quick sketch', 'Line drawing', 'Contemporary illustration', 'Freehand drawing', 'Gesture drawing'],)",
     Subject: "(['An athletic figure in sporting attire', 'Tennis player pose', 'Sports illustration', 'Action portrait'],)",
     Keywords: "['tennis', 'sports sketch', 'athlete', 'baseball cap', 'racket', 'pencil art', 'line drawing', 'sports illustration', 'athletic wear', 'gesture sketch', 'casual portrait', 'contemporary drawing']",
-    Category: "Bsky"
+    Category: "Bsky",
+    img_alt: null
   },
   {
     "Date": "2025-01-13",
@@ -107,7 +128,8 @@ const data = [
     Style: "(['Sketch', 'Line drawing', 'Minimalist', 'Gestural drawing', 'Quick study'],)",
     Subject: "('A bunch of bananas sitting in what appears to be a simple bowl or container, viewed from a slight side angle showing the curved arrangement of the fruit',)",
     Keywords: "['bananas', 'fruit', 'bowl', 'sketch', 'line art', 'still life', 'black and white', 'minimalist', 'food illustration', 'kitchen art', 'produce drawing']",
-    Category: "Bsky"
+    Category: "Bsky",
+    img_alt: null
   },
   {
     "Date": "2025-01-11",
@@ -118,7 +140,8 @@ const data = [
     Style: "('Observational sketch/Still life drawing with emphasis on line art and hatching technique',)",
     Subject: "('A chess rook piece drawn from observation of a life-sized chess set, showcasing dimensional drawing and shading techniques to create form and volume',)",
     Keywords: "['chess', 'rook', 'sketch', 'drawing', 'outdoor chess', 'game', 'pencil art', 'observation drawing', 'still life', 'hatching', 'board game', 'street chess', 'sketchbook']",
-    Category: "Bsky"
+    Category: "Bsky",
+    img_alt: null
   },
   {
     "Date": "2025-01-08",
@@ -129,18 +152,8 @@ const data = [
     Style: "(['Gestural sketch', 'Loose illustration', 'Quick study', 'Ink wash drawing', 'Monochromatic'],)",
     Subject: "('Three ripe bananas arranged on what appears to be a round plate or dish, drawn from a slightly elevated angle',)",
     Keywords: "['bananas', 'fruit', 'still life', 'sketch', 'ink drawing', 'monochrome', 'food illustration', 'brush drawing', 'kitchen art', 'botanical', 'quick sketch', 'produce', 'study']",
-    Category: "Bsky"
-  },
-  {
-    "Date": "2025-01-07",
-    Title: "Morning tram  with my new fude pen",
-    img_path: "bafkreiarifdfezdzscs465pttrxcp6hxfbmxzc3qsoacvoj2ui7szkhanu.jpg",
-    Caption: "('A sketchbook spread showing two quick figure studies. On the left page is a person sitting on what appears to be a bench or seat, hunched over in a contemplative pose. On the right page is a standing figure wearing a hat, shown in profile view looking at or holding something in their hand.',)",
-    Colours: "(['Black/grey ink', 'White paper', 'Red (bookmark detail)'],)",
-    Style: "(['Quick gestural sketches', 'Urban sketching', 'Loose line drawing', 'Minimalist', 'Observational drawing'],)",
-    Subject: "('Urban life studies capturing everyday moments - one figure seated in repose and another standing figure, possibly looking at a mobile phone or device',)",
-    Keywords: "['sketch', 'figure drawing', 'urban sketching', 'gestural', 'line drawing', 'people watching', 'daily life', 'minimalist', 'observational', 'sketchbook', 'pen drawing', 'quick study']",
-    Category: "Bsky"
+    Category: "Bsky",
+    img_alt: null
   },
   {
     "Date": "2025-01-07",
@@ -151,7 +164,20 @@ const data = [
     Style: "(['Contemporary portrait', 'Minimalist', 'Watercolor painting', 'Expressive', 'Profile portrait'],)",
     Subject: "('A side-view portrait showing the profile of someone wearing glasses, depicted in a minimalist style with simple color blocking and minimal detail work',)",
     Keywords: "['portrait', 'profile', 'watercolor', 'glasses', 'minimalist', 'contemporary art', 'terracotta', 'blonde', 'side view', 'framed artwork', 'earring', 'modern portrait']",
-    Category: "Bsky"
+    Category: "Bsky",
+    img_alt: null
+  },
+  {
+    "Date": "2025-01-07",
+    Title: "Morning tram  with my new fude pen",
+    img_path: "bafkreiarifdfezdzscs465pttrxcp6hxfbmxzc3qsoacvoj2ui7szkhanu.jpg",
+    Caption: "('A sketchbook spread showing two quick figure studies. On the left page is a person sitting on what appears to be a bench or seat, hunched over in a contemplative pose. On the right page is a standing figure wearing a hat, shown in profile view looking at or holding something in their hand.',)",
+    Colours: "(['Black/grey ink', 'White paper', 'Red (bookmark detail)'],)",
+    Style: "(['Quick gestural sketches', 'Urban sketching', 'Loose line drawing', 'Minimalist', 'Observational drawing'],)",
+    Subject: "('Urban life studies capturing everyday moments - one figure seated in repose and another standing figure, possibly looking at a mobile phone or device',)",
+    Keywords: "['sketch', 'figure drawing', 'urban sketching', 'gestural', 'line drawing', 'people watching', 'daily life', 'minimalist', 'observational', 'sketchbook', 'pen drawing', 'quick study']",
+    Category: "Bsky",
+    img_alt: null
   },
   {
     "Date": "2025-01-03",
@@ -162,18 +188,20 @@ const data = [
     Style: "['Urban sketching', 'Plein air watercolor', 'Quick loose sketch', 'Architectural illustration', 'Travel journal style']",
     Subject: "An architectural study of what appears to be a historic or institutional building, possibly a church, school, or civic building, with an artist or sketcher included in the scene for scale and human interest",
     Keywords: "['watercolor', 'architecture', 'urban sketching', 'arched windows', 'tower', 'institutional building', 'plein air', 'landscape', 'artist sketch', 'foliage', 'stone wall', 'travel journal', 'architectural detail']",
-    Category: "Bsky"
+    Category: "Bsky",
+    img_alt: null
   },
   {
     "Date": "2024-12-31",
     Title: "hefeweizen! ",
     img_path: "bafkreig5j2vebtrqlkqrdlzsefmjkmlpbnuh62ya5wctgbyzfdq2sw4lwi.jpg",
-    Caption: "A watercolor sketch of a rustic stone building entrance with a wooden door and decorative wooden railing. The building features a triangular gable with a green circular emblem or window, and there's a sign or banner above the door in green. The stone walls are painted in warm earth tones, and there are small planters with greenery. The scene includes some foliage in the background and a purple-toned ground.",
-    Colours: "['Beige/Sandy brown', 'Forest green', 'Grey-brown', 'Purple/Lavender', 'Light blue', 'Terracotta']",
-    Style: "['Watercolor illustration', 'Architectural sketch', 'Loose naturalistic style', 'Urban sketching']",
-    Subject: "A rustic building entrance or storefront with stone walls and wooden architectural details, possibly a shop, restaurant, or cottage entrance",
-    Keywords: "['watercolor', 'architecture', 'rustic', 'stone building', 'wooden door', 'cottage', 'entrance', 'gable', 'architectural sketch', 'garden', 'planters', 'facade', 'stone wall', 'urban sketch']",
-    Category: "Bsky"
+    Caption: "('A watercolor painting of a rustic stone building entrance with a wooden door and decorative wooden railings. The building features a circular green sign or window at the top, and what appears to be a name or text in green above the door. There are small plants or shrubs in planters along the railing, and foliage visible on the sides of the composition.',)",
+    Colours: "(['Beige/Tan (stone walls)', 'Brown (wooden door and railings)', 'Green (plants and signage)', 'Blue (sky)', 'Purple/Mauve (ground)', 'Yellow (subtle tones in stonework)'],)",
+    Style: "('Casual watercolor sketch/Urban sketching style with loose, informal brushwork and architectural focus',)",
+    Subject: "('A quaint building entrance with stone walls, featuring rustic architectural elements like wooden cross-braced railings and a wooden door, possibly a shop or restaurant entrance',)",
+    Keywords: "['watercolor', 'architecture', 'rustic', 'stone building', 'wooden door', 'garden', 'entrance', 'cottage', 'urban sketch', 'planter boxes', 'cross-braced railing', 'building facade']",
+    Category: "Bsky",
+    img_alt: null
   },
   {
     "Date": "2024-12-30",
@@ -184,7 +212,20 @@ const data = [
     Style: "['Urban sketching', 'Loose watercolor', 'Quick sketch', 'Observational drawing', 'Plein air']",
     Subject: "An architectural sketch of a building exterior with a tree, capturing a quiet urban or residential scene with natural elements integrated into the built environment",
     Keywords: "['urban sketch', 'watercolor', 'architecture', 'tree', 'building', 'windows', 'street scene', 'plein air', 'sketchbook', 'nature', 'cityscape', 'loose style', 'outdoor drawing']",
-    Category: "Bsky"
+    Category: "Bsky",
+    img_alt: null
+  },
+  {
+    "Date": "2024-12-17",
+    Title: "Couple more quick portrait ",
+    img_path: "bafkreiemva6yjipucqyw6mmmhfmn4kayggsk4q3lflic3ebawsb4onneii.jpg",
+    Caption: "A loose, gestural sketch portrait done in a quick, sketchy line drawing style. The drawing features a subject wearing glasses and depicts the head and partial shoulder area. The lines are energetic and spontaneous, creating a dynamic sense of movement.",
+    Colours: "['Black', 'Grey (paper)', 'Beige/cream (paper tone)']",
+    Style: "['Gestural drawing', 'Loose sketch', 'Continuous line drawing', 'Contemporary portrait', 'Quick study']",
+    Subject: "A portrait sketch showing the head and partial shoulders of a figure wearing rectangular glasses, rendered in an expressive line drawing style with minimal detail but capturing essential features",
+    Keywords: "['sketch', 'portrait', 'line drawing', 'glasses', 'gestural', 'pen drawing', 'expressive', 'minimal', 'contemporary', 'monochrome', 'quick sketch', 'artistic study']",
+    Category: "Bsky",
+    img_alt: null
   },
   {
     "Date": "2024-12-17",
@@ -195,18 +236,8 @@ const data = [
     Style: "['Gestural sketch', 'Line drawing', 'Quick study', 'Minimalist', 'Contemporary sketch']",
     Subject: "['Portrait sketch showing three-quarter view', 'Figure wearing a decorated hat', 'Casual contemporary portrait']",
     Keywords: "['sketch', 'portrait', 'hat', 'line drawing', 'gestural', 'minimal', 'contemporary', 'profile', 'sketchbook', 'study', 'quick drawing', 'artistic practice']",
-    Category: "Bsky"
-  },
-  {
-    "Date": "2024-12-17",
-    Title: "Couple more quick portrait ",
-    img_path: "bafkreiemva6yjipucqyw6mmmhfmn4kayggsk4q3lflic3ebawsb4onneii.jpg",
-    Caption: null,
-    Colours: "(['Black (ink)', 'Grey/white (paper)', 'Wooden tone (visible desk in background)'],)",
-    Style: "(['Gestural drawing', 'Quick sketch', 'Loose line art', 'Continuous line technique', 'Contemporary sketch'],)",
-    Subject: "('A bust-style portrait sketch showing a figure with short hair and rectangular glasses, rendered in an expressive line drawing style with minimal detail but effective capture of form',)",
-    Keywords: "['sketch', 'portrait', 'line drawing', 'glasses', 'contemporary art', 'pen drawing', 'gestural', 'minimalist', 'expressive', 'quick study', 'black and white', 'loose style']",
-    Category: "Bsky"
+    Category: "Bsky",
+    img_alt: null
   },
   {
     "Date": "2024-12-07",
@@ -217,7 +248,8 @@ const data = [
     Style: "['Urban sketching', 'Plein air', 'Quick watercolor sketch', 'Architectural illustration', 'Loose gestural style']",
     Subject: "A tropical or colonial architecture building with palm trees, likely a restaurant, café, or commercial establishment with outdoor seating area",
     Keywords: "['urban sketch', 'watercolor', 'architecture', 'tropical', 'palm trees', 'café', 'building', 'terracotta', 'outdoor seating', 'colonial style', 'plein air', 'quick sketch', 'restaurant', 'balcony', 'stairs']",
-    Category: "Bsky"
+    Category: "Bsky",
+    img_alt: null
   },
   {
     "Date": "2024-11-27",
@@ -228,7 +260,8 @@ const data = [
     Style: "['Gestural sketch', 'Line drawing', 'Minimalist', 'Quick observational drawing', 'Urban sketching']",
     Subject: "A group of people viewed from behind, possibly students or commuters given the backpacks, drawn in a candid, observational style capturing a moment of everyday life",
     Keywords: "['sketch', 'line drawing', 'backpacks', 'queue', 'standing figures', 'observational drawing', 'minimal art', 'urban sketch', 'gesture drawing', 'people from behind', 'group sketch', 'daily life', 'student life']",
-    Category: "Bsky"
+    Category: "Bsky",
+    img_alt: null
   },
   {
     "Date": "2024-11-22",
@@ -239,7 +272,8 @@ const data = [
     Style: "['Loose gestural sketch', 'Quick study', 'Contemporary illustration', 'Urban sketching', 'Minimalist watercolor']",
     Subject: "A casual portrait sketch of a figure in a relaxed pose, wearing glasses and what appears to be casual clothing, captured in a spontaneous, sketch-like style",
     Keywords: "['watercolor sketch', 'portrait', 'gestural drawing', 'loose style', 'contemporary art', 'quick study', 'minimal', 'glasses', 'casual pose', 'ink and wash', 'figure drawing']",
-    Category: "Bsky"
+    Category: "Bsky",
+    img_alt: null
   },
   {
     "Date": "2024-08-03",
@@ -250,7 +284,8 @@ const data = [
     Style: "['Quick sketch', 'Urban sketching', 'Architectural drawing', 'Pen and ink illustration', 'Freehand drawing']",
     Subject: "An interior architectural space, likely a café or restaurant setting, captured in a loose sketching style with emphasis on structural elements and spatial relationships",
     Keywords: "['interior sketch', 'architectural drawing', 'urban sketching', 'café scene', 'cross-hatching', 'pen drawing', 'counter seating', 'restaurant interior', 'black and white', 'quick sketch', 'perspective drawing', 'structural elements']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2024-07-27",
@@ -261,7 +296,8 @@ const data = [
     Style: "['Urban sketching', 'Quick observational drawing', 'Line drawing', 'Gestural sketch', 'Informal drawing']",
     Subject: "An interior scene of what appears to be a café or restaurant, featuring casual seating arrangements and a service area with shelving. The perspective is from a customer's viewpoint looking into the establishment.",
     Keywords: "['café sketch', 'restaurant interior', 'urban sketching', 'line drawing', 'interior scene', 'observational art', 'black and white', 'casual drawing', 'architectural sketch', 'perspective drawing', 'café life', 'daily sketch']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2024-07-26",
@@ -272,7 +308,8 @@ const data = [
     Style: "Minimalist watercolor sketch/study with loose, impressionistic qualities",
     Subject: "A simplified landscape showing three connected mountainous forms or islands in a horizontal composition, suggesting a distant horizon or coastline",
     Keywords: "['watercolor', 'landscape', 'mountains', 'minimal', 'horizon', 'sketch', 'nature', 'seascape', 'islands', 'earth tones', 'impressionistic', 'simple', 'peaceful', 'atmospheric']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2024-07-26",
@@ -283,7 +320,8 @@ const data = [
     Style: "['Gestural drawing', 'Continuous line drawing', 'Quick sketch', 'Minimalist', 'Urban sketching']",
     Subject: "Two similar sketches of people in contemplative poses, looking downward at what appears to be mobile devices or books. The drawings capture a common modern scene of people absorbed in their personal devices.",
     Keywords: "['sketch', 'line drawing', 'gestural', 'contemporary life', 'urban sketching', 'technology', 'reading', 'observation', 'daily life', 'minimalist art', 'pen drawing', 'figure study']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2024-07-25",
@@ -294,7 +332,8 @@ const data = [
     Style: "Urban sketching/Travel journal illustration style with a combination of loose watercolor techniques and line drawings. The artwork has a casual, spontaneous feel typical of on-location sketching.",
     Subject: "A series of travel-themed illustrations featuring Singapore landmarks, transportation elements, and casual everyday scenes. The collection appears to document travel experiences or memories through artistic interpretation.",
     Keywords: "['Travel sketches', 'Urban sketching', 'Watercolor', 'Singapore', 'Marina Bay Sands', 'Scooter', 'Vespa', 'Coca-Cola', 'Architecture', 'Travel journal', 'Illustration', 'Giraffe', 'Landscape', 'Mixed media', 'Documentary art']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2024-07-19",
@@ -305,7 +344,8 @@ const data = [
     Style: "Loose watercolor sketch, impressionistic, minimalist landscape study",
     Subject: "Coastal seascape featuring a beach view with distant islands or hills, calm waters, and tiny figures providing scale on the shoreline",
     Keywords: "['watercolor', 'seascape', 'beach', 'coastal', 'landscape', 'sketch', 'minimal', 'ocean', 'islands', 'plein air', 'nature', 'seaside', 'atmospheric', 'beach scene', 'shoreline']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2024-07-18",
@@ -316,7 +356,8 @@ const data = [
     Style: "['Sketch art', 'Urban sketching', 'Line drawing', 'Pen and ink illustration', 'Observational drawing']",
     Subject: "A potted tree or shrub on what appears to be a terrace or balcony setting, with a landscape view in the background featuring mountains or hills",
     Keywords: "['sketch', 'tree', 'planter', 'landscape', 'mountains', 'ink drawing', 'hatching', 'terrace', 'botanical', 'urban sketch', 'line art', 'nature', 'architecture', 'perspective', 'outdoor scene']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2024-07-14",
@@ -327,7 +368,8 @@ const data = [
     Style: "Architectural sketch/Urban sketching with emphasis on linear perspective and hatching techniques",
     Subject: "Interior architectural details featuring classical elements including paneled doors, columns, and a window view. The drawing emphasizes spatial relationships and architectural details through careful linework and shading.",
     Keywords: "['architectural sketch', 'interior drawing', 'columns', 'doorway', 'perspective drawing', 'hatching', 'black and white', 'linear sketch', 'architectural details', 'urban sketching', 'classical architecture', 'paneled doors', 'window view']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2024-07-14",
@@ -338,7 +380,8 @@ const data = [
     Style: "['Urban sketch', 'Architectural illustration', 'Freehand drawing', 'Line art', 'Observational sketch']",
     Subject: "Interior scene of what appears to be a bar or cafe, capturing the atmospheric details of the space including furniture, architectural elements, and spatial layout",
     Keywords: "['bar sketch', 'interior drawing', 'architectural illustration', 'urban sketching', 'bar stools', 'counter', 'cafe interior', 'pen drawing', 'black and white', 'perspective drawing', 'ambient space', 'hospitality sketch']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2024-07-11",
@@ -349,7 +392,8 @@ const data = [
     Style: "Urban sketching/Architectural illustration in loose watercolor style with ink linework",
     Subject: "A traditional East Asian temple bell pavilion with characteristic architectural features including upturned roof corners, wooden posts, and a central hanging bell. The composition emphasizes architectural perspective and spatial depth.",
     Keywords: "['Temple architecture', 'Asian architecture', 'Watercolor sketch', 'Temple bell', 'Pavilion', 'Urban sketching', 'Traditional architecture', 'Architectural illustration', 'Heritage building', 'Oriental design', 'Temple grounds', 'Plein air', 'Travel sketch']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2024-07-10",
@@ -360,7 +404,8 @@ const data = [
     Style: "Casual watercolor sketch/illustration, loose naturalistic style with simple lines and watercolor washes",
     Subject: "A contemplative scene showing someone viewing a maritime landscape through a window, featuring both interior and exterior elements in a single composition",
     Keywords: "['watercolor', 'river scene', 'boat', 'window view', 'interior', 'still life', 'landscape', 'contemplative', 'maritime', 'flowers', 'vase', 'peaceful', 'observation']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2024-07-09",
@@ -371,7 +416,8 @@ const data = [
     Style: "['Urban sketch', 'Loose watercolor', 'Quick gestural drawing', 'Illustrated journal', 'On-location sketching']",
     Subject: "An informal cafe or bar interior scene capturing a quiet moment between staff or customers at a counter, with emphasis on the architectural elements and casual atmosphere",
     Keywords: "['cafe', 'watercolor', 'urban sketch', 'interior', 'bar scene', 'counter', 'flowers', 'shelving', 'casual', 'hospitality', 'sketching', 'atmospheric', 'journal art', 'green', 'daily life']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2024-05-08",
@@ -382,7 +428,8 @@ const data = [
     Style: "Loose watercolor sketch/study, impressionistic, observational painting",
     Subject: "A pair of casual ankle boots or desert boots, possibly suede or leather, positioned at an angle showing both front and side views",
     Keywords: "['watercolor', 'boots', 'shoes', 'still life', 'fashion illustration', 'footwear', 'sketch', 'study', 'casual art', 'desert boots', 'ankle boots', 'fashion art', 'accessories']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2024-05-07",
@@ -393,7 +440,8 @@ const data = [
     Style: "['Loose watercolor sketch', 'Quick study', 'Impressionistic', 'Observational drawing']",
     Subject: "A single apple or round fruit with a short stem, depicted from a slightly elevated angle with a cast shadow",
     Keywords: "['watercolor', 'fruit', 'apple', 'sketch', 'still life', 'study', 'yellow', 'purple', 'shadow', 'botanical', 'loose painting', 'sketchbook', 'nature study']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2024-04-27",
@@ -404,18 +452,8 @@ const data = [
     Style: "['Loose watercolor', 'Impressionistic', 'Gestural', 'Quick study', 'Observational painting']",
     Subject: "A pair of ballet pointe shoes, positioned at a slight angle with their openings visible, cast against a white background with a gentle green shadow",
     Keywords: "['Ballet', 'Pointe shoes', 'Dance', 'Watercolor', 'Pink', 'Performance art', 'Classical dance', 'Dance equipment', 'Art study', 'Dance accessories']",
-    Category: "Blog"
-  },
-  {
-    "Date": "2024-04-25",
-    Title: "Its getting cold",
-    img_path: "240425_its-getting-cold_0.jpg",
-    Caption: "A watercolor sketch of yellow boots or rain boots lying on their side against a blue background with a subtle purple shadow. The boots are rendered with loose, gestural brushstrokes showing highlights and shadows in the rubber material.",
-    Colours: "['Yellow ochre', 'Cobalt blue', 'Light purple', 'White (paper)', 'Gray (shadows)']",
-    Style: "Quick watercolor sketch/study, loose impressionistic style with gestural brushwork",
-    Subject: "A pair of rubber boots or wellington boots lying on their side, appearing to be well-worn or broken in, showing natural folds and creases in the material",
-    Keywords: "['watercolor', 'boots', 'wellington boots', 'rubber boots', 'rain gear', 'still life', 'sketch', 'yellow', 'blue', 'casual art', 'study', 'everyday objects', 'footwear']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2024-04-25",
@@ -426,7 +464,20 @@ const data = [
     Style: "Quick watercolor sketch/study, loose naturalistic style, minimalist approach with simple color blocking and wet-on-wet technique",
     Subject: "A single peanut shell, split or broken, showing the characteristic curved shape and texture of a peanut hull. The shell appears empty and is depicted from a side view.",
     Keywords: "['watercolor', 'peanut', 'shell', 'food study', 'botanical illustration', 'still life', 'yellow', 'minimalist', 'nature study', 'sketch']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
+  },
+  {
+    "Date": "2024-04-25",
+    Title: "Its getting cold",
+    img_path: "240425_its-getting-cold_0.jpg",
+    Caption: "A watercolor sketch of yellow boots or rain boots lying on their side against a blue background with a subtle purple shadow. The boots are rendered with loose, gestural brushstrokes showing highlights and shadows in the rubber material.",
+    Colours: "['Yellow ochre', 'Cobalt blue', 'Light purple', 'White (paper)', 'Gray (shadows)']",
+    Style: "Quick watercolor sketch/study, loose impressionistic style with gestural brushwork",
+    Subject: "A pair of rubber boots or wellington boots lying on their side, appearing to be well-worn or broken in, showing natural folds and creases in the material",
+    Keywords: "['watercolor', 'boots', 'wellington boots', 'rubber boots', 'rain gear', 'still life', 'sketch', 'yellow', 'blue', 'casual art', 'study', 'everyday objects', 'footwear']",
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2024-04-22",
@@ -437,7 +488,8 @@ const data = [
     Style: "['Urban sketch', 'Architectural illustration', 'Loose watercolor', 'Quick sketch', 'Pen and wash technique']",
     Subject: "A Gothic-style church or cathedral with characteristic medieval architectural features, including pointed arches, quatrefoil windows, and multiple spires, accompanied by an autumn tree",
     Keywords: "['Gothic architecture', 'Church', 'Cathedral', 'Watercolor', 'Urban sketch', 'Autumn', 'Architecture', 'Religious building', 'Medieval', 'Stained glass', 'Arches', 'Spires', 'Historic building']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2024-04-18",
@@ -448,7 +500,8 @@ const data = [
     Style: "['Expressionist', 'Gestural', 'Quick sketch', 'Contemporary figure study', 'Loose watercolor technique']",
     Subject: "A figure in repose, lounging on furniture in a casual indoor setting. The composition emphasizes the relaxed posture and contemplative mood of the scene.",
     Keywords: "['portrait', 'sketch', 'watercolor', 'expressionist', 'figure study', 'orange', 'lounging', 'relaxation', 'contemporary art', 'gestural drawing', 'indoor scene', 'warm tones']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2024-04-17",
@@ -459,7 +512,8 @@ const data = [
     Style: "['Loose watercolor sketch', 'Urban sketching', 'Gestural', 'Quick observational drawing', 'Contemporary illustration']",
     Subject: "A quiet indoor scene showing someone at work or study, surrounded by houseplants in a modern setting, possibly a home office or café environment",
     Keywords: "['watercolor', 'sketch', 'indoor scene', 'workspace', 'plants', 'study', 'modern life', 'blue', 'purple', 'urban sketching', 'contemplative', 'daily life', 'houseplants', 'workspace illustration']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2024-04-15",
@@ -470,7 +524,8 @@ const data = [
     Style: "['Urban sketching', 'Loose watercolor', 'Quick gestural', 'Contemporary illustration', 'On-location drawing']",
     Subject: "A cafe/bar scene focusing on a worker behind the counter, capturing the atmosphere of a service environment with its characteristic shelving, equipment, and workspace layout",
     Keywords: "['cafe', 'barista', 'urban sketch', 'watercolor', 'service industry', 'counter', 'bar', 'restaurant', 'hospitality', 'workplace', 'interior scene', 'sketch journal']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2024-04-13",
@@ -481,7 +536,8 @@ const data = [
     Style: "['Gestural sketch', 'Loose watercolor', 'Contemporary figure drawing', 'Quick study', 'Minimalist']",
     Subject: "A casual figure study showing someone in relaxed attire, depicted in a contemplative moment. The composition emphasizes the natural, unstaged quality of the scene.",
     Keywords: "['watercolor', 'figure study', 'blue', 'sketch', 'contemporary art', 'casual pose', 'gestural', 'minimal', 'glasses', 'tank top', 'reading pose', 'quick study']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2024-04-02",
@@ -492,7 +548,8 @@ const data = [
     Style: "['Loose gestural sketch', 'Contemporary portrait', 'Mixed media', 'Expressive', 'Minimalist']",
     Subject: "A contemplative portrait study rendered primarily in yellow tones, featuring glasses and flowing hair, with minimal detail but strong emotional presence",
     Keywords: "['portrait', 'watercolor', 'yellow', 'sketch', 'glasses', 'monochromatic', 'contemporary art', 'ink drawing', 'expressive', 'gestural', 'sketchbook', 'mixed media', 'artistic study']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2024-02-04",
@@ -503,7 +560,8 @@ const data = [
     Style: "['Gestural', 'Impressionistic', 'Quick sketch', 'Loose watercolor', 'Contemporary figure study']",
     Subject: "A standing figure rendered in a loose, expressive style, depicted from approximately waist up. The figure is shown in a contemplative pose with warm tones dominating the composition.",
     Keywords: "['watercolor', 'portrait', 'sketch', 'figure study', 'gestural', 'warm tones', 'expressive', 'contemporary art', 'loose style', 'mixed media', 'quick study', 'minimalist']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2024-01-29",
@@ -514,7 +572,8 @@ const data = [
     Style: "['Loose watercolor sketch', 'Contemporary figure study', 'Gestural drawing', 'Quick study', 'Minimalist watercolor']",
     Subject: "A seated figure in a contemplative pose, dressed in light clothing, appearing to be absorbed in an activity or thought while sitting cross-legged on what appears to be a floor or surface with a reddish background",
     Keywords: "['watercolor', 'figure study', 'contemplative', 'seated figure', 'cross-legged', 'sketch', 'portrait', 'casual pose', 'warm tones', 'gestural', 'minimal', 'contemporary art']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2024-01-25",
@@ -525,7 +584,8 @@ const data = [
     Style: "['Urban sketching', 'Loose impressionistic', 'Gestural', 'Mixed media illustration', 'Contemporary watercolor']",
     Subject: "A nocturnal urban scene featuring a lone figure walking down a city street with architectural elements and street lighting creating an atmospheric environment",
     Keywords: "['urban sketch', 'night scene', 'street art', 'atmospheric', 'cityscape', 'loose style', 'gestural drawing', 'watercolor', 'ink drawing', 'moody', 'noir', 'street lights', 'architecture', 'urban environment', 'minimalist']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2024-01-15",
@@ -536,7 +596,8 @@ const data = [
     Style: "Urban sketching/watercolor sketch, loose impressionistic style with minimal detail and atmospheric perspective",
     Subject: "Sydney harbor cityscape featuring the downtown skyline, with simplified boats and natural elements creating a peaceful harbor scene",
     Keywords: "['Sydney', 'cityscape', 'harbor', 'watercolor', 'urban sketch', 'boats', 'skyline', 'architecture', 'maritime', 'landscape', 'plein air', 'atmospheric', 'minimalist', 'waterfront', 'Australia']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2024-01-14",
@@ -547,7 +608,8 @@ const data = [
     Style: "Urban sketching/Architectural illustration with watercolor wash and ink line work",
     Subject: "The Sydney Opera House, one of Australia's most famous architectural landmarks, depicted from a harbor-side perspective showing its distinctive modernist design and waterfront setting",
     Keywords: "['Sydney Opera House', 'Architecture', 'Watercolor sketch', 'Urban sketching', 'Australian landmark', 'Modernist architecture', 'Harbor view', 'Building illustration', 'Travel art', 'Architectural drawing', 'Sydney Harbor', 'Australian art', 'Cityscape', 'Maritime scene']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2024-01-12",
@@ -558,7 +620,8 @@ const data = [
     Style: "['Urban sketch', 'Loose watercolor', 'Quick sketch', 'Impressionistic', 'Contemporary watercolor']",
     Subject: "A ferry boat on Sydney Harbour (appears to be a typical Sydney ferry) with the city skyline visible in the background through foggy or overcast conditions",
     Keywords: "['ferry', 'boat', 'watercolor', 'cityscape', 'harbor', 'maritime', 'urban sketch', 'transportation', 'seascape', 'nautical', 'waterfront', 'Sydney', 'rough seas', 'urban landscape']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-12-20",
@@ -569,7 +632,8 @@ const data = [
     Style: "['Urban sketching', 'Loose watercolor', 'Quick gestural drawing', 'Plein air', 'Impressionistic']",
     Subject: "An urban street scene featuring food trucks or market stalls beneath trees, with simplified representations of street furniture, vehicles, and pedestrians",
     Keywords: "['urban sketch', 'watercolor', 'street scene', 'food trucks', 'trees', 'city life', 'vendor stalls', 'outdoor market', 'street signs', 'urban landscape', 'plein air', 'loose style', 'quick sketch']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-11-09",
@@ -580,7 +644,8 @@ const data = [
     Style: "['Contemporary watercolor', 'Loose realistic style', 'Portrait art', 'Minimalist approach', 'Wet-on-wet technique']",
     Subject: "A portrait study focusing on facial features, particularly emphasizing a full beard and upper portion of the figure against a simple background",
     Keywords: "['watercolor portrait', 'beard', 'contemporary art', 'minimalist portrait', 'loose painting style', 'portrait study', 'figurative art', 'modern portrait', 'bearded figure', 'watercolor technique']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-10-25",
@@ -591,7 +656,8 @@ const data = [
     Style: "Loose watercolor illustration with sketchy, dynamic qualities. Sports action artwork with a casual, spontaneous feel. The style combines realistic proportions with artistic freedom in the execution.",
     Subject: "A dramatic moment in a soccer/football match focusing on a goalkeeper's diving save attempt, capturing the intensity and athleticism of the sport.",
     Keywords: "['Soccer', 'Football', 'Sports illustration', 'Watercolor', 'Action scene', 'Goalkeeper', 'Athletic', 'Goal net', 'Sports art', 'Dynamic pose', 'Game moment', 'Sports action', 'Match scene']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-10-24",
@@ -602,7 +668,8 @@ const data = [
     Style: "['Urban sketching', 'Loose watercolor', 'Observational drawing', 'Quick sketch style', 'Illustrative watercolor']",
     Subject: "['Two contrasting daily life scenes:', 'Kitchen work/food preparation', 'Outdoor chess game/leisure activity']",
     Keywords: "['Watercolor sketch', 'Urban sketching', 'Kitchen scene', 'Chess players', 'Daily life', 'Food preparation', 'Leisure activities', 'Sketchbook spread', 'Observational art', 'Documentary drawing']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-10-13",
@@ -613,7 +680,8 @@ const data = [
     Style: "Urban sketching/architectural watercolor illustration with a loose, impressionistic approach",
     Subject: "Victorian or colonial-style civic building with prominent clock tower, likely a town hall or municipal building, rendered in an architectural sketching style",
     Keywords: "['Architecture', 'Clock tower', 'Watercolor', 'Urban sketch', 'Victorian architecture', 'Heritage building', 'Architectural illustration', 'Town hall', 'Historical building', 'Plein air', 'Building facade', 'Street scene']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-10-08",
@@ -624,7 +692,8 @@ const data = [
     Style: "Urban sketch/Watercolor illustration with loose, gestural line work and minimal color palette. Quick observational drawing with architectural elements and figure studies.",
     Subject: "A casual basketball game in an outdoor setting, capturing the dynamic movement of players and the social atmosphere of recreational sports, with architectural elements of steps and basketball hoop.",
     Keywords: "['Basketball', 'Urban sketch', 'Watercolor', 'Sports illustration', 'Outdoor recreation', 'Street basketball', 'Court scene', 'Action sketch', 'Athletic movement', 'Community sports', 'Urban life', 'Spectators', 'Quick sketch', 'Movement study']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-10-06",
@@ -635,7 +704,8 @@ const data = [
     Style: "Urban sketching/architectural illustration with loose watercolor technique, combining architectural detail with a casual, documentary style",
     Subject: "A McDonald's restaurant exterior in what appears to be an urban setting, focusing on the architectural features and street-level activity",
     Keywords: `["McDonald's", 'Urban sketch', 'Architecture', 'Watercolor', 'Restaurant', 'Storefront', 'Building facade', 'Street scene', 'Fast food', 'Urban landscape', 'Architectural illustration', 'Commercial building', 'Golden arches', 'City sketch']`,
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-10-04",
@@ -646,7 +716,8 @@ const data = [
     Style: "Urban sketching/Sports illustration with loose watercolor technique, combining quick pen lines with watercolor washes",
     Subject: "A baseball game action moment at a stadium, focusing on the batter-catcher interaction at home plate with spectators in the background",
     Keywords: "['Baseball', 'Sports art', 'Watercolor', 'Stadium', 'Baseball player', 'Action sketch', 'Game scene', 'Sports illustration', 'Baseball stadium', 'Live drawing', 'Urban sketch', 'Athletic scene']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-09-25",
@@ -657,7 +728,8 @@ const data = [
     Style: "['Loose watercolor sketch', 'Gestural', 'Contemporary portrait', 'Quick study', 'Monochromatic']",
     Subject: "A casual portrait study showing a figure in a relaxed pose, wearing glasses and holding what appears to be a drink. The composition is informal and captures a candid moment.",
     Keywords: "['watercolor', 'portrait', 'monochrome', 'sketch', 'glasses', 'casual', 'gestural', 'contemporary', 'drink', 'brushwork', 'loose style', 'sketchbook', 'study']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-09-24",
@@ -668,7 +740,8 @@ const data = [
     Style: "Urban sketching/Quick gestural watercolor sketches with a loose, impressionistic approach",
     Subject: "Urban transportation scenes - a hot air balloon gathering and a modern transit vehicle, both depicted in public spaces with crowds and natural elements",
     Keywords: "['Urban sketch', 'Monochrome', 'Transportation', 'Hot air balloon', 'Train', 'Tram', 'Street scene', 'Watercolor', 'Sketchbook', 'Trees', 'Architecture', 'People', 'Crowd', 'City life', 'Public space']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-08-13",
@@ -679,7 +752,8 @@ const data = [
     Style: "Loose watercolor sketch, casual observational painting with a documentary/urban sketching approach",
     Subject: "A market scene showing a vendor at work, capturing daily life and commerce in what appears to be a traditional market or produce stand setting",
     Keywords: "['watercolor', 'market scene', 'vendor', 'produce', 'vegetables', 'urban sketch', 'daily life', 'commerce', 'fresh food', 'market stall', 'hanging baskets', 'working life', 'food market']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-08-02",
@@ -690,7 +764,8 @@ const data = [
     Style: "['Loose watercolor sketch', 'Contemporary portrait', 'Quick gestural drawing', 'Minimalist', 'Expressive line work']",
     Subject: "['Portrait study in watercolor', 'Head and shoulders composition', 'Casual sketch in sketchbook', 'Study of facial features and expression']",
     Keywords: "['watercolor portrait', 'sketch', 'artistic study', 'blue monochrome', 'sketchbook art', 'casual drawing', 'glasses portrait', 'contemporary art', 'loose style', 'gestural portrait']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-07-01",
@@ -701,7 +776,8 @@ const data = [
     Style: "['Urban sketching', 'Architectural illustration', 'Loose watercolor', 'Line and wash technique', 'Contemporary sketch']",
     Subject: "Modern urban architecture featuring contemporary residential towers with distinctive architectural features, set against natural elements in what appears to be a city setting.",
     Keywords: "['urban sketch', 'architecture', 'high-rise', 'watercolor', 'buildings', 'modern architecture', 'cityscape', 'trees', 'balconies', 'geometric pattern', 'architectural drawing', 'urban landscape', 'sketchbook', 'contemporary building', 'urban art']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-06-24",
@@ -712,7 +788,8 @@ const data = [
     Style: "Urban sketching/Architectural illustration with loose watercolor technique",
     Subject: "An architectural landscape view from a balcony, featuring Mediterranean-style buildings and natural surroundings",
     Keywords: "['Urban sketch', 'Watercolor', 'Architecture', 'Mediterranean', 'Terracotta roofs', 'Landscape', 'Buildings', 'Balcony view', 'Mountain vista', 'Plein air', 'Travel sketch', 'Architectural illustration', 'Urban landscape', 'Pen and wash']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-06-23",
@@ -723,7 +800,8 @@ const data = [
     Style: "['Loose watercolor sketch', 'Urban sketching', 'Plein air', 'Quick study', 'Impressionistic']",
     Subject: "A beachside or poolside seating arrangement typical of a resort or tropical destination, emphasized by the surrounding palm trees and vegetation, creating a relaxing vacation atmosphere",
     Keywords: "['tropical', 'beach', 'resort', 'palm trees', 'umbrella', 'lounge chairs', 'watercolor', 'sketch', 'vacation', 'paradise', 'relaxation', 'outdoor scene', 'tropical vegetation', 'beach furniture']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-06-22",
@@ -734,7 +812,8 @@ const data = [
     Style: "['Urban sketching', 'Loose watercolor', 'Line and wash', 'Travel journal illustration', 'Architectural sketch']",
     Subject: "A tropical resort pool area with traditional architecture, capturing a peaceful vacation scene with architectural elements and natural landscaping",
     Keywords: "['resort', 'swimming pool', 'palm trees', 'tropical', 'architecture', 'watercolor', 'sketch', 'vacation', 'loungers', 'beach resort', 'travel art', 'tropical architecture', 'outdoor scene', 'leisure', 'resort lifestyle']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-06-21",
@@ -745,7 +824,8 @@ const data = [
     Style: "Urban sketching/Architectural illustration with loose, impressionistic qualities combining ink line work with watercolor washes",
     Subject: "Classical or neoclassical building facade with prominent arched features, possibly a church, theatre, or civic building. The architecture shows multiple levels with repeated arch motifs and classical architectural elements including columns and a pediment.",
     Keywords: "['Architecture', 'Urban sketch', 'Classical building', 'Arches', 'Columns', 'Watercolor', 'Line drawing', 'Building facade', 'Historical architecture', 'Architectural illustration', 'Pediment', 'Quick sketch', 'Urban art', 'Classical style']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-06-20",
@@ -756,7 +836,8 @@ const data = [
     Style: "['Urban sketching', 'Loose watercolor', 'Architectural illustration', 'Quick gestural drawing', 'On-location sketching']",
     Subject: "An interior view of what appears to be a casual dining establishment or café, featuring industrial-style ceiling beams, indoor plants, and bench seating. The sketch emphasizes the spatial layout and atmosphere of the venue.",
     Keywords: "['café sketch', 'interior illustration', 'urban sketching', 'watercolor', 'restaurant interior', 'architectural drawing', 'plants', 'industrial design', 'loose sketch', 'atmospheric', 'indoor scene', 'quick sketch', 'botanical', 'casual dining']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-06-19",
@@ -767,7 +848,8 @@ const data = [
     Style: "['Urban sketch', 'Loose watercolor', 'Architectural illustration', 'Quick sketch style', 'Line and wash technique']",
     Subject: "An architectural facade study focusing on a building entrance with figures and decorative elements, capturing a casual street scene moment with attention to architectural details and ambient elements",
     Keywords: "['urban sketch', 'architecture', 'watercolor', 'building entrance', 'street scene', 'mediterranean', 'potted plants', 'shutters', 'terracotta roof', 'facade', 'doorway', 'street life', 'architectural detail', 'urban art']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-06-14",
@@ -778,7 +860,8 @@ const data = [
     Style: "Urban sketching/architectural illustration with loose pen and wash technique",
     Subject: "Historic European street scene with architectural elements including buildings, clock tower, and street perspective showing depth and atmosphere",
     Keywords: "['Urban sketch', 'Architecture', 'Clock tower', 'Street scene', 'European cityscape', 'Pen and wash', 'Historic buildings', 'Perspective drawing', 'Travel sketch', 'Watercolor', 'Urban landscape', 'Historic architecture', 'Street view', 'Building sketch']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-06-13",
@@ -789,7 +872,8 @@ const data = [
     Style: "Urban sketching/architectural illustration with loose watercolor wash and ink line work",
     Subject: "A corner view of a French-style commercial building labeled 'Roquette', capturing the architectural details and street atmosphere of what appears to be a European or French Quarter setting",
     Keywords: "['Urban sketch', 'Watercolor', 'Architecture', 'French building', 'Street scene', 'Corner store', 'Roquette', 'Historical building', 'Architectural illustration', 'City sketch', 'Vintage architecture', 'Street view', 'Urban art', 'Building facade', 'Plein air']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-06-11",
@@ -800,7 +884,8 @@ const data = [
     Style: "['Urban sketching', 'Loose watercolor', 'Quick sketch', 'Illustrative', 'Casual sketching']",
     Subject: "A casual shopping or browsing scene showing a figure standing in an interior space with shelved walls, possibly a bookstore, library, or retail environment",
     Keywords: "['urban sketch', 'watercolor', 'shopping', 'browsing', 'interior', 'shelves', 'retail', 'casual', 'lifestyle', 'store scene', 'daily life', 'illustration']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-06-11",
@@ -811,7 +896,8 @@ const data = [
     Style: "['Urban sketching', 'Gestural drawing', 'Quick observational sketch', 'Loose watercolor', 'Line and wash technique']",
     Subject: "A casual social scene captured in a quick observational sketch, showing figures in conversation at what appears to be a cafe or casual meeting space",
     Keywords: "['urban sketch', 'watercolor', 'cafe scene', 'conversation', 'hijab', 'social scene', 'gestural', 'quick sketch', 'people', 'daily life', 'observational drawing', 'informal portrait']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-06-10",
@@ -822,7 +908,8 @@ const data = [
     Style: "['Urban sketch', 'Architectural illustration', 'Plein air watercolor', 'Loose watercolor technique', 'Line and wash']",
     Subject: "['Colonial or Mediterranean architecture', 'Building exterior', 'Courtyard scene', 'Architectural details', 'Landscaped grounds']",
     Keywords: "['architecture', 'watercolor', 'colonial', 'arches', 'courtyard', 'dome', 'palm trees', 'urban sketch', 'building', 'colonnade', 'terracotta', 'landscape']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-06-09",
@@ -833,7 +920,8 @@ const data = [
     Style: "['Urban sketching', 'Architectural illustration', 'Line and wash technique', 'Quick sketch style', 'Loose gestural drawing']",
     Subject: "The Petronas Towers and surrounding KLCC complex in Kuala Lumpur, captured in an architectural sketch showing both the monumentality of the buildings and the human scale of the street level experience",
     Keywords: "['Urban sketch', 'Architecture', 'Petronas Towers', 'Kuala Lumpur', 'Cityscape', 'Skyscrapers', 'Street scene', 'Watercolor', 'Urban art', 'Malaysia', 'Travel sketch', 'Architectural drawing', 'Urban landscape']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-03-20",
@@ -844,18 +932,8 @@ const data = [
     Style: "['Contemporary watercolor illustration', 'Urban sketching', 'Loose gestural style', 'Mixed media (ink and watercolor)']",
     Subject: "A portrait study featuring casual contemporary fashion including a bucket hat, glasses, and yellow sweater. The composition focuses on a relaxed, candid pose.",
     Keywords: "['watercolor portrait', 'urban sketch', 'contemporary art', 'bucket hat', 'yellow sweater', 'glasses', 'fashion illustration', 'mixed media', 'casual style', 'portrait study', 'gestural drawing']",
-    Category: "Blog"
-  },
-  {
-    "Date": "2023-03-17",
-    Title: "The Captain",
-    img_path: "4561_2023_7e4c61a426.jpg",
-    Caption: "A watercolor portrait sketch in shades of purple and pink, showing a bearded figure wearing a cap. The artwork features loose, expressive linework combined with soft watercolor washes. The portrait is dated 16/03/23 and appears to be labeled with the number 30.",
-    Colours: "['Purple', 'Pink', 'White (paper)', 'Black (linework)', 'Magenta undertones']",
-    Style: "['Contemporary watercolor', 'Loose sketch style', 'Mixed media', 'Urban sketching', 'Gestural portraiture']",
-    Subject: "A portrait study featuring a bearded figure wearing what appears to be a flat cap or beret, rendered in monochromatic purple tones with emphasis on facial features and facial hair",
-    Keywords: "['watercolor', 'portrait', 'beard', 'cap', 'purple', 'sketch', 'contemporary', 'monochromatic', 'urban sketch', 'ink and wash', 'facial study', 'masculine', 'headwear']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-03-17",
@@ -866,18 +944,20 @@ const data = [
     Style: "['Contemporary sketch', 'Gestural drawing', 'Loose watercolor', 'Urban sketching', 'Quick study']",
     Subject: "A casual portrait study featuring distinctive round glasses and an upraised hand, rendered in a loose, impressionistic style that emphasizes movement and emotion over precise detail",
     Keywords: "['watercolor', 'sketch', 'portrait', 'glasses', 'contemporary', 'purple', 'gestural', 'expressive', 'loose', 'urban sketch', 'quick study', 'modern', 'artistic', 'spontaneous']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
-    "Date": "2023-02-26",
-    Title: "Purple guy",
-    img_path: "purple_head.jpg",
-    Caption: "A watercolor portrait sketch showing a profile view of a person looking upward, wearing a gridded jacket. The subject has a full beard and a contemplative expression. The drawing is dated 10/3/23 and marked with the number 24.",
-    Colours: "['Purple', 'Lavender', 'White (paper)', 'Grey (line work)', 'Muted violet tones']",
-    Style: "['Contemporary sketch', 'Loose watercolor', 'Urban sketching', 'Minimalist portraiture', 'Quick study']",
-    Subject: "Portrait study of a person shown in profile view, featuring strong facial characteristics including a full beard, wearing casual clothing including a gridded jacket or shirt",
-    Keywords: "['watercolor', 'portrait', 'profile', 'beard', 'sketch', 'purple', 'monochromatic', 'contemporary', 'urban sketch', 'gridded jacket', 'upward gaze', 'male portrait', 'daily sketch', 'minimal', 'contemplative']",
-    Category: "Blog"
+    "Date": "2023-03-17",
+    Title: "The Captain",
+    img_path: "4561_2023_7e4c61a426.jpg",
+    Caption: "A watercolor portrait sketch in shades of purple and pink, showing a bearded figure wearing a cap. The artwork features loose, expressive linework combined with soft watercolor washes. The portrait is dated 16/03/23 and appears to be labeled with the number 30.",
+    Colours: "['Purple', 'Pink', 'White (paper)', 'Black (linework)', 'Magenta undertones']",
+    Style: "['Contemporary watercolor', 'Loose sketch style', 'Mixed media', 'Urban sketching', 'Gestural portraiture']",
+    Subject: "A portrait study featuring a bearded figure wearing what appears to be a flat cap or beret, rendered in monochromatic purple tones with emphasis on facial features and facial hair",
+    Keywords: "['watercolor', 'portrait', 'beard', 'cap', 'purple', 'sketch', 'contemporary', 'monochromatic', 'urban sketch', 'ink and wash', 'facial study', 'masculine', 'headwear']",
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-02-26",
@@ -888,7 +968,20 @@ const data = [
     Style: "['Loose sketching', 'Urban sketching', 'Mixed media', 'Gestural drawing', 'Contemporary portraiture']",
     Subject: "A portrait study showing a middle-aged figure wearing rectangular glasses, depicted from a slightly angled perspective. The subject has a serious, thoughtful expression and is wearing what appears to be a collared shirt.",
     Keywords: "['portrait', 'sketch', 'watercolor', 'ink drawing', 'glasses', 'quick study', 'loose style', 'expressive', 'contemporary art', 'mixed media portrait']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
+  },
+  {
+    "Date": "2023-02-26",
+    Title: "Purple guy",
+    img_path: "purple_head.jpg",
+    Caption: "A watercolor portrait sketch showing a profile view of a person looking upward, wearing a gridded jacket. The subject has a full beard and a contemplative expression. The drawing is dated 10/3/23 and marked with the number 24.",
+    Colours: "['Purple', 'Lavender', 'White (paper)', 'Grey (line work)', 'Muted violet tones']",
+    Style: "['Contemporary sketch', 'Loose watercolor', 'Urban sketching', 'Minimalist portraiture', 'Quick study']",
+    Subject: "Portrait study of a person shown in profile view, featuring strong facial characteristics including a full beard, wearing casual clothing including a gridded jacket or shirt",
+    Keywords: "['watercolor', 'portrait', 'profile', 'beard', 'sketch', 'purple', 'monochromatic', 'contemporary', 'urban sketch', 'gridded jacket', 'upward gaze', 'male portrait', 'daily sketch', 'minimal', 'contemplative']",
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-02-11",
@@ -899,7 +992,8 @@ const data = [
     Style: "Urban sketching/architectural illustration with loose watercolor technique, combining pen and wash methods",
     Subject: "The Spirit of Tasmania passenger ferry at port, which is a significant vessel that operates between Melbourne, Australia and Devonport, Tasmania",
     Keywords: "['Maritime art', 'Ferry', 'Nautical', 'Urban sketching', 'Watercolor', 'Ship', 'Harbor scene', 'Tasmania', 'Transportation', 'Marine vessel', 'Dock', 'Port', 'Seascape', 'Travel illustration']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-02-07",
@@ -910,29 +1004,8 @@ const data = [
     Style: "['Architectural sketch', 'Urban sketching', 'Loose watercolor', 'Plein air', 'Quick study']",
     Subject: "A historic industrial or institutional building complex, possibly a former mill, factory, or workhouse, rendered in a loose architectural sketch style with watercolor treatment",
     Keywords: "['Architecture', 'Industrial heritage', 'Watercolor sketch', 'Historic building', 'Factory', 'Mill building', 'Landscape', 'Urban sketch', 'Heritage architecture', 'Victorian industrial', 'Architectural illustration', 'Building study']",
-    Category: "Blog"
-  },
-  {
-    "Date": "2023-02-06",
-    Title: "Waiting for MONA",
-    img_path: "2302_waiting_for_mona.jpg",
-    Caption: "A watercolor urban sketch showing a historic building with classical architecture features, including arched windows and ornate details. The scene includes white market tents on the sidewalk, small figures of people, and a tall modern building in the background. The sketch is held down with binder clips on what appears to be a wooden surface.",
-    Colours: "['Grey-blue', 'Light brown', 'Pale blue (sky)', 'Green (vegetation)', 'White', 'Beige']",
-    Style: "['Urban sketching', 'Architectural illustration', 'Loose watercolor', 'En plein air', 'Quick sketch style']",
-    Subject: "A classical style building on a city street corner, likely a historic or civic building, with market stalls or temporary structures set up outside. The perspective is from a slight elevation, showing the street corner and surrounding urban context.",
-    Keywords: "['Urban sketch', 'Architecture', 'Watercolor', 'City scene', 'Historic building', 'Street market', 'Classical architecture', 'Downtown', 'Building illustration', 'Cityscape', 'Street scene', 'Urban art']",
-    Category: "Blog"
-  },
-  {
-    "Date": "2023-02-06",
-    Title: "Hobart lolly shop",
-    img_path: "2302_lolli_shop.jpg",
-    Caption: "A watercolor sketch of a small stone cottage or house with a gray roof and chimney. The building has three openings - two windows and a central door - with arched details. The scene includes a small garden with white flowers in the foreground, trees on either side, and a simple fence. There appears to be a sign that reads 'Lollies' in the foreground. The scene is set against a light blue sky with hints of clouds.",
-    Colours: "['Buff/beige (stone building)', 'Gray (roof and shadows)', 'Green (vegetation and trees)', 'Light blue (sky)', 'White (paper and highlights)', 'Purple/gray (ground and shadows)']",
-    Style: "['Urban sketch', 'Architectural illustration', 'Loose watercolor', 'Line and wash technique', 'Plein air style']",
-    Subject: "A small historic stone cottage or shop building with garden setting, captured in a casual, sketch-like style with architectural details preserved",
-    Keywords: "['cottage', 'architecture', 'watercolor', 'urban sketch', 'stone building', 'garden', 'trees', 'fence', 'historic building', 'streetscape', 'shop front', 'Australian architecture', 'heritage building', 'architectural drawing', 'outdoor scene']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-02-06",
@@ -943,7 +1016,32 @@ const data = [
     Style: "['Urban sketching', 'Architectural illustration', 'Watercolor sketch', 'Loose line drawing', 'Plein air style']",
     Subject: "An urban scene featuring a commercial building complex with parking facilities and landscaping, likely a shopping center or marketplace with vendor stalls",
     Keywords: "['Urban sketch', 'Architecture', 'Watercolor', 'Shopping center', 'Marketplace', 'Trees', 'Parking lot', 'Buildings', 'Street scene', 'Market stalls', 'Urban landscape', 'Commercial building']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
+  },
+  {
+    "Date": "2023-02-06",
+    Title: "Hobart lolly shop",
+    img_path: "2302_lolli_shop.jpg",
+    Caption: "A watercolor sketch of a small stone cottage or house with a gray roof and chimney. The building has three openings - two windows and a central door - with arched details. The scene includes a small garden with white flowers in the foreground, trees on either side, and a simple fence. There appears to be a sign that reads 'Lollies' in the foreground. The scene is set against a light blue sky with hints of clouds.",
+    Colours: "['Buff/beige (stone building)', 'Gray (roof and shadows)', 'Green (vegetation and trees)', 'Light blue (sky)', 'White (paper and highlights)', 'Purple/gray (ground and shadows)']",
+    Style: "['Urban sketch', 'Architectural illustration', 'Loose watercolor', 'Line and wash technique', 'Plein air style']",
+    Subject: "A small historic stone cottage or shop building with garden setting, captured in a casual, sketch-like style with architectural details preserved",
+    Keywords: "['cottage', 'architecture', 'watercolor', 'urban sketch', 'stone building', 'garden', 'trees', 'fence', 'historic building', 'streetscape', 'shop front', 'Australian architecture', 'heritage building', 'architectural drawing', 'outdoor scene']",
+    Category: "Blog",
+    img_alt: null
+  },
+  {
+    "Date": "2023-02-06",
+    Title: "Waiting for MONA",
+    img_path: "2302_waiting_for_mona.jpg",
+    Caption: "A watercolor urban sketch showing a historic building with classical architecture features, including arched windows and ornate details. The scene includes white market tents on the sidewalk, small figures of people, and a tall modern building in the background. The sketch is held down with binder clips on what appears to be a wooden surface.",
+    Colours: "['Grey-blue', 'Light brown', 'Pale blue (sky)', 'Green (vegetation)', 'White', 'Beige']",
+    Style: "['Urban sketching', 'Architectural illustration', 'Loose watercolor', 'En plein air', 'Quick sketch style']",
+    Subject: "A classical style building on a city street corner, likely a historic or civic building, with market stalls or temporary structures set up outside. The perspective is from a slight elevation, showing the street corner and surrounding urban context.",
+    Keywords: "['Urban sketch', 'Architecture', 'Watercolor', 'City scene', 'Historic building', 'Street market', 'Classical architecture', 'Downtown', 'Building illustration', 'Cityscape', 'Street scene', 'Urban art']",
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-02-05",
@@ -954,7 +1052,8 @@ const data = [
     Style: "['Urban sketching', 'Loose watercolor', 'Quick gestural drawing', 'Architectural illustration', 'En plein air']",
     Subject: "An urban scene showing a queue of people waiting outside a building, possibly a popular restaurant, cafe, or venue, captured in a casual, observational style",
     Keywords: "['urban sketch', 'queue', 'street scene', 'architecture', 'watercolor', 'cityscape', 'building', 'crowd', 'line-up', 'street life', 'observation drawing', 'urban landscape']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-02-02",
@@ -965,7 +1064,8 @@ const data = [
     Style: "['Urban sketching', 'Loose watercolor', 'Architectural illustration', 'Quick sketch style', 'En plein air']",
     Subject: "A European-style harbor waterfront with traditional buildings and moored boats, likely depicting a coastal town or city port area. The composition emphasizes the relationship between the built environment and the water.",
     Keywords: "['harbor', 'waterfront', 'boats', 'urban sketch', 'watercolor', 'architecture', 'maritime', 'cityscape', 'coastal', 'nautical', 'buildings', 'dock', 'European', 'waterside', 'port']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-02-01",
@@ -976,7 +1076,8 @@ const data = [
     Style: "['Urban sketch', 'Loose watercolor', 'Maritime illustration', 'Quick sketch style', 'Pen and wash technique']",
     Subject: "A collection of fishing boats or working vessels in a harbor setting, captured in a loose, sketchy style that emphasizes their basic shapes and colors while maintaining their characteristic features like cabins, masts, and hull shapes.",
     Keywords: "['fishing boats', 'harbor scene', 'maritime art', 'watercolor sketch', 'nautical', 'boats', 'marine art', 'coastal', 'dock', 'working vessels', 'seascape', 'harbor sketch']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-01-31",
@@ -987,7 +1088,8 @@ const data = [
     Style: "Urban sketching/Architectural illustration with loose watercolor wash and ink linework",
     Subject: "Historic Victorian architecture, specifically what appears to be a museum building or civic center with distinctive clock tower and street frontage",
     Keywords: "['Urban sketch', 'Architecture', 'Victorian', 'Clock tower', 'Museum', 'Watercolor', 'Street scene', 'Heritage building', 'Street lamps', 'Building facade', 'Historical architecture', 'City sketch', 'Urban landscape', 'Architectural drawing']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-01-28",
@@ -998,7 +1100,8 @@ const data = [
     Style: "['Urban sketching', 'Plein air', 'Loose watercolor', 'Quick gestural drawing', 'Line and wash technique']",
     Subject: "A group of visitors at a scenic viewpoint or observation deck, rendered in a casual sketching style that captures the essence of the moment without focusing on specific details",
     Keywords: "['Urban sketch', 'Watercolor', 'Landscape', 'Observation deck', 'Viewpoint', 'People watching', 'Tourist spot', 'Quick sketch', 'Travel art', 'Plein air drawing', 'Scenic view', 'Gestural drawing']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-01-27",
@@ -1009,7 +1112,8 @@ const data = [
     Style: "['Urban sketching', 'Loose gestural drawing', 'Quick observational sketch', 'Line and wash technique']",
     Subject: "A street food vendor or cart scene with customers, including the cart setup, awnings, and people gathering around in what appears to be a public square or plaza",
     Keywords: "['urban sketch', 'street scene', 'food cart', 'street vendor', 'people watching', 'city life', 'outdoor scene', 'quick sketch', 'watercolor', 'urban life', 'street food', 'plein air', 'observational drawing']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-01-07",
@@ -1020,7 +1124,8 @@ const data = [
     Style: "['Urban sketching', 'Architectural illustration', 'Loose watercolor', 'En plein air', 'Quick gestural sketch']",
     Subject: "An urban scene showing a covered walkway with planted trees in large containers and people walking through the space. The architecture appears modern or contemporary with clean lines and a distinctive angular roof structure.",
     Keywords: "['urban sketch', 'architecture', 'watercolor', 'street scene', 'planter boxes', 'trees', 'covered walkway', 'public space', 'perspective drawing', 'architectural illustration', 'urban landscape', 'quick sketch', 'streetscape']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2023-01-06",
@@ -1031,7 +1136,8 @@ const data = [
     Style: "Urban sketching/Architectural illustration with loose watercolor wash and ink linework",
     Subject: "Downtown cityscape featuring modern architecture, street scene with emphasis on urban greenery and infrastructure",
     Keywords: "['Urban sketch', 'Cityscape', 'Architecture', 'Watercolor', 'Street scene', 'Urban trees', 'Buildings', 'Communications tower', 'Perspective drawing', 'Modern city', 'Urban planning', 'Street view', 'Mixed media']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-12-27",
@@ -1042,18 +1148,8 @@ const data = [
     Style: "Urban sketching/architectural illustration with loose watercolor wash and ink linework",
     Subject: "Historical Bank of Adelaide building in an urban setting, showcasing the juxtaposition of classical and modern architecture in a city environment",
     Keywords: "['urban sketch', 'architecture', 'heritage building', 'cityscape', 'watercolor', 'Bank of Adelaide', 'street scene', 'historical architecture', 'modern buildings', 'architectural illustration', 'urban landscape', 'perspective drawing', 'street corner', 'classical architecture']",
-    Category: "Blog"
-  },
-  {
-    "Date": "2022-12-25",
-    Title: "Surfers Paradise cityscape",
-    img_path: "221225-surfers-paradise-cityscape.jpg",
-    Caption: "A watercolor and ink sketch of modern city skyscrapers viewed from a high angle, featuring tall glass and steel buildings against a light blue sky. The scene depicts an urban landscape with varying building heights, including two dominant skyscrapers and several smaller commercial buildings in the foreground.",
-    Colours: "['Light blue (sky)', 'Steel grey', 'Beige/yellow (buildings)', 'White (highlights)', 'Dark grey (shadows)', 'Pale purple (distant buildings)']",
-    Style: "['Urban sketching', 'Architectural illustration', 'Contemporary watercolor', 'Line and wash technique', 'Loose realistic style']",
-    Subject: "Modern urban cityscape focusing on contemporary architecture and skyscrapers, capturing the scale and geometry of a downtown business district with emphasis on vertical architectural elements",
-    Keywords: "['cityscape', 'skyscrapers', 'urban sketch', 'architecture', 'watercolor', 'downtown', 'buildings', 'modern city', 'high-rise', 'urban landscape', 'architectural drawing', 'perspective', 'metropolis']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-12-25",
@@ -1064,7 +1160,20 @@ const data = [
     Style: "['Quick sketch', 'Urban sketching', 'Loose watercolor', 'Observational art', 'Contemporary illustration']",
     Subject: "A social commentary piece showing modern beach behavior where beachgoers are all absorbed in their mobile devices rather than engaging with the natural environment or each other",
     Keywords: "['Beach scene', 'Watercolor', 'Social commentary', 'Technology', 'Smartphones', 'Beach umbrella', 'Ocean', 'Summer', 'Modern life', 'Leisure', 'Sketch', 'Plein air', 'Contemporary culture']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
+  },
+  {
+    "Date": "2022-12-25",
+    Title: "Surfers Paradise cityscape",
+    img_path: "221225-surfers-paradise-cityscape.jpg",
+    Caption: "A watercolor and ink sketch of modern city skyscrapers viewed from a high angle, featuring tall glass and steel buildings against a light blue sky. The scene depicts an urban landscape with varying building heights, including two dominant skyscrapers and several smaller commercial buildings in the foreground.",
+    Colours: "['Light blue (sky)', 'Steel grey', 'Beige/yellow (buildings)', 'White (highlights)', 'Dark grey (shadows)', 'Pale purple (distant buildings)']",
+    Style: "['Urban sketching', 'Architectural illustration', 'Contemporary watercolor', 'Line and wash technique', 'Loose realistic style']",
+    Subject: "Modern urban cityscape focusing on contemporary architecture and skyscrapers, capturing the scale and geometry of a downtown business district with emphasis on vertical architectural elements",
+    Keywords: "['cityscape', 'skyscrapers', 'urban sketch', 'architecture', 'watercolor', 'downtown', 'buildings', 'modern city', 'high-rise', 'urban landscape', 'architectural drawing', 'perspective', 'metropolis']",
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-12-24",
@@ -1075,7 +1184,8 @@ const data = [
     Style: "['Urban sketch', 'Architectural illustration', 'Loose watercolor', 'Line and wash technique', 'Quick sketch style']",
     Subject: "A coastal observation tower with Asian-influenced architecture, positioned on a beach overlooking a body of water. The structure combines functional design with decorative elements, particularly in its pagoda-style roof.",
     Keywords: "['watchtower', 'beach', 'coastal', 'architecture', 'pagoda', 'watercolor', 'sketch', 'observation post', 'lifeguard tower', 'oceanfront', 'structural drawing', 'landscape', 'outdoor scene', 'architectural sketch', 'beach architecture']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-12-18",
@@ -1086,7 +1196,8 @@ const data = [
     Style: "['Urban sketching', 'Architectural illustration', 'Loose watercolor', 'Quick sketch', 'Pen and wash technique']",
     Subject: "An architectural view of what appears to be a covered market or shopping arcade with multiple archways and peaked roof sections. The scene includes architectural details and human figures for scale.",
     Keywords: "['urban sketch', 'architecture', 'market', 'arcade', 'watercolor', 'pen and wash', 'building', 'arches', 'street scene', 'quick sketch', 'plein air', 'shopping area', 'architectural illustration']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-12-13",
@@ -1097,7 +1208,8 @@ const data = [
     Style: "['Contemporary illustration', 'Urban sketching', 'Minimalist watercolor', 'Line and wash technique']",
     Subject: "A quiet corner still life featuring a houseplant in a white pot alongside some books, positioned next to a window, capturing a peaceful moment of domestic interior design",
     Keywords: "['houseplant', 'interior sketch', 'windowsill', 'books', 'watercolor', 'minimalist', 'home decor', 'botanical illustration', 'urban sketch', 'indoor plant', 'cozy', 'simple', 'contemporary art']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-12-12",
@@ -1108,7 +1220,8 @@ const data = [
     Style: "Loose watercolor sketch with ink line work; casual still life study combining gestural drawing with watercolor washes",
     Subject: "Still life arrangement of fruit on a plate, featuring bananas and a round green fruit, demonstrating form, shadow, and simple composition",
     Keywords: "['watercolor', 'still life', 'fruit', 'bananas', 'sketch', 'ink drawing', 'botanical art', 'kitchen art', 'food illustration', 'minimalist', 'study', 'line and wash']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-12-03",
@@ -1119,7 +1232,8 @@ const data = [
     Style: "['Urban sketch', 'Architectural illustration', 'Line and wash technique', 'Quick gestural drawing']",
     Subject: "A waterfront building, possibly a pier building, boathouse, or maritime structure with Victorian or colonial architectural elements including domed towers and a central spire, situated on a dock or pier",
     Keywords: "['architectural sketch', 'waterfront', 'maritime', 'pier', 'dock', 'towers', 'nautical', 'coastal', 'urban sketching', 'watercolor', 'ink drawing', 'seascape', 'harbor', 'building illustration', 'sailboat']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-10-30",
@@ -1130,7 +1244,8 @@ const data = [
     Style: "Urban sketching/Architectural illustration with loose watercolor technique",
     Subject: "Colonial or historical architecture, possibly a church, government building, or other institutional structure with distinctive yellow walls and architectural features including a dome, arched windows, and decorative moldings",
     Keywords: "['Urban sketch', 'Architecture', 'Watercolor', 'Colonial building', 'Yellow building', 'Dome', 'Historical architecture', 'Quick sketch', 'Urban art', 'Building illustration', 'Architectural drawing', 'Plein air', 'Street scene']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-10-30",
@@ -1141,7 +1256,8 @@ const data = [
     Style: "Urban sketching/architectural watercolor illustration with loose, gestural line work and informal watercolor washes",
     Subject: "A charming country or suburban house scene featuring Victorian architecture with characteristic details like multiple chimneys and decorative windows, surrounded by natural landscaping",
     Keywords: "['Victorian house', 'Watercolor', 'Architecture', 'Urban sketch', 'Landscape', 'House portrait', 'Garden scene', 'Historical building', 'Cottage', 'Plein air', 'Architectural illustration', 'Building sketch']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-10-15",
@@ -1152,7 +1268,8 @@ const data = [
     Style: "['Urban sketching', 'Architectural illustration', 'Loose watercolor', 'Quick sketch', 'Plein air style']",
     Subject: "An architectural vignette featuring a classical tiered fountain centered between two arched entrances, possibly part of a historic building or shopping arcade",
     Keywords: "['fountain', 'architecture', 'arches', 'watercolor', 'urban sketch', 'IGA', 'building facade', 'architectural detail', 'streetscape', 'heritage building', 'quick sketch', 'urban art']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-10-11",
@@ -1163,7 +1280,8 @@ const data = [
     Style: "Loose impressionistic watercolor sketch with a naturalistic approach, featuring quick, spontaneous brushstrokes and light washes",
     Subject: "A pastoral countryside scene featuring a wire fence line with wooden posts against a backdrop of trees and mountains",
     Keywords: "['watercolor', 'landscape', 'rural', 'mountains', 'fence posts', 'countryside', 'pastoral', 'nature', 'trees', 'sketch', 'plein air', 'atmospheric', 'peaceful']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-10-10",
@@ -1174,7 +1292,8 @@ const data = [
     Style: "Urban sketch / Architectural illustration with loose watercolor technique, combining ink linework with watercolor washes",
     Subject: "An urban streetscape featuring the Myer department store building with architectural details, a street lamp, and pedestrians. The scene appears to be capturing a moment of city life with emphasis on the building's historic architecture",
     Keywords: "['urban sketch', 'architecture', 'watercolor', 'city scene', 'street view', 'Myer building', 'street lamp', 'architectural drawing', 'building facade', 'urban landscape', 'pedestrians', 'storefront', 'Central Square', 'historical building', 'street scene']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-10-09",
@@ -1185,7 +1304,8 @@ const data = [
     Style: "['Minimalist line drawing', 'Gestural sketch', 'Contemporary illustration', 'Quick sketch portrait', 'Continuous line drawing']",
     Subject: "A contemporary portrait sketch showing a modern style with fashionable accessories including sunglasses, earrings, and a casual high-neck top or turtleneck",
     Keywords: "['line drawing', 'sketch', 'portrait', 'sunglasses', 'modern', 'minimalist', 'fashion illustration', 'ink drawing', 'contemporary art', 'quick sketch', 'monochrome', 'gestural', 'urban style']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-10-08",
@@ -1196,7 +1316,8 @@ const data = [
     Style: "Continuous line drawing / Gestural sketch / Minimalist illustration",
     Subject: "A portrait sketch showing the head and upper shoulders of a person wearing glasses and what appears to be a collared shirt or jacket",
     Keywords: "['line drawing', 'sketch', 'portrait', 'continuous line', 'minimalist', 'ink drawing', 'gestural', 'glasses', 'black and white', 'modern art', 'expressive', 'quick sketch', 'portrait study']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-10-02",
@@ -1207,7 +1328,8 @@ const data = [
     Style: "Urban sketching/Architectural illustration with loose watercolor wash and ink linework",
     Subject: "Historic urban architecture, specifically a Victorian or early 20th century commercial corner building with classic architectural features like arched windows and decorative cornices",
     Keywords: "['Urban sketch', 'Architecture', 'Historic building', 'Watercolor', 'Street scene', 'Corner building', 'City landscape', 'Victorian architecture', 'Ink drawing', 'Urban art', 'Building facade', 'Streetscape', 'Quick sketch', 'Downtown', 'Architectural illustration']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-10-01",
@@ -1218,7 +1340,8 @@ const data = [
     Style: "['Urban sketch', 'Architectural illustration', 'Line drawing', 'Loose freehand drawing']",
     Subject: "A historic hotel building on a street corner, showing Victorian architectural features including arched windows, decorative cornices, and outdoor seating area with umbrellas or awnings",
     Keywords: "['architecture', 'urban sketch', 'hotel', 'Victorian building', 'corner building', 'heritage architecture', 'street scene', 'awnings', 'arched windows', 'pen and ink', 'architectural drawing', 'building facade', 'streetscape']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-10-01",
@@ -1229,18 +1352,8 @@ const data = [
     Style: "Urban sketching/architectural illustration with a combination of loose watercolor and detailed line work. The style is semi-realistic with elements of impressionism.",
     Subject: "A Gothic-style church or chapel with characteristic pointed spire and architectural details, set against a natural backdrop of trees and sky.",
     Keywords: "['Gothic architecture', 'Church', 'Spire', 'Watercolor', 'Urban sketch', 'Trees', 'Religious building', 'Architecture illustration', 'Plein air', 'Line and wash', 'Nature', 'Landscape']",
-    Category: "Blog"
-  },
-  {
-    "Date": "2022-09-25",
-    Title: "Atop The Hill",
-    img_path: "c6fd065784.jpg",
-    Caption: "A black and white watercolor sketch of a small, simple house or building with three arched windows and a pitched roof, surrounded by bushes or foliage. The sketch is placed on white paper and photographed against grass.",
-    Colours: "['Black', 'Grey', 'White', 'Various shades of grey through dilution']",
-    Style: "Quick watercolor sketch in monochromatic wash technique, architectural illustration with loose, impressionistic elements",
-    Subject: "A small architectural structure, possibly a chapel, garden house, or small residential building, set within a natural landscape setting",
-    Keywords: "['watercolor', 'sketch', 'architecture', 'house', 'building', 'monochrome', 'arched windows', 'landscape', 'foliage', 'black and white', 'quick sketch', 'architectural drawing', 'cottage', 'rural scene']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-09-25",
@@ -1251,7 +1364,20 @@ const data = [
     Style: "Urban sketch/architectural watercolor illustration with loose, informal technique and quick gestural elements",
     Subject: "Flinders Street Railway Station, a historic landmark building in Melbourne, Australia, shown from street level with surrounding urban context",
     Keywords: "['Melbourne', 'Flinders Street Station', 'Architecture', 'Watercolor', 'Urban sketch', 'Heritage building', 'Railway station', 'Victorian architecture', 'Cityscape', 'Australian landmark', 'Green domes', 'Street scene', 'Urban landscape', 'Historical building']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
+  },
+  {
+    "Date": "2022-09-25",
+    Title: "Atop The Hill",
+    img_path: "c6fd065784.jpg",
+    Caption: "A black and white watercolor sketch of a small, simple house or building with three arched windows and a pitched roof, surrounded by bushes or foliage. The sketch is placed on white paper and photographed against grass.",
+    Colours: "['Black', 'Grey', 'White', 'Various shades of grey through dilution']",
+    Style: "Quick watercolor sketch in monochromatic wash technique, architectural illustration with loose, impressionistic elements",
+    Subject: "A small architectural structure, possibly a chapel, garden house, or small residential building, set within a natural landscape setting",
+    Keywords: "['watercolor', 'sketch', 'architecture', 'house', 'building', 'monochrome', 'arched windows', 'landscape', 'foliage', 'black and white', 'quick sketch', 'architectural drawing', 'cottage', 'rural scene']",
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-09-23",
@@ -1262,18 +1388,8 @@ const data = [
     Style: "['Loose gestural sketch', 'Quick observational drawing', 'Contemporary life drawing', 'Urban sketching']",
     Subject: "A figure in profile view seated in what appears to be a chair, holding and looking at a mobile device. The sketch captures a modern moment of technology use in daily life.",
     Keywords: "['sketch', 'profile', 'mobile device', 'contemporary life', 'monochrome', 'gestural drawing', 'seated figure', 'observation', 'urban sketch', 'daily life', 'technology', 'modern portrait']",
-    Category: "Blog"
-  },
-  {
-    "Date": "2022-09-22",
-    Title: "Another Sunny Sketch",
-    img_path: "d818fe14b0.jpg",
-    Caption: "A quick architectural sketch of what appears to be a historic building with a prominent clock tower in the center. The building features a series of arched colonnades along its base and decorative domes on either side of the central tower. Modern skyscrapers or tall buildings are suggested in the background through simple rectangular shapes.",
-    Colours: "['Black', 'White', 'Grey (from ink variation)']",
-    Style: "Urban sketching/Architectural illustration with a loose, gestural line drawing technique",
-    Subject: "A historic building facade, likely a railway station, government building, or other significant civic architecture, with modern city elements in the background",
-    Keywords: "['architectural sketch', 'urban drawing', 'clock tower', 'colonnade', 'historic building', 'pen and ink', 'cityscape', 'building facade', 'quick sketch', 'architectural illustration', 'urban art', 'line drawing', 'Victorian architecture']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-09-22",
@@ -1284,7 +1400,20 @@ const data = [
     Style: "['Quick sketch', 'Loose watercolor', 'Contemporary illustration', 'Gestural drawing', 'Urban sketching']",
     Subject: "A figure in a casual pose, wearing sunglasses and appearing to be looking down, possibly at a device or book. The composition is minimal and focuses on the upper body and head.",
     Keywords: "['watercolor', 'sketch', 'sunglasses', 'contemporary', 'minimal', 'portrait', 'casual', 'monochromatic', 'gestural', 'urban sketch', 'illustration', 'quick study']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
+  },
+  {
+    "Date": "2022-09-22",
+    Title: "Another Sunny Sketch",
+    img_path: "d818fe14b0.jpg",
+    Caption: "A quick architectural sketch of what appears to be a historic building with a prominent clock tower in the center. The building features a series of arched colonnades along its base and decorative domes on either side of the central tower. Modern skyscrapers or tall buildings are suggested in the background through simple rectangular shapes.",
+    Colours: "['Black', 'White', 'Grey (from ink variation)']",
+    Style: "Urban sketching/Architectural illustration with a loose, gestural line drawing technique",
+    Subject: "A historic building facade, likely a railway station, government building, or other significant civic architecture, with modern city elements in the background",
+    Keywords: "['architectural sketch', 'urban drawing', 'clock tower', 'colonnade', 'historic building', 'pen and ink', 'cityscape', 'building facade', 'quick sketch', 'architectural illustration', 'urban art', 'line drawing', 'Victorian architecture']",
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-09-20",
@@ -1295,7 +1424,8 @@ const data = [
     Style: "Contemporary watercolor portrait, casual and loose style with minimal detail and soft edges, showing characteristics of quick gesture painting",
     Subject: "A casual portrait study showing a relaxed pose with sunglasses, emphasizing a carefree or cool attitude through the tilted head position and expression",
     Keywords: "['watercolor', 'portrait', 'sunglasses', 'redhead', 'casual', 'contemporary', 'minimal', 'gesture', 'fashion', 'lifestyle', 'modern', 'young', 'cool', 'relaxed']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-09-11",
@@ -1306,18 +1436,8 @@ const data = [
     Style: "Urban sketching/Architectural illustration with hand-drawn line work and cross-hatching technique",
     Subject: "A vintage or old-fashioned two-story building with multiple windows, showing architectural details and wood siding rendered in a sketchy style",
     Keywords: "['architectural sketch', 'building illustration', 'urban sketch', 'pen and ink', 'vintage building', 'house drawing', 'black and white', 'linework', 'cross-hatching', 'architectural detail', 'urban art', 'freehand drawing']",
-    Category: "Blog"
-  },
-  {
-    "Date": "2022-09-11",
-    Title: "Now Some Trees",
-    img_path: "ae4a2986aa.jpg",
-    Caption: "A simple black and white watercolor sketch of a solitary tree on white paper, with what appears to be art supplies visible at the edge of the image. The sketch is placed on a weathered wooden surface.",
-    Colours: "['Black', 'Grey', 'White', 'Natural wood tone (in background)']",
-    Style: "['Minimalist', 'Monochromatic', 'Loose watercolor', 'Sketch', 'Nature study']",
-    Subject: "A single tree with a distinctive trunk and full, textured foliage rendered in loose, expressive brushstrokes. The tree appears to be standing alone on a simple ground line.",
-    Keywords: "['tree', 'watercolor', 'monochrome', 'sketch', 'nature art', 'botanical', 'black and white', 'minimalist', 'ink drawing', 'landscape', 'art study']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-09-11",
@@ -1328,7 +1448,20 @@ const data = [
     Style: "['Urban sketch', 'Architectural illustration', 'Freehand drawing', 'Quick sketch style', 'Line drawing']",
     Subject: "A Victorian or Edwardian-era commercial building, likely a former bank, shop, or civic building with classical architectural elements typical of late 19th or early 20th century construction",
     Keywords: "['Architecture', 'Urban sketch', 'Heritage building', 'Victorian architecture', 'Street scene', 'Building facade', 'Historical building', 'Architectural drawing', 'Corner building', 'Classical architecture', 'Urban art', 'Pen sketch']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
+  },
+  {
+    "Date": "2022-09-11",
+    Title: "Now Some Trees",
+    img_path: "ae4a2986aa.jpg",
+    Caption: "A simple black and white watercolor sketch of a solitary tree on white paper, with what appears to be art supplies visible at the edge of the image. The sketch is placed on a weathered wooden surface.",
+    Colours: "['Black', 'Grey', 'White', 'Natural wood tone (in background)']",
+    Style: "['Minimalist', 'Monochromatic', 'Loose watercolor', 'Sketch', 'Nature study']",
+    Subject: "A single tree with a distinctive trunk and full, textured foliage rendered in loose, expressive brushstrokes. The tree appears to be standing alone on a simple ground line.",
+    Keywords: "['tree', 'watercolor', 'monochrome', 'sketch', 'nature art', 'botanical', 'black and white', 'minimalist', 'ink drawing', 'landscape', 'art study']",
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-09-07",
@@ -1339,7 +1472,8 @@ const data = [
     Style: "['Gestural sketch', 'Quick study', 'Contemporary drawing', 'Linear drawing', 'Expressive line work']",
     Subject: "A profile portrait study showing the side view of a figure wearing glasses, with emphasis on capturing the essential features through minimal, confident linework.",
     Keywords: "['sketch', 'profile', 'portrait', 'glasses', 'line drawing', 'gestural', 'contemporary art', 'black and white', 'illustration', 'profile study', 'expressive', 'minimalist', 'quick sketch', 'pen drawing']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-09-07",
@@ -1350,7 +1484,8 @@ const data = [
     Style: "['Contemporary sketch', 'Minimalist drawing', 'Loose gestural style', 'Quick study', 'Modern portrait']",
     Subject: "A simple portrait sketch showing a bald head with focused attention on facial features, particularly the eyes and basic facial structure. The drawing has a contemplative, direct gaze.",
     Keywords: "['portrait', 'sketch', 'minimalist', 'monochrome', 'contemporary art', 'facial study', 'grayscale', 'gestural drawing', 'quick sketch', 'modern portrait']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-09-07",
@@ -1361,7 +1496,8 @@ const data = [
     Style: "['Sketch', 'Gestural drawing', 'Contour drawing', 'Loose line art', 'Quick portrait study']",
     Subject: "A portrait sketch showing someone with rectangular glasses, casual attire suggested by a simple neckline, and medium-length straight hair framing their face. The expression appears gentle with a slight smile.",
     Keywords: "['sketch', 'portrait', 'line drawing', 'pen art', 'glasses', 'contemporary', 'casual', 'quick study', 'black and white', 'minimalist', 'gestural', 'illustration']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-09-04",
@@ -1372,7 +1508,8 @@ const data = [
     Style: "['Sketch art', 'Line drawing', 'Gestural drawing', 'Observational sketch', 'Urban sketching']",
     Subject: "A figure viewed from behind, sitting at what appears to be a counter or desk, captured in a candid, everyday moment. The sketch emphasizes natural posture and casual environment.",
     Keywords: "['sketch', 'line drawing', 'figure study', 'bar stool', 'casual scene', 'everyday life', 'urban sketch', 'back view', 'monochrome', 'pen drawing', 'contemplative', 'cafe scene', 'observational drawing']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-09-03",
@@ -1383,7 +1520,8 @@ const data = [
     Style: "Quick gestural sketch/Life drawing with continuous line technique, showing influence of observational drawing and contemporary urban sketching",
     Subject: "A casual indoor scene capturing a moment of modern life - someone absorbed in their mobile device while relaxing",
     Keywords: "['sketch', 'line drawing', 'contemporary', 'mobile phone', 'relaxation', 'everyday life', 'gestural', 'observational drawing', 'casual', 'modern life', 'black and white', 'minimalist']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-08-28",
@@ -1394,7 +1532,8 @@ const data = [
     Style: "['Gestural sketch', 'Loose line drawing', 'Expressive contour drawing', 'Contemporary sketch', 'Quick study']",
     Subject: "A portrait sketch featuring round glasses, with emphasis on linear marks and gestural expression. The subject is shown from a slightly upward angle, wearing a simple crew neck top.",
     Keywords: "['sketch', 'portrait', 'glasses', 'line drawing', 'pen art', 'gestural', 'contemporary', 'monochromatic', 'expressive', 'study', 'minimal', 'loose style', 'clipboard', 'black and white']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-08-28",
@@ -1405,7 +1544,8 @@ const data = [
     Style: "['Gestural drawing', 'Continuous line art', 'Quick sketch', 'Contemporary portrait', 'Minimalist line drawing']",
     Subject: "A portrait sketch showing a side profile of a figure with glasses and long straight hair, captured in an expressive linear style that emphasizes the contours and features of the subject",
     Keywords: "['portrait', 'line drawing', 'sketch', 'profile view', 'glasses', 'long hair', 'gestural', 'ink drawing', 'continuous line', 'minimalist', 'contemporary art', 'black and white', 'expressive']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-08-27",
@@ -1416,7 +1556,8 @@ const data = [
     Style: "['Quick sketch', 'Line drawing', 'Urban sketching', 'Minimalist', 'Observational drawing']",
     Subject: "A solitary figure viewed from behind, sitting at what appears to be a counter or bar, captured in a candid moment that suggests contemplation or solitude",
     Keywords: "['sketch', 'pen drawing', 'bar scene', 'solitude', 'figure drawing', 'interior scene', 'urban sketch', 'minimalist', 'line art', 'candid', 'observational', 'monochrome']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-08-26",
@@ -1427,29 +1568,8 @@ const data = [
     Style: "['Quick sketch', 'Line drawing', 'Gestural drawing', 'Urban sketching', 'Minimalist illustration']",
     Subject: "A solitary figure engaged in reading while sitting on a perspective-drawn structure, possibly railroad tracks or steps, creating a sense of solitude and contemplation",
     Keywords: "['sketch', 'ink drawing', 'perspective', 'reading', 'solitude', 'railroad tracks', 'steps', 'linear perspective', 'contemplation', 'urban scene', 'minimalist', 'quick drawing', 'gesture sketch', 'vanishing point', 'illustration']",
-    Category: "Blog"
-  },
-  {
-    "Date": "2022-08-23",
-    Title: "Grabbing A Drink",
-    img_path: "98abf826f2.jpg",
-    Caption: "A simple pen sketch showing a portrait of a figure wearing rectangular glasses, with shoulder-length hair and a gentle smile. The drawing is done in a loose, quick sketch style with multiple flowing lines creating the form.",
-    Colours: "['Black ink', 'White paper background']",
-    Style: "['Quick sketch', 'Loose line drawing', 'Gestural drawing', 'Contemporary sketch', 'Minimalist portrait']",
-    Subject: "A portrait sketch of someone wearing glasses, depicted from roughly the shoulders up, drawn in a casual, spontaneous style with flowing lines creating the hair and facial features",
-    Keywords: "['sketch', 'portrait', 'line drawing', 'glasses', 'pen drawing', 'black and white', 'casual art', 'quick drawing', 'minimal', 'contemporary portrait', 'loose style', 'gestural']",
-    Category: "Blog"
-  },
-  {
-    "Date": "2022-08-23",
-    Title: "An Empty Building",
-    img_path: "0d78144ebd.jpg",
-    Caption: "A black ink sketch of a historic two-story commercial building with arched windows and doorways. The building appears to be a retail or grocer's shop with distinctive architectural features including ornate cornices and multiple window bays. The sketch is drawn on white paper and photographed alongside what appears to be a pen.",
-    Colours: "['Black', 'White', 'Grey (through shading techniques)']",
-    Style: "['Urban sketching', 'Architectural illustration', 'Freehand drawing', 'Line art', 'Quick sketch']",
-    Subject: "A Victorian or Edwardian-era commercial building facade featuring retail/grocer signage, with classical architectural elements including arched windows, decorative cornices, and a corner entrance design",
-    Keywords: "['architecture', 'urban sketch', 'building facade', 'Victorian architecture', 'retail shop', 'grocer', 'ink drawing', 'historical building', 'street scene', 'architectural detail', 'urban art', 'storefront', 'arched windows', 'commercial building', 'line drawing']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-08-23",
@@ -1460,7 +1580,32 @@ const data = [
     Style: "['Minimalist line drawing', 'Quick sketch', 'Contemporary', 'Gestural', 'Single-line technique']",
     Subject: "A portrait sketch showing a frontal view of a person with shoulder-length hair, featuring minimal detail but capturing essential facial features and basic proportions",
     Keywords: "['portrait', 'sketch', 'line drawing', 'ink drawing', 'minimal', 'monochrome', 'contemporary art', 'quick sketch', 'portraiture', 'black and white', 'pen drawing']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
+  },
+  {
+    "Date": "2022-08-23",
+    Title: "An Empty Building",
+    img_path: "0d78144ebd.jpg",
+    Caption: "A black ink sketch of a historic two-story commercial building with arched windows and doorways. The building appears to be a retail or grocer's shop with distinctive architectural features including ornate cornices and multiple window bays. The sketch is drawn on white paper and photographed alongside what appears to be a pen.",
+    Colours: "['Black', 'White', 'Grey (through shading techniques)']",
+    Style: "['Urban sketching', 'Architectural illustration', 'Freehand drawing', 'Line art', 'Quick sketch']",
+    Subject: "A Victorian or Edwardian-era commercial building facade featuring retail/grocer signage, with classical architectural elements including arched windows, decorative cornices, and a corner entrance design",
+    Keywords: "['architecture', 'urban sketch', 'building facade', 'Victorian architecture', 'retail shop', 'grocer', 'ink drawing', 'historical building', 'street scene', 'architectural detail', 'urban art', 'storefront', 'arched windows', 'commercial building', 'line drawing']",
+    Category: "Blog",
+    img_alt: null
+  },
+  {
+    "Date": "2022-08-23",
+    Title: "Grabbing A Drink",
+    img_path: "98abf826f2.jpg",
+    Caption: "A simple pen sketch showing a portrait of a figure wearing rectangular glasses, with shoulder-length hair and a gentle smile. The drawing is done in a loose, quick sketch style with multiple flowing lines creating the form.",
+    Colours: "['Black ink', 'White paper background']",
+    Style: "['Quick sketch', 'Loose line drawing', 'Gestural drawing', 'Contemporary sketch', 'Minimalist portrait']",
+    Subject: "A portrait sketch of someone wearing glasses, depicted from roughly the shoulders up, drawn in a casual, spontaneous style with flowing lines creating the hair and facial features",
+    Keywords: "['sketch', 'portrait', 'line drawing', 'glasses', 'pen drawing', 'black and white', 'casual art', 'quick drawing', 'minimal', 'contemporary portrait', 'loose style', 'gestural']",
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-08-14",
@@ -1471,7 +1616,8 @@ const data = [
     Style: "['Architectural sketch', 'Urban sketching', 'Line drawing', 'Technical illustration', 'Freehand architectural rendering']",
     Subject: "A Victorian-era bank building facade showing classical architectural features including arched windows, decorative cornices, and detailed stonework typical of 19th-century commercial architecture",
     Keywords: "['Architecture', 'Victorian', 'Bank building', 'Urban sketch', 'Heritage architecture', 'Building facade', 'Architectural drawing', 'Historical building', 'Pen and ink', 'Gothic revival', 'Colonial architecture', 'Arched windows', 'Commercial building', 'Street scene', 'Urban art']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-08-06",
@@ -1482,7 +1628,8 @@ const data = [
     Style: "['Architectural sketch', 'Line drawing', 'Urban sketching', 'Freehand drawing']",
     Subject: "A traditional wooden gazebo or garden shelter structure with a prominent peaked roof, architectural details including decorative trim and support posts. The structure appears to be drawn in a classical or Victorian style.",
     Keywords: "['gazebo', 'architectural drawing', 'sketch', 'garden structure', 'pavilion', 'urban sketching', 'ink drawing', 'architectural details', 'Victorian architecture', 'outdoor shelter', 'line art', 'building illustration']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-07-31",
@@ -1493,7 +1640,8 @@ const data = [
     Style: "Urban sketching/Architectural illustration with watercolor wash technique",
     Subject: "A vintage or historical building facade with classical architectural elements including an arched doorway, shuttered windows, and a dormer window at the top level",
     Keywords: "['urban sketching', 'architecture', 'watercolor', 'building facade', 'classical architecture', 'plein air', 'art supplies', 'architectural drawing', 'streetscape', 'historic building', 'urban art', 'on-location drawing']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-07-21",
@@ -1504,7 +1652,8 @@ const data = [
     Style: "['Architectural sketch', 'Urban sketching', 'Freehand drawing', 'Line drawing', 'Quick study']",
     Subject: "Two simple residential houses drawn from an angular perspective, showing their front and side facades, with basic architectural details like windows, doors, and rooflines",
     Keywords: "['houses', 'architecture', 'sketch', 'residential', 'buildings', 'urban sketch', 'pen drawing', 'black and white', 'architectural illustration', 'home drawing', 'gabled roof', 'landscape sketch', 'freehand', 'urban scene']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-07-17",
@@ -1515,7 +1664,8 @@ const data = [
     Style: "['Architectural sketch', 'Line drawing', 'Urban sketching', 'Freehand illustration']",
     Subject: "A Victorian-era commercial or civic building, likely a historic Campbell's Company building, featuring classical architectural elements and a prominent clock tower in the center",
     Keywords: `['Victorian architecture', 'Clock tower', 'Architectural drawing', 'Historic building', "Campbell's", 'Line art', 'Urban sketch', 'Arched windows', 'Commercial building', 'Heritage architecture', 'Building facade', 'Pen sketch', 'Tower', 'Historic preservation']`,
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-06-30",
@@ -1526,7 +1676,8 @@ const data = [
     Style: "Watercolor painting, impressionistic, loose brushwork, nature study",
     Subject: "A deciduous tree in autumn colors, painted in a minimalist style with a simple base or platform beneath it. The tree appears to be a bonsai or decorative tree given its placement on a platform.",
     Keywords: "['watercolor', 'autumn tree', 'fall colors', 'bonsai', 'nature art', 'botanical illustration', 'tree painting', 'art supplies', 'yellow leaves', 'art study', 'minimalist', 'decorative tree']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-06-22",
@@ -1537,7 +1688,8 @@ const data = [
     Style: "['Contemporary portrait', 'Minimalist', 'Loose brushwork', 'Expressive', 'Monochromatic watercolor']",
     Subject: "A portrait study focusing on facial features and expression, rendered in a minimalist style with emphasis on light and shadow. The composition is centered and frontal, with the subject's gaze directed at the viewer.",
     Keywords: "['portrait', 'watercolor', 'monochrome', 'sketch', 'contemporary art', 'black and white', 'expression', 'top knot', 'minimalist', 'face study', 'grayscale', 'brushwork']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-06-20",
@@ -1548,7 +1700,8 @@ const data = [
     Style: "Impressionistic watercolor painting with minimalist elements",
     Subject: "A lone sailboat moored on still waters against a moody, overcast sky, creating a peaceful and contemplative maritime scene",
     Keywords: "['watercolor', 'sailboat', 'seascape', 'maritime', 'nautical', 'atmospheric', 'moody', 'minimalist', 'boat', 'ocean', 'cloudy sky', 'peaceful', 'marine art', 'reflection', 'harbor scene']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-06-17",
@@ -1559,7 +1712,8 @@ const data = [
     Style: "Contemporary watercolor portrait, realistic with slight stylization, loose brushwork with attention to form and shadow",
     Subject: "A portrait study showing the subject from shoulders up, featuring distinctive black-framed glasses and a simple white top. The composition is centered on the cream-colored paper with a subtle background wash.",
     Keywords: "['watercolor', 'portrait', 'glasses', 'contemporary art', 'sketchbook', 'illustration', 'realistic', 'original artwork', 'painting', 'casual portrait']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-06-16",
@@ -1570,7 +1724,8 @@ const data = [
     Style: "Loose watercolor still life with a minimalist approach, featuring soft edges and gentle color gradients typical of wet-on-wet watercolor technique",
     Subject: "A simple floral still life composition featuring a single vase with flowers, demonstrating classic still life arrangement principles with a contemporary, loose painting style",
     Keywords: "['watercolor', 'still life', 'vase', 'flowers', 'pink flowers', 'green vase', 'botanical', 'floral art', 'sketchbook', 'loose painting', 'minimalist', 'home decor', 'nature study']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-06-14",
@@ -1581,7 +1736,8 @@ const data = [
     Style: "Contemporary watercolor portrait, loose realistic style with minimalist approach",
     Subject: "A portrait painting showing a contemplative expression, with the focus on natural, understated features. The composition is centered and cropped at shoulder level.",
     Keywords: "['watercolor', 'portrait', 'art supplies', 'painting', 'contemporary art', 'brown tones', 'art study', 'minimalist', 'artistic process', 'neutral colors', 'loose style', 'creative workspace']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-06-12",
@@ -1592,7 +1748,8 @@ const data = [
     Style: "Contemporary watercolor portrait, loose and expressive with minimal detail and soft edges",
     Subject: "A portrait painting focusing on facial features and expression, rendered in a somewhat minimalist style with emphasis on emotional conveyance through the eyes and facial expression",
     Keywords: "['watercolor', 'portrait', 'contemporary art', 'emotional expression', 'minimalist', 'peach tones', 'artwork', 'painting', 'illustration', 'modern portrait', 'expressive art']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-06-10",
@@ -1603,7 +1760,8 @@ const data = [
     Style: "['Expressive', 'Gestural', 'Contemporary portrait', 'Loose brushwork', 'Monochromatic']",
     Subject: "A portrait study showing emotional expression through facial features, with particular emphasis on the eyes and subtle shadowing to create depth and form",
     Keywords: "['portrait', 'monochrome', 'watercolor', 'ink wash', 'expressionist', 'contemporary art', 'grayscale', 'portrait study', 'gestural artwork', 'emotional expression']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-06-09",
@@ -1614,7 +1772,8 @@ const data = [
     Style: "['Contemporary sketch', 'Realistic portrait', 'Loose gestural drawing', 'Academic drawing style', 'Quick study']",
     Subject: "['Portrait sketch', 'Head and shoulders composition', 'Contemporary figure with glasses', 'Minimal clothing detail with focus on facial features']",
     Keywords: "['portrait', 'sketch', 'charcoal', 'glasses', 'contemporary', 'kraft paper', 'monochrome', 'gestural', 'academic drawing', 'study', 'minimalist']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-06-08",
@@ -1625,7 +1784,8 @@ const data = [
     Style: "['Continuous line drawing', 'Gestural sketch', 'Minimalist', 'Quick study', 'Contemporary sketch']",
     Subject: "A portrait sketch showing someone wearing glasses, depicted from the shoulders up, with a neutral expression. The drawing focuses on capturing the essential features with minimal detail.",
     Keywords: "['sketch', 'portrait', 'line drawing', 'glasses', 'continuous line', 'minimal', 'contemporary', 'quick sketch', 'pen drawing', 'sketchbook art', 'monochrome', 'gestural']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-06-06",
@@ -1636,7 +1796,8 @@ const data = [
     Style: "['Loose sketch', 'Expressive portraiture', 'Quick study', 'Contemporary illustration', 'Gestural drawing']",
     Subject: "['Two portrait studies', 'Sketched figures', 'Character studies', 'Facial expressions', 'Head and shoulder portraits']",
     Keywords: "['portrait', 'sketch', 'illustration', 'drawing', 'artistic study', 'monochrome', 'yellow', 'formal attire', 'sketchbook', 'character design']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-06-05",
@@ -1647,7 +1808,8 @@ const data = [
     Style: "Expressionist sketch/Contemporary portrait drawing with loose, gestural qualities and emotional emphasis rather than strict realism",
     Subject: "A portrait study showing an individual in casual attire, depicted from roughly the chest up, with an emphasis on capturing mood and character rather than photographic accuracy",
     Keywords: "['portrait', 'sketch', 'expressionist', 'contemporary', 'watercolor', 'mixed media', 'gestural', 'loose style', 'sketchbook art', 'character study', 'emotional portrait', 'modern drawing']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-06-04",
@@ -1658,7 +1820,8 @@ const data = [
     Style: "Quick watercolor sketch/study, loose botanical illustration, minimalist watercolor",
     Subject: "A simple potted plant or sapling rendered in a minimalist style, focusing on basic form and light washes of color rather than detailed botanical illustration",
     Keywords: "['watercolor', 'sketch', 'botanical', 'plant', 'pot', 'sapling', 'study', 'minimal', 'green', 'gray', 'loose style', 'nature', 'indoor plant', 'art supplies', 'sketchbook']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-06-04",
@@ -1669,7 +1832,8 @@ const data = [
     Style: "Urban sketching / Architectural watercolor illustration with loose, informal linework combined with watercolor washes",
     Subject: "A tower structure, likely a beach lifeguard tower or observation post, depicted with a distinctive peaked roof and elevated platform, shown against a sky background",
     Keywords: "['watercolor', 'sketch', 'architecture', 'tower', 'lifeguard station', 'beach', 'observation post', 'urban sketching', 'plein air', 'art supplies', 'drawing', 'illustration']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-05-31",
@@ -1680,7 +1844,8 @@ const data = [
     Style: "['Realistic portrait sketch', 'Contemporary charcoal drawing', 'Traditional portraiture', 'Naturalistic rendering']",
     Subject: "['Portrait study', 'Three-quarter view portrait', 'Expression study', 'Contemporary portraiture']",
     Keywords: "['charcoal', 'portrait', 'sketch', 'black and white', 'drawing', 'art study', 'monochrome', 'realism', 'sketchbook', 'fine art', 'shading', 'contemporary art']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-05-29",
@@ -1691,7 +1856,8 @@ const data = [
     Style: "Contemporary realistic sketch portrait with elements of expressionism, executed in a loose, gestural drawing technique",
     Subject: "A portrait study focusing on facial features and emotional expression, rendered in charcoal with dramatic shadowing and contrast",
     Keywords: "['portrait', 'charcoal drawing', 'sketch', 'monochrome', 'expressionist', 'contemporary art', 'emotional expression', 'gesture drawing', 'portraiture', 'art study', 'tonal drawing', 'dramatic lighting']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-05-26",
@@ -1702,7 +1868,8 @@ const data = [
     Style: "['Contemporary', 'Impressionistic', 'Loose watercolor', 'Gestural', 'Minimalist portrait']",
     Subject: "A portrait study executed in blue watercolor, featuring a figure with glasses and a contemplative expression. The composition is centered on the page and focuses on the head and shoulders.",
     Keywords: "['watercolor', 'portrait', 'blue', 'monochromatic', 'glasses', 'sketch', 'contemporary art', 'gestural painting', 'minimal', 'loose style', 'sketchbook', 'art study']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2022-02-22",
@@ -1713,7 +1880,8 @@ const data = [
     Style: "['Contemporary portrait', 'Minimalist watercolor', 'Sketch to watercolor progression', 'Loose gestural style', 'Modern illustration']",
     Subject: "A portrait study featuring glasses and long hair, shown in both sketch and watercolor form, demonstrating the artistic process from initial drawing to colored completion",
     Keywords: "['portrait', 'watercolor', 'sketch', 'artistic process', 'blue', 'progression', 'art workspace', 'illustration', 'drawing', 'before and after', 'art supplies', 'studio setup']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2021-12-26",
@@ -1724,7 +1892,8 @@ const data = [
     Style: "['Expressionist', 'Contemporary', 'Loose watercolor', 'Amateur/learning style', 'Bold color application']",
     Subject: "A portrait painting showing a figure from shoulders up, featuring distinctive blue hair and bold yellow skin tones, painted in an experimental watercolor style",
     Keywords: "['watercolor', 'portrait', 'painting', 'art supplies', 'blue hair', 'experimental', 'contemporary art', 'art process', 'creative', 'bold colors', 'expressive']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2021-12-26",
@@ -1735,18 +1904,8 @@ const data = [
     Style: "['Contemporary watercolor', 'Loose illustration', 'Minimalist portrait', 'Sketch-like quality', 'Modern casual style']",
     Subject: "A contemporary portrait featuring simplified features, with emphasis on bold hair color and eyewear, rendered in a loose watercolor technique with minimal detail",
     Keywords: "['watercolor', 'portrait', 'contemporary art', 'red hair', 'sunglasses', 'illustration', 'minimal', 'modern portrait', 'loose style', 'fashion illustration', 'art process', 'work in progress']",
-    Category: "Blog"
-  },
-  {
-    "Date": "2021-12-09",
-    Title: "Not moving enough",
-    img_path: "Notmoving.jpeg",
-    Caption: "A sketch on white paper showing four similar portraits arranged in a diamond pattern. Each sketch depicts a face wearing glasses rendered in a simple, manga-inspired style. The drawing appears to be done on a notebook or sketchbook placed on a dark granite or marble surface, with what appears to be a glass of beer or amber liquid visible in the corner.",
-    Colours: "['Grey (pencil)', 'White (paper)', 'Dark speckled grey/black (counter surface)', 'Amber/golden (beverage in glass)', 'Brown (pen handle)']",
-    Style: "['Manga/Anime-inspired', 'Sketch', 'Quick study', 'Minimalist line drawing']",
-    Subject: "Four quick portrait sketches showing similar faces with glasses in different angles and expressions, possibly studies of the same character from different perspectives",
-    Keywords: "['sketch', 'manga', 'portraits', 'glasses', 'character study', 'pencil drawing', 'anime style', 'face study', 'multiple angles', 'rough sketch', 'line art', 'character design']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2021-12-09",
@@ -1757,7 +1916,20 @@ const data = [
     Style: "['Quick sketch', 'Gestural drawing', 'Linear drawing', 'Contemporary portrait', 'Minimalist', 'Study sketch']",
     Subject: "A portrait sketch showing a head and partial shoulders in three-quarter view, featuring glasses and short hair in a contemporary style",
     Keywords: "['sketch', 'portrait', 'glasses', 'pencil drawing', 'gestural', 'contemporary', 'minimal', 'quick study', 'head drawing', 'line art', 'draft', 'artistic study']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
+  },
+  {
+    "Date": "2021-12-09",
+    Title: "Not moving enough",
+    img_path: "Notmoving.jpeg",
+    Caption: "A sketch on white paper showing four similar portraits arranged in a diamond pattern. Each sketch depicts a face wearing glasses rendered in a simple, manga-inspired style. The drawing appears to be done on a notebook or sketchbook placed on a dark granite or marble surface, with what appears to be a glass of beer or amber liquid visible in the corner.",
+    Colours: "['Grey (pencil)', 'White (paper)', 'Dark speckled grey/black (counter surface)', 'Amber/golden (beverage in glass)', 'Brown (pen handle)']",
+    Style: "['Manga/Anime-inspired', 'Sketch', 'Quick study', 'Minimalist line drawing']",
+    Subject: "Four quick portrait sketches showing similar faces with glasses in different angles and expressions, possibly studies of the same character from different perspectives",
+    Keywords: "['sketch', 'manga', 'portraits', 'glasses', 'character study', 'pencil drawing', 'anime style', 'face study', 'multiple angles', 'rough sketch', 'line art', 'character design']",
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2021-11-27",
@@ -1768,7 +1940,8 @@ const data = [
     Style: "Monochromatic watercolor portrait sketch with loose, expressive brushwork",
     Subject: "A portrait sketch featuring someone wearing rectangular glasses, rendered in black and grey tones with a simple, minimalist approach to detail",
     Keywords: "['watercolor', 'portrait', 'monochrome', 'sketch', 'glasses', 'art supplies', 'black and white', 'minimalist', 'contemporary', 'artistic workspace', 'creative process']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2021-11-26",
@@ -1779,7 +1952,8 @@ const data = [
     Style: "['Sketch', 'Gestural drawing', 'Contemporary', 'Life drawing', 'Quick study']",
     Subject: "A portrait sketch featuring loose, expressive line work capturing facial features, with particular attention to the eyes, nose, and lips. The drawing shows a three-quarter view of the subject's face with minimal shading.",
     Keywords: "['portrait', 'sketch', 'drawing', 'art study', 'line work', 'facial features', 'contemporary art', 'pencil drawing', 'gestural', 'artistic process', 'work in progress']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2021-05-31",
@@ -1790,7 +1964,8 @@ const data = [
     Style: "['Sketchy', 'Contemporary portraiture', 'Gestural drawing', 'Quick study', 'Expressive realism']",
     Subject: "A portrait sketch showing the head and partial shoulders of a figure wearing casual clothing and a head covering, rendered in an expressive style with emphasis on facial features and emotional quality",
     Keywords: "['portrait', 'sketch', 'pencil drawing', 'contemporary art', 'expressive', 'gestural', 'monochrome', 'beanie', 'urban style', 'character study', 'facial expression', 'emotional']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2021-05-23",
@@ -1801,7 +1976,8 @@ const data = [
     Style: "['Naturalistic sketch', 'Loose gestural drawing', 'Contemporary illustration', 'Quick study']",
     Subject: "Two birds sketched in profile, with emphasis on their characteristic round eyes and beaks. The drawing captures the soft, rounded forms typical of common garden birds or pigeons.",
     Keywords: "['bird sketch', 'graphite drawing', 'nature illustration', 'wildlife art', 'bird study', 'charcoal drawing', 'avian art', 'black and white sketch', 'natural history illustration', 'ornithological drawing']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2021-05-10",
@@ -1812,7 +1988,8 @@ const data = [
     Style: "['Quick sketch', 'Loose gestural drawing', 'Contemporary portrait', 'Realistic with expressive elements']",
     Subject: "A portrait drawing featuring a contemporary figure wearing glasses, captured in a casual, candid style with emphasis on facial expression and basic features",
     Keywords: "['portrait', 'sketch', 'glasses', 'contemporary', 'pencil drawing', 'graphite', 'facial expression', 'gestural', 'casual portrait', 'art study', 'quick sketch']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2021-04-18",
@@ -1823,7 +2000,8 @@ const data = [
     Style: "['Realistic sketch', 'Maritime illustration', 'Monochromatic drawing', 'Loose watercolor technique']",
     Subject: "A passenger ferry or tour boat with multiple viewing decks, windows, and a small flag on top, depicted in a maritime scene with suggested water beneath",
     Keywords: "['boat sketch', 'maritime art', 'ferry drawing', 'nautical illustration', 'watercolor supplies', 'monochrome', 'vessel', 'marine sketch', 'ship drawing', 'artistic process', 'plein air']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2021-04-18",
@@ -1834,7 +2012,8 @@ const data = [
     Style: "['Urban sketching', 'Architectural illustration', 'Monochromatic', 'Loose sketch style', 'Quick gestural drawing']",
     Subject: "A classical or historical building facade with multiple arched windows and doors, accompanied by a tree, rendered in a loose sketching style with grey tones",
     Keywords: "['urban sketch', 'architecture', 'coffee', 'art supplies', 'monochrome', 'sketchbook', 'building facade', 'arches', 'watercolor', 'cafe art', 'creative workspace', 'architectural drawing', 'urban art', 'sketching', 'artistic process']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2021-01-24",
@@ -1845,7 +2024,8 @@ const data = [
     Style: "['Quick sketch', 'Minimalist', 'Life drawing', 'Observational drawing', 'Line art']",
     Subject: "Two figures sitting together in a quiet moment, viewed from behind. The composition suggests intimacy and companionship through simple body language and positioning.",
     Keywords: "['sketch', 'drawing', 'figures', 'companionship', 'minimalist', 'black and white', 'line drawing', 'friendship', 'relationship', 'quiet moment', 'sitting', 'back view', 'intimate', 'casual', 'observational']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2021-01-15",
@@ -1856,7 +2036,8 @@ const data = [
     Style: "['Urban sketch', 'Architectural drawing', 'Freehand sketch', 'Line drawing']",
     Subject: "A street-level view of a commercial building facade with classical architectural elements, including decorated pillars, multiple windows, and street infrastructure",
     Keywords: "['architecture', 'urban sketch', 'building facade', 'storefront', 'retail building', 'street scene', 'pencil drawing', 'architectural detail', 'windows', 'pillars', 'commercial building', 'street view']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-12-19",
@@ -1867,7 +2048,8 @@ const data = [
     Style: "['Gestural sketch', 'Quick study', 'Linear drawing', 'Minimalist', 'Contemporary sketching', 'Life drawing']",
     Subject: "Two head studies showing different angles - one frontal view and one profile view. The sketches appear to be quick observational studies focusing on capturing basic form and expression.",
     Keywords: "['sketch', 'portrait', 'head study', 'line drawing', 'gestural', 'sketchbook', 'ink drawing', 'profile', 'frontal view', 'quick study', 'character sketch', 'anatomical study']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-10-31",
@@ -1878,7 +2060,8 @@ const data = [
     Style: "['Architectural sketch', 'Perspective drawing', 'Freehand drawing', 'Interior illustration', 'Observational drawing']",
     Subject: "An interior architectural space, possibly a classroom, studio, or educational setting, drawn with attention to perspective and spatial relationships. The drawing emphasizes architectural elements like the arched doorway, ceiling beams, and furniture arrangement.",
     Keywords: "['architectural sketch', 'interior drawing', 'perspective', 'classroom', 'furniture', 'arch', 'desks', 'stools', 'hallway', 'ceiling beams', 'spatial design', 'graphite drawing', 'architectural interior', 'educational space', 'room layout']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-10-24",
@@ -1889,7 +2072,8 @@ const data = [
     Style: "['Impressionistic', 'Loose watercolor', 'Monochromatic', 'Contemporary portrait', 'Gestural']",
     Subject: "A side profile portrait rendered in blue watercolor, featuring distinctive facial hair and a contemplative expression. The composition focuses on the head and shoulders, with the figure appearing to emerge from the white of the paper through careful application of blue washes.",
     Keywords: "['watercolor', 'monochromatic', 'portrait', 'profile', 'beard', 'blue', 'impressionist', 'loose style', 'classical', 'study', 'contemplative', 'minimal']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-10-23",
@@ -1900,7 +2084,8 @@ const data = [
     Style: "['Classical portrait', 'Watercolor painting', 'Monochromatic study', 'Traditional portraiture', 'Loose brush technique']",
     Subject: "A portrait study featuring a bearded figure in historical dress, wearing a wide-brimmed hat and what appears to be a dark coat or cloak. The style and attire suggest this may be inspired by Renaissance or classical portraiture.",
     Keywords: "['watercolor', 'monochrome', 'portrait', 'historical', 'beard', 'hat', 'classical', 'renaissance', 'sketch', 'traditional art', 'black and white', 'study', 'period costume']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-10-11",
@@ -1911,7 +2096,8 @@ const data = [
     Style: "Contemporary sketch portrait with water-soluble media, showing characteristics of loose gestural drawing with a somewhat expressionistic approach",
     Subject: "A portrait sketch showing the face and upper shoulders, characterized by strong tonal contrasts and expressive mark-making",
     Keywords: "['Portrait', 'Sketch', 'Water-soluble graphite', 'ArtGraf', 'Monochrome', 'Drawing', 'Gestural', 'Expressive', 'Contemporary art', 'Works on paper']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-10-04",
@@ -1922,7 +2108,8 @@ const data = [
     Style: "Urban sketching/Architectural illustration with a monochromatic palette, featuring realistic perspective and shading techniques",
     Subject: "A window view of the Pyramids of Giza from what appears to be a Cairo building, capturing both architectural elements and historical monuments in one composition",
     Keywords: "['Pyramids', 'Egypt', 'Urban sketch', 'Architecture', 'Window view', 'Perspective drawing', 'Monochrome', 'Travel art', 'Historical monuments', 'Landscape', 'Urban scene', 'Architectural detail', 'Giza', 'Cairo', 'Sketchbook art']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-10-02",
@@ -1933,7 +2120,8 @@ const data = [
     Style: "Minimalist sketch/Observational drawing with light watercolor wash, architectural interior study",
     Subject: "An interior domestic scene showing a living room or sitting area with furniture and windows, capturing a quiet moment of everyday life through simple architectural elements and furnishings",
     Keywords: "['interior sketch', 'living room', 'sofa', 'windows', 'cushions', 'furniture', 'architectural drawing', 'monochrome', 'watercolor', 'domestic scene', 'minimalist', 'observational drawing', 'stool', 'home interior', 'sketch book']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-10-02",
@@ -1944,7 +2132,8 @@ const data = [
     Style: "['Minimalist', 'Botanical sketch', 'Loose watercolor', 'Contemporary', 'Observational drawing']",
     Subject: "Indoor potted plants in a domestic setting, likely on a windowsill, captured in a casual, observational style. The composition shows three different types of houseplants with varying leaf shapes and sizes.",
     Keywords: "['houseplants', 'botanical art', 'watercolor', 'monochrome', 'sketch', 'indoor plants', 'windowsill', 'potted plants', 'minimalist', 'black and white', 'nature study', 'domestic scene']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-10-01",
@@ -1955,7 +2144,8 @@ const data = [
     Style: "['Monochromatic', 'Expressive', 'Contemporary', 'Ink wash', 'Gestural']",
     Subject: "A dramatic close-up portrait of a fish, emphasizing its eye and facial features with strong tonal contrast and expressive brushwork",
     Keywords: "['fish', 'monochrome', 'aquatic', 'ink painting', 'nature art', 'marine life', 'black and white', 'dramatic', 'expressive', 'wildlife', 'sketch', 'brushwork', 'contrast', 'aquatic art']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-09-30",
@@ -1966,7 +2156,8 @@ const data = [
     Style: "Urban sketch/Watercolor illustration with ink line work, casual and loose illustrative style with a minimalist approach",
     Subject: "An urban window scene with a cat, depicting city architecture and plant life in a simple, stylized manner",
     Keywords: "['Urban sketch', 'Watercolor', 'Cat', 'City', 'Architecture', 'Windows', 'Plants', 'Buildings', 'Illustration', 'Mixed media', 'Urban landscape', 'Minimal', 'Cityscape', 'Sketchbook art']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-09-30",
@@ -1977,7 +2168,8 @@ const data = [
     Style: "Urban sketching/architectural watercolor illustration with loose, informal linework combined with watercolor washes",
     Subject: "City view from a window in Phnom Penh, Cambodia, focusing on urban architecture and cityscape",
     Keywords: "['Urban sketch', 'Cityscape', 'Phnom Penh', 'Architecture', 'Watercolor', 'Building', 'Apartment', 'Window view', 'Urban landscape', 'Travel sketch', 'Cambodia', 'Urban architecture', 'Sketchbook art']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-09-07",
@@ -1988,18 +2180,8 @@ const data = [
     Style: "['Portrait sketch', 'Contemporary realism', 'Traditional drawing', 'Tonal drawing']",
     Subject: "A portrait study showing facial features and upper shoulders wearing what appears to be a dark sleeveless top. The drawing demonstrates attention to facial anatomy and tonal values.",
     Keywords: "['portrait', 'sketch', 'drawing', 'pencil art', 'toned paper', 'graphite', 'realism', 'portraiture', 'traditional art', 'monochromatic', 'tonal study']",
-    Category: "Blog"
-  },
-  {
-    "Date": "2020-09-03",
-    Title: "So many orange buildings",
-    img_path: "Romewindowsketch.jpeg",
-    Caption: "A watercolor sketch of a narrow European street perspective, likely in Rome, showing a salmon-pink building with multiple shuttered windows on the right side. The street slopes upward with stairs visible in the background. A small figure is walking along the street. The scene uses dramatic angles and architectural details typical of Italian urban settings.",
-    Colours: "['Salmon pink', 'Yellow', 'Grey', 'Black', 'Brown', 'White']",
-    Style: "['Urban sketch', 'Architectural illustration', 'Loose watercolor', 'Travel sketch', 'Perspective drawing']",
-    Subject: "A street scene in Rome titled 'Altai's Window', depicting traditional Italian architecture with characteristic shuttered windows and a sloping cobblestone street",
-    Keywords: "['Rome', 'Italian architecture', 'Street scene', 'Urban landscape', 'Perspective', 'Windows', 'Shutters', 'European street', 'Travel sketch', 'Watercolor', 'Urban sketching', 'Architecture drawing', 'Mediterranean', 'Historic building']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-09-03",
@@ -2010,7 +2192,20 @@ const data = [
     Style: "['Sketch art', 'Victorian-inspired', 'Expressionist', 'Traditional drawing', 'Character study']",
     Subject: "A portrait study showing a figure in Victorian or vintage formal wear, featuring a top hat and jacket. The drawing captures a somewhat dramatic expression with defined facial features and classic styling.",
     Keywords: "['portrait', 'vintage', 'charcoal', 'sketch', 'top hat', 'formal wear', 'kraft paper', 'Victorian', 'character art', 'monochrome', 'traditional art', 'historical fashion']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
+  },
+  {
+    "Date": "2020-09-03",
+    Title: "So many orange buildings",
+    img_path: "Romewindowsketch.jpeg",
+    Caption: "A watercolor sketch of a narrow European street perspective, likely in Rome, showing a salmon-pink building with multiple shuttered windows on the right side. The street slopes upward with stairs visible in the background. A small figure is walking along the street. The scene uses dramatic angles and architectural details typical of Italian urban settings.",
+    Colours: "['Salmon pink', 'Yellow', 'Grey', 'Black', 'Brown', 'White']",
+    Style: "['Urban sketch', 'Architectural illustration', 'Loose watercolor', 'Travel sketch', 'Perspective drawing']",
+    Subject: "A street scene in Rome titled 'Altai's Window', depicting traditional Italian architecture with characteristic shuttered windows and a sloping cobblestone street",
+    Keywords: "['Rome', 'Italian architecture', 'Street scene', 'Urban landscape', 'Perspective', 'Windows', 'Shutters', 'European street', 'Travel sketch', 'Watercolor', 'Urban sketching', 'Architecture drawing', 'Mediterranean', 'Historic building']",
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-08-30",
@@ -2021,7 +2216,8 @@ const data = [
     Style: "['Observational sketch', 'Architectural drawing', 'Urban sketching', 'Realistic illustration']",
     Subject: "A window or balcony view from a building in Akhisar, Turkey, showing architectural elements, planters, and a mountain landscape in the background",
     Keywords: "['Urban sketch', 'Architecture', 'Balcony', 'Mountains', 'Planters', 'Window view', 'Residential', 'Turkey', 'Akhisar', 'Landscape', 'Perspective drawing', 'Pencil art']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-08-29",
@@ -2032,7 +2228,8 @@ const data = [
     Style: "['Urban sketch', 'Observational drawing', 'Architectural illustration', 'Casual sketch style', 'Perspective drawing']",
     Subject: "A domestic interior scene looking out through a window in Copenhagen, featuring a resting dog on window cushions with urban architecture visible through the window frame",
     Keywords: "['Copenhagen', 'Urban sketch', 'Window view', 'Dog', 'Architecture', 'Interior', 'Cityscape', 'Balconies', 'Street scene', 'Perspective', 'Apartment buildings', 'Cushions', 'Domestic scene', 'Danish architecture', 'Pencil drawing']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-08-29",
@@ -2043,7 +2240,8 @@ const data = [
     Style: "['Architectural sketch', 'Technical illustration', 'Freehand drawing', 'Urban sketching']",
     Subject: "A mobile or temporary COVID-19 testing facility depicted as a modular building or trailer unit with signage and access points",
     Keywords: "['COVID-19', 'Medical facility', 'Mobile unit', 'Architectural drawing', 'Sketch', 'Testing center', 'Trailer', 'Healthcare', 'Modular building', 'Ink drawing', 'Urban sketch', 'Pandemic', 'Medical infrastructure']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-08-29",
@@ -2054,7 +2252,8 @@ const data = [
     Style: "['Quick sketch', 'Line drawing', 'Freehand illustration', 'Urban sketching', 'Minimalist']",
     Subject: "A mobile cold brew coffee vending setup consisting of a pop-up tent, bicycle cart, and promotional signage",
     Keywords: "['cold brew', 'coffee cart', 'bicycle cart', 'pop-up shop', 'vendor tent', 'street food', 'mobile business', 'sketch', 'illustration', 'outdoor market', 'sandwich board', 'pricing sign', 'canopy tent']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-08-28",
@@ -2065,7 +2264,8 @@ const data = [
     Style: "['Sketch art', 'Quick study', 'Loose gestural drawing', 'Observational drawing', 'Contemporary casual sketch']",
     Subject: "A figure in a relaxed pose sitting in a wooden chair, featuring loose clothing and distinctive hair, captured in a casual, observational style",
     Keywords: "['sketch', 'portrait', 'chair', 'figure drawing', 'pencil art', 'casual pose', 'gestural', 'observational', 'contemporary', 'relaxed', 'sunglasses', 'seated figure', 'loose style', 'sketchbook', 'study']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-08-25",
@@ -2076,7 +2276,8 @@ const data = [
     Style: "['Gestural sketch', 'Quick line drawing', 'Minimalist', 'Loose contour drawing', 'Expressive linework']",
     Subject: "A portrait sketch of a figure wearing a hat with a patterned band, showing shoulders and head in a casual, contemplative pose",
     Keywords: "['sketch', 'portrait', 'hat', 'line drawing', 'pen sketch', 'notebook art', 'quick drawing', 'expressive', 'gestural', 'minimalist portrait', 'sketchbook', 'casual drawing']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-08-23",
@@ -2087,7 +2288,8 @@ const data = [
     Style: "['Still life sketch', 'Realistic drawing', 'Traditional pencil art', 'Observational drawing']",
     Subject: "A round ceramic or clay pot containing wilting flowers or plants with long, curved stems. The pot appears to be sitting on a flat surface with a cast shadow.",
     Keywords: "['still life', 'botanical', 'pot plant', 'pencil sketch', 'wilting flowers', 'shading', 'monochrome', 'grayscale', 'plant drawing', 'pottery', 'garden art', 'sketching', 'botanical illustration', 'shadow study', 'indoor plant']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-08-22",
@@ -2098,7 +2300,8 @@ const data = [
     Style: "['Quick sketch', 'Urban sketching', 'Minimalist line drawing', 'Loose gestural drawing']",
     Subject: "An outdoor event setup with canopy tents and audio equipment near a waterfront or beach setting",
     Keywords: "['beach', 'canopy tents', 'outdoor event', 'waterfront', 'sketch', 'audio equipment', 'speaker stand', 'monochrome', 'outdoor scene', 'pop-up tents', 'seaside', 'event setup']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-08-20",
@@ -2109,7 +2312,8 @@ const data = [
     Style: "['Architectural sketch', 'Technical drawing', 'Freehand illustration', 'Minimalist', 'Linear drawing']",
     Subject: "A three-drawer cabinet or chest of drawers shown in a perspective view, featuring hatched shading to indicate surfaces and form",
     Keywords: "['furniture sketch', 'cabinet', 'drawers', 'hatching', 'perspective drawing', 'blue ink', 'architectural drawing', 'furniture design', 'technical sketch', 'interior design', 'linear drawing', 'monochromatic']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-08-19",
@@ -2120,7 +2324,8 @@ const data = [
     Style: "['Quick sketch', 'Loose line drawing', 'Urban sketching', 'Gestural drawing']",
     Subject: "A recreational or small commercial boat, possibly a ferry or tour boat, shown in profile view on water with simple landscape elements suggested in the background",
     Keywords: "['boat sketch', 'maritime drawing', 'vessel illustration', 'nautical art', 'pen drawing', 'quick sketch', 'watercraft', 'marine sketch', 'transportation drawing', 'sketchbook', 'line art']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-08-18",
@@ -2131,7 +2336,8 @@ const data = [
     Style: "['Quick sketch', 'Gesture drawing', 'Line art', 'Minimalist', 'Informal sketch']",
     Subject: "A solitary figure in casual attire seated on a rocky formation, suggesting themes of solitude, contemplation, and connection with nature",
     Keywords: "['sketch', 'figure drawing', 'landscape', 'contemplation', 'outdoor scene', 'cliff', 'rocks', 'line drawing', 'black and white', 'minimalist', 'nature', 'solitude', 'gestural', 'quick drawing']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-08-15",
@@ -2142,7 +2348,8 @@ const data = [
     Style: "['Quick sketch', 'Architectural drawing', 'Line art', 'Freehand illustration']",
     Subject: "Two ticket booth structures sketched from different angles, possibly representing concept drawings for an event venue or entertainment facility design",
     Keywords: "['ticket booth', 'kiosk', 'architectural sketch', 'line drawing', 'perspective drawing', 'concept art', 'venue design', 'booth design', 'rough sketch', 'structural drawing', 'event planning', 'ticket counter']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-08-12",
@@ -2153,7 +2360,8 @@ const data = [
     Style: "Quick gestural landscape sketch",
     Subject: "A mountainous landscape with dramatic peaks and valleys, featuring strong contrast between light and shadow. The drawing captures the natural formation and texture of mountain terrain with expressive mark-making.",
     Keywords: "['landscape', 'mountains', 'sketch', 'graphite', 'nature', 'peaks', 'dramatic', 'black and white', 'gestural', 'outdoor scene', 'terrain', 'topography', 'geological', 'drawing']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-08-09",
@@ -2164,7 +2372,8 @@ const data = [
     Style: "['Sketch art', 'Gestural drawing', 'Loose illustration', 'Quick study', 'Minimalist']",
     Subject: "A figure in traditional East Asian clothing, possibly depicting a geisha or someone in traditional Japanese dress, complete with a wide conical hat and fan, standing in a contemplative pose",
     Keywords: "['Asian', 'Traditional dress', 'Sketch', 'Pencil drawing', 'Conical hat', 'Fan', 'Traditional costume', 'Japanese', 'Gestural', 'Figure drawing', 'Cultural art', 'Traditional', 'Minimalist sketch']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-08-08",
@@ -2175,7 +2384,8 @@ const data = [
     Style: "['Quick sketch', 'Botanical illustration', 'Simple line drawing', 'Amateur/practice drawing', 'Loose gestural style']",
     Subject: "A simple still life drawing of flowers in a round pot. The pot appears to be a classic rounded vessel shape, with what appears to be small daisy-like flowers emerging from it with simple leaves.",
     Keywords: "['sketch', 'flowers', 'potted plant', 'botanical', 'still life', 'pencil drawing', 'grayscale', 'simple', 'garden', 'floral', 'houseplant', 'practice drawing', 'sketchbook']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-08-03",
@@ -2186,7 +2396,8 @@ const data = [
     Style: "Casual freehand architectural sketch with loose line work and basic perspective drawing techniques",
     Subject: "An interior office workspace setup drawn from a corner perspective, showcasing typical office furniture and equipment in a quick observational sketch style",
     Keywords: "['office sketch', 'workspace drawing', 'interior design', 'architectural sketch', 'perspective drawing', 'desk setup', 'office furniture', 'pencil drawing', 'freehand sketch', 'workspace layout', 'interior sketch', 'office environment']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-08-03",
@@ -2197,18 +2408,8 @@ const data = [
     Style: "['Expressionist', 'Contemporary sketch', 'Loose gestural drawing', 'Amateur/student art', 'Raw/unrefined drawing style']",
     Subject: "['Portrait drawing', 'Head and shoulders composition', 'Expressive facial study']",
     Keywords: "['portrait', 'sketch', 'colored pencil art', 'expressionist', 'contemporary drawing', 'sketchbook', 'facial study', 'amateur art', 'gestural drawing', 'dual-tone', 'purple and blue']",
-    Category: "Blog"
-  },
-  {
-    "Date": "2020-08-02",
-    Title: "Piped in",
-    img_path: "Pipedin.jpeg",
-    Caption: "A colorful portrait sketch showing a person with blue hair and mustache, wearing a blue suit and purple tie. The face is drawn in orange/red tones, and the subject is smoking a purple pipe. The drawing has a somewhat whimsical, informal quality with loose, expressive strokes.",
-    Colours: "['Blue', 'Orange/Red', 'Purple', 'White (paper)']",
-    Style: "['Casual sketch', 'Folk art style', 'Expressionist', 'Naive art']",
-    Subject: "A portrait sketch of a person in business attire smoking a pipe, drawn with bold colors and informal strokes, giving it a characterful, almost caricature-like quality",
-    Keywords: "['portrait', 'sketch', 'colorful', 'pipe-smoker', 'business attire', 'mustache', 'blue suit', 'casual art', 'colored pencil drawing', 'character study', 'expressive']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-08-02",
@@ -2219,7 +2420,8 @@ const data = [
     Style: "['Sketch art', 'Realistic drawing', 'Contemporary portrait', 'Quick study', 'Loose line drawing']",
     Subject: "A profile portrait sketch featuring someone wearing what appears to be a cap or hat, with attention paid to facial features and some clothing details visible at the neck area",
     Keywords: "['portrait', 'sketch', 'profile', 'hat', 'cap', 'pencil drawing', 'graphite', 'facial study', 'contemporary art', 'line drawing', 'monochrome', 'side view']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-08-02",
@@ -2230,7 +2432,20 @@ const data = [
     Style: "['Quick sketch', 'Minimalist', 'Gestural drawing', 'Contemporary figure drawing']",
     Subject: "A portrait sketch featuring a person in what appears to be military or formal attire, depicted from roughly the chest up, with structured shoulders and a high collar",
     Keywords: "['sketch', 'portrait', 'uniform', 'military style', 'sepia drawing', 'figure study', 'minimal art', 'quick drawing', 'formal attire', 'structured jacket']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
+  },
+  {
+    "Date": "2020-08-02",
+    Title: "Piped in",
+    img_path: "Pipedin.jpeg",
+    Caption: "A colorful portrait sketch showing a person with blue hair and mustache, wearing a blue suit and purple tie. The face is drawn in orange/red tones, and the subject is smoking a purple pipe. The drawing has a somewhat whimsical, informal quality with loose, expressive strokes.",
+    Colours: "['Blue', 'Orange/Red', 'Purple', 'White (paper)']",
+    Style: "['Casual sketch', 'Folk art style', 'Expressionist', 'Naive art']",
+    Subject: "A portrait sketch of a person in business attire smoking a pipe, drawn with bold colors and informal strokes, giving it a characterful, almost caricature-like quality",
+    Keywords: "['portrait', 'sketch', 'colorful', 'pipe-smoker', 'business attire', 'mustache', 'blue suit', 'casual art', 'colored pencil drawing', 'character study', 'expressive']",
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-07-26",
@@ -2241,18 +2456,8 @@ const data = [
     Style: "['Gestural sketch', 'Quick study', 'Expressive drawing', 'Loose sketching technique', 'Contemporary portrait drawing']",
     Subject: "A portrait sketch showing facial features from a slight side angle, with emphasis on shadow areas and defining characteristics like the eyes, nose, and mouth through quick, dynamic strokes",
     Keywords: "['sketch', 'portrait', 'graphite', 'drawing', 'profile', 'gestural', 'expression', 'linework', 'study', 'contemporary', 'face', 'artwork']",
-    Category: "Blog"
-  },
-  {
-    "Date": "2020-07-14",
-    Title: "Out for lunch",
-    img_path: "Fancy.jpeg",
-    Caption: "A rough pencil sketch of a water pipe or bong sitting on what appears to be a table or surface. The sketch includes details of the pipe's structure, including the neck, base, and some additional objects in the background. The drawing has a loose, informal quality with sketchy lines.",
-    Colours: "['Grey', 'White', 'Light graphite tones']",
-    Style: "['Rough sketch', 'Observational drawing', 'Quick study', 'Informal line drawing']",
-    Subject: "A smoking apparatus or water pipe drawn from observation, with some background elements including what appear to be objects on a shelf or surface",
-    Keywords: "['sketch', 'drawing', 'pipe', 'still life', 'pencil art', 'grayscale', 'smoking device', 'study', 'observational drawing', 'informal sketch']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-07-14",
@@ -2263,7 +2468,20 @@ const data = [
     Style: "['Minimalist line art', 'Sketch', 'Contemporary illustration', 'Character design', 'Quick-study drawing']",
     Subject: "A character portrait featuring a bearded figure wearing what appears to be a uniform or formal attire with a cap or hat. The drawing emphasizes facial features through simple line work.",
     Keywords: "['line drawing', 'portrait', 'sketch', 'facial hair', 'uniform', 'cap', 'blue ink', 'minimalist', 'illustration', 'character design', 'beard', 'mustache', 'front view']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
+  },
+  {
+    "Date": "2020-07-14",
+    Title: "Out for lunch",
+    img_path: "Fancy.jpeg",
+    Caption: "A rough pencil sketch of a water pipe or bong sitting on what appears to be a table or surface. The sketch includes details of the pipe's structure, including the neck, base, and some additional objects in the background. The drawing has a loose, informal quality with sketchy lines.",
+    Colours: "['Grey', 'White', 'Light graphite tones']",
+    Style: "['Rough sketch', 'Observational drawing', 'Quick study', 'Informal line drawing']",
+    Subject: "A smoking apparatus or water pipe drawn from observation, with some background elements including what appear to be objects on a shelf or surface",
+    Keywords: "['sketch', 'drawing', 'pipe', 'still life', 'pencil art', 'grayscale', 'smoking device', 'study', 'observational drawing', 'informal sketch']",
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-07-13",
@@ -2274,7 +2492,8 @@ const data = [
     Style: "['Sketch art', 'Line drawing', 'Freehand drawing', 'Contemporary illustration', 'Quick study']",
     Subject: "A bearded face drawn in profile with emphasis on facial features including eyes, nose, and facial hair. The drawing has a somewhat ethereal or mystical quality due to the crown-like hair treatment.",
     Keywords: "['sketch', 'beard', 'portrait', 'blue', 'line art', 'facial features', 'illustration', 'drawing', 'quick sketch', 'profile', 'masculine', 'artistic', 'contemporary art', 'freehand']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-07-09",
@@ -2285,7 +2504,8 @@ const data = [
     Style: "['Sketch art', 'Portrait drawing', 'Loose expressive style', 'Contemporary sketching', 'Gestural drawing']",
     Subject: "A portrait sketch showing expressive facial features with emphasis on the eyes, distinctive hairstyle, and wearing what appears to be a collar or jacket",
     Keywords: "['portrait', 'sketch', 'orange', 'pastel', 'chalk drawing', 'expressive', 'art supplies', 'sketchbook', 'facial study', 'gestural', 'contemporary art', 'drawing']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-07-08",
@@ -2296,7 +2516,8 @@ const data = [
     Style: "['Sketching', 'Impressionistic', 'Gestural drawing', 'Quick study', 'Loose expressive style']",
     Subject: "A figure study depicting someone in period dress, featuring a wide-brimmed hat and high collar or scarf, shown in profile or three-quarter view",
     Keywords: "['sketch', 'portrait', 'hat', 'period costume', 'monochromatic', 'sanguine', 'gestural', 'loose', 'expressive', 'profile', 'historical', 'study', 'drawing']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-07-08",
@@ -2307,7 +2528,8 @@ const data = [
     Style: "['Sketch', 'Gestural drawing', 'Quick study', 'Contemporary', 'Loose linework']",
     Subject: "A portrait sketch focusing on facial features, particularly emphasizing glasses and hair, with minimal detail in the lower portions including a basic collar or neckline",
     Keywords: "['sketch', 'portrait', 'glasses', 'graphite', 'mechanical pencil', 'gestural', 'study', 'drawing', 'sketchbook', 'contemporary art', 'linework', 'portrait study']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-07-08",
@@ -2318,7 +2540,8 @@ const data = [
     Style: "['Sketch art', 'Noir', 'Gestural drawing', 'Loose expressive style', 'Quick study']",
     Subject: "A silhouetted profile figure in noir detective style, featuring dramatic shadowing and minimal detail, emphasizing the hat and coat silhouette",
     Keywords: "['noir', 'sketch', 'profile', 'hat', 'silhouette', 'mysterious', 'detective', 'shadow', 'graphite', 'loose drawing', 'fedora', 'coat', 'dramatic']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-07-07",
@@ -2329,7 +2552,8 @@ const data = [
     Style: "['Sketch', 'Line drawing', 'Minimalist', 'Quick study', 'Gestural']",
     Subject: "A simple potted plant or bamboo arrangement in a vase, featuring segmented stalks and minimal foliage, depicted from a slightly angled perspective",
     Keywords: "['sketch', 'plant', 'bamboo', 'vase', 'botanical', 'drawing', 'line art', 'minimalist', 'blue', 'houseplant', 'pot', 'stems', 'foliage', 'study']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-06-29",
@@ -2340,7 +2564,8 @@ const data = [
     Style: "['Minimalist sketch', 'Line drawing', 'Portrait sketch', 'Casual illustration', 'Contemporary drawing']",
     Subject: "A portrait sketch showing a front-facing view with simple lines depicting facial features and the suggestion of a collar or neckline of clothing",
     Keywords: "['sketch', 'portrait', 'blue line drawing', 'minimalist', 'illustration', 'notebook art', 'line art', 'casual drawing', 'sketchbook', 'contemporary portrait', 'blue sketch', 'simple drawing']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-06-28",
@@ -2351,7 +2576,8 @@ const data = [
     Style: "['Minimalist line art', 'Sketch illustration', 'Single-line drawing', 'Modern portrait', 'Digital illustration']",
     Subject: "A bust-length portrait drawing of a figure in formal dress, including a jacket, collar, and tie, rendered in a simple linear style",
     Keywords: "['line art', 'portrait', 'minimalist', 'green', 'sketch', 'digital drawing', 'formal attire', 'bust portrait', 'monochrome', 'contemporary art', 'simple illustration']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-06-27",
@@ -2362,7 +2588,8 @@ const data = [
     Style: "['Line art', 'Minimalist sketch', 'Contemporary portrait', 'Quick sketch', 'Gestural drawing']",
     Subject: "A portrait sketch showing a face with defined features, particularly emphasizing cat-eye glasses and a neutral expression. The drawing has a contemporary feel with simplified forms and deliberate line work.",
     Keywords: "['sketch', 'portrait', 'blue line art', 'glasses', 'minimalist', 'contemporary drawing', 'gestural', 'monochromatic', 'cat-eye glasses', 'line drawing', 'profile study', 'quick sketch']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-06-26",
@@ -2373,7 +2600,8 @@ const data = [
     Style: "['Minimalist sketch', 'Line drawing', 'Quick sketch', 'Caricature-like', 'Vintage-inspired']",
     Subject: "A portrait sketch featuring a figure in formal attire including a flat-brimmed hat and collared clothing, rendered in a simplified, stylized manner that suggests a vintage or classic aesthetic",
     Keywords: "['sketch', 'portrait', 'blue line', 'hat', 'vintage style', 'minimalist', 'formal wear', 'line art', 'illustration', 'character design', 'quick drawing', 'monochrome']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-06-19",
@@ -2384,7 +2612,8 @@ const data = [
     Style: "['Quick sketch', 'Contemporary illustration', 'Minimalist line drawing', 'Gestural drawing']",
     Subject: "A portrait sketch showing facial features drawn in a simplified, stylized manner with emphasis on basic shapes and expressive lines",
     Keywords: "['portrait', 'sketch', 'line drawing', 'blue ink', 'minimalist', 'contemporary', 'face study', 'monochromatic', 'illustration', 'expresive', 'gesture drawing', 'simplified', 'stylized']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-06-02",
@@ -2395,7 +2624,8 @@ const data = [
     Style: "['Cartoon sketch', 'Simple line drawing', 'Caricature', 'Informal illustration']",
     Subject: "A military or authoritative figure characterized by rectangular glasses, a prominent mustache, and a uniformed outfit decorated with medals",
     Keywords: "['sketch', 'military uniform', 'mustache', 'medals', 'glasses', 'blue pencil', 'portrait', 'cartoon', 'caricature', 'uniformed figure', 'illustration', 'line drawing']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-05-27",
@@ -2406,7 +2636,8 @@ const data = [
     Style: "['Sketching', 'Quick study', 'Loose line drawing', 'Contemporary', 'Minimalist']",
     Subject: "A portrait sketch showing head and partial shoulders, drawn with minimal detail and loose linework, emphasizing basic facial structure and features",
     Keywords: "['sketch', 'portrait', 'drawing', 'pencil art', 'minimalist', 'line drawing', 'gesture drawing', 'contemporary art', 'face study', 'quick sketch', 'monochrome', 'amateur art']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-05-25",
@@ -2417,7 +2648,8 @@ const data = [
     Style: "['Sketch', 'Portrait drawing', 'Quick study', 'Loose line drawing', 'Contemporary illustration']",
     Subject: "A portrait sketch showing the head and shoulders of a bearded figure with minimal hair on top, drawn in a casual, sketch-like style with emphasis on facial features and beard texture",
     Keywords: "['sketch', 'portrait', 'beard', 'blue pencil', 'drawing', 'illustration', 'male figure', 'line art', 'casual drawing', 'contemporary art', 'portrait study', 'monochromatic']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-05-23",
@@ -2428,18 +2660,8 @@ const data = [
     Style: "['Minimalist sketch', 'Casual doodle', 'Comic-style illustration', 'Simple line drawing']",
     Subject: "A humorous illustration depicting a figure reading a book with an underwhelming review, suggesting a commentary on literary criticism or book reviews in a satirical way",
     Keywords: "['sketch', 'book', 'reading', 'humor', 'review', 'doodle', 'minimalist', 'blue sketch', 'literary humor', 'book critique', 'simple drawing', 'spiky hair', 'casual art']",
-    Category: "Blog"
-  },
-  {
-    "Date": "2020-05-22",
-    Title: "Selfie 5",
-    img_path: "12Selfie-5.jpeg",
-    Caption: "A quick sketch portrait drawn in a loose, expressive style showing facial features with wild, energetic hair. The drawing is done with quick, gestural strokes and shows features like eyes, nose, and lips in a somewhat abstract manner.",
-    Colours: "['Blue', 'White (paper)', 'Silver (visible pen in image)']",
-    Style: "['Gestural sketch', 'Quick study', 'Expressive', 'Contemporary', 'Loose line drawing']",
-    Subject: "A portrait sketch showing facial features with emphasized wild hair, drawn in an expressive, spontaneous manner that captures movement and energy rather than precise detail",
-    Keywords: "['sketch', 'portrait', 'blue pen', 'gestural', 'expressive', 'contemporary art', 'line drawing', 'quick study', 'loose style', 'sketching', 'wild hair', 'pen drawing', 'spontaneous art']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-05-22",
@@ -2450,7 +2672,20 @@ const data = [
     Style: "['Sketch art', 'Gestural drawing', 'Contemporary illustration', 'Quick study', 'Loose linework']",
     Subject: "A portrait study showing head and partial shoulder, executed in a loose, sketchy style that captures expression and form through minimal but effective linework",
     Keywords: "['sketch', 'portrait', 'blue pencil', 'gesture drawing', 'illustration', 'expression', 'study', 'contemporary art', 'drawing', 'linework', 'mechanical pencil', 'profile study']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
+  },
+  {
+    "Date": "2020-05-22",
+    Title: "Selfie 5",
+    img_path: "12Selfie-5.jpeg",
+    Caption: "A quick sketch portrait drawn in a loose, expressive style showing facial features with wild, energetic hair. The drawing is done with quick, gestural strokes and shows features like eyes, nose, and lips in a somewhat abstract manner.",
+    Colours: "['Blue', 'White (paper)', 'Silver (visible pen in image)']",
+    Style: "['Gestural sketch', 'Quick study', 'Expressive', 'Contemporary', 'Loose line drawing']",
+    Subject: "A portrait sketch showing facial features with emphasized wild hair, drawn in an expressive, spontaneous manner that captures movement and energy rather than precise detail",
+    Keywords: "['sketch', 'portrait', 'blue pen', 'gestural', 'expressive', 'contemporary art', 'line drawing', 'quick study', 'loose style', 'sketching', 'wild hair', 'pen drawing', 'spontaneous art']",
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-05-17",
@@ -2461,7 +2696,8 @@ const data = [
     Style: "['Sketch', 'Gestural drawing', 'Quick study', 'Loose illustration', 'Nature study']",
     Subject: "A waterside landscape scene with a small boat, featuring clouds above and textured vegetation or rocky elements along the shore. The composition suggests a peaceful water scene captured in a quick, observational style.",
     Keywords: "['landscape', 'sketch', 'boat', 'water', 'clouds', 'shoreline', 'nature drawing', 'outdoor scene', 'colored pencil', 'gestural', 'sketchbook', 'study', 'maritime', 'waterscape']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-05-13",
@@ -2472,7 +2708,8 @@ const data = [
     Style: "['Cartoon sketch', 'Casual doodle', 'Simple line drawing', 'Amateur/informal illustration']",
     Subject: "A cartoon character sitting on a stool, depicted in a simple, sketch-like manner with basic shapes and lines. The character has a round head with glasses and appears to be in a contemplative or slightly anxious pose.",
     Keywords: "['sketch', 'cartoon', 'doodle', 'character', 'glasses', 'sitting', 'stool', 'pencil drawing', 'casual art', 'notebook', 'simple', 'amateur', 'graphite']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-05-12",
@@ -2483,7 +2720,8 @@ const data = [
     Style: "['Sketch art', 'Comic style', 'Casual illustration', 'Freehand drawing']",
     Subject: "A sketched portrait of a bespectacled figure with a full beard, drawn in a casual, cartoon-like style with an explosive 'BOOM!' effect above",
     Keywords: "['sketch', 'beard', 'glasses', 'boom', 'explosion', 'comic art', 'portrait', 'pencil drawing', 'casual art', 'notebook sketch', 'cartoon', 'facial hair', 'doodle']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-05-11",
@@ -2494,7 +2732,8 @@ const data = [
     Style: "['Rough sketch', 'Gestural drawing', 'Expressive', 'Quick study', 'Loose illustration']",
     Subject: "A sketch of a face featuring rectangular glasses and textured hair/beard rendered through energetic scribbled lines",
     Keywords: "['sketch', 'portrait', 'glasses', 'beard', 'scribble', 'gestural', 'expressive', 'pencil drawing', 'rough', 'spontaneous', 'textured', 'sketchbook', 'study']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-05-10",
@@ -2505,7 +2744,8 @@ const data = [
     Style: "['Gestural sketch', 'Quick study', 'Loose illustrative style', 'Informal drawing']",
     Subject: "A figure shown in a relaxed position reading a book, captured in a quick sketch style with emphasis on movement and form rather than detail",
     Keywords: "['sketch', 'reading', 'book', 'figure drawing', 'gestural', 'sepia', 'casual', 'study', 'relaxed', 'sketchbook', 'illustration']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-05-07",
@@ -2516,7 +2756,8 @@ const data = [
     Style: "['Sketch art', 'Portrait drawing', 'Loose gestural drawing', 'Quick study', 'Contemporary illustration']",
     Subject: "A portrait sketch featuring glasses and medium-length hair, drawn with expressive lines that create a casual yet characteristic likeness",
     Keywords: "['sketch', 'portrait', 'glasses', 'artistic', 'brown pencil', 'gestural', 'contemporary', 'expressive', 'illustration', 'drawing', 'sketchbook', 'casual art']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-05-07",
@@ -2527,7 +2768,8 @@ const data = [
     Style: "['Sketchy', 'Gestural', 'Loose', 'Observational drawing', 'Life drawing']",
     Subject: "A cat viewed from behind, showing its fur texture, ears, and back. The cat appears to be sitting or resting, captured in a natural, casual pose.",
     Keywords: "['cat', 'sketch', 'animal drawing', 'feline', 'fur texture', 'sepia sketch', 'sketchbook', 'life drawing', 'pet portrait', 'animal art', 'loose drawing', 'gestural sketch']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-05-06",
@@ -2538,7 +2780,8 @@ const data = [
     Style: "['Loose sketch', 'Gestural drawing', 'Expressive portrait', 'Quick study', 'Caricature-like']",
     Subject: "['Portrait drawing of a figure with distinctive features including', '- Rectangular glasses', '- Disheveled/wild hair', '- Bow tie', '- Serious expression']",
     Keywords: "['sketch', 'portrait', 'glasses', 'bow tie', 'sepia', 'gestural', 'expressive', 'loose drawing', 'character study', 'quick sketch', 'monochromatic']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-05-06",
@@ -2549,7 +2792,8 @@ const data = [
     Style: "['Contemporary sketch', 'Expressive line art', 'Single-color illustration', 'Gestural drawing', 'Quick sketch portraiture']",
     Subject: "A portrait sketch depicting a peaceful facial expression with closed eyes, defined features, and flowing, wind-swept hair rendered entirely in blue marker",
     Keywords: "['marker art', 'blue sketch', 'portrait', 'line drawing', 'expressive', 'cross-hatching', 'flowing hair', 'peaceful', 'contemporary art', 'minimalist', 'single color', 'gestural', 'sketch', 'Tombow marker']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-05-05",
@@ -2560,18 +2804,8 @@ const data = [
     Style: "['Contemporary sketch', 'Gestural drawing', 'Quick study', 'Loose linear style', 'Expressive portraiture']",
     Subject: "['Portrait study', 'Head and shoulders view', 'Contemporary figure drawing']",
     Keywords: "['sketch', 'portrait', 'sepia', 'gestural', 'contemporary', 'expressive', 'drawing', 'study', 'artistic', 'illustration', 'linear', 'quick sketch']",
-    Category: "Blog"
-  },
-  {
-    "Date": "2020-04-27",
-    Title: "GnT",
-    img_path: "24GnT0.jpg",
-    Caption: "A sketch of a tall beverage cup with a straw, drawn in a simple style on white paper. The cup appears to have vertical lines suggesting ridges or texture, and there is some basic shading or hatching around the base to suggest a surface or shadow.",
-    Colours: "['Reddish-brown/sepia', 'White (paper)', 'Light grey (shadows)']",
-    Style: "['Sketch', 'Line drawing', 'Observational drawing', 'Quick study', 'Minimalist']",
-    Subject: "A disposable drink cup with a straw, likely representing a fast-food or takeaway beverage container drawn in a geometric, simplified form",
-    Keywords: "['cup', 'drink', 'straw', 'sketch', 'beverage', 'takeaway', 'disposable', 'container', 'drawing', 'study', 'line art', 'geometric', 'simple', 'fast food']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-04-27",
@@ -2582,7 +2816,20 @@ const data = [
     Style: "['Gestural sketch', 'Quick study', 'Loose expressive drawing', 'Contemporary portraiture', 'Spontaneous line drawing']",
     Subject: "A portrait sketch focusing on facial features, particularly emphasizing glasses and characteristic expression, drawn in a casual, immediate style with emphasis on capturing essential features rather than precise detail",
     Keywords: "['portrait', 'sketch', 'glasses', 'mechanical pencil', 'sepia', 'gestural', 'contemporary', 'expressive', 'linework', 'study', 'quick drawing', 'head portrait', 'casual style']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
+  },
+  {
+    "Date": "2020-04-27",
+    Title: "GnT",
+    img_path: "24GnT0.jpg",
+    Caption: "A sketch of a tall beverage cup with a straw, drawn in a simple style on white paper. The cup appears to have vertical lines suggesting ridges or texture, and there is some basic shading or hatching around the base to suggest a surface or shadow.",
+    Colours: "['Reddish-brown/sepia', 'White (paper)', 'Light grey (shadows)']",
+    Style: "['Sketch', 'Line drawing', 'Observational drawing', 'Quick study', 'Minimalist']",
+    Subject: "A disposable drink cup with a straw, likely representing a fast-food or takeaway beverage container drawn in a geometric, simplified form",
+    Keywords: "['cup', 'drink', 'straw', 'sketch', 'beverage', 'takeaway', 'disposable', 'container', 'drawing', 'study', 'line art', 'geometric', 'simple', 'fast food']",
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-04-24",
@@ -2593,7 +2840,8 @@ const data = [
     Style: "['Sketch', 'Minimalist', 'Quick study', 'Loose illustration', 'Monochromatic drawing']",
     Subject: "A simple interior scene showing a reading or study setup with an open book and small furniture piece, suggesting a quiet, contemplative space",
     Keywords: "['book', 'sketch', 'study', 'reading', 'interior', 'minimal', 'green', 'furniture', 'table', 'monochrome', 'simple', 'drawing', 'illustration']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-04-23",
@@ -2604,7 +2852,8 @@ const data = [
     Style: "['Sketch art', 'Loose drawing', 'Contemporary portrait', 'Minimalist', 'Gestural drawing']",
     Subject: "A portrait drawing showing the head and upper torso of a figure wearing formal attire with buttons down the front",
     Keywords: "['portrait', 'sketch', 'green', 'monochromatic', 'casual drawing', 'loose style', 'contemporary art', 'digital sketch', 'minimal', 'expressive', 'portrait study', 'fashion illustration']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-04-22",
@@ -2615,7 +2864,8 @@ const data = [
     Style: "['Casual sketch', 'Cartoon', 'Minimalist', 'Quick gesture drawing']",
     Subject: "A side-view portrait sketch showing distinctive square glasses and spiky hair, rendered in a simple, expressive style",
     Keywords: "['sketch', 'profile', 'glasses', 'spiky hair', 'green', 'cartoon', 'punk', 'minimalist', 'portrait', 'quick drawing', 'alternative style']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-04-17",
@@ -2626,7 +2876,8 @@ const data = [
     Style: "['Sketch', 'Casual illustration', 'Minimalist', 'Loose gestural drawing', 'Contemporary doodle']",
     Subject: "A single teacup and saucer drawn in a casual, sketchy style with emphasis on basic form and shape rather than detail",
     Keywords: "['teacup', 'saucer', 'sketch', 'green', 'minimal', 'casual', 'kitchenware', 'beverage', 'coffee cup', 'tea service', 'drawing', 'illustration', 'doodle']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-04-15",
@@ -2637,7 +2888,8 @@ const data = [
     Style: "['Sketch art', 'Minimalist drawing', 'Loose line drawing', 'Quick study', 'Gestural portrait']",
     Subject: "A portrait sketch of a figure wearing round glasses, rendered with simple lines showing facial features and a contemplative expression",
     Keywords: "['portrait', 'sketch', 'green', 'glasses', 'minimal', 'line drawing', 'monochromatic', 'quick sketch', 'study', 'facial features', 'contemporary', 'simple']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-04-14",
@@ -2648,7 +2900,8 @@ const data = [
     Style: "['Sketch art', 'Gestural drawing', 'Loose illustrative style', 'Portrait study', 'Blue line art']",
     Subject: "A portrait sketch showing the head and shoulders of a figure in formal dress, including a bow tie. The drawing has a soft, contemplative quality with attention paid to facial features and basic clothing details.",
     Keywords: "['sketch', 'portrait', 'blue pencil', 'formal wear', 'bow tie', 'artistic', 'drawing', 'illustration', 'monochrome', 'gestural', 'contemplative', 'study', 'line art']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-04-12",
@@ -2659,7 +2912,8 @@ const data = [
     Style: "['Sketch art', 'Film noir aesthetic', 'Gestural drawing', 'Minimalist', 'Loose illustration']",
     Subject: "A figure in formal attire, depicted in profile view, wearing a suit jacket and wide-brimmed hat in a classic detective or noir style",
     Keywords: "['noir', 'sketch', 'blue', 'monochromatic', 'detective', 'silhouette', 'hat', 'suit', 'mystery', 'profile', 'illustration', 'gestural', 'vintage']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-04-12",
@@ -2670,7 +2924,8 @@ const data = [
     Style: "['Sketch', 'Minimalist', 'Gestural drawing', 'Impressionistic', 'Loose illustration']",
     Subject: "A silhouette figure smoking a pipe, presented in a casual, relaxed pose. The figure appears to be wearing a hat and has a distinctive profile shape.",
     Keywords: "['silhouette', 'pipe smoking', 'monochromatic', 'blue', 'sketch', 'hat', 'smoke', 'profile', 'casual', 'illustration', 'artistic', 'minimalist', 'gestural']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-04-04",
@@ -2681,18 +2936,8 @@ const data = [
     Style: "Quick sketch/gestural drawing with an expressionist quality",
     Subject: "A portrait drawing featuring dynamic linework and expressive features, rendered in a casual, sketch-like manner",
     Keywords: "['sketch', 'portrait', 'purple', 'monochromatic', 'expressionist', 'gestural', 'loose drawing', 'quick sketch', 'artistic', 'contemporary', 'marker drawing', 'line art']",
-    Category: "Blog"
-  },
-  {
-    "Date": "2020-03-04",
-    Title: "Financier",
-    img_path: "36Financier2.jpg",
-    Caption: "A black and white charcoal-style portrait sketch showing a profile view of a figure wearing round glasses and formal attire including a suit and tie. The artwork has bold, expressive strokes and emphasizes strong contrast between light and dark areas.",
-    Colours: "['Black', 'White', 'Various shades of grey']",
-    Style: "['Expressionist', 'Sketch art', 'Portrait drawing', 'Monochromatic', 'Loose gestural style']",
-    Subject: "A profile portrait sketch of a figure in professional attire, characterized by round glasses, a defined nose, and formal suit. The drawing captures a serious, dignified expression and maintains a professional demeanor.",
-    Keywords: "['Portrait', 'Profile view', 'Sketch', 'Charcoal', 'Monochrome', 'Round glasses', 'Formal wear', 'Business attire', 'Black and white', 'Professional', 'Artistic', 'Expression', 'Character study']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-03-04",
@@ -2703,7 +2948,20 @@ const data = [
     Style: "Expressive sketch art with elements of gesture drawing and contemporary portraiture. The style is loose and gestural with a focus on capturing emotion rather than photorealistic detail.",
     Subject: "A portrait study showing a person in casual attire. The drawing emphasizes the subject's facial expression and uses bold, confident strokes to define features and form.",
     Keywords: "['sketch', 'portrait', 'charcoal drawing', 'expressive art', 'black and white', 'contemporary art', 'gestural drawing', 'character study', 'informal portrait', 'casual pose', 'monochrome', 'rough sketch']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
+  },
+  {
+    "Date": "2020-03-04",
+    Title: "Financier",
+    img_path: "36Financier2.jpg",
+    Caption: "A black and white charcoal-style portrait sketch showing a profile view of a figure wearing round glasses and formal attire including a suit and tie. The artwork has bold, expressive strokes and emphasizes strong contrast between light and dark areas.",
+    Colours: "['Black', 'White', 'Various shades of grey']",
+    Style: "['Expressionist', 'Sketch art', 'Portrait drawing', 'Monochromatic', 'Loose gestural style']",
+    Subject: "A profile portrait sketch of a figure in professional attire, characterized by round glasses, a defined nose, and formal suit. The drawing captures a serious, dignified expression and maintains a professional demeanor.",
+    Keywords: "['Portrait', 'Profile view', 'Sketch', 'Charcoal', 'Monochrome', 'Round glasses', 'Formal wear', 'Business attire', 'Black and white', 'Professional', 'Artistic', 'Expression', 'Character study']",
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-03-01",
@@ -2714,7 +2972,8 @@ const data = [
     Style: "['Sketch', 'Simple illustration', 'Casual drawing', 'Minimalist', 'Freehand']",
     Subject: "A casual sketch of a car scene depicting someone loading or unloading something from the trunk of a vehicle. The car appears to be a hatchback or compact car style vehicle.",
     Keywords: "['sketch', 'car', 'automobile', 'trunk', 'loading', 'stick figure', 'transportation', 'casual drawing', 'freehand', 'simple illustration', 'hatchback', 'vehicle']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-02-26",
@@ -2725,7 +2984,8 @@ const data = [
     Style: "['Sketch', 'Portrait drawing', 'Gestural', 'Linear', 'Loose illustration']",
     Subject: "A portrait sketch showing a figure from roughly the shoulders up, featuring a warm expression and long straight hair, rendered in a casual, spontaneous style",
     Keywords: "['portrait', 'sketch', 'drawing', 'illustration', 'figure', 'monochromatic', 'conte', 'hatching', 'gesture drawing', 'sketchbook', 'study', 'art']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-02-22",
@@ -2736,7 +2996,8 @@ const data = [
     Style: "['Quick sketch', 'Loose gestural drawing', 'Contemporary portraiture', 'Casual sketching', 'Life drawing']",
     Subject: "A casual portrait sketch showing a person wearing what appears to be casual clothing, with expressive features and naturally styled hair",
     Keywords: "['portrait', 'sketch', 'sepia', 'drawing', 'sketchbook', 'casual', 'gestural', 'artistic', 'study', 'pencil drawing', 'expressive', 'contemporary']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-02-21",
@@ -2747,7 +3008,8 @@ const data = [
     Style: "['Realistic sketch', 'Traditional portrait drawing', 'Life drawing', 'Gestural', 'Classical drawing technique']",
     Subject: "A profile portrait sketch showing features in a classical style, with attention to facial structure, long flowing hair, and natural proportions",
     Keywords: "['profile', 'portrait', 'sketch', 'sanguine', 'classical drawing', 'life drawing', 'facial study', 'traditional art', 'red chalk style', 'gestural drawing', 'portrait study', 'fine art']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-02-20",
@@ -2758,7 +3020,8 @@ const data = [
     Style: "['Sketch', 'Cartoon', 'Minimalist', 'Loose line drawing', 'Freehand illustration']",
     Subject: "A whimsical cartoon-style cat portrait with emphasized facial features, drawn in a simple, childlike manner with loose, flowing lines",
     Keywords: "['cat drawing', 'sketch', 'cartoon cat', 'feline art', 'simple illustration', 'line drawing', 'whimsical', 'doodle', 'cat face', 'animal sketch', 'minimalist drawing']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-02-20",
@@ -2769,7 +3032,8 @@ const data = [
     Style: "['Loose sketch', 'Naturalistic drawing', 'Minimalist', 'Gestural drawing']",
     Subject: "A single palm tree, likely a coconut palm, drawn in a simplified manner with emphasis on the characteristic drooping fronds and cylindrical trunk planted in what appears to be a circular base or ground area",
     Keywords: "['palm tree', 'tropical', 'sketch', 'botanical drawing', 'sepia', 'nature', 'coastal', 'beach', 'simple', 'minimalist', 'flora', 'tree study']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-02-08",
@@ -2780,7 +3044,8 @@ const data = [
     Style: "['Quick sketch', 'Observational drawing', 'Urban sketching', 'Loose line work', 'Gestural drawing']",
     Subject: "A railway station scene focusing on a passenger checking the departure board or timetable, capturing a moment of everyday urban life",
     Keywords: "['railway station', 'train timetable', 'departure board', 'sketch', 'commuter', 'public transport', 'urban scene', 'architecture', 'travel', 'passenger', 'station roof', 'transportation', 'schedule', 'numbers']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-02-04",
@@ -2791,7 +3056,8 @@ const data = [
     Style: "['Sketch', 'Gestural drawing', 'Quick study', 'Minimalist', 'Impressionistic']",
     Subject: "A figure in historical or period clothing standing in a rustic outdoor setting, rendered in a simple sketch style with minimal detail but effective composition",
     Keywords: "['sketch', 'period costume', 'garden', 'rural', 'hat', 'coat', 'fence', 'sepia', 'rustic', 'minimal', 'historical', 'standing figure', 'outdoor scene']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-02-01",
@@ -2802,18 +3068,8 @@ const data = [
     Style: "['Sketch art', 'Child-like drawing', 'Minimalist', 'Freehand drawing', 'Simple line art']",
     Subject: "A motorcycle with an attached trailer or cart, drawn in a basic illustrative style showing the vehicle from a side profile view",
     Keywords: "['motorcycle', 'trailer', 'sketch', 'transportation', 'vehicle', 'wheels', 'cart', 'drawing', 'freehand', 'sepia', 'child art', 'simple', 'illustration']",
-    Category: "Blog"
-  },
-  {
-    "Date": "2020-01-25",
-    Title: "Some more from Angkor Thom",
-    img_path: "51SomemorefromAngkorThom8.jpg",
-    Caption: "A sketch of an Art Deco-style skyscraper or tall building with a stepped, ziggurat-like profile. The drawing features geometric shapes and cross-hatching for shading, with stylized clouds or smoke in the background. The building has multiple windows and levels that get progressively smaller towards the top, culminating in a tower-like structure.",
-    Colours: "['Reddish-brown/Sepia', 'Off-white paper', 'Light grey shadows']",
-    Style: "['Architectural sketch', 'Freehand drawing', 'Art Deco influence', 'Quick conceptual sketch']",
-    Subject: "An architectural drawing of a modernist or Art Deco skyscraper with stepped architecture, showing the building's facade and structural elements in a simplified form",
-    Keywords: "['skyscraper', 'architecture', 'Art Deco', 'building', 'sketch', 'ziggurat', 'geometric', 'tower', 'urban', 'architectural drawing', 'stepped building', 'modernist', 'cityscape']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-01-25",
@@ -2824,7 +3080,20 @@ const data = [
     Style: "['Urban sketch', 'Architectural drawing', 'Whimsical illustration', 'Line drawing', 'Contemporary sketch']",
     Subject: "Anthropomorphic architecture featuring buildings with facial features integrated into their design, creating a playful interpretation of urban architecture",
     Keywords: "['architecture', 'urban sketch', 'buildings', 'cityscape', 'whimsical', 'anthropomorphic', 'skyscrapers', 'line art', 'sepia', 'architectural illustration', 'surreal', 'fantasy architecture']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
+  },
+  {
+    "Date": "2020-01-25",
+    Title: "Some more from Angkor Thom",
+    img_path: "51SomemorefromAngkorThom8.jpg",
+    Caption: "A sketch of an Art Deco-style skyscraper or tall building with a stepped, ziggurat-like profile. The drawing features geometric shapes and cross-hatching for shading, with stylized clouds or smoke in the background. The building has multiple windows and levels that get progressively smaller towards the top, culminating in a tower-like structure.",
+    Colours: "['Reddish-brown/Sepia', 'Off-white paper', 'Light grey shadows']",
+    Style: "['Architectural sketch', 'Freehand drawing', 'Art Deco influence', 'Quick conceptual sketch']",
+    Subject: "An architectural drawing of a modernist or Art Deco skyscraper with stepped architecture, showing the building's facade and structural elements in a simplified form",
+    Keywords: "['skyscraper', 'architecture', 'Art Deco', 'building', 'sketch', 'ziggurat', 'geometric', 'tower', 'urban', 'architectural drawing', 'stepped building', 'modernist', 'cityscape']",
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-01-24",
@@ -2835,7 +3104,8 @@ const data = [
     Style: "['Quick sketch', 'Architectural drawing', 'Loose gestural drawing', 'Urban sketching', 'Perspective study']",
     Subject: "An urban rooftop scene drawn from an elevated viewpoint, showing building structures, geometric forms, and architectural elements with an emphasis on perspective and spatial relationships",
     Keywords: "['architectural sketch', 'urban drawing', 'rooftops', 'perspective drawing', 'sepia sketch', 'cityscape', 'building study', 'geometric shapes', 'quick sketch', 'architectural study', 'urban landscape', 'line drawing']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-01-24",
@@ -2846,7 +3116,8 @@ const data = [
     Style: "['Quick sketch', 'Urban sketch', 'Loose gestural drawing', 'Architectural drawing', 'Minimalist']",
     Subject: "An urban landscape featuring a series of buildings and architectural structures drawn in a loose, quick style from what appears to be a distance or elevated viewpoint",
     Keywords: "['urban sketch', 'cityscape', 'architecture', 'buildings', 'skyline', 'chalk drawing', 'landscape', 'architectural sketch', 'quick study', 'towers', 'perspective drawing', 'urban planning', 'street scene']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-01-24",
@@ -2857,7 +3128,8 @@ const data = [
     Style: "['Minimalist sketch', 'Line drawing', 'Traditional Asian art influence', 'Study drawings', 'Contemplative portraiture']",
     Subject: "A collection of Buddhist-inspired portrait sketches showing different expressions and traditional headdresses, each face conveying a sense of serenity and meditation",
     Keywords: "['Buddhist art', 'Sketch', 'Portrait study', 'Meditation', 'Spiritual art', 'Traditional headdress', 'Asian art influence', 'Minimalist drawing', 'Religious iconography', 'Face study', 'Contemplative art', 'Line drawing']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-01-20",
@@ -2868,7 +3140,8 @@ const data = [
     Style: "['Architectural sketch', 'Gestural drawing', 'Quick study', 'Loose illustrative style']",
     Subject: "A traditional Chinese or Japanese architectural element, focusing on the distinctive roof structure with its upward-curving corners and tiered design typical of East Asian temple architecture",
     Keywords: "['pagoda', 'temple', 'Asian architecture', 'architectural sketch', 'traditional building', 'eaves', 'roof detail', 'oriental design', 'architectural drawing', 'heritage building', 'traditional structure', 'red chalk drawing']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-01-20",
@@ -2879,7 +3152,8 @@ const data = [
     Style: "['Quick sketch', 'Architectural drawing', 'Loose gestural drawing', 'Observational sketch', 'Linear drawing']",
     Subject: "A grand piano in an interior setting, focusing on the instrument's profile and its relationship to the architectural space around it",
     Keywords: "['piano', 'grand piano', 'musical instrument', 'interior sketch', 'architectural drawing', 'brick wall', 'performance space', 'music room', 'monochromatic', 'sepia sketch', 'furniture drawing', 'musical equipment']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-01-19",
@@ -2890,7 +3164,8 @@ const data = [
     Style: "['Sketch', 'Gestural drawing', 'Minimalist', 'Quick study', 'Loose illustration']",
     Subject: "A potted flower arrangement drawn in a simple, sketch-like manner, featuring what appears to be several flowers with stems in a basic cylindrical pot or vase",
     Keywords: "['flowers', 'sketch', 'botanical', 'potted plant', 'floral drawing', 'brown pencil', 'loose drawing', 'plant illustration', 'vase', 'garden art', 'simple drawing', 'nature sketch']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-01-18",
@@ -2901,7 +3176,8 @@ const data = [
     Style: "['Rough sketch', 'Gestural drawing', 'Maritime art', 'Quick study', 'Impressionistic']",
     Subject: "Maritime scene featuring sailing boats on rough waters, capturing the movement and energy of boats sailing through choppy seas",
     Keywords: "['sailboat', 'maritime', 'nautical', 'sketch', 'seascape', 'waves', 'rough seas', 'sailing', 'boats', 'ocean', 'storm', 'sepia', 'gestural', 'movement', 'crosshatching']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2020-01-17",
@@ -2912,7 +3188,8 @@ const data = [
     Style: "['Contemporary sketch', 'Gestural drawing', 'Expressive linework', 'Quick study', 'Modern portrait']",
     Subject: "A portrait study featuring strong angular features, drawn in profile view with emphasis on the bone structure and characteristic features like tousled hair and an earring",
     Keywords: "['sketch', 'portrait', 'profile', 'contemporary art', 'gestural', 'expressive', 'study', 'drawing', 'monochromatic', 'line art']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-12-27",
@@ -2923,7 +3200,8 @@ const data = [
     Style: "['Minimalist sketch', 'Loose line drawing', 'Contemporary casual illustration', 'Quick gesture drawing', 'Cartoon-like simplification']",
     Subject: "A front-facing portrait sketch focusing on basic facial features, with emphasis on round glasses and distinctive hair styling, drawn in a casual, unstudied manner",
     Keywords: "['sketch', 'purple', 'glasses', 'portrait', 'line drawing', 'minimalist', 'casual art', 'contemporary', 'quick sketch', 'monochromatic', 'spiky hair', 'simple portrait', 'doodle']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-12-26",
@@ -2934,7 +3212,8 @@ const data = [
     Style: "Quick observational sketch",
     Subject: "Interior furniture layout or room sketch showing basic forms and spatial relationships between furniture pieces",
     Keywords: "['sketch', 'furniture', 'interior', 'desk', 'shelving', 'line drawing', 'rough draft', 'architectural sketch', 'room layout', 'sepia', 'minimal', 'gestural', 'perspective drawing']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-12-22",
@@ -2945,7 +3224,8 @@ const data = [
     Style: "['Abstract', 'Primitive', 'Organic', 'Doodle-like', 'Textural sketch']",
     Subject: "An abstract composition featuring organic patterns and spiral elements, possibly inspired by cellular structures, coral, or microscopic organisms",
     Keywords: "['abstract', 'organic', 'spiral', 'cellular', 'pattern', 'sketch', 'texture', 'geometric', 'biomorphic', 'doodle', 'natural forms', 'conte crayon', 'divided composition']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-12-21",
@@ -2956,7 +3236,8 @@ const data = [
     Style: "['Quick sketch', 'Minimalist', 'Digital illustration', 'Gestural drawing', 'Monochromatic']",
     Subject: "A head and shoulders portrait sketch of a person wearing rectangular glasses, rendered in a quick, gestural style with minimal detail",
     Keywords: "['sketch', 'portrait', 'glasses', 'digital art', 'monochrome', 'minimalist', 'brushwork', 'quick drawing', 'character study', 'head shot', 'black and white', 'illustration']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-12-15",
@@ -2967,7 +3248,8 @@ const data = [
     Style: "['Minimalist', 'Sketch', 'Botanical illustration', 'Contemporary', 'Gestural drawing', 'Line art']",
     Subject: "A simple botanical still life featuring palm fronds or similar leaves in a cylindrical container, rendered in a minimalist style with emphasis on line work and basic form.",
     Keywords: "['botanical', 'palm leaves', 'vase', 'minimalist', 'black and white', 'sketch', 'line drawing', 'still life', 'plant illustration', 'contemporary art', 'digital drawing', 'foliage', 'home decor', 'interior design', 'wall art']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-12-15",
@@ -2978,7 +3260,8 @@ const data = [
     Style: "['Sketch', 'Line drawing', 'Digital illustration', 'Minimalist', 'Quick sketch', 'Freehand drawing']",
     Subject: "A potted flower arrangement with three blooming stems in a round vessel, depicted in a casual, sketchy style with simple lines and basic shading",
     Keywords: "['flower sketch', 'botanical drawing', 'potted plant', 'line art', 'digital sketch', 'flower pot', 'daisies', 'simple drawing', 'monochrome', 'vase', 'floral illustration', 'casual sketch']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-12-09",
@@ -2989,7 +3272,8 @@ const data = [
     Style: "['Sketch', 'Contemporary', 'Minimalist', 'Geometric', 'Abstract']",
     Subject: "A stylized portrait drawing with geometric shapes forming a face, featuring angular features and distinctive spiky or crown-like elements around the head",
     Keywords: "['sketch', 'geometric', 'portrait', 'abstract', 'spiky', 'angular', 'minimal', 'linear', 'contemporary art', 'red drawing', 'geometric portrait', 'stylized']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-12-08",
@@ -3000,7 +3284,8 @@ const data = [
     Style: "['Sketch art', 'Caricature', 'Victorian-inspired illustration', 'Loose gestural drawing']",
     Subject: "A stylized portrait drawing of a figure in Victorian formal wear, featuring distinct clothing elements like a top hat and bow tie, rendered in a caricature-like style with expressive features",
     Keywords: "['Victorian', 'Top hat', 'Bow tie', 'Sketch', 'Caricature', 'Sepia', 'Portrait', 'Formal wear', 'Historical style', 'Character design', 'Whimsical', 'Illustration']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-12-07",
@@ -3011,7 +3296,8 @@ const data = [
     Style: "['Cartoon sketch', 'Gestural drawing', 'Quick sketch', 'Character illustration', 'Loose expressive style']",
     Subject: "A comical character sketch focusing on facial features, particularly emphasizing large circular eyes and a pointed hat, drawn in a caricature style.",
     Keywords: "['sketch', 'cartoon', 'caricature', 'whimsical', 'expressive', 'character design', 'monochromatic', 'funny', 'hat', 'eyes', 'quick drawing', 'loose style']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-11-17",
@@ -3022,7 +3308,8 @@ const data = [
     Style: "['Quick sketch', 'Gestural drawing', 'Minimalist', 'Contemporary portraiture', 'Loose illustration style']",
     Subject: "A portrait sketch focusing on facial features and upper body, drawn in a simplified, stylized manner with an emphasis on contour lines and basic shading",
     Keywords: "['sketch', 'portrait', 'brown', 'minimalist', 'facial features', 'contour drawing', 'monochromatic', 'expressive', 'line art', 'bust portrait', 'artistic study', 'casual drawing']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-11-16",
@@ -3033,7 +3320,8 @@ const data = [
     Style: "['Sketch art', 'Contemporary drawing', 'Gestural drawing', 'Quick study', 'Linear expression']",
     Subject: "['Portrait drawing', 'Head study', 'Modern figure wearing casual attire including baseball cap']",
     Keywords: "['sketch', 'portrait', 'baseball cap', 'contemporary', 'monochromatic', 'gestural', 'study', 'line drawing', 'casual', 'urban', 'modern', 'hatching', 'expression']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-11-15",
@@ -3044,7 +3332,8 @@ const data = [
     Style: "['Gestural sketch', 'Quick study', 'Life drawing', 'Loose line work', 'Observational drawing']",
     Subject: "A figure seated at a desk or workstation, captured in a casual, observational style. The drawing emphasizes the pose and basic forms rather than specific details.",
     Keywords: "['sketch', 'figure drawing', 'workspace', 'seated figure', 'gestural', 'study', 'desk', 'brown pencil', 'casual drawing', 'observational art', 'quick sketch', 'minimal detail']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-11-14",
@@ -3055,7 +3344,8 @@ const data = [
     Style: "['Expressionist', 'Gestural drawing', 'Quick sketch', 'Life drawing', 'Contemporary figurative']",
     Subject: "A close-up portrait sketch focusing on facial features, rendered in an expressive style with emphasis on emotional intensity through the eyes and overall composition",
     Keywords: "['sketch', 'portrait', 'expressionist', 'conte', 'drawing', 'gestural', 'face', 'cross-hatching', 'study', 'contemporary art', 'figurative', 'loose style']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-11-10",
@@ -3066,7 +3356,8 @@ const data = [
     Style: "['Sketch art', 'Contemporary drawing', 'Loose illustration style', 'Gestural drawing', 'Portrait sketch']",
     Subject: "A portrait sketch showing a front-facing view of a person with long hair, rendered in a simple, sketch-like style with emphasis on basic facial features and flowing hair lines",
     Keywords: "['sketch', 'portrait', 'drawing', 'sepia', 'art', 'illustration', 'face', 'long hair', 'monochrome', 'artistic', 'loose style', 'gestural', 'contemporary']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-11-10",
@@ -3077,7 +3368,8 @@ const data = [
     Style: "['Sketch', 'Gestural drawing', 'Contemporary', 'Loose illustrative style', 'Quick study']",
     Subject: "A portrait drawing focusing on facial features, with particular emphasis on glasses, hair texture, and facial expression. The drawing has an informal, candid quality.",
     Keywords: "['sketch', 'portrait', 'glasses', 'sepia', 'gestural', 'loose style', 'contemporary art', 'facial study', 'quick drawing', 'expressive', 'illustration']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-10-30",
@@ -3088,7 +3380,8 @@ const data = [
     Style: "Quick sketch portrait drawing, casual freehand style with loose gestural lines",
     Subject: "A portrait study featuring glasses and shoulder-length hair, drawn in a minimalist style with emphasis on basic facial features",
     Keywords: "['sketch', 'portrait', 'glasses', 'long hair', 'red pencil', 'sepia', 'minimalist', 'drawing', 'casual art', 'line drawing', 'portrait study', 'freehand']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-10-13",
@@ -3099,7 +3392,8 @@ const data = [
     Style: "['Urban sketch', 'Freehand drawing', 'Architectural illustration', 'Quick sketch', 'Perspective drawing']",
     Subject: "An urban streetscape featuring buildings, a train or streetcar, and infrastructure elements like utility poles and tracks. The drawing emphasizes linear perspective and architectural elements.",
     Keywords: "['urban sketch', 'cityscape', 'street scene', 'architecture', 'train', 'streetcar', 'buildings', 'perspective', 'utility poles', 'transportation', 'railway', 'street view', 'urban infrastructure', 'pencil drawing']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-10-09",
@@ -3110,7 +3404,8 @@ const data = [
     Style: "['Gestural sketch', 'Quick study', 'Loose line drawing', 'Contemporary portrait sketch', 'Expressive drawing']",
     Subject: "A portrait sketch focusing on facial features, with particular attention to glasses and disheveled hair. The drawing has a casual, spontaneous quality suggesting it may have been drawn from life or as a quick character study.",
     Keywords: "['sketch', 'portrait', 'glasses', 'graphite', 'gestural', 'contemporary', 'expressive', 'loose drawing', 'character study', 'pencil art', 'head study', 'line drawing']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-10-08",
@@ -3121,7 +3416,8 @@ const data = [
     Style: "['Gestural sketch', 'Quick study', 'Contemporary drawing', 'Loose line work', 'Expressive drawing']",
     Subject: "A side profile portrait study featuring distinctive long hair and facial features, drawn in a spontaneous, loose style that emphasizes movement and form",
     Keywords: "['sketch', 'portrait', 'profile', 'gestural', 'pencil drawing', 'long hair', 'contemporary art', 'expressive', 'study', 'line drawing', 'monochrome']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-10-07",
@@ -3132,7 +3428,8 @@ const data = [
     Style: "['Gestural sketch', 'Loose expressionist drawing', 'Quick study', 'Spontaneous line work']",
     Subject: "A figure drawn in profile view wearing glasses, characterized by energetic line work and particularly emphasized by wild, scribbly hair treatment and loose gestural marks",
     Keywords: "['sketch', 'portrait', 'profile', 'glasses', 'scribble', 'gestural', 'expressive', 'spontaneous', 'pencil drawing', 'line work', 'contemporary', 'informal', 'study']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-09-21",
@@ -3143,7 +3440,8 @@ const data = [
     Style: "['Sketch', 'Observational drawing', 'Quick study', 'Loose gestural drawing']",
     Subject: "A sketch depicting a workspace setup, featuring a tall desk or workstation with someone positioned at it, shown from a side view. The furniture appears to have multiple levels or shelves.",
     Keywords: "['workspace', 'standing desk', 'sketch', 'workstation', 'furniture', 'office', 'pencil drawing', 'ergonomic', 'desk setup', 'architectural sketch', 'interior drawing', 'workspace design']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-09-17",
@@ -3154,7 +3452,8 @@ const data = [
     Style: "['Sketch art', 'Freehand drawing', 'Contemporary illustration', 'Quick study', 'Loose gestural style']",
     Subject: "['Portrait drawing', 'Stylized figure with futuristic elements', 'Contemporary character design', 'Head and shoulders composition']",
     Keywords: "['sketch', 'portrait', 'visor', 'futuristic', 'character design', 'pencil art', 'grayscale', 'gestural drawing', 'sci-fi', 'illustration']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-09-08",
@@ -3165,7 +3464,8 @@ const data = [
     Style: "['Quick sketch', 'Urban sketching', 'Gestural drawing', 'Industrial sketch', 'Architectural drawing']",
     Subject: "An industrial port or harbor scene featuring loading cranes and dock infrastructure, drawn from an elevated perspective with emphasis on linear elements and structural forms",
     Keywords: "['Harbor', 'Port', 'Industrial', 'Cranes', 'Sketch', 'Maritime', 'Docklands', 'Infrastructure', 'Urban landscape', 'Waterfront', 'Industrial architecture', 'Pencil drawing', 'Quick sketch', 'Perspective drawing']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-09-08",
@@ -3176,7 +3476,8 @@ const data = [
     Style: "['Abstract expressionism', 'Gestural drawing', 'Loose sketch', 'Spontaneous mark-making', 'Child-like/Naive art']",
     Subject: "An abstract composition that suggests a bird or wing in motion, with sweeping lines and dynamic energy creating a sense of movement and flight",
     Keywords: "['abstract', 'bird', 'wing', 'motion', 'crayon', 'gestural', 'flowing', 'dynamic', 'sketch', 'movement', 'spontaneous', 'organic', 'free-form', 'expressionistic']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-09-03",
@@ -3187,7 +3488,8 @@ const data = [
     Style: "['Expressionist', 'Sketch art', 'Raw/primitive', 'Emotional art', 'Contemporary drawing']",
     Subject: "An emotionally charged face showing distress or shock, drawn in an expressionist style with emphasis on conveying feeling rather than realistic representation",
     Keywords: "['expressionist', 'sketch', 'emotion', 'distress', 'face', 'pencil drawing', 'primitive art', 'emotional expression', 'scribble', 'raw art', 'gestural drawing', 'contemporary art']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-08-29",
@@ -3198,7 +3500,8 @@ const data = [
     Style: "['Naive art', 'Primitive sketch', 'Child-like drawing', 'Expressionist', 'Raw/outsider art']",
     Subject: "A portrait of a royal or noble figure wearing a crown, depicted from the neck up in a straightforward, frontal view",
     Keywords: "['sketch', 'crown', 'portrait', 'expressionist', 'royal', 'drawing', 'primitive art', 'face', 'blue and orange', 'simple lines', 'monarch', 'naive art']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-08-29",
@@ -3209,7 +3512,8 @@ const data = [
     Style: `["Children's drawing", 'Naive art', 'Simple sketch', 'Loose illustration']`,
     Subject: "A ghostly or supernatural figure drawn in a simple, ethereal style suggesting movement or floating",
     Keywords: `['ghost', 'spirit', 'sketch', "children's art", 'supernatural', 'floating', 'ethereal', 'simple', 'paranormal', 'spooky', 'hand-drawn', 'casual drawing']`,
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-08-29",
@@ -3220,7 +3524,8 @@ const data = [
     Style: "['Sketch art', 'Quick study', 'Loose expressive drawing', 'Contemporary sketch', 'Gestural drawing']",
     Subject: "A portrait sketch showing a bearded figure with distinctive facial features rendered in an expressive, sketchy style. The drawing focuses on capturing the essence of the subject through quick, decisive marks rather than precise detail.",
     Keywords: "['sketch', 'portrait', 'beard', 'hat', 'graphite', 'drawing', 'expressive', 'loose style', 'contemporary art', 'facial features', 'gestural', 'monochrome']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-08-26",
@@ -3231,7 +3536,8 @@ const data = [
     Style: `['Naive art', "Children's drawing", 'Architectural sketch', 'Primitive drawing']`,
     Subject: "A large architectural structure resembling a European-style mansion or castle with multiple stories, featuring distinctive roof elements and a systematic arrangement of windows and doors",
     Keywords: `['architecture', 'castle', 'mansion', "children's art", 'building sketch', 'windows', 'spires', 'towers', 'symmetrical', 'naive drawing', 'architectural illustration', 'rough sketch']`,
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-08-24",
@@ -3242,7 +3548,8 @@ const data = [
     Style: "['Naive sketch', 'Loose illustrative drawing', 'Informal botanical illustration', 'Child-like or primitive style']",
     Subject: "A staked young tree or sapling with supports, showing horticultural care practices for newly planted trees",
     Keywords: "['tree', 'sapling', 'garden', 'sketch', 'stakes', 'support', 'horticulture', 'planting', 'botanical', 'drawing', 'crayon', 'foliage', 'nature', 'gardening']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-08-24",
@@ -3253,7 +3560,8 @@ const data = [
     Style: "['Sketch art', 'Minimalist', 'Contemporary portrait', 'Loose gestural drawing', 'Quick study']",
     Subject: "A portrait drawing featuring a figure wearing what appears to be a hat or head covering, with defined facial features and flowing hair rendered in simple lines",
     Keywords: "['sketch', 'portrait', 'monochromatic', 'orange', 'headwear', 'drawing', 'art', 'minimal', 'study', 'gestural', 'expressive', 'contemporary']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-08-19",
@@ -3264,7 +3572,8 @@ const data = [
     Style: "['Sketch art', 'Urban sketching', 'Loose illustrative style', 'Monochromatic drawing']",
     Subject: "An urban landscape featuring architecture and nature, with a central tree dominating the composition and surrounded by city buildings",
     Keywords: "['urban sketch', 'cityscape', 'tree', 'architecture', 'street scene', 'monochromatic', 'blue', 'buildings', 'tower', 'perspective drawing', 'landscape', 'sketch art', 'urban environment']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-08-19",
@@ -3275,7 +3584,8 @@ const data = [
     Style: "['Architectural sketch', 'Freehand drawing', 'Quick study', 'Loose illustrative style']",
     Subject: "A Victorian-era mansion or institutional building with Gothic architectural elements, including multiple towers, spires, and numerous rectangular windows. The building appears to be multiple stories tall with distinctive architectural features typical of 19th-century design.",
     Keywords: "['Victorian architecture', 'Gothic', 'Mansion', 'Towers', 'Spires', 'Architectural drawing', 'Blue sketch', 'Historic building', 'Windows', 'Turrets', '19th century', 'Building illustration']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-08-19",
@@ -3286,7 +3596,8 @@ const data = [
     Style: "['Architectural sketch', 'Freehand drawing', 'Quick study', 'Loose gestural style']",
     Subject: "A traditional church or chapel building with Gothic architectural features, viewed from a slight angle showing both the front facade and one side. The building includes typical ecclesiastical architectural elements such as pointed arches, a cupola, and vertical emphasis.",
     Keywords: "['church', 'chapel', 'architecture', 'Gothic', 'religious building', 'sketch', 'blue', 'dome', 'spire', 'architectural drawing', 'place of worship', 'arches', 'ecclesiastical', 'building study']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-08-19",
@@ -3297,7 +3608,8 @@ const data = [
     Style: `['Naive art', "Child's drawing", 'Sketch', 'Freehand drawing', 'Primitive style']`,
     Subject: "A architectural drawing of a building with a clock tower, possibly a church, town hall, or school building. The building has multiple windows, a peaked roof, and architectural features typical of institutional or religious buildings.",
     Keywords: `['architecture', 'clock tower', 'building', 'sketch', 'crayon drawing', 'blue', "children's art", 'naive drawing', 'institutional building', 'windows', 'tower', 'church', 'town hall', 'school', 'architectural sketch']`,
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-08-18",
@@ -3308,7 +3620,8 @@ const data = [
     Style: "['Naive art', 'Child-like sketch', 'Minimalist drawing', 'Simple line drawing', 'Primitive sketch']",
     Subject: "A simple indoor scene depicting figures at a table or desk under what appears to be a roof or ceiling structure, suggesting a domestic or educational setting",
     Keywords: "['sketch', 'blue drawing', 'stick figures', 'indoor scene', 'naive art', 'simple drawing', 'shelter', 'table scene', 'minimalist', 'childlike art', 'basic shapes', 'monochromatic']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-08-18",
@@ -3319,7 +3632,8 @@ const data = [
     Style: "['Sketch art', 'Architectural drawing', 'Loose gestural drawing', 'Perspective study', 'Urban sketch']",
     Subject: "An architectural interior scene of what appears to be a curved train or subway platform with waiting figures and architectural details",
     Keywords: "['subway', 'platform', 'architecture', 'perspective', 'sketch', 'station', 'urban', 'interior', 'passengers', 'public transport', 'waiting area', 'curved space', 'geometric', 'transit']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-08-18",
@@ -3330,7 +3644,8 @@ const data = [
     Style: "['Sketch', 'Minimalist', 'Profile portrait', 'Gestural drawing', 'Quick study']",
     Subject: "A side profile sketch featuring a figure in a fedora hat with flowing hair or fabric elements, rendered in monochromatic blue tones",
     Keywords: "['sketch', 'blue', 'profile', 'hat', 'fedora', 'monochromatic', 'minimal', 'flowing', 'portrait', 'side view', 'gesture drawing', 'simple', 'artistic']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-08-14",
@@ -3341,7 +3656,8 @@ const data = [
     Style: "Architectural sketch/perspective drawing",
     Subject: "An interior architectural space showing perspective and depth through linear drawing techniques, possibly a corner of a room or hallway with emphasis on structural elements",
     Keywords: "['perspective drawing', 'architectural sketch', 'interior space', 'linear drawing', 'conte crayon', 'corner view', 'diagonal lines', 'spatial depth', 'architectural study', 'geometric drawing', 'minimalist', 'structural drawing']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-08-14",
@@ -3352,7 +3668,8 @@ const data = [
     Style: "['Architectural sketch', 'Freehand drawing', 'Linear perspective drawing', 'Monochromatic illustration']",
     Subject: "A large Victorian or Gothic Revival style building, possibly a palace, university, or public institution, drawn from a front perspective view showing its architectural grandeur and symmetrical design",
     Keywords: "['Architecture', 'Gothic Revival', 'Victorian architecture', 'Arched windows', 'Historic building', 'Architectural sketch', 'Blue sketch', 'Dome', 'Symmetrical design', 'Classical architecture', 'Building facade', 'Monochromatic', 'Heritage building', 'Architectural illustration']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-08-11",
@@ -3363,7 +3680,8 @@ const data = [
     Style: "['Sketch', 'Urban sketch', 'Freehand drawing', 'Architectural illustration', 'Quick study']",
     Subject: "An architectural landscape featuring civic or institutional buildings, including what appears to be a government building or courthouse with a prominent dome and a church or bell tower",
     Keywords: "['architecture', 'cityscape', 'dome', 'church', 'tower', 'urban sketch', 'buildings', 'monochrome', 'blue sketch', 'institutional architecture', 'architectural drawing', 'civic building', 'urban landscape']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-08-10",
@@ -3374,7 +3692,8 @@ const data = [
     Style: "Architectural sketch",
     Subject: "Interior architectural space showing bookshelves in perspective with a tiled floor pattern and decorative foliage element",
     Keywords: "['sketch', 'perspective drawing', 'bookshelf', 'interior design', 'architectural drawing', 'library', 'bookstore', 'red chalk', 'tiles', 'foliage', 'monochromatic', 'perspective study']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-08-09",
@@ -3385,7 +3704,8 @@ const data = [
     Style: "Quick architectural sketch/rough draft drawing with a minimalist, informal approach typical of preliminary concept art or travel sketching",
     Subject: "Traditional East Asian architecture featuring pagoda-style buildings with a connecting bridge or walkway over water",
     Keywords: "['pagoda', 'Asian architecture', 'bridge', 'sketch', 'temple', 'waterfront', 'blue drawing', 'architectural drawing', 'traditional building', 'oriental design', 'waterside structure', 'rough sketch', 'concept art']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-08-07",
@@ -3396,7 +3716,8 @@ const data = [
     Style: "['Rough sketch', 'Urban sketching', 'Architectural drawing', 'Freehand drawing', 'Quick study']",
     Subject: "An urban streetscape featuring a multi-story building with traditional architecture, including arched doorways and multiple windows arranged in a grid pattern. The scene includes ground-level details suggesting a commercial or retail space.",
     Keywords: "['architecture', 'urban sketch', 'building', 'street scene', 'cityscape', 'storefront', 'windows', 'arches', 'sketch', 'monochromatic', 'street view', 'perspective drawing']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-08-04",
@@ -3407,7 +3728,8 @@ const data = [
     Style: "['Impressionistic', 'Sketchy', 'Abstract', 'Loose gestural drawing', 'Child-like or naive art']",
     Subject: "A landscape scene featuring a building or house with surrounding environment, possibly including trees and a winding path or road",
     Keywords: "['sketch', 'blue', 'landscape', 'house', 'trees', 'path', 'flowing', 'abstract', 'childhood art', 'crayon drawing', 'gestural', 'outdoor scene', 'naive art']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-08-03",
@@ -3418,7 +3740,8 @@ const data = [
     Style: "['Architectural sketch', 'Loose gestural drawing', 'Quick observational study', 'Freehand architectural rendering']",
     Subject: "Gothic-style religious architecture, specifically a cathedral or church with twin spires, featuring characteristic pointed arches, vertical emphasis, and repeated architectural elements",
     Keywords: "['Gothic architecture', 'Cathedral', 'Church', 'Spires', 'Architectural sketch', 'Religious building', 'Twin towers', 'Arched windows', 'Medieval architecture', 'Sacred architecture', 'Drawing', 'Architectural study']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-07-30",
@@ -3429,7 +3752,8 @@ const data = [
     Style: "['Architectural sketch', 'Freehand drawing', 'Urban sketching', 'Monochromatic study']",
     Subject: "An Art Deco-style skyscraper or civic building, possibly inspired by buildings like the Empire State Building or similar architectural landmarks from the 1920s-1930s era. The drawing captures the building's imposing height and architectural details including its ornate crown and geometric window patterns.",
     Keywords: "['architecture', 'skyscraper', 'Art Deco', 'urban sketch', 'building', 'tower', 'architectural drawing', 'cityscape', 'spire', 'monochromatic', 'red chalk', 'vertical lines', 'geometric', 'perspective drawing']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-07-29",
@@ -3440,7 +3764,8 @@ const data = [
     Style: "['Quick sketch', 'Architectural drawing', 'Loose gestural drawing', 'Minimalist', 'Preliminary study']",
     Subject: "A classical or traditional building entrance with architectural features including an arched doorway, windows, columns, and decorative elements typical of historical European architecture",
     Keywords: "['architecture', 'sketch', 'building', 'facade', 'arch', 'doorway', 'columns', 'classical', 'red', 'monochromatic', 'study', 'traditional', 'entrance', 'windows', 'drawing']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-07-27",
@@ -3451,7 +3776,8 @@ const data = [
     Style: "['Rough sketch', 'Expressionist', 'Gestural drawing', 'Quick study']",
     Subject: "A portrait featuring dramatic facial features with emphasis on wild hair, intense eyes, and a full beard, drawn in an expressive, loose style that suggests movement and energy",
     Keywords: "['sketch', 'portrait', 'beard', 'wild hair', 'expressive', 'rough drawing', 'intense', 'brown tones', 'gestural', 'character study', 'facial features', 'artistic']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   },
   {
     "Date": "2019-07-24",
@@ -3462,7 +3788,8 @@ const data = [
     Style: "Amateur architectural sketch",
     Subject: "Traditional East Asian architecture, specifically what appears to be a torii gate or temple entrance with surrounding architectural elements",
     Keywords: "['architecture', 'sketch', 'temple', 'torii', 'gateway', 'Japanese', 'Asian', 'traditional', 'monochromatic', 'crayon', 'buildings', 'arch', 'structure', 'architectural drawing']",
-    Category: "Blog"
+    Category: "Blog",
+    img_alt: null
   }
 ];
 const prerender = false;

@@ -25,6 +25,10 @@ print(os.getcwd())
 from dotenv import load_dotenv,dotenv_values
 load_dotenv()
 
+# print(dotenv_values('.env').keys())
+
+# %%
+
 user = dotenv_values(".env")['bskyuser']
 passy = dotenv_values(".env")['bskypass']
 claudy = dotenv_values(".env")['claudy']
@@ -100,7 +104,8 @@ linklogs = []
 scribbles = []
 
 curse = None
-for i in range(0,9):
+for i in range(0,5):
+# for i in range(0,9):
 # for i in range(0,2):
     print("eye: ", i)
     next = client.get_author_feed(user, cursor=curse, limit=100)
@@ -144,6 +149,8 @@ for i in range(0,9):
                             record = {"Date": created.strftime("%Y-%m-%d"), "Title": text, "Uri": uri}
 
                             stemmo = image.image.cid
+                            record['img_alt'] = image.alt
+                            # print(image.alt)
                             record["img_path"] = f"{stemmo}.jpg"
 
                             picco = f'https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:3kqj3ksyfct7pip5j5dnmjcu/{stemmo}@jpeg'
@@ -219,7 +226,7 @@ for i in range(0,9):
 
 
 
-# https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:3kqj3ksyfct7pip5j5dnmjcu/bafkreihnhin3ktxu7qmy7cskxtoc7te6pkp3v47sybg75kz7ses46anxqm@jpeg
+# # https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:3kqj3ksyfct7pip5j5dnmjcu/bafkreihnhin3ktxu7qmy7cskxtoc7te6pkp3v47sybg75kz7ses46anxqm@jpeg
 
 
-# %%
+# # %%

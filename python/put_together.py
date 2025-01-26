@@ -37,7 +37,7 @@ old_b_scrib = pd.read_csv('scrap/copied_bsky.csv')
 # ['Para', 'Date', 'Title', 'img_path', 'img_alt', 'md_path', 
 # 'Category', 'Caption', 'Colours', 'Style', 'Subject', 'Keywords']
 
-old_b_scrib.drop(columns={'Para', 'img_alt', 'md_path', }, inplace=True)
+old_b_scrib.drop(columns={'Para', 'md_path', }, inplace=True)
 old_b_scrib['Category'] = 'Bsky'
 
 bscrib = pd.concat([new_bscrib, old_b_scrib])
