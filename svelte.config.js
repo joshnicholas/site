@@ -1,14 +1,27 @@
 import { mdsvex } from "mdsvex";
-// import adapter from "@sveltejs/adapter-vercel";
-import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-cloudflare';
 
-export default {
-	kit: {
-		adapter: adapter({
-			fallback: '200.html' // may differ from host to host
-		})
-	}
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+  kit: {
+    adapter: adapter(),
+    // ... truncated ...
+  }
 };
+
+export default config;
+
+
+// import adapter from "@sveltejs/adapter-vercel";
+// import adapter from '@sveltejs/adapter-static';
+
+// export default {
+// 	kit: {
+// 		adapter: adapter({
+// 			fallback: '200.html' // may differ from host to host
+// 		})
+// 	}
+// };
 
 // /** @type {import('@sveltejs/kit').Config} */
 // const config = {
