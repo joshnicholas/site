@@ -8,6 +8,9 @@ import time
 import pandas as pd 
 import json 
 
+from PIL import Image, ImageOps
+import os 
+
 import requests
 today = datetime.datetime.now().astimezone(pytz.timezone("Australia/Brisbane"))
 
@@ -37,6 +40,7 @@ client = Client()
 client.login(user,passy)
 
 image_outty = '/Users/josh/Github/site/static/images/'
+image_backup = '/Users/josh/Github/site/python/image_archive/'
 csv_outty = '/Users/josh/Github/site/python/scrap'
 
 # %%
@@ -158,11 +162,34 @@ for i in range(0,5):
                             r = requests.get(picco, stream=True)
 
                             if r.status_code == 200:
-                                with open(f'{image_outty}{stemmo}.jpg', 'wb') as f:
+                                with open(f'{image_backup}{stemmo}.jpg', 'wb') as f:
                                     for chunk in r:
                                         f.write(chunk)
 
-                            messy = get_caption(f'{image_outty}{stemmo}.jpg')
+                            messy = get_caption(f'{image_backup}{stemmo}.jpg')
+
+                            new_image = Image.open(f'{image_backup}{stemmo}.jpg')
+                            image_stats = os.stat(f'{image_backup}{stemmo}.jpg')
+
+                            if (image_stats.st_size / (1024 * 1024)) > 1:
+                                    w, h = new_image.size
+                                    new_w = int(w/3)
+                                    new_h = int(h/3)
+                                    new_image = new_image.resize((new_w, new_h))
+
+                                    new_image.save(f'{image_outty}{stemmo}.jpg')
+                            
+                            else:
+                                    new_image.save(f'{image_outty}{stemmo}.jpg')
+
+                            w, h = new_image.size
+
+                            old_image_df = pd.read_csv('/Users/josh/Github/site/python/scrap/image_sizes.csv')
+                            new_image_record = {"Img_path": f'{stemmo}.jpg', 'Width': w, "Height": h}
+                            new_i_df = pd.DataFrame.from_records([new_image_record])
+                            new_i_df_2 = pd.concat([old_image_df, new_i_df])
+                            dumper('/Users/josh/Github/site/python/scrap', 'image_sizes', new_i_df_2)
+
                             jsony = json.loads(messy.content[0].text)
 
                             record["Caption"] = jsony['Caption'],

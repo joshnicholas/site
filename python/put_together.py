@@ -86,7 +86,7 @@ combo = combo.loc[~combo['img_path'].isin(exclude)]
 print(len(combo['img_path'].unique().tolist()))
 
 
-print(combo.loc[combo['img_path'].str.contains("bafkreieyj3wi5k5lzrjdo6wjq52crjdklhvjwypffpblyvon5teuawl37e.jpg")])
+# print(combo.loc[combo['img_path'].str.contains("bafkreieyj3wi5k5lzrjdo6wjq52crjdklhvjwypffpblyvon5teuawl37e.jpg")])
 
 combo.dropna(subset=['img_path'], inplace=True)
 combo.drop_duplicates(subset=['img_path'], inplace=True)
@@ -101,7 +101,7 @@ combo['img_path'] = combo['img_path'].str.replace("/", '')
 combo.sort_values(by=['Date'], ascending=False, inplace=True)
 
 
-# pp(combo)
+pp(combo)
 
 # with open('/Users/josh/Github/site/src/lib/data/scribbles.json', 'w') as f:
 #     combo.to_json(f, orient='records')
