@@ -90,7 +90,7 @@ exclude = ['bafkreickplyzs7xo4bm7sqeaes2jgyxyfhdurrvtvbiffnxfxxkwdzjbdu.jpg',
            'bafkreibj7u4rxw6lb2axwlb7yjb3xdhlmkwcdrzzmdobolwur3s4j4u75u.jpg',
            'bafkreiaist7i2on52yxk7ib74gdi4rter4mwhvgckt7rudxclgxagndlcu.jpg',]
 
-print(len(combo['img_path'].unique().tolist()))
+# print(len(combo['img_path'].unique().tolist()))
 
 combo = combo.loc[~combo['img_path'].isin(exclude)]
 

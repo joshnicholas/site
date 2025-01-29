@@ -23,7 +23,7 @@ pathos = 'static/'
 out_path = 'static/'
 
 pathos = '/Users/josh/Github/site/python/image_archive/'
-out_path = '/Users/josh/Github/site/static/small/'
+out_path = '/Users/josh/Github/site/static/images/'
 
 to_do = os.listdir(pathos)
 
@@ -35,7 +35,7 @@ fillos = [x for x in fillos if any(endo in x.lower() for endo in include)]
 already_done = os.listdir(out_path)
 # fillos =[ x for x in fillos if x not in already_done]
 
-print(fillos)
+# print(fillos)
 
 # %%
 
@@ -49,7 +49,7 @@ for fillo in fillos:
 
     im = Image.open(inter)
 
-    mywidth = 320
+    mywidth = 340
     wpercent = (mywidth/float(im.size[0]))
     hsize = int((float(im.size[1])*float(wpercent)))
     img = im.resize((mywidth,hsize))
