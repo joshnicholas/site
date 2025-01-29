@@ -2,7 +2,7 @@
 import { onMount } from 'svelte';
 import Card from '$lib/components/card.svelte'
 // import Radio from '$lib/components/radio.svelte'
-import Bigcard from '$lib/components/bigcard.svelte'
+// import Bigcard from '$lib/components/bigcard.svelte'
 
 export let datah
 export let pageLimit
@@ -105,7 +105,7 @@ $: showNext = !hasNextPage ?  'hidden' : "visible"
     <!-- {#key rows} -->
     {#each rows as row, index}
 
-        <Card {index} bind:row={row} bind:modalImage={modalImage} bind:modalOpen={modalOpen}/>
+        <Card {index} bind:row={row} bind:modalImage={modalImage} bind:modalOpen={modalOpen} imagePathos='{row["img_path"]}'/>
 
     {/each}
     <!-- {/key} -->

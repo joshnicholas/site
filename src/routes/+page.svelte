@@ -3,7 +3,8 @@
 // export let data 
 /** @type {{ data: import('./$types').PageData }} */
 
-let { data } = $props();
+let { data, imageDataArray } = $props();
+
 
 import { setContext } from 'svelte';
 

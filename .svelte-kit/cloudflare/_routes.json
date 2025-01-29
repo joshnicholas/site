@@ -7,7 +7,9 @@
 	"exclude": [
 		"/_app/*",
 		"/.DS_Store",
+		"/0c85263293.jpg",
 		"/blueyellow.jpg",
+		"/favicon.ico",
 		"/favicon.png",
 		"/images/03598547cb.jpg",
 		"/images/047539495b.jpg",
@@ -101,8 +103,6 @@
 		"/images/23DefinitelynotKierkegaard7.jpg",
 		"/images/240114-sydney-opera-house.jpg",
 		"/images/240117-misty-sydney-cbd.jpg",
-		"/images/240124-sydney-ferry.jpg",
-		"/images/240125-melbourne-trams.jpg",
-		"/images/240129-the-knitter.jpeg"
+		"/images/240124-sydney-ferry.jpg"
 	]
 }
