@@ -12,9 +12,9 @@ export let pageLimit
 let firstImage = 0
 let lastImage = firstImage + pageLimit
 
-let modalOpen = false;
-let modalImage
-$: modalShow = modalOpen == false ? "hidden" : 'visible'
+// let modalOpen = false;
+// let modalImage
+// $: modalShow = modalOpen == false ? "hidden" : 'visible'
 
 
 let modalRow 
@@ -105,7 +105,7 @@ $: showNext = !hasNextPage ?  'hidden' : "visible"
     <!-- {#key rows} -->
     {#each rows as row, index}
 
-        <Card {index} bind:row={row} bind:modalImage={modalImage} bind:modalOpen={modalOpen} imagePathos='{row["img_path"]}'/>
+        <Card {index} bind:row={row}/>
 
     {/each}
     <!-- {/key} -->

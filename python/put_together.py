@@ -18,7 +18,7 @@ import pathlib
 pathos = pathlib.Path(__file__).parent
 os.chdir(pathos)
 
-print(os.getcwd())
+# print(os.getcwd())
 
 # %%
 
@@ -61,6 +61,17 @@ blog.drop(columns={'Para'}, inplace=True)
 blog = blog[['Date', 'Title', 'img_path', 'Caption', 'Colours', 'Style', 'Subject', 
 'Keywords', 'Category']]
 
+# %%
+
+### Process images and get sizes etc.
+
+import smaller_images
+
+sizes = pd.read_csv('/Users/josh/Github/site/python/scrap/image_sizes.csv')
+
+
+# %%
+
 
 combo = pd.concat([blog, bscrib])
 combo.sort_values(by=['Date'], ascending=True, inplace=True)
@@ -83,7 +94,7 @@ print(len(combo['img_path'].unique().tolist()))
 
 combo = combo.loc[~combo['img_path'].isin(exclude)]
 
-print(len(combo['img_path'].unique().tolist()))
+# print(len(combo['img_path'].unique().tolist()))
 
 
 # print(combo.loc[combo['img_path'].str.contains("bafkreieyj3wi5k5lzrjdo6wjq52crjdklhvjwypffpblyvon5teuawl37e.jpg")])
@@ -101,7 +112,18 @@ combo['img_path'] = combo['img_path'].str.replace("/", '')
 combo.sort_values(by=['Date'], ascending=False, inplace=True)
 
 
-pp(combo)
+# %%
+
+# %%
+
+dumbo = pd.merge(combo, sizes, on='img_path', how='left')
+
+# print(dumbo.isna())
+# pp(dumbo)
+
+# %%
+
+# %%
 
 # with open('/Users/josh/Github/site/src/lib/data/scribbles.json', 'w') as f:
 #     combo.to_json(f, orient='records')
@@ -111,5 +133,8 @@ pp(combo)
 
 with open('/Users/josh/Github/site/src/lib/scribbles.json', 'w') as f:
     combo.to_json(f, orient='records')
+
+with open('/Users/josh/Github/site/src/lib/scribbles.json', 'w') as f:
+    dumbo.to_json(f, orient='records')
 
 # %%

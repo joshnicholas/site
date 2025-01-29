@@ -4,8 +4,8 @@ export let row
 export let modalOpen
 // export let modalImage
 // export let modalIndex
-export let imagePathos
-// export let index
+// export let imagePathos
+export let index
 
 import { timeParse, timeFormat } from 'd3-time-format'
 
@@ -25,19 +25,19 @@ let dateFormat = timeFormat("%d %b %Y")
 
 
 
-function getImageUrl(name) {
-  // note that this does not include files in subdirectories
-  return new URL(`/images/${name}`, import.meta.url).href
-}
+// function getImageUrl(name) {
+//   // note that this does not include files in subdirectories
+//   return new URL(`/images/${name}`, import.meta.url).href
+// }
 
 // let imgSrc = getImageUrl(imagePathos)
 // console.log("imgSrc: ", imgSrc)
 
-let images = import.meta.glob('$lib/images/*.{jpg,jpeg,png}',
-      { query: { enhanced: true },
-	import: 'default',
-	eager: true
-      })
+// let images = import.meta.glob('$lib/images/*.{jpg,jpeg,png}',
+//       { query: { enhanced: true },
+// 	import: 'default',
+// 	eager: true
+//       })
 
 
 
@@ -46,20 +46,23 @@ let images = import.meta.glob('$lib/images/*.{jpg,jpeg,png}',
 
 <div>
 
-<!-- <img class='cardy' 
+<img class='cardy mx-auto' 
 id={index}
+width={row["Width"]}
+height={row['Height']}
 style='border-color:{colours[i]}' 
-src="images/{row["img_path"]}" 
-alt="/images{row["Title"]}"
+src="small/{row["img_path"]}" 
+alt="{row["Title"]}"
 on:click={() => modalOpen = true}
 on:click={() => modalImage = row["img_path"]}
 on:click={() => modalIndex = index}
 
-> -->
+>
 
-<div style='border-color:{colours[i]};border-width: 10px;' >
+<!-- <div style='border-color:{colours[i]};border-width: 10px;' >
 <enhanced:img src="{images[`/src/lib/images/${imagePathos}`]}"  alt="An alt text" />
-</div>
+</div> -->
+
 <span class='text-l'>{row["Title"]}</span><br>
 
 <span class='text-xs'>{dateFormat(dateParse(row["Date"]))}</span>
@@ -79,12 +82,12 @@ on:click={() => modalIndex = index}
 
 
 
-/* img {
-    border-width: 10px; */
+img {
+    border-width: 10px;
     /* border-color: #B1C29E; */
     /* border-color: #F0A04B; */
 
     /* border-color: #DC5F00; */
-/* } */
+}
 
 </style>
