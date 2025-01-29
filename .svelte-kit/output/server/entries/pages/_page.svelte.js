@@ -4031,7 +4031,6 @@ function Card($$payload, $$props) {
   let row = $$props["row"];
   let modalOpen = $$props["modalOpen"];
   let imagePathos = $$props["imagePathos"];
-  let index = $$props["index"];
   let colours = ["#DC5F00", "#B1C29E", "#789DBC", "#8967B3"];
   let i = Math.floor(Math.random() * colours.length);
   let dateParse = timeParse("%Y-%m-%d");
@@ -4386,7 +4385,7 @@ function Card($$payload, $$props) {
     $$payload.out += `<!--]--> <img${attr("src", images[`/src/lib/images/${imagePathos}`].img.src)} alt="An alt text"${attr("width", images[`/src/lib/images/${imagePathos}`].img.w)}${attr("height", images[`/src/lib/images/${imagePathos}`].img.h)}></picture>`;
   }
   $$payload.out += `<!--]--></div> <span class="text-l">${escape_html(row["Title"])}</span><br> <span class="text-xs">${escape_html(dateFormat(dateParse(row["Date"])))}</span></div>`;
-  bind_props($$props, { row, modalOpen, imagePathos, index });
+  bind_props($$props, { row, modalOpen, imagePathos });
   pop();
 }
 function ImageSet($$payload, $$props) {
@@ -4394,7 +4393,6 @@ function ImageSet($$payload, $$props) {
   let isFirstPage, hasNextPage, showPrev, showNext;
   let datah = $$props["datah"];
   let pageLimit = $$props["pageLimit"];
-  let containerWidth = $$props["containerWidth"];
   let firstImage = 0;
   let lastImage = firstImage + pageLimit;
   let modalOpen = false;
@@ -4447,7 +4445,7 @@ function ImageSet($$payload, $$props) {
     $$render_inner($$inner_payload);
   } while (!$$settled);
   assign_payload($$payload, $$inner_payload);
-  bind_props($$props, { datah, pageLimit, containerWidth });
+  bind_props($$props, { datah, pageLimit });
   pop();
 }
 function _page($$payload, $$props) {
@@ -4458,7 +4456,6 @@ function _page($$payload, $$props) {
   let sortBy = void 0;
   sortBy = "Random";
   const options = ["Random", "Newest", "Oldest", "Favs"];
-  let containerWidth = void 0;
   let feature = [
     "240711_last-full-day_0.jpg",
     "240714_escaping-the-hu_0.jpg",
@@ -4500,7 +4497,6 @@ function _page($$payload, $$props) {
   let $$settled = true;
   let $$inner_payload;
   function $$render_inner($$payload2) {
-    $$payload2.out += `<div id="Biggest">`;
     Radio($$payload2, {
       options,
       get sortBy() {
@@ -4515,11 +4511,10 @@ function _page($$payload, $$props) {
     {
       ImageSet($$payload2, {
         pageLimit,
-        datah: sorter(data.data, sortBy),
-        containerWidth
+        datah: sorter(data.data, sortBy)
       });
     }
-    $$payload2.out += `<!----></div>`;
+    $$payload2.out += `<!---->`;
   }
   do {
     $$settled = true;

@@ -6,7 +6,7 @@ import Card from '$lib/components/card.svelte'
 
 export let datah
 export let pageLimit
-export let containerWidth
+// export let containerWidth
 
 
 let firstImage = 0

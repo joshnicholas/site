@@ -5,7 +5,7 @@ export let modalOpen
 // export let modalImage
 // export let modalIndex
 export let imagePathos
-export let index
+// export let index
 
 import { timeParse, timeFormat } from 'd3-time-format'
 
@@ -27,7 +27,7 @@ let dateFormat = timeFormat("%d %b %Y")
 
 function getImageUrl(name) {
   // note that this does not include files in subdirectories
-  return new URL(`/static/images/${name}`, import.meta.url).href
+  return new URL(`/images/${name}`, import.meta.url).href
 }
 
 // let imgSrc = getImageUrl(imagePathos)

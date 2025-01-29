@@ -24,7 +24,7 @@ sortBy = 'Random'
 
 const options = ['Random', 'Newest', 'Oldest', 'Favs']
 
-let containerWidth = $state();
+// let containerWidth = $state();
 
 let feature = ["240711_last-full-day_0.jpg","240714_escaping-the-hu_0.jpg","240117-misty-sydney-cbd.jpg",
         "240719_pretty-sparkling-day_0.jpg","uncle_e.jpg","240425_its-getting-cold_0.jpg","240725_sending-a-whoooooole_0.jpg",
@@ -67,14 +67,14 @@ function sorter(array, how){
 
 </script>
 
-<div id='Biggest' bind:clientWidth={containerWidth}>
+<!-- <div id='Biggest' bind:clientWidth={containerWidth}> -->
 
     <Radio {options} bind:sortBy={sortBy}/>
 
     {#key sortBy}
-    <Imageset {pageLimit} datah={sorter(data.data, sortBy)} {containerWidth} /> 
+    <Imageset {pageLimit} datah={sorter(data.data, sortBy)} /> 
     {/key}
 
 
-</div>
+<!-- </div> -->
 
