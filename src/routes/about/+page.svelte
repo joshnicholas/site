@@ -27,13 +27,11 @@
       <!-- , <a href='https://joshnicholas.com/projects'>projects</a> I'm working on -->
       <p>My name is <span class="font-semibold">Josh</span> and I'm a scribbler and <a href='https://www.theguardian.com/profile/josh-nicholas' target='_blank' rel="me">journalist</a>.</p><br>
 
-      <p>Welcome. This site is pretty new. It is mostly an experiment and very much a work in progress. Sorry if anything breaks.</p><br>
+      <p>Welcome. This site is an experiment and a work in progress. Sorry if anything breaks.</p><br>
         
-      <p>For almost 20 years this domain hosted a much neglected blog. The book reviews I posted in high school were truly terrible. In 2019 I <a href='https://www.theguardian.com/lifeandstyle/2022/aug/15/i-used-to-think-art-required-natural-talent-then-i-taught-myself-to-draw'>started to take drawing a bit more seriously</a> and posting scribbles semi-regularly.</p><br>
+      <p>For almost 20 years you would have found a much neglected blog at this domain. The book reviews I posted in high school were truly terrible. In 2019 I <a href='https://www.theguardian.com/lifeandstyle/2022/aug/15/i-used-to-think-art-required-natural-talent-then-i-taught-myself-to-draw'>started to take drawing a bit more seriously</a> and began posting scribbles semi-regularly.</p><br>
 
-      <p>Over time I amassed a couple hundred scribbles on here, but most of them were stuck behind a chronological timeline. I also lost hundreds more through various platform migrations.</p><br>
-
-      <p>I recently decided to try something new. This is both an archive of (whats left of) earlier scribbles, and a growing collection of newer stuff posted on social media. I'm putting the emphasis on discovery rather than chronology. I've scheduled a script to update about once a week.</p><br>
+      <p>But I got sick of seeing my scribbles spread across different platforms, and lost in chronological timelines. This new site is an attempt to bring everything together and make it more discoverable. I'll run a script to update about once a week.</p><br>
 
       </div>
 
