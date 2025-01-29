@@ -13,21 +13,25 @@
 
   <div class="block max-w-3xl display:block">
     <!-- class="prose w-full rounded" -->
-    <div class='float-left lg:w-1/3  prose md:pr-10'>
+    <div class='float-left lg:w-1/3  prose mr-0 sm:mr-2 mb-2 sm:mb-0'>
     <!-- <img alt='about image' src='/about.png' class="max-w-50px rounded"/> -->
       <!-- <img alt='about image' src='/new_about.jpg' class="max-h-[15rem] text-wrap  mx-auto rounded sm:rounded-2xl"/> -->
       <!-- <img alt='about image' src='/yellow.jpg' class=" md:max-h-[25rem] mx-auto rounded rounded-2xl"/> -->
 
-      <img alt='about image' src='/blueyellow.jpg' class=" md:max-h-[25rem] mx-auto" style='border-color:#DC5F00;border-width: 10px;'/>
+      <img alt='about image'  srcset="/blueyellow200.jpg 200w, /blueyellow340.jpg 380w" sizes="(max-width: 600px) 380px,
+         380px" class="mx-auto" style='border-color:#DC5F00;border-width: 10px;'/>
 
     </div>
 
   </div>
 
-  <div class="block max-w-3xl mx-auto display:block">  
+  
     <div class=''>
 
-      <p class='mt-5'>Ello.</p><br>
+      <br>
+      <br>
+
+      <p class=''>Ello.</p><br>
       <!-- , <a href='https://joshnicholas.com/projects'>projects</a> I'm working on -->
       <p>My name is <span class="font-semibold">Josh</span> and I'm a scribbler and <a href='https://www.theguardian.com/profile/josh-nicholas' target='_blank' rel="me">journalist</a>.</p><br>
 
@@ -39,11 +43,7 @@
 
       </div>
 
-</div>
 
-<div class="clear-left">
-
-</div>
 
 </div>
 
