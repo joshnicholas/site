@@ -18,6 +18,7 @@ $: modalShow = modalOpen == false ? "none" : 'block'
 // console.log("row.image_path: ", row["img_path"])
 
 let colours = ['#DC5F00', '#B1C29E', '#789DBC', '#8967B3']
+
 let i = Math.floor(Math.random() * colours.length);
 
 let dateParse = timeParse("%Y-%m-%d")
@@ -50,7 +51,7 @@ let dateFormat = timeFormat("%d %b %Y")
 id={index}
 width={row["Width"]}
 height={row['Height']}
-style='border-color:{colours[i]}' 
+style='border-color:{colours[i]};background-color:"{colours[i]}"' 
 src="images/{row["img_path"]}" 
 alt="{row["Title"]}"
 on:click={() => modalOpen = true}
