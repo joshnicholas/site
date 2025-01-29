@@ -12,12 +12,12 @@
       // $:console.log(userSelected)
   </script>
 
-<div id='sortRow' class="flex justify-between text-l pb-5">
+<div id='sortRow' class="flex justify-between text-l font-semibold" style='padding-bottom:0.5rem;'>
 
   {#each options as option}
   <!-- <div> -->
   <input
-    class="sr-only mr-5"
+    class="sr-only mr-2"
     type="radio"
     id={slugify(option)}
     bind:group={sortBy}
@@ -44,18 +44,10 @@
           --gray: black;
       }
       
-     .group-container {
-        border-radius: 2px;
-        display: flex;
-        flex-direction: row;
-      }
-  
-    .legend {
-      font-weight: bold;
-    }
+
     label {
       user-select: none;
-      padding-right:0.5em;
+      /* padding-right:0.5em; */
 
     }
   

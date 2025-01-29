@@ -2,10 +2,14 @@
 // export let data 
 /** @type {{ data: import('./$types').PageData }} */
 
+	  import Navvy from '$lib/components/nav.svelte'
+
 
 </script>
 
 <div class='mx-auto max-w-[800px] min-h-[600px]'>
+
+  <Navvy upDown='up'/>
 
   <div class="block max-w-3xl display:block">
     <!-- class="prose w-full rounded" -->
