@@ -137,4 +137,6 @@ with open('/Users/josh/Github/site/src/lib/scribbles.json', 'w') as f:
 with open('/Users/josh/Github/site/src/lib/scribbles.json', 'w') as f:
     dumbo.to_json(f, orient='records')
 
+dumper('/Users/josh/Github/site/python/scrap', 'together', dumbo)
+
 # %%
