@@ -14,13 +14,12 @@
         <li class="mr-0">
             <a href='/'>scribbles</a>
         </li >
-        <li class="mr-0">
-            <a href='/about'>about</a>
-        </li >
         <!-- <li class="mr-0">
             <a href='https://www.theguardian.com/profile/josh-nicholas' target='_blank' rel="me">journalism</a>
         </li> -->
-
+        <li class="mr-0">
+            <a href='/about'>about</a>
+        </li >
     </ul>
 
 </div>

@@ -6,6 +6,7 @@ import Card from '$lib/components/card.svelte'
 
 export let datah
 export let pageLimit
+export let isSortTime = false
 // export let containerWidth
 
 

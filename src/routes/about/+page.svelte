@@ -3,7 +3,11 @@
 /** @type {{ data: import('./$types').PageData }} */
 
 	  import Navvy from '$lib/components/nav.svelte'
+    import PostList from '$lib/components/postList.svelte'
 
+    let { data } = $props();
+
+    // console.log("items: ", data.items)
 
 </script>
 
@@ -43,6 +47,11 @@
 
       </div>
 
+      <hr class='mb-5' style='border-color:#000 !important;width:50%'>
+
+      <div>
+        <PostList datah={data.items} pageLimit={6} title={"Recent articles:"}/>
+      </div>
 
 
 </div>
