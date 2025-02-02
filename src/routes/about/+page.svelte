@@ -47,11 +47,11 @@
 
       </div>
 
-      <hr class='mb-5' style='border-color:#000 !important;width:50%'>
+      <!-- <hr class='mb-5' style='border-color:#000 !important;width:50%'>
 
       <div>
         <PostList datah={data.items} pageLimit={6} title={"Recent articles:"}/>
-      </div>
+      </div> -->
 
 
 </div>
