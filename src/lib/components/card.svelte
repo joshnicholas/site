@@ -22,7 +22,7 @@ let colours = ['#DC5F00', '#B1C29E', '#789DBC', '#8967B3']
 let i = Math.floor(Math.random() * colours.length);
 
 let dateParse = timeParse("%Y-%m-%d")
-let dateFormat = timeFormat("%d %b %Y")
+let dateFormat = timeFormat("%b %Y")
 
 
 

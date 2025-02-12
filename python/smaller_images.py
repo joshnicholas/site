@@ -33,39 +33,39 @@ fillos = os.listdir(pathos)
 fillos = [x for x in fillos if any(endo in x.lower() for endo in include)]
 
 already_done = os.listdir(out_path)
-# fillos =[ x for x in fillos if x not in already_done]
+fillos =[ x for x in fillos if x not in already_done]
 
-# print(fillos)
+print(fillos)
 
 # %%
 
 records = []
 
-# for fillo in fillos:
+for fillo in fillos:
 
-#     stemmo = fillo.split(".")[0].strip()
+    stemmo = fillo.split(".")[0].strip()
 
-#     inter = f"{pathos}{fillo}"
+    inter = f"{pathos}{fillo}"
 
-#     im = Image.open(inter)
+    im = Image.open(inter)
 
-#     mywidth = 340
-#     wpercent = (mywidth/float(im.size[0]))
-#     hsize = int((float(im.size[1])*float(wpercent)))
-#     img = im.resize((mywidth,hsize))
-#     img.save(f"{out_path}{fillo}")
+    mywidth = 340
+    wpercent = (mywidth/float(im.size[0]))
+    hsize = int((float(im.size[1])*float(wpercent)))
+    img = im.resize((mywidth,hsize))
+    img.save(f"{out_path}{fillo}")
 
-#     record = {"img_path": fillo, 'Width': img.size[0], 'Height': img.size[1]}
-#     records.append(record)
+    record = {"img_path": fillo, 'Width': img.size[0], 'Height': img.size[1]}
+    records.append(record)
 
-#     # print(f"Old: {im.size[0]}")
-#     # print(f"New: {img.size[0]}")
+    # print(f"Old: {im.size[0]}")
+    # print(f"New: {img.size[0]}")
 
-# cat = pd.DataFrame.from_records(records)
+cat = pd.DataFrame.from_records(records)
 
-# dumper("/Users/josh/Github/site/python/scrap", 'image_sizes', cat)
+dumper("/Users/josh/Github/site/python/scrap", 'image_sizes', cat)
 
-# pp(cat)
+pp(cat)
 
     # im.save(f"{out_path}{stemmo}.avif", quality=100)
 
@@ -73,22 +73,22 @@ records = []
 
 
 
-inter = f"/Users/josh/Github/site/python/image_archive/blueyellow.jpg"
+# inter = f"/Users/josh/Github/site/python/image_archive/blueyellow.jpg"
 
-im = Image.open(inter)
-# im.save(f"/Users/josh/Github/site/python/image_archive/blueyellow.jpg")
+# im = Image.open(inter)
+# # im.save(f"/Users/josh/Github/site/python/image_archive/blueyellow.jpg")
 
-mywidth = 340
-wpercent = (mywidth/float(im.size[0]))
-hsize = int((float(im.size[1])*float(wpercent)))
-img = im.resize((mywidth,hsize))
-img.save(f"/Users/josh/Github/site/static/blueyellow340.jpg")
+# mywidth = 340
+# wpercent = (mywidth/float(im.size[0]))
+# hsize = int((float(im.size[1])*float(wpercent)))
+# img = im.resize((mywidth,hsize))
+# img.save(f"/Users/josh/Github/site/static/blueyellow340.jpg")
 
-mywidth = 200
-wpercent = (mywidth/float(im.size[0]))
-hsize = int((float(im.size[1])*float(wpercent)))
-img = im.resize((mywidth,hsize))
-img.save(f"/Users/josh/Github/site/static/blueyellow200.jpg")
+# mywidth = 200
+# wpercent = (mywidth/float(im.size[0]))
+# hsize = int((float(im.size[1])*float(wpercent)))
+# img = im.resize((mywidth,hsize))
+# img.save(f"/Users/josh/Github/site/static/blueyellow200.jpg")
 
-print(img.size[0])
-print(img.size[1])
+# print(img.size[0])
+# print(img.size[1])

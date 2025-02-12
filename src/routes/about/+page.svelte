@@ -9,6 +9,8 @@
 
     // console.log("items: ", data.items)
 
+    console.log("data: ", data)
+
 </script>
 
 <div class='mx-auto max-w-[800px] min-h-[600px]'>
