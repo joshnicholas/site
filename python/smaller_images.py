@@ -55,17 +55,17 @@ for fillo in fillos:
     img = im.resize((mywidth,hsize))
     img.save(f"{out_path}{fillo}")
 
-    record = {"img_path": fillo, 'Width': img.size[0], 'Height': img.size[1]}
-    records.append(record)
+    # record = {"img_path": fillo, 'Width': img.size[0], 'Height': img.size[1]}
+    # records.append(record)
 
     # print(f"Old: {im.size[0]}")
     # print(f"New: {img.size[0]}")
 
-cat = pd.DataFrame.from_records(records)
+# cat = pd.DataFrame.from_records(records)
 
-dumper("/Users/josh/Github/site/python/scrap", 'image_sizes', cat)
+# dumper("/Users/josh/Github/site/python/scrap", 'image_sizes', cat)
 
-pp(cat)
+# pp(cat) 
 
     # im.save(f"{out_path}{stemmo}.avif", quality=100)
 

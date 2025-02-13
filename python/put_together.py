@@ -67,6 +67,8 @@ blog = blog[['Date', 'Title', 'img_path', 'Caption', 'Colours', 'Style', 'Subjec
 
 import smaller_images
 
+import get_sizes
+
 sizes = pd.read_csv('/Users/josh/Github/site/python/scrap/image_sizes.csv')
 
 
