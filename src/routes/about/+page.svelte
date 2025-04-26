@@ -43,9 +43,11 @@
 
       <p>This site is an experiment and I'm constantly tinkering. Sorry if anything breaks while you're here.</p><br>
         
-      <p>For almost 20 years you would have found a much neglected blog at this domain. The book reviews I posted in high school were truly terrible. In 2019 I <a href='https://www.theguardian.com/lifeandstyle/2022/aug/15/i-used-to-think-art-required-natural-talent-then-i-taught-myself-to-draw'>started to take drawing a bit more seriously</a> and began posting them semi-regularly.</p><br>
+      <p>For almost 20 years you would have found a much neglected blog at this domain. In 2019 I <a href='https://www.theguardian.com/lifeandstyle/2022/aug/15/i-used-to-think-art-required-natural-talent-then-i-taught-myself-to-draw'>started scribbling a bit more seriously</a>.</p><br>
 
-      <p>Eventually I got sick of seeing my scribbles spread across different platforms, and lost in chronological timelines. This new site is an attempt to bring everything together and make it more discoverable. I'll run a script to update about once a week.</p><br>
+      <p>I got sick of seeing my scribbles spread across different platforms, and lost in chronological timelines. This new site attempts to bring everything together and make it more discoverable.</p><br> 
+      
+      <p>I'm working on new features all the time and aiming to run an update script about once a week. I post more regularly on <a href='https://www.instagram.com/joshcnicholas' target='_blank' rel="me">Instagram</a>.</p><br>
 
       </div>
 

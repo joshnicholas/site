@@ -23,6 +23,8 @@ os.chdir(pathos)
 
 print(os.getcwd())
 
+dont_delete = ['at://did:plc:3kqj3ksyfct7pip5j5dnmjcu/app.bsky.feed.post/3lkweaztywc2t']
+
 # %%
 
 from dotenv import load_dotenv,dotenv_values
@@ -165,9 +167,10 @@ for i in range(0,5):
                                 with open(f'{image_backup}{stemmo}.jpg', 'wb') as f:
                                     for chunk in r:
                                         f.write(chunk)
-
-                            messy = get_caption(f'{image_backup}{stemmo}.jpg')
-
+                            try:
+                                messy = get_caption(f'{image_backup}{stemmo}.jpg')
+                            except:
+                                break
                             # new_image = Image.open(f'{image_backup}{stemmo}.jpg')
                             # image_stats = os.stat(f'{image_backup}{stemmo}.jpg')
 
@@ -234,17 +237,21 @@ for i in range(0,5):
             if handle.lower() == user:
                 uri = thingo.post.uri
                 if (difference.days > 30):
-                    client.delete_post(uri)
-                    # record['Deleted'] = True
-                    deleted += 1
-                    print("Deleted: ", deleted)
+                    
+                    if thingo.post.uri not in dont_delete:
+
+                        client.delete_post(uri)
+                        # record['Deleted'] = True
+                        deleted += 1
+                        print("Deleted: ", deleted)
             else:
                 uri = thingo.post.viewer.repost
                 if (difference.days > 30):
-                    client.delete_repost(uri)
-                    # record['Deleted'] = True
-                    deleted += 1
-                    print("Deleted: ", deleted)
+                    if thingo.post.uri not in dont_delete:
+                        client.delete_repost(uri)
+                        # record['Deleted'] = True
+                        deleted += 1
+                        print("Deleted: ", deleted)
         except Exception as e:
             print(e)
             print(thingo.post.record.embed.images)
