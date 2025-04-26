@@ -15,14 +15,14 @@
             <a href='/'>scribbles</a>
         </li >
         <li class="mr-0">
-            <a href='https://www.theguardian.com/profile/josh-nicholas' target='_blank' rel="me">guardian</a>
-        </li>
-        <li class="mr-0">
-            <a href='https://www.instagram.com/joshcnicholas' target='_blank' rel="me">insta</a>
-        </li>
-        <li class="mr-0">
             <a href='/about'>about</a>
         </li >
+        <li class="mr-0">
+            <a href='https://www.theguardian.com/profile/josh-nicholas' target='_blank' rel="me">guardian⤴</a>
+        </li>
+        <li class="mr-0">
+            <a href='https://www.instagram.com/joshcnicholas' target='_blank' rel="me">insta⤴</a>
+        </li>
     </ul>
 
 </div>
