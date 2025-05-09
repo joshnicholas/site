@@ -37,21 +37,22 @@ $: hasNextPage = lastImage >= lenno ? false: true;
 $: showPrev = isFirstPage ? "hidden" : 'visible'
 $: showNext = !hasNextPage ?  'hidden' : "visible"
 
+let scrolly
 
 </script>
 
+    <div bind:this={scrolly}></div>
+
+    <div id='pagination'  class='mx-auto flex items-center justify-between text-xl pb-5 pt-5'>
 
 
-    <div id='pagination' class='mx-auto flex items-center justify-between text-xl pb-5 pt-5'>
-
-
-    <button id='left' on:click={() => firstImage -= pageLimit} on:click={() => lastImage -= pageLimit} style='visibility: {showPrev}'>Prev</button>
+    <button id='left' on:click={() => firstImage -= pageLimit} on:click={() => lastImage -= pageLimit} style='visibility: {showPrev}' on:click={() => scrolly.scrollIntoView()}>Prev</button>
         <!-- <div id='left' on:click={() => firstImage -= pageLimit} on:click={() => lastImage -= pageLimit} style='visibility: {showPrev}'>Prev</div> -->
 
 
         <span class='text-xs font-semibold'>{lastImage}/{lenno}</span>
     
-        <button id='right' on:click={() => firstImage += pageLimit} on:click={() => lastImage += pageLimit} style='visibility: {showNext}'>Next</button>
+        <button id='right' on:click={() => firstImage += pageLimit} on:click={() => lastImage += pageLimit} style='visibility: {showNext}' on:click={() => scrolly.scrollIntoView()}>Next</button>
         <!-- <div id='right' on:click={() => firstImage += pageLimit} on:click={() => lastImage += pageLimit} style='visibility: {showNext}'>Next</div> -->
     
     </div>
@@ -73,13 +74,13 @@ $: showNext = !hasNextPage ?  'hidden' : "visible"
 
 <div id='pagination' class='mx-auto flex items-center justify-between text-xl pt-10'>
 
-    <button id='left' on:click={() => firstImage -= pageLimit} on:click={() => lastImage -= pageLimit} style='visibility: {showPrev}'>Prev</button>
+    <button id='left' on:click={() => firstImage -= pageLimit} on:click={() => lastImage -= pageLimit} style='visibility: {showPrev}' on:click={() => scrolly.scrollIntoView()}>Prev</button>
         <!-- <div id='left' on:click={() => firstImage -= pageLimit} on:click={() => lastImage -= pageLimit} style='visibility: {showPrev}'>Prev</div> -->
 
 
         <span class='text-xs font-semibold'>{lastImage}/{lenno}</span>
     
-        <button id='right' on:click={() => firstImage += pageLimit} on:click={() => lastImage += pageLimit} style='visibility: {showNext}'>Next</button>
+        <button id='right' on:click={() => firstImage += pageLimit} on:click={() => lastImage += pageLimit} style='visibility: {showNext}' on:click={() => scrolly.scrollIntoView()}>Next</button>
         <!-- <div id='right' on:click={() => firstImage += pageLimit} on:click={() => lastImage += pageLimit} style='visibility: {showNext}'>Next</div> -->
 </div>
 
