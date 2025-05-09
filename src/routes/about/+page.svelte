@@ -2,6 +2,17 @@
 // export let data 
 /** @type {{ data: import('./$types').PageData }} */
 
+let mobileBreakpoint = 768;
+let innerWidth = $state(620);
+let isNotMobile = $derived(innerWidth >= mobileBreakpoint);
+
+
+$inspect(innerWidth)
+
+function handleResize() {
+    innerWidth = window.innerWidth;
+  }
+
 	  import Navvy from '$lib/components/nav.svelte'
     import PostList from '$lib/components/postList.svelte'
 
@@ -9,13 +20,22 @@
 
     // console.log("items: ", data.items)
 
-    console.log("data: ", data)
+    // console.log("data: ", data)
 
+    console.log("Hi!")
 </script>
 
-<div class='mx-auto max-w-[800px] min-h-[600px]'>
+<svelte:window bind:innerWidth />
 
+<div class='mx-auto max-w-[800px] min-h-[425px]'>
+
+  {#if !isNotMobile}
   <Navvy upDown='up'/>
+{/if}
+{#if isNotMobile}
+<div class="mb-10"></div>
+{/if}
+
 
   <div class="block max-w-3xl display:block">
     <!-- class="prose w-full rounded" -->
@@ -41,13 +61,11 @@
       <!-- , <a href='https://joshnicholas.com/projects'>projects</a> I'm working on -->
       <p>My name is <span class="font-semibold">Josh</span>. I'm a scribbler and <a href='https://www.theguardian.com/profile/josh-nicholas' target='_blank' rel="me">journalist</a>.</p><br>
 
-      <p>This site is an experiment and I'm constantly tinkering. Sorry if anything breaks while you're here.</p><br>
-        
-      <p>For almost 20 years you would have found a much neglected blog at this domain. In 2019 I <a href='https://www.theguardian.com/lifeandstyle/2022/aug/15/i-used-to-think-art-required-natural-talent-then-i-taught-myself-to-draw'>started scribbling a bit more seriously</a>.</p><br>
+      <p>You would have previously found a much-neglected blog here. Now I'm using it to collect <a href='https://www.theguardian.com/lifeandstyle/2022/aug/15/i-used-to-think-art-required-natural-talent-then-i-taught-myself-to-draw'>scribbles</a> from various platforms into one space.</p><br>
 
-      <p>I got sick of seeing my scribbles spread across different platforms, and lost in chronological timelines. This new site attempts to bring everything together and make it more discoverable.</p><br> 
-      
-      <p>I'm working on new features all the time and aiming to run an update script about once a week. I post more regularly on <a href='https://www.instagram.com/joshcnicholas' target='_blank' rel="me">Instagram</a>.</p><br>
+      <p>This site is an experiment and I'm still tinkering. Sorry if anything breaks.</p><br>
+              
+      <p>I'm aiming to run an update script about once a week. I post more regularly on <a href='https://www.instagram.com/joshcnicholas' target='_blank' rel="me">Instagram</a>.</p><br>
 
       </div>
 
