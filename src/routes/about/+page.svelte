@@ -39,7 +39,7 @@ function handleResize() {
 
   <div class="block max-w-3xl display:block">
     <!-- class="prose w-full rounded" -->
-    <div class='float-left lg:w-1/3  prose mr-0 sm:mr-2 mb-2 sm:mb-0'>
+    <div class='float-left lg:w-1/3  prose mr-0 sm:mr-2 mb-1 sm:mb-0'>
     <!-- <img alt='about image' src='/about.png' class="max-w-50px rounded"/> -->
       <!-- <img alt='about image' src='/new_about.jpg' class="max-h-[15rem] text-wrap  mx-auto rounded sm:rounded-2xl"/> -->
       <!-- <img alt='about image' src='/yellow.jpg' class=" md:max-h-[25rem] mx-auto rounded rounded-2xl"/> -->
@@ -68,6 +68,9 @@ function handleResize() {
       <p>I'm aiming to run an update script about once a week. I post more regularly on <a href='https://www.instagram.com/joshcnicholas' target='_blank' rel="me">Instagram</a>.</p><br>
 
       </div>
+
+
+      <div style="clear: both; display: block; visibility: visible; width: 100%; height: 0; content: ''; overflow: hidden;"></div>
 
       <!-- <hr class='mb-5' style='border-color:#000 !important;width:50%'>
 
