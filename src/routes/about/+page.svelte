@@ -61,9 +61,9 @@ function handleResize() {
       <!-- , <a href='https://joshnicholas.com/projects'>projects</a> I'm working on -->
       <p>My name is <span class="font-semibold">Josh</span>. I'm a scribbler and <a href='https://www.theguardian.com/profile/josh-nicholas' target='_blank' rel="me">journalist</a>.</p><br>
 
-      <p>You would have previously found a much-neglected blog here. Now I'm using it to collect <a href='https://www.theguardian.com/lifeandstyle/2022/aug/15/i-used-to-think-art-required-natural-talent-then-i-taught-myself-to-draw'>scribbles</a> from various platforms into one space.</p><br>
+      <p>There used to be a much-neglected blog at this site. I'm now using it to gather <a href='https://www.theguardian.com/lifeandstyle/2022/aug/15/i-used-to-think-art-required-natural-talent-then-i-taught-myself-to-draw'>my scribbles</a> from various platforms.</p><br>
 
-      <p>This site is an experiment and I'm still tinkering. Sorry if anything breaks.</p><br>
+      <p>This is all an experiment and I'm still tinkering. Sorry if anything breaks.</p><br>
               
       <p>I'm aiming to run an update script about once a week. I post more regularly on <a href='https://www.instagram.com/joshcnicholas' target='_blank' rel="me">Instagram</a>.</p><br>
 
