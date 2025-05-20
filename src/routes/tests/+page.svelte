@@ -207,7 +207,7 @@ $inspect(filteredResults)
 
 <div class='mx-auto max-w-[800px] min-h-[425px]'>
 
-  <div class='mb-6'>I'm experimenting with multimodality and search.</div>
+  <div class='mb-6'>This is an experiment of multimodality and search.</div>
 
   <div class='mb-6'>I've been running scribbles through an image model to assign keywords, captions and styles. This is what the search bar is hooked up to. It's pretty good for things like "still life" or "green".</div>
 
