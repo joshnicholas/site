@@ -402,12 +402,12 @@ function calculateSimilarity(a, b) {
 
   <div class='mb-6'>I've run the scribbles through an image model to get keywords, captions and styles. This what the search bar is hooked up to. It's pretty good for things like "still life" or "green". "Ball" will return both "ball" and "balloon".</div>
 
-  <div class="mb-4">
-    <div class="relative">
+  <div class="mb-4 flex justify-center">
+    <div class="relative w-full md:w-1/2">
       <input 
         type="text" 
         bind:value={searchQuery}
-        placeholder="Search scribbles by key word" 
+        placeholder="Search for scribbles" 
         class="w-full px-4 py-2 border border-black 2px solid; rounded-lg focus:outline-none focus:ring-2 focus:ring-black bg-[#FADA7A] text-black placeholder-black"
         />
       {#if searchQuery}
