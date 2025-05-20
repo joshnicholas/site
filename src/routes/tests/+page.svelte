@@ -261,51 +261,108 @@ function filterPosts(arrayo, settoVar, searchQuery, indexReady) {
   
   // Calculate scores for each post
   const scores = new Array(data.data.length).fill(0);
+  const termMatches = {}; // Track which terms matched for each document
   
   // For each query term, add its contribution to document scores
   queryTerms.forEach(term => {
     // Find similar terms if exact match doesn't exist
     let relevantTerms = [];
     
+    // Exact matches get highest priority
     if (searchIndex[term]) {
-      relevantTerms.push({ term, weight: 1.0 }); // Exact match gets full weight
+      relevantTerms.push({ term, weight: 1.0, matchType: 'exact' }); // Exact match gets full weight
     }
     
-    // Add partial matches (terms that contain the query term)
-    terms.forEach(indexTerm => {
-      if (indexTerm !== term && indexTerm.includes(term)) {
-        relevantTerms.push({ term: indexTerm, weight: 0.8 }); // Partial match gets 0.8 weight
-      }
-    });
-    
-    // If still no matches, find terms with low edit distance
-    if (relevantTerms.length === 0) {
+    // Only look for partial matches if we don't have exact matches
+    // and the term is at least 4 characters long to avoid too many false positives
+    if (relevantTerms.length === 0 && term.length >= 4) {
+      // First look for terms that start with our query term (stronger signal)
       terms.forEach(indexTerm => {
-        // Simple character overlap similarity
-        const similarity = calculateSimilarity(term, indexTerm);
-        if (similarity > 0.6) { // Threshold for similarity
-          relevantTerms.push({ term: indexTerm, weight: similarity });
+        if (indexTerm !== term && indexTerm.startsWith(term)) {
+          relevantTerms.push({ term: indexTerm, weight: 0.7, matchType: 'prefix' });
+        }
+      });
+      
+      // If no prefix matches, then look for substring matches with higher threshold
+      if (relevantTerms.length === 0) {
+        terms.forEach(indexTerm => {
+          // Only consider meaningful substrings (avoid matching short terms in longer ones)
+          if (indexTerm !== term && indexTerm.includes(term) && 
+              // Ensure the match length is significant compared to the total length
+              term.length > indexTerm.length * 0.5) {
+            relevantTerms.push({ term: indexTerm, weight: 0.5, matchType: 'substring' });
+          }
+        });
+      }
+    }
+    
+    // If still no matches and term is at least 4 chars, find terms with similarity
+    if (relevantTerms.length === 0 && term.length >= 4) {
+      terms.forEach(indexTerm => {
+        // Only compare terms of similar length to reduce false positives
+        if (Math.abs(indexTerm.length - term.length) <= Math.max(2, term.length * 0.3)) {
+          // Simple character overlap similarity
+          const similarity = calculateSimilarity(term, indexTerm);
+          // Higher threshold for similarity to reduce false positives
+          if (similarity > 0.7) { 
+            relevantTerms.push({ term: indexTerm, weight: similarity * 0.6, matchType: 'similar' });
+          }
         }
       });
     }
     
     // Update scores with matching terms
-    relevantTerms.forEach(({ term: matchedTerm, weight }) => {
+    relevantTerms.forEach(({ term: matchedTerm, weight, matchType }) => {
       if (searchIndex[matchedTerm]) {
         searchIndex[matchedTerm].forEach(({ index, weight: termWeight }) => {
           scores[index] += termWeight * weight;
+          
+          // Track which terms matched for each document
+          if (!termMatches[index]) {
+            termMatches[index] = [];
+          }
+          termMatches[index].push({ term, matchedTerm, matchType, weight });
         });
       }
     });
   });
   
   // Create pairs of [index, score] for non-zero scores and sort by score
-  const scoredIndices = scores
-    .map((score, index) => ({ index, score }))
-    .filter(item => item.score > 0)
-    .sort((a, b) => b.score - a.score);
+  let scoredIndices = scores
+    .map((score, index) => ({ 
+      index, 
+      score, 
+      matches: termMatches[index] || [],
+      // Count how many unique query terms were matched
+      matchedTermsCount: termMatches[index] ? 
+        new Set(termMatches[index].map(m => m.term)).size : 0
+    }))
+    .filter(item => item.score > 0);
   
-  // Map back to posts, using the original order as a tiebreaker for stable sorting
+  // Only keep results that match a minimum percentage of query terms
+  // This dramatically reduces false positives for multi-word queries
+  const minTermCoverage = 0.5; // At least 50% of search terms must match
+  if (queryTerms.length > 1) {
+    scoredIndices = scoredIndices.filter(item => 
+      item.matchedTermsCount / queryTerms.length >= minTermCoverage
+    );
+  }
+  
+  // Apply a minimum score threshold to reduce noise and false positives
+  const minScoreThreshold = 0.05;
+  scoredIndices = scoredIndices.filter(item => item.score >= minScoreThreshold);
+  
+  // Now sort by score
+  scoredIndices.sort((a, b) => {
+    // First prioritize by how many query terms were matched
+    if (b.matchedTermsCount !== a.matchedTermsCount) {
+      return b.matchedTermsCount - a.matchedTermsCount;
+    }
+    // Then by TF-IDF score
+    return b.score - a.score;
+  });
+  
+  // Map back to posts
   return scoredIndices.map(item => data.data[item.index]);
 }
 
@@ -328,13 +385,25 @@ function simpleSubstringSearch(query) {
   });
 }
 
-// Simple character overlap similarity function
+// Improved character overlap similarity function with positional bias
 function calculateSimilarity(a, b) {
   if (!a || !b) return 0;
   if (a === b) return 1.0;
   
-  const aChars = new Set(a.split(''));
-  const bChars = new Set(b.split(''));
+  // Case insensitive comparison
+  const strA = a.toLowerCase();
+  const strB = b.toLowerCase();
+  
+  // If length difference is too great, they're probably not similar
+  const maxLengthRatio = 0.7;
+  const lengthRatio = Math.min(strA.length, strB.length) / Math.max(strA.length, strB.length);
+  if (lengthRatio < maxLengthRatio) {
+    return 0;
+  }
+  
+  // Calculate character-level Jaccard similarity
+  const aChars = new Set(strA.split(''));
+  const bChars = new Set(strB.split(''));
   
   // Intersection size
   let intersection = 0;
@@ -344,7 +413,29 @@ function calculateSimilarity(a, b) {
   
   // Jaccard similarity: intersection / union
   const union = aChars.size + bChars.size - intersection;
-  return intersection / union;
+  const jaccardSim = intersection / union;
+  
+  // Calculate positional similarity (character positions matter)
+  // This helps with transpositions and common spelling errors
+  let posSimilarity = 0;
+  const longerStr = strA.length >= strB.length ? strA : strB;
+  const shorterStr = strA.length < strB.length ? strA : strB;
+  
+  // Look for character bigrams that match
+  let bigramMatches = 0;
+  for (let i = 0; i < shorterStr.length - 1; i++) {
+    const bigram = shorterStr.substring(i, i + 2);
+    if (longerStr.includes(bigram)) {
+      bigramMatches++;
+    }
+  }
+  
+  // Normalize by the max possible bigram matches
+  const maxBigrams = shorterStr.length - 1 || 1; // Avoid division by zero
+  posSimilarity = bigramMatches / maxBigrams;
+  
+  // Combine both similarity measures with weights
+  return jaccardSim * 0.4 + posSimilarity * 0.6;
 }
 
   // $inspect(filteredResults)
