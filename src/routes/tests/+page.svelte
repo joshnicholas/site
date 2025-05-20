@@ -16,6 +16,7 @@ sortBy = 'Random'
 
 // $inspect(innerWidth)
 
+
 function handleResize() {
     innerWidth = window.innerWidth;
   }
@@ -132,54 +133,29 @@ let sorted = sortUniqueStringsByFrequency(hashes)
 let filteredResults = $derived(filterPosts([...data.data], setto, searchQuery))
 
 function filterPosts(arrayo, settoVar, searchQuery) {
-    // Ensure settoVar is an array
-    let insidesetto = Array.isArray(settoVar) ? [...settoVar] : [];
-    
     // If search is empty, return all posts
     if (!searchQuery || typeof searchQuery !== 'string' || searchQuery.trim() === '') {
       return [...data.data];
     }
     
     // Ensure searchQuery is a string before using toLowerCase
-    const normalizedSearch = (typeof searchQuery === 'string') 
-      ? searchQuery.toLowerCase().trim() 
-      : '';
+    const normalizedSearch = searchQuery.toLowerCase().trim();
     
-    // First filter the tags that match the search
-    const matchingTags = insidesetto.filter(tag => {
-      // Ensure tag is a string before using includes
-      if (typeof tag !== 'string') return false;
-      return tag.toLowerCase().includes(normalizedSearch);
-    });
+    // Properties to search in
+    const propertiesToSearch = ['Keywords', 'Caption', 'Subject', 'Style', 'Colours'];
     
-    // If no matching tags, return empty array
-    if (matchingTags.length === 0 && normalizedSearch.length > 0) {
-      return [];
-    } else {
-      return data.data.filter(post => {
-        // Skip if post content is not a string
-        if (!post['Keywords'] || typeof post['Keywords'] !== 'string') return false;
+    // Filter posts that contain the search query in any of the specified properties
+    return data.data.filter(post => {
+      return propertiesToSearch.some(property => {
+        // Skip if property does not exist or is not a string
+        if (!post[property] || typeof post[property] !== 'string') {
+          return false;
+        }
         
-        // Check if post contains any matching tag
-        return matchingTags.some(tag => {
-          if (typeof tag !== 'string') return false;
-          return post['Keywords'].toLowerCase().includes(tag.toLowerCase());
-        });
+        // Check if the property value contains the search query
+        return post[property].toLowerCase().includes(normalizedSearch);
       });
-    }
-    
-    // // Then filter posts that contain any of the matching tags
-    // filteredResults = data.data.filter(post => {
-    //   // Skip if post content is not a string
-    //   if (!post['Keywords'] || typeof post['Keywords'] !== 'string') return false;
-      
-    //   // Check if post contains any matching tag
-    //   return matchingTags.some(tag => {
-    //     if (typeof tag !== 'string') return false;
-    //     const hashtagVersion = `#${tag}`;
-    //     return post['Keywords'].toLowerCase().includes(hashtagVersion);
-    //   });
-    // });
+    });
   }
 
   // $inspect(filteredResults)
@@ -212,6 +188,11 @@ function filterPosts(arrayo, settoVar, searchQuery) {
 }
 }
 
+// console.log("Objecto: ", Object.keys(data.data[0]))
+// ['Date', 'Title', 'img_path', 'Caption', 'Colours', 'Style', 'Subject', 'Keywords', 'Category', 'img_alt', 'Width', 'Height']
+
+$inspect(filteredResults)
+
 </script>
 
 <svelte:window bind:innerWidth />
@@ -226,9 +207,9 @@ function filterPosts(arrayo, settoVar, searchQuery) {
 
 <div class='mx-auto max-w-[800px] min-h-[425px]'>
 
-  <div class='mb-6'>This page is for experiments. Right now I'm working on search.</div>
+  <div class='mb-6'>I'm experimenting with multimodality and search.</div>
 
-  <div class='mb-6'>I've been running scribbles through an image model to assign keywords. This is all the search bar is hooked up to. It's pretty good for things like "still life" or "green".</div>
+  <div class='mb-6'>I've been running scribbles through an image model to assign keywords, captions and styles. This is what the search bar is hooked up to. It's pretty good for things like "still life" or "green".</div>
 
   <div class="mb-4">
     <div class="relative">
