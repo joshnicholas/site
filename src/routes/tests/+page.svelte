@@ -123,40 +123,229 @@ function handleResize() {
 let hashes = data.data.map(d => d['Keywords'].replace(/\[|\]/g,'').split(',').map(d => d.trim()).map(d => d.replace(/'/g, '')))
 let setto = [... new Set(hashes.flat())]
 // console.log("setto: ", setto)
-let sorted = sortUniqueStringsByFrequency(hashes)
+// let sorted = sortUniqueStringsByFrequency(hashes)
 
 // $effect(() => console.log(searchQuery))
 
 
 // let filteredResults  = [ ...data.data]
 
-let filteredResults = $derived(filterPosts([...data.data], setto, searchQuery))
+// TF-IDF search variables
+let postVectors = $state([]);
+let corpus = $state([]);
+let terms = $state([]);
+let idfValues = $state({});
+let searchIndex = $state({});
+let searchIndexReady = $state(false);
 
-function filterPosts(arrayo, settoVar, searchQuery) {
-    // If search is empty, return all posts
-    if (!searchQuery || typeof searchQuery !== 'string' || searchQuery.trim() === '') {
-      return [...data.data];
+// Precompute the search index when component mounts
+function prepareSearchIndex(posts) {
+  // Properties to include in the search index
+  const propertiesToSearch = ['Keywords', 'Caption', 'Subject', 'Style', 'Colours'];
+  
+  // Extract all searchable text from each post
+  const newCorpus = posts.map(post => {
+    return propertiesToSearch
+      .map(prop => post[prop] || '')
+      .join(' ')
+      .toLowerCase()
+      .replace(/[\.,\/#!$%\^&\*;:{}=\-_`~()]/g, '')
+      .replace(/\s{2,}/g, ' ');
+  });
+  
+  // Create document frequency map
+  const documentFrequency = {};
+  
+  // Extract unique terms from all documents
+  const allWords = new Set();
+  const documentTerms = newCorpus.map(text => {
+    // Split into words and filter out short words
+    const words = text.split(/\s+/).filter(word => word.length > 2);
+    const uniqueWords = [...new Set(words)];
+    
+    // Add to global term set
+    uniqueWords.forEach(word => allWords.add(word));
+    
+    // Count document frequency
+    uniqueWords.forEach(word => {
+      documentFrequency[word] = (documentFrequency[word] || 0) + 1;
+    });
+    
+    return words;
+  });
+  
+  // Convert set to array
+  const newTerms = [...allWords];
+  
+  // Calculate IDF for each term
+  const numDocuments = newCorpus.length;
+  const newIdfValues = {};
+  newTerms.forEach(term => {
+    // Use smoothed IDF to handle terms that appear in all documents
+    newIdfValues[term] = Math.log((numDocuments + 1) / (documentFrequency[term] + 1)) + 1;
+  });
+  
+  // Create TF-IDF vector for each document
+  const newPostVectors = documentTerms.map((docTerms, docIndex) => {
+    const vector = {};
+    const wordCount = docTerms.length;
+    
+    // Count term frequencies
+    const termFrequency = {};
+    docTerms.forEach(term => {
+      termFrequency[term] = (termFrequency[term] || 0) + 1;
+    });
+    
+    // Calculate TF-IDF for each term
+    Object.keys(termFrequency).forEach(term => {
+      const tf = termFrequency[term] / wordCount;
+      vector[term] = tf * newIdfValues[term];
+    });
+    
+    return vector;
+  });
+  
+  // Create an inverted index for faster search
+  const newSearchIndex = {};
+  newTerms.forEach(term => {
+    newSearchIndex[term] = [];
+    newPostVectors.forEach((vector, postIndex) => {
+      if (vector[term]) {
+        newSearchIndex[term].push({
+          index: postIndex,
+          weight: vector[term]
+        });
+      }
+    });
+  });
+  
+  // Update state variables
+  corpus = newCorpus;
+  terms = newTerms;
+  idfValues = newIdfValues;
+  postVectors = newPostVectors;
+  searchIndex = newSearchIndex;
+  searchIndexReady = true;
+}
+
+// Initialize search index
+$effect(() => {
+  if (data && data.data && data.data.length > 0) {
+    prepareSearchIndex(data.data);
+  }
+});
+
+let filteredResults = $derived(filterPosts([...data.data], setto, searchQuery, searchIndexReady))
+
+function filterPosts(arrayo, settoVar, searchQuery, indexReady) {
+  // If search is empty or index isn't ready, return all posts
+  if (!searchQuery || typeof searchQuery !== 'string' || searchQuery.trim() === '' || !indexReady) {
+    return [...data.data];
+  }
+  
+  // Normalize and split the search query into terms
+  const normalizedSearch = searchQuery.toLowerCase().trim();
+  const queryTerms = normalizedSearch
+    .replace(/[\.,\/#!$%\^&\*;:{}=\-_`~()]/g, '')
+    .split(/\s+/)
+    .filter(word => word.length > 2);
+  
+  // If no valid terms, return empty results
+  if (queryTerms.length === 0) {
+    // Fall back to substring search if query is too short
+    if (normalizedSearch.length >= 2) {
+      return simpleSubstringSearch(normalizedSearch);
+    }
+    return [];
+  }
+  
+  // Calculate scores for each post
+  const scores = new Array(data.data.length).fill(0);
+  
+  // For each query term, add its contribution to document scores
+  queryTerms.forEach(term => {
+    // Find similar terms if exact match doesn't exist
+    let relevantTerms = [];
+    
+    if (searchIndex[term]) {
+      relevantTerms.push({ term, weight: 1.0 }); // Exact match gets full weight
     }
     
-    // Ensure searchQuery is a string before using toLowerCase
-    const normalizedSearch = searchQuery.toLowerCase().trim();
-    
-    // Properties to search in
-    const propertiesToSearch = ['Keywords', 'Caption', 'Subject', 'Style', 'Colours'];
-    
-    // Filter posts that contain the search query in any of the specified properties
-    return data.data.filter(post => {
-      return propertiesToSearch.some(property => {
-        // Skip if property does not exist or is not a string
-        if (!post[property] || typeof post[property] !== 'string') {
-          return false;
-        }
-        
-        // Check if the property value contains the search query
-        return post[property].toLowerCase().includes(normalizedSearch);
-      });
+    // Add partial matches (terms that contain the query term)
+    terms.forEach(indexTerm => {
+      if (indexTerm !== term && indexTerm.includes(term)) {
+        relevantTerms.push({ term: indexTerm, weight: 0.8 }); // Partial match gets 0.8 weight
+      }
     });
-  }
+    
+    // If still no matches, find terms with low edit distance
+    if (relevantTerms.length === 0) {
+      terms.forEach(indexTerm => {
+        // Simple character overlap similarity
+        const similarity = calculateSimilarity(term, indexTerm);
+        if (similarity > 0.6) { // Threshold for similarity
+          relevantTerms.push({ term: indexTerm, weight: similarity });
+        }
+      });
+    }
+    
+    // Update scores with matching terms
+    relevantTerms.forEach(({ term: matchedTerm, weight }) => {
+      if (searchIndex[matchedTerm]) {
+        searchIndex[matchedTerm].forEach(({ index, weight: termWeight }) => {
+          scores[index] += termWeight * weight;
+        });
+      }
+    });
+  });
+  
+  // Create pairs of [index, score] for non-zero scores and sort by score
+  const scoredIndices = scores
+    .map((score, index) => ({ index, score }))
+    .filter(item => item.score > 0)
+    .sort((a, b) => b.score - a.score);
+  
+  // Map back to posts, using the original order as a tiebreaker for stable sorting
+  return scoredIndices.map(item => data.data[item.index]);
+}
+
+// Simple substring search as fallback for very short queries
+function simpleSubstringSearch(query) {
+  // Properties to search in
+  const propertiesToSearch = ['Keywords', 'Caption', 'Subject', 'Style', 'Colours'];
+  
+  // Filter posts that contain the search query in any of the specified properties
+  return data.data.filter(post => {
+    return propertiesToSearch.some(property => {
+      // Skip if property does not exist or is not a string
+      if (!post[property] || typeof post[property] !== 'string') {
+        return false;
+      }
+      
+      // Check if the property value contains the search query
+      return post[property].toLowerCase().includes(query);
+    });
+  });
+}
+
+// Simple character overlap similarity function
+function calculateSimilarity(a, b) {
+  if (!a || !b) return 0;
+  if (a === b) return 1.0;
+  
+  const aChars = new Set(a.split(''));
+  const bChars = new Set(b.split(''));
+  
+  // Intersection size
+  let intersection = 0;
+  aChars.forEach(char => {
+    if (bChars.has(char)) intersection++;
+  });
+  
+  // Jaccard similarity: intersection / union
+  const union = aChars.size + bChars.size - intersection;
+  return intersection / union;
+}
 
   // $inspect(filteredResults)
 
@@ -191,7 +380,9 @@ function filterPosts(arrayo, settoVar, searchQuery) {
 // console.log("Objecto: ", Object.keys(data.data[0]))
 // ['Date', 'Title', 'img_path', 'Caption', 'Colours', 'Style', 'Subject', 'Keywords', 'Category', 'img_alt', 'Width', 'Height']
 
-$inspect(filteredResults)
+// $inspect(filteredResults)
+
+
 
 </script>
 
@@ -207,9 +398,9 @@ $inspect(filteredResults)
 
 <div class='mx-auto max-w-[800px] min-h-[425px]'>
 
-  <div class='mb-6'>This is an experiment of multimodality and search.</div>
+  <!-- <div class='mb-6'>This is an experiment using multimodality and search.</div> -->
 
-  <div class='mb-6'>I've been running scribbles through an image model to assign keywords, captions and styles. This is what the search bar is hooked up to. It's pretty good for things like "still life" or "green".</div>
+  <div class='mb-6'>I've run the scribbles through an image model to get keywords, captions and styles. This what the search bar is hooked up to. It's pretty good for things like "still life" or "green". "Ball" will return both "ball" and "balloon".</div>
 
   <div class="mb-4">
     <div class="relative">
