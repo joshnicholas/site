@@ -69,8 +69,8 @@ def get_caption(image_path):
     return message
 
 # %%
-# fillo = 'scrap/together.csv'
-fillo = 'scrap/bsky_scribbles.csv'
+fillo = 'scrap/together.csv'
+# fillo = 'scrap/bsky_scribbles.csv'
 
 old = pd.read_csv(fillo)
 # ['Date', 'Title', 'img_path', 'Caption', 'Colours', 
@@ -82,6 +82,7 @@ for col in ['Caption', 'Style', 'Subject', 'Keywords', 'Colours']:
     try:
         inter = old.copy()
         inter = inter.loc[inter[col].isna()]
+        # inter = inter.loc[inter[col] == '']
         print("Col: ", col)
         print("lenno: ", len(inter))
         inter = inter
@@ -107,7 +108,8 @@ for col in ['Caption', 'Style', 'Subject', 'Keywords', 'Colours']:
         print(e)
         continue
 
-dumper('scrap', 'bsky_scribbles', old)
+dumper('scrap', 'together', old)
+# dumper('scrap', 'bsky_scribbles', old)
 
     # pp(inter)
 
