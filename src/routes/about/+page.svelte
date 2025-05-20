@@ -29,12 +29,12 @@ function handleResize() {
 
 <div class='mx-auto max-w-[800px] min-h-[425px]'>
 
-  {#if !isNotMobile}
+  <!-- {#if !isNotMobile}
   <Navvy upDown='up'/>
 {/if}
 {#if isNotMobile}
 <div class="mb-10"></div>
-{/if}
+{/if} -->
 
 
   <div class="block max-w-3xl display:block">

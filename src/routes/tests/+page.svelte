@@ -4,22 +4,35 @@
 // import { onMount } from 'svelte';
 import Imageset from '$lib/components/imageSet.svelte'
 
-let mobileBreakpoint = 768;
-let innerWidth = $state(620);
-let isNotMobile = $derived(innerWidth >= mobileBreakpoint);
 import { shuffle, descending, ascending } from 'd3-array';
+import { browser } from '$app/environment';
+import { Filter } from 'bad-words';
+
+// Initialize profanity filter
+let profanityFilter;
+$effect(() => {
+  if (browser) {
+    profanityFilter = new Filter();
+  }
+});
+
+let mobileBreakpoint = 768;
+let innerWidth = $state(1000); // Default to desktop for SSR
+let isMobile = $state(false);
+let hasInitialized = $state(false);
 
 let pageLimit = 4
-// let sortBy = $state({'Random'})
 let sortBy = $state()
 sortBy = 'Random'
 
-// $inspect(innerWidth)
-
-
-function handleResize() {
+// Initialize isMobile immediately on client-side
+$effect(() => {
+  if (browser) {
     innerWidth = window.innerWidth;
+    isMobile = innerWidth < mobileBreakpoint;
+    hasInitialized = true;
   }
+});
 
 	  import Navvy from '$lib/components/nav.svelte'
     import PostList from '$lib/components/postList.svelte'
@@ -241,6 +254,12 @@ function filterPosts(arrayo, settoVar, searchQuery, indexReady) {
   // If search is empty or index isn't ready, return all posts
   if (!searchQuery || typeof searchQuery !== 'string' || searchQuery.trim() === '' || !indexReady) {
     return [...data.data];
+  }
+  
+  // Check for profanity if profanity filter is available
+  if (browser && profanityFilter && profanityFilter.isProfane(searchQuery)) {
+    // Return empty array if profanity is detected
+    return [];
   }
   
   // Normalize and split the search query into terms
@@ -473,18 +492,24 @@ function calculateSimilarity(a, b) {
 
 // $inspect(filteredResults)
 
+let colours = ['#DC5F00', '#B1C29E', '#789DBC', '#8967B3']
 
+let i = Math.floor(Math.random() * colours.length);
 
 </script>
 
-<svelte:window bind:innerWidth />
+<svelte:window on:resize={() => {
+  innerWidth = window.innerWidth;
+  isMobile = innerWidth < mobileBreakpoint;
+}} />
 
-{#if !isNotMobile}
-  <Navvy upDown='up'/>
-{/if}
-{#if isNotMobile}
-<div class="mb-10"></div>
-{/if}
+<!-- {#if hasInitialized}
+  {#if isMobile}
+    <Navvy upDown='up'/>
+  {:else}
+    <div class="mb-10"></div>
+  {/if}
+{/if} -->
 
 
 <div class='mx-auto max-w-[800px] min-h-[425px]'>
@@ -498,8 +523,9 @@ function calculateSimilarity(a, b) {
       <input 
         type="text" 
         bind:value={searchQuery}
-        placeholder="Search for scribbles" 
-        class="w-full px-4 py-2 border border-black 2px solid; rounded-lg focus:outline-none focus:ring-2 focus:ring-black bg-[#FADA7A] text-black placeholder-black"
+        placeholder="Search for something..." 
+        class="w-full px-4 py-2 rounded-none focus:outline-none focus:ring-2 bg-[#FADA7A] text-black placeholder-black"
+        style="border: 4px solid {colours[i]};"
         />
       {#if searchQuery}
         <button 
