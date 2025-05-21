@@ -68,29 +68,29 @@ let i = Math.floor(Math.random() * colours.length);
 <div class='mx-auto max-w-[800px] min-h-[425px]'>
 
   <div class='mb-6'>This is a timeline of all my scribbles using the five main colours in each image. It still very experimental, but if you click on a colour you should get that image.</div> 
-  <div class='mb-6'>I borrowed the idea to extract colours from images <a href='https://lab.slv.vic.gov.au/resources/introduction-to-k-means-clustering'>from the State Library of Victoria</a>.</div>
+  <div class='mb-6'>I borrowed the methodology to extract colours from images <a href='https://lab.slv.vic.gov.au/resources/introduction-to-k-means-clustering'>from the State Library of Victoria</a>.</div>
     
 
-        <!-- Display selected image -->
-        {#if selectedImage}
-        <div class="flex justify-center mb-8">
-            <div class="max-w-[340px] mx-auto">
-                <img 
-                    src={`/images/${selectedImage}`} 
-                    alt="Selected artwork" 
-                    class="w-full h-auto rounded shadow-md" 
-                />
-            </div>
+        <!-- Display selected image with fixed height container -->
+        <div class="flex justify-center mb-8 h-[300px]">
+            {#if selectedImage}
+                <div class="max-w-[340px] mx-auto h-full flex items-center">
+                    <img 
+                        src={`/images/${selectedImage}`} 
+                        alt="Selected artwork" 
+                        class="max-w-full max-h-[300px] w-auto h-auto object-contain rounded shadow-md" 
+                    />
+                </div>
+            {/if}
         </div>
-    {/if}
     
 
-    <div class="mb-8">
-        <div class="w-full">
+    <div class="mb-8 flex justify-center">
+        <div class="w-full max-w-2xl mx-auto">
             {#if chartData && chartData.length > 0}
                 <!-- Calculate how many colors per row -->
                 {@const itemWidth = 8}
-                {@const containerWidth = Math.min(800, innerWidth - 40)} <!-- account for padding -->
+                {@const containerWidth = 640} <!-- fixed width for consistent centering -->
                 {@const itemsPerRow = Math.floor(containerWidth / itemWidth)}
                 {@const totalRows = Math.ceil(chartData.length / itemsPerRow)}
                 
@@ -105,8 +105,8 @@ let i = Math.floor(Math.random() * colours.length);
                             ? chartData.slice(startIdx, endIdx) 
                             : chartData.slice(startIdx, endIdx).reverse()}
                         
-                        <!-- Create the row with 100px height -->
-                        <div class="flex h-[100px] {isEvenRow ? 'flex-row' : 'flex-row-reverse'}">
+                        <!-- Create the row with 100px height and centered content -->
+                        <div class="flex h-[80px] justify-center {isEvenRow ? 'flex-row' : 'flex-row-reverse'}">
                             {#each rowItems as item, colIndex}
                                 <div 
                                     class="flex flex-col cursor-pointer" 
@@ -123,11 +123,6 @@ let i = Math.floor(Math.random() * colours.length);
                                     {/each}
                                 </div>
                             {/each}
-                            
-                            <!-- Fill empty spaces on the last row -->
-                            {#if rowItems.length < itemsPerRow}
-                                <div style="flex: 1;"></div>
-                            {/if}
                         </div>
                     {/each}
                 </div>
