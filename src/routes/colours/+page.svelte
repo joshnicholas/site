@@ -22,7 +22,7 @@ import { onMount } from 'svelte';
 
 let { data } = $props();
 
-console.log(data);
+// console.log(data);
 
 // Prepare data for the chart
 let chartData = $derived(prepareChartData(data?.colourData));
@@ -35,19 +35,14 @@ onMount(() => {
 function prepareChartData(data) {
     if (!data || !Array.isArray(data)) return [];
     
-    // Debug data
     if (data.length > 0) {
         console.log("First item sample:", data[0]);
     }
     
-    // Pass through data without any processing or sorting
     return data;
 }
-
-// Track selected image
 let selectedImage = $state(null);
 
-// Set a random image on page load
 function setRandomImage(data) {
     if (!data || !Array.isArray(data) || data.length === 0) return;
     
@@ -64,8 +59,8 @@ function setRandomImage(data) {
 let colours = ['#DC5F00', '#B1C29E', '#789DBC', '#8967B3']
 let i = Math.floor(Math.random() * colours.length);
 
-$inspect(chartData)
-$inspect(selectedImage)
+// $inspect(chartData)
+// $inspect(selectedImage)
 </script>
 
 <svelte:window bind:innerWidth />
@@ -94,7 +89,7 @@ $inspect(selectedImage)
         <div class="w-full">
             {#if chartData && chartData.length > 0}
                 <!-- Calculate how many colors per row -->
-                {@const itemWidth = 10}
+                {@const itemWidth = 8}
                 {@const containerWidth = Math.min(800, innerWidth - 40)} <!-- account for padding -->
                 {@const itemsPerRow = Math.floor(containerWidth / itemWidth)}
                 {@const totalRows = Math.ceil(chartData.length / itemsPerRow)}

@@ -16,13 +16,13 @@ function handleResize() {
 	  import Navvy from '$lib/components/nav.svelte'
     import PostList from '$lib/components/postList.svelte'
 
-    let { data } = $props();
+    // let { data } = $props();
 
     // console.log("items: ", data.items)
 
     // console.log("data: ", data)
 
-    console.log("Hi!")
+    // console.log("Hi!")
 </script>
 
 <svelte:window bind:innerWidth />

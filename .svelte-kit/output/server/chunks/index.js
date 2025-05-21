@@ -7,6 +7,22 @@ function lifecycle_outside_component(name) {
     throw new Error(`https://svelte.dev/e/lifecycle_outside_component`);
   }
 }
+const ATTR_REGEX = /[&"<]/g;
+const CONTENT_REGEX = /[&<]/g;
+function escape_html(value, is_attr) {
+  const str = String(value ?? "");
+  const pattern = is_attr ? ATTR_REGEX : CONTENT_REGEX;
+  pattern.lastIndex = 0;
+  let escaped = "";
+  let last = 0;
+  while (pattern.test(str)) {
+    const i = pattern.lastIndex - 1;
+    const ch = str[i];
+    escaped += str.substring(last, i) + (ch === "&" ? "&amp;" : ch === '"' ? "&quot;" : "&lt;");
+    last = i + 1;
+  }
+  return escaped + str.substring(last);
+}
 var current_component = null;
 function getContext(key) {
   const context_map = get_or_init_context_map();
@@ -53,13 +69,13 @@ function get_parent_context(component_context) {
 }
 const BLOCK_OPEN = `<!--${HYDRATION_START}-->`;
 const BLOCK_CLOSE = `<!--${HYDRATION_END}-->`;
-function copy_payload({ out, css, head }) {
+function copy_payload({ out, css, head: head2 }) {
   return {
     out,
     css: new Set(css),
     head: {
-      title: head.title,
-      out: head.out
+      title: head2.title,
+      out: head2.out
     }
   };
 }
@@ -84,18 +100,37 @@ function render(component, options = {}) {
   payload.out += BLOCK_CLOSE;
   for (const cleanup of on_destroy) cleanup();
   on_destroy = prev_on_destroy;
-  let head = payload.head.out + payload.head.title;
+  let head2 = payload.head.out + payload.head.title;
   for (const { hash, code } of payload.css) {
-    head += `<style id="${hash}">${code}</style>`;
+    head2 += `<style id="${hash}">${code}</style>`;
   }
   return {
-    head,
+    head: head2,
     html: payload.out,
     body: payload.out
   };
 }
+function head(payload, fn) {
+  const head_payload = payload.head;
+  head_payload.out += BLOCK_OPEN;
+  fn(head_payload);
+  head_payload.out += BLOCK_CLOSE;
+}
 function stringify(value) {
   return typeof value === "string" ? value : value == null ? "" : value + "";
+}
+function style_object_to_string(style_object) {
+  return Object.keys(style_object).filter(
+    /** @param {any} key */
+    (key) => style_object[key] != null && style_object[key] !== ""
+  ).map(
+    /** @param {any} key */
+    (key) => `${key}: ${escape_html(style_object[key], true)};`
+  ).join(" ");
+}
+function add_styles(style_object) {
+  const styles = style_object_to_string(style_object);
+  return styles ? ` style="${styles}"` : "";
 }
 function slot(payload, $$props, name, slot_props, fallback_fn) {
   var slot_fn = $$props.$$slots?.[name];
@@ -126,13 +161,16 @@ export {
   HYDRATION_START as a,
   HYDRATION_END as b,
   pop as c,
-  slot as d,
-  bind_props as e,
-  ensure_array_like as f,
+  bind_props as d,
+  slot as e,
+  escape_html as f,
   getContext as g,
-  stringify as h,
-  copy_payload as i,
-  assign_payload as j,
+  head as h,
+  ensure_array_like as i,
+  copy_payload as j,
+  assign_payload as k,
+  add_styles as l,
+  stringify as m,
   push as p,
   render as r,
   setContext as s
