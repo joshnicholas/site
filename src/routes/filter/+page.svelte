@@ -516,7 +516,9 @@ let i = Math.floor(Math.random() * colours.length);
 
   <!-- <div class='mb-6'>This is an experiment using multimodality and search.</div> -->
 
-  <div class='mb-6'>I've run the scribbles through an image model to get keywords, captions and styles. This what the search bar is hooked up to. It's pretty good for things like "still life" or "green". "Ball" will return both "ball" and "balloon".</div>
+  <div class='mb-6'>I've run the scribbles through an image model to get keywords, captions and styles. This what the search bar is hooked up to.</div>
+  
+  <div class='mb-6'>I'm still tinkering with this. So it may break. But currently it's pretty good for searching for things like "still life" or "green".</div>
 
   <div class="mb-4 flex justify-center">
     <div class="relative w-full md:w-1/2">

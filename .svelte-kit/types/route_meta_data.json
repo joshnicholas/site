@@ -5,8 +5,8 @@
 	"/about": [
 		"src/routes/about/+page.js"
 	],
-	"/colours": [
-		"src/routes/colours/+page.js"
+	"/experiment": [
+		"src/routes/experiment/+page.js"
 	],
 	"/filter": [
 		"src/routes/filter/+page.js"

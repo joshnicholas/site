@@ -24,10 +24,8 @@ let { data } = $props();
 
 // console.log(data);
 
-// Prepare data for the chart
 let chartData = $derived(prepareChartData(data?.colourData));
 
-// Initialize with a random image on mount
 onMount(() => {
     setRandomImage(data?.colourData);
 });
@@ -46,11 +44,9 @@ let selectedImage = $state(null);
 function setRandomImage(data) {
     if (!data || !Array.isArray(data) || data.length === 0) return;
     
-    // Select a random item from the data
     const randomIndex = Math.floor(Math.random() * data.length);
     const randomItem = data[randomIndex];
     
-    // Set the selected image
     if (randomItem && randomItem.img_path) {
         selectedImage = randomItem.img_path;
     }
@@ -67,11 +63,12 @@ let i = Math.floor(Math.random() * colours.length);
 
 <div class='mx-auto max-w-[800px] min-h-[425px]'>
 
-  <div class='mb-6'>This is a timeline of all my scribbles using the five main colours in each image. It still very experimental, but if you click on a colour you should get that image.</div> 
+    <div class='mb-6'>This is a page I use to try out new ideas.</div> 
+
+  <div class='mb-6'>It's currently a timeline of all my scribbles using the five "most representative" colours in each image. If you click on a stack of colours you should get that image. I'm still tinkering with all of this so it may break.</div> 
   <div class='mb-6'>I borrowed the methodology to extract colours from images <a href='https://lab.slv.vic.gov.au/resources/introduction-to-k-means-clustering'>from the State Library of Victoria</a>.</div>
     
 
-        <!-- Display selected image with fixed height container -->
         <div class="flex justify-center mb-8 h-[300px]">
             {#if selectedImage}
                 <div class="max-w-[340px] mx-auto h-full flex items-center">
@@ -88,16 +85,15 @@ let i = Math.floor(Math.random() * colours.length);
     <div class="mb-8 flex justify-center">
         <div class="w-full max-w-2xl mx-auto">
             {#if chartData && chartData.length > 0}
-                <!-- Calculate how many colors per row -->
                 {@const itemWidth = 8}
-                {@const containerWidth = 640} <!-- fixed width for consistent centering -->
+                {@const containerWidth = 640}
                 {@const itemsPerRow = Math.floor(containerWidth / itemWidth)}
                 {@const totalRows = Math.ceil(chartData.length / itemsPerRow)}
                 
-                <!-- Create the snake pattern with gap between rows -->
+
                 <div class="flex flex-col gap-[10px]">
                     {#each Array(totalRows) as _, rowIndex}
-                        <!-- Determine if it's an odd or even row for direction -->
+
                         {@const isEvenRow = rowIndex % 2 === 0}
                         {@const startIdx = rowIndex * itemsPerRow}
                         {@const endIdx = Math.min((rowIndex + 1) * itemsPerRow, chartData.length)}
@@ -105,7 +101,7 @@ let i = Math.floor(Math.random() * colours.length);
                             ? chartData.slice(startIdx, endIdx) 
                             : chartData.slice(startIdx, endIdx).reverse()}
                         
-                        <!-- Create the row with 100px height and centered content -->
+ 
                         <div class="flex h-[80px] justify-center {isEvenRow ? 'flex-row' : 'flex-row-reverse'}">
                             {#each rowItems as item, colIndex}
                                 <div 
