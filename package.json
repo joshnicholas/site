@@ -35,7 +35,9 @@
 		"@tailwindcss/vite": "^4.0.0",
 		"bad-words": "^4.0.0",
 		"d3-array": "^3.2.4",
+		"d3-scale": "^4.0.2",
 		"d3-time-format": "^4.1.0",
+		"layercake": "^8.4.3",
 		"xmldom": "^0.6.0"
 	},
 	"engines": {

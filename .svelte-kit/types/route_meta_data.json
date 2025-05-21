@@ -1,0 +1,17 @@
+{
+	"/": [
+		"src/routes/+page.js"
+	],
+	"/about": [
+		"src/routes/about/+page.js"
+	],
+	"/colours": [
+		"src/routes/colours/+page.js"
+	],
+	"/filter": [
+		"src/routes/filter/+page.js"
+	],
+	"/sitemap.xml": [
+		"src/routes/sitemap.xml/+server.js"
+	]
+}

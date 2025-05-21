@@ -15,8 +15,11 @@
             <a href='/'>scribbles</a>
         </li >
         <li class="mr-0">
-            <a href='/tests'>tests</a>
+            <a href='/filter'>filter</a>
         </li >
+        <!-- <li class="mr-0">
+            <a href='/colours'>colours</a>
+        </li > -->
         <li class="mr-0">
             <a href='/about'>about</a>
         </li >
