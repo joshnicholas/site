@@ -52,7 +52,7 @@ id={index}
 width={row["Width"]}
 height={row['Height']}
 style='border-color:{colours[i]};background-color:"{colours[i]}"' 
-src="images/{row["img_path"]}" 
+src="/images/{row["img_path"]}" 
 alt="{row["Title"]}"
 on:click={() => modalOpen = true}
 on:click={() => modalImage = row["img_path"]}

@@ -15,7 +15,7 @@
             <a href='/'>scribbles</a>
         </li >
         <li class="mr-0">
-            <a href='/filter'>filter</a>
+            <a href='/tinkering'>tinkering</a>
         </li >
         <!-- <li class="mr-0">
             <a href='/colours'>colours</a>

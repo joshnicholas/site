@@ -8,10 +8,16 @@
 	"/experiment": [
 		"src/routes/experiment/+page.js"
 	],
-	"/filter": [
-		"src/routes/filter/+page.js"
-	],
 	"/sitemap.xml": [
 		"src/routes/sitemap.xml/+server.js"
+	],
+	"/tinkering": [
+		"src/routes/tinkering/+page.js"
+	],
+	"/tinkering/colourmatch": [
+		"src/routes/tinkering/colourmatch/+page.js"
+	],
+	"/tinkering/filter": [
+		"src/routes/tinkering/filter/+page.js"
 	]
 }

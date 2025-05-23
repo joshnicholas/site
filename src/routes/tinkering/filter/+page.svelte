@@ -518,7 +518,7 @@ let i = Math.floor(Math.random() * colours.length);
 
   <div class='mb-6'>I've run the scribbles through an image model to get keywords, captions and styles. This what the search bar is hooked up to.</div>
   
-  <div class='mb-6'>I'm still tinkering with this. So it may break. But currently it's pretty good for searching for things like "still life" or "green".</div>
+  <div class='mb-6'>It's pretty good for searching for things like "still life" or "green".</div>
 
   <div class="mb-4 flex justify-center">
     <div class="relative w-full md:w-1/2">
@@ -526,7 +526,7 @@ let i = Math.floor(Math.random() * colours.length);
         type="text" 
         bind:value={searchQuery}
         placeholder="Search for something..." 
-        class="w-full px-4 py-2 rounded-none focus:outline-none focus:ring-2 bg-[#FADA7A] text-black placeholder-black"
+        class="w-full px-4 py-2 rounded-none focus:outline-none focus:none bg-[#FADA7A] text-black placeholder-black"
         style="border: 4px solid {colours[i]};"
         />
       {#if searchQuery}
