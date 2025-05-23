@@ -19,5 +19,8 @@
 	],
 	"/tinkering/filter": [
 		"src/routes/tinkering/filter/+page.js"
+	],
+	"/tinkering/sinhalacards": [
+		"src/routes/tinkering/sinhalacards/+page.js"
 	]
 }
