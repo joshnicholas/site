@@ -74,8 +74,9 @@ let i = Math.floor(Math.random() * colours.length);
                 <div class="max-w-[340px] mx-auto h-full flex items-center">
                     <img 
                         src={`/images/${selectedImage}`} 
-                        alt="Selected artwork" 
-                        class="max-w-full max-h-[300px] w-auto h-auto object-contain rounded shadow-md" 
+                        alt="Selected image" 
+                        style="border-color:{colours[i]};border-width:5px;border-style:solid;" 
+                        class="max-w-full max-h-[300px] w-auto h-auto mx-auto"
                     />
                 </div>
             {/if}
@@ -126,5 +127,11 @@ let i = Math.floor(Math.random() * colours.length);
         </div>
     </div>
     
+
+
+
+<div class='mt-8 mb-10 text-xl pt-10'>
+    <a href="/tinkering" class="text-black">Back</a>
+</div>
 
 </div>

@@ -561,7 +561,9 @@ let i = Math.floor(Math.random() * colours.length);
 
 
 
-
+  <div class='mt-8 mb-10 text-xl pt-10'>
+    <a href="/tinkering" class="text-black">Back</a>
+</div>
 
   
 </div>

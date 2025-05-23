@@ -28,7 +28,7 @@
 
     
 
-    <p>I use this site to tinker and learn new things.</p><br>
+    <p>I use this site to tinker and learn.</p><br>
 
     <p>Things I'm currently working on:</p>
 
