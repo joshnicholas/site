@@ -7,7 +7,7 @@
     let isNotMobile = $derived(innerWidth >= mobileBreakpoint);
     
     
-    $inspect(innerWidth)
+    // $inspect(innerWidth)
     
     function handleResize() {
         innerWidth = window.innerWidth;

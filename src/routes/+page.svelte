@@ -67,7 +67,7 @@ function sorter(array, how){
 }
 }
 
-
+console.log("Hi!")
 
 </script>
 

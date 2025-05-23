@@ -33,9 +33,9 @@ onMount(() => {
 function prepareChartData(data) {
     if (!data || !Array.isArray(data)) return [];
     
-    if (data.length > 0) {
-        console.log("First item sample:", data[0]);
-    }
+    // if (data.length > 0) {
+    //     console.log("First item sample:", data[0]);
+    // }
     
     return data;
 }

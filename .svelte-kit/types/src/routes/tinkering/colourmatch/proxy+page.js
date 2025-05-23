@@ -27,23 +27,23 @@ export async function load({ fetch, params }) {
     
     // No sorting or processing of the array order
     
-    // Log some information about the data
-    if (processedData.length > 0) {
-        console.log("Data info:", {
-            count: processedData.length,
-            firstItem: processedData[0].Date,
-            lastItem: processedData[processedData.length-1].Date
-        });
-    }
+    // // Log some information about the data
+    // if (processedData.length > 0) {
+    //     console.log("Data info:", {
+    //         count: processedData.length,
+    //         firstItem: processedData[0].Date,
+    //         lastItem: processedData[processedData.length-1].Date
+    //     });
+    // }
     
-    // Log the first few items to debug
-    if (processedData.length > 0) {
-        console.log("First few dates:", 
-            processedData.slice(0, 3).map(item => item.Date),
-            "Last few dates:",
-            processedData.slice(-3).map(item => item.Date)
-        );
-    }
+    // // Log the first few items to debug
+    // if (processedData.length > 0) {
+    //     console.log("First few dates:", 
+    //         processedData.slice(0, 3).map(item => item.Date),
+    //         "Last few dates:",
+    //         processedData.slice(-3).map(item => item.Date)
+    //     );
+    // }
     
     return { 
         colourData: processedData
