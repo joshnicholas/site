@@ -8,6 +8,9 @@
 	"/experiment": [
 		"src/routes/experiment/+page.js"
 	],
+	"/linklog": [
+		"src/routes/linklog/+page.js"
+	],
 	"/sitemap.xml": [
 		"src/routes/sitemap.xml/+server.js"
 	],
