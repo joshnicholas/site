@@ -19,7 +19,7 @@ export const dictionary = {
 		"/": [2],
 		"/about": [3],
 		"/experiment": [4],
-		"/linklog": [5],
+		"/linklog": [~5],
 		"/tinkering": [6],
 		"/tinkering/colourmatch": [7],
 		"/tinkering/filter": [8],

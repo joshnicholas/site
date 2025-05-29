@@ -1,6 +1,8 @@
+// @ts-nocheck
+// +page.server.js
 export const prerender = true;
 
-/** @type {import('./$types').PageServerLoad} */
+/** @param {Parameters<import('./$types').PageServerLoad>[0]} event */
 export async function load({ fetch }) {
     const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSlgMV5lFDlkoOlCsDFBfNAsd8hVmEI42TnvUtEEhl0g0uz5_v3pF4SJM3q8aoddp69fsii054BnRcK/pub?gid=0&single=true&output=csv';
     
