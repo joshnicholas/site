@@ -1,4 +1,4 @@
-import { m as stringify, f as escape_html, d as bind_props, c as pop, p as push, j as copy_payload, k as assign_payload, i as ensure_array_like } from "./index.js";
+import { s as stringify, a as escape_html, c as bind_props, p as pop, b as push, f as copy_payload, g as assign_payload, e as ensure_array_like } from "./index2.js";
 import { f as fallback } from "./utils.js";
 import { timeParse, timeFormat } from "d3-time-format";
 import { a as attr } from "./attributes.js";
@@ -11,7 +11,7 @@ function Card($$payload, $$props) {
   let i = Math.floor(Math.random() * colours.length);
   let dateParse = timeParse("%Y-%m-%d");
   let dateFormat = timeFormat("%b %Y");
-  $$payload.out += `<div><img class="cardy mx-auto svelte-1yq8s6w"${attr("id", index)}${attr("width", row["Width"])}${attr("height", row["Height"])}${attr("style", `border-color:${stringify(colours[i])};background-color:"${stringify(colours[i])}"`)}${attr("src", `images/${stringify(row["img_path"])}`)}${attr("alt", row["Title"])}> <span class="text-l">${escape_html(row["Title"])}</span><br> <span class="text-xs">${escape_html(dateFormat(dateParse(row["Date"])))}</span></div>`;
+  $$payload.out += `<div><img class="cardy mx-auto svelte-1yq8s6w"${attr("id", index)}${attr("width", row["Width"])}${attr("height", row["Height"])}${attr("style", `border-color:${stringify(colours[i])};background-color:"${stringify(colours[i])}"`)}${attr("src", `/images/${stringify(row["img_path"])}`)}${attr("alt", row["Title"])}> <span class="text-l">${escape_html(row["Title"])}</span><br> <span class="text-xs">${escape_html(dateFormat(dateParse(row["Date"])))}</span></div>`;
   bind_props($$props, { row, modalOpen, index });
   pop();
 }

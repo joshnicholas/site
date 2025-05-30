@@ -1,4 +1,4 @@
-import { d as bind_props, c as pop, p as push, h as head, e as slot } from "../../chunks/index.js";
+import { c as bind_props, p as pop, b as push, h as head, d as slot } from "../../chunks/index2.js";
 /* empty css                                             */
 import { f as fallback } from "../../chunks/utils.js";
 import { a as attr } from "../../chunks/attributes.js";
@@ -6,7 +6,7 @@ function Nav($$payload, $$props) {
   push();
   let upDown = fallback($$props["upDown"], "down");
   let csso = upDown.toLowerCase() == "down" ? "border-top: 2px solid;margin-top:1.25rem;padding-top:0.5rem;" : "border-bottom: 2px solid;margin-bottom:1.25rem;padding-bottom:0.5rem;";
-  $$payload.out += `<div id="navblock"${attr("style", csso)}><ul id="navynav" class="space-x-6 flex justify-start text-l font-semibold"><li class="mr-0"><a href="/" class="svelte-186xnan">scribbles</a></li> <li class="mr-0"><a href="/filter" class="svelte-186xnan">filter</a></li> <li class="mr-0"><a href="/about" class="svelte-186xnan">about</a></li> <li class="mr-0"><a href="https://www.theguardian.com/profile/josh-nicholas" target="_blank" rel="me" class="svelte-186xnan">guardian⤴</a></li></ul></div>`;
+  $$payload.out += `<div id="navblock"${attr("style", csso)}><ul id="navynav" class="space-x-6 flex justify-start text-l font-semibold"><li class="mr-0"><a href="/" class="svelte-186xnan">scribbles</a></li> <li class="mr-0"><a href="/tinkering" class="svelte-186xnan">tinkering</a></li> <li class="mr-0"><a href="/about" class="svelte-186xnan">about</a></li> <li class="mr-0"><a href="https://www.theguardian.com/profile/josh-nicholas" target="_blank" rel="me" class="svelte-186xnan">guardian⤴</a></li></ul></div>`;
   bind_props($$props, { upDown });
   pop();
 }

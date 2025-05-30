@@ -1,4 +1,4 @@
-import { i as ensure_array_like, f as escape_html, d as bind_props, c as pop, p as push, j as copy_payload, k as assign_payload } from "../../chunks/index.js";
+import { e as ensure_array_like, a as escape_html, c as bind_props, p as pop, b as push, f as copy_payload, g as assign_payload } from "../../chunks/index2.js";
 import { a as attr } from "../../chunks/attributes.js";
 import { shuffle, ascending, descending } from "d3-array";
 import { timeParse } from "d3-time-format";
@@ -69,6 +69,7 @@ function _page($$payload, $$props) {
       return shuffle(array.filter((row) => keep.includes(row["img_path"])));
     }
   }
+  console.log("Hi!");
   let $$settled = true;
   let $$inner_payload;
   function $$render_inner($$payload2) {

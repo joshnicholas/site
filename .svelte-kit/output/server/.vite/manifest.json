@@ -12,7 +12,7 @@
     "file": "chunks/attributes.js",
     "name": "attributes",
     "imports": [
-      "_index.js"
+      "_index2.js"
     ]
   },
   "_equality.js": {
@@ -31,7 +31,7 @@
     "file": "chunks/imageSet.js",
     "name": "imageSet",
     "imports": [
-      "_index.js",
+      "_index2.js",
       "_utils.js",
       "_attributes.js"
     ],
@@ -43,13 +43,17 @@
     "file": "chunks/index.js",
     "name": "index"
   },
+  "_index2.js": {
+    "file": "chunks/index2.js",
+    "name": "index"
+  },
   "_internal.js": {
     "file": "chunks/internal.js",
     "name": "internal",
     "imports": [
       "_utils.js",
       "_equality.js",
-      "_index.js"
+      "_index2.js"
     ]
   },
   "_nav.svelte_svelte_type_style_lang.js": {
@@ -74,7 +78,7 @@
     "src": "node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte",
     "isEntry": true,
     "imports": [
-      "_index.js",
+      "_index2.js",
       "_utils.js",
       "_exports.js"
     ]
@@ -86,6 +90,7 @@
     "isEntry": true,
     "imports": [
       "_internal.js",
+      "_index.js",
       "_exports.js"
     ]
   },
@@ -95,12 +100,12 @@
     "src": "src/routes/+layout.svelte",
     "isEntry": true,
     "imports": [
-      "_index.js",
+      "_index2.js",
       "_utils.js",
       "_attributes.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.CoAyk0MI.css",
+      "_app/immutable/assets/_layout.BpNN1Omf.css",
       "_app/immutable/assets/nav.C7DIyg2k.css"
     ]
   },
@@ -119,7 +124,7 @@
     "src": "src/routes/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index.js",
+      "_index2.js",
       "_attributes.js",
       "_imageSet.js"
     ],
@@ -137,50 +142,36 @@
     "file": "entries/pages/about/_page.svelte.js",
     "name": "entries/pages/about/_page.svelte",
     "src": "src/routes/about/+page.svelte",
-    "isEntry": true,
-    "css": [
-      "_app/immutable/assets/nav.C7DIyg2k.css",
-      "_app/immutable/assets/postList.DjdvdsIi.css"
-    ]
-  },
-  "src/routes/colours/+page.js": {
-    "file": "entries/pages/colours/_page.js",
-    "name": "entries/pages/colours/_page",
-    "src": "src/routes/colours/+page.js",
     "isEntry": true
   },
-  "src/routes/colours/+page.svelte": {
-    "file": "entries/pages/colours/_page.svelte.js",
-    "name": "entries/pages/colours/_page.svelte",
-    "src": "src/routes/colours/+page.svelte",
+  "src/routes/experiment/+page.js": {
+    "file": "entries/pages/experiment/_page.js",
+    "name": "entries/pages/experiment/_page",
+    "src": "src/routes/experiment/+page.js",
     "isEntry": true,
     "imports": [
-      "_index.js",
-      "_attributes.js"
-    ],
-    "css": [
-      "_app/immutable/assets/_page.gPmmZy0Y.css",
-      "_app/immutable/assets/nav.C7DIyg2k.css",
-      "_app/immutable/assets/postList.DjdvdsIi.css"
+      "_index.js"
     ]
   },
-  "src/routes/filter/+page.js": {
-    "file": "entries/pages/filter/_page.js",
-    "name": "entries/pages/filter/_page",
-    "src": "src/routes/filter/+page.js",
-    "isEntry": true,
-    "imports": [
-      "_scribbles.js"
-    ]
+  "src/routes/experiment/+page.svelte": {
+    "file": "entries/pages/experiment/_page.svelte.js",
+    "name": "entries/pages/experiment/_page.svelte",
+    "src": "src/routes/experiment/+page.svelte",
+    "isEntry": true
   },
-  "src/routes/filter/+page.svelte": {
-    "file": "entries/pages/filter/_page.svelte.js",
-    "name": "entries/pages/filter/_page.svelte",
-    "src": "src/routes/filter/+page.svelte",
+  "src/routes/linklog/+page.server.js": {
+    "file": "entries/pages/linklog/_page.server.js",
+    "name": "entries/pages/linklog/_page.server",
+    "src": "src/routes/linklog/+page.server.js",
+    "isEntry": true
+  },
+  "src/routes/linklog/+page.svelte": {
+    "file": "entries/pages/linklog/_page.svelte.js",
+    "name": "entries/pages/linklog/_page.svelte",
+    "src": "src/routes/linklog/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index.js",
-      "_imageSet.js",
+      "_index2.js",
       "_attributes.js"
     ],
     "css": [
@@ -193,5 +184,85 @@
     "name": "entries/endpoints/sitemap.xml/_server",
     "src": "src/routes/sitemap.xml/+server.js",
     "isEntry": true
+  },
+  "src/routes/tinkering/+page.js": {
+    "file": "entries/pages/tinkering/_page.js",
+    "name": "entries/pages/tinkering/_page",
+    "src": "src/routes/tinkering/+page.js",
+    "isEntry": true
+  },
+  "src/routes/tinkering/+page.svelte": {
+    "file": "entries/pages/tinkering/_page.svelte.js",
+    "name": "entries/pages/tinkering/_page.svelte",
+    "src": "src/routes/tinkering/+page.svelte",
+    "isEntry": true,
+    "css": [
+      "_app/immutable/assets/nav.C7DIyg2k.css"
+    ]
+  },
+  "src/routes/tinkering/colourmatch/+page.js": {
+    "file": "entries/pages/tinkering/colourmatch/_page.js",
+    "name": "entries/pages/tinkering/colourmatch/_page",
+    "src": "src/routes/tinkering/colourmatch/+page.js",
+    "isEntry": true
+  },
+  "src/routes/tinkering/colourmatch/+page.svelte": {
+    "file": "entries/pages/tinkering/colourmatch/_page.svelte.js",
+    "name": "entries/pages/tinkering/colourmatch/_page.svelte",
+    "src": "src/routes/tinkering/colourmatch/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index2.js",
+      "_attributes.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.gPmmZy0Y.css",
+      "_app/immutable/assets/nav.C7DIyg2k.css",
+      "_app/immutable/assets/postList.DjdvdsIi.css"
+    ]
+  },
+  "src/routes/tinkering/filter/+page.js": {
+    "file": "entries/pages/tinkering/filter/_page.js",
+    "name": "entries/pages/tinkering/filter/_page",
+    "src": "src/routes/tinkering/filter/+page.js",
+    "isEntry": true,
+    "imports": [
+      "_scribbles.js"
+    ]
+  },
+  "src/routes/tinkering/filter/+page.svelte": {
+    "file": "entries/pages/tinkering/filter/_page.svelte.js",
+    "name": "entries/pages/tinkering/filter/_page.svelte",
+    "src": "src/routes/tinkering/filter/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index2.js",
+      "_imageSet.js",
+      "_attributes.js"
+    ],
+    "css": [
+      "_app/immutable/assets/nav.C7DIyg2k.css",
+      "_app/immutable/assets/postList.DjdvdsIi.css"
+    ]
+  },
+  "src/routes/tinkering/sinhalacards/+page.js": {
+    "file": "entries/pages/tinkering/sinhalacards/_page.js",
+    "name": "entries/pages/tinkering/sinhalacards/_page",
+    "src": "src/routes/tinkering/sinhalacards/+page.js",
+    "isEntry": true
+  },
+  "src/routes/tinkering/sinhalacards/+page.svelte": {
+    "file": "entries/pages/tinkering/sinhalacards/_page.svelte.js",
+    "name": "entries/pages/tinkering/sinhalacards/_page.svelte",
+    "src": "src/routes/tinkering/sinhalacards/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index2.js",
+      "_attributes.js"
+    ],
+    "css": [
+      "_app/immutable/assets/nav.C7DIyg2k.css",
+      "_app/immutable/assets/postList.DjdvdsIi.css"
+    ]
   }
 }
