@@ -27,8 +27,8 @@ dont_delete = ['at://did:plc:3kqj3ksyfct7pip5j5dnmjcu/app.bsky.feed.post/3lkweaz
 
 # %%
 
-from dotenv import load_dotenv,dotenv_values
-load_dotenv()
+# from dotenv import load_dotenv,dotenv_values
+# load_dotenv()
 
 # print(dotenv_values('.env').keys())
 
