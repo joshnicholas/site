@@ -27,8 +27,8 @@ dont_delete = ['at://did:plc:3kqj3ksyfct7pip5j5dnmjcu/app.bsky.feed.post/3lkweaz
 
 # %%
 
-# from dotenv import load_dotenv,dotenv_values
-# load_dotenv()
+from dotenv import load_dotenv,dotenv_values
+load_dotenv()
 
 # print(dotenv_values('.env').keys())
 
@@ -53,7 +53,6 @@ script_dir = pathlib.Path(__file__).parent
 # Go up one level to the site directory, then into static/images
 image_outty = script_dir.parent / "static" / "images"
 image_backup = script_dir.parent / "python" / 'image_archive/'
-
 csv_outty = script_dir.parent / 'python' / 'scrap'
 
 # image_outty = '/Users/josh/Github/site/static/images/'
