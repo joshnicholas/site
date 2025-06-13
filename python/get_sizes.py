@@ -6,7 +6,7 @@ import pandas as pd
 
 from sudulunu.helpers import dumper, pp 
 
-
+import pathlib
 import pillow_avif  # Have to import this before importing PIL
 from PIL import Image, ImageOps
 
@@ -19,7 +19,14 @@ from PIL import Image, ImageOps
 
 # %%
 
-pathos = '/Users/josh/Github/site/static/images/'
+script_dir = pathlib.Path(__file__).parent
+
+# Go up one level to the site directory, then into static/images
+# pathos = script_dir.parent / "static" / "images"
+
+pathos = "../static/images/"
+
+# pathos = '/Users/josh/Github/site/static/images/'
 
 to_do = os.listdir(pathos)
 
@@ -57,7 +64,7 @@ for fillo in fillos:
 
 df = pd.DataFrame.from_records(records)
 
-dumper('/Users/josh/Github/site/python/scrap', 'image_sizes', df)   
+dumper('scrap', 'image_sizes', df)   
 
 pp(df)
 
