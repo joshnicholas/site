@@ -32,8 +32,8 @@ jobs:
       run: python python/run.py
       env:
         claudy: ${{ secrets.CLAUDY }}
-        bskypass: ${{ secrets.BSKYPASS }}
         bskyuser: ${{ secrets.BSKYUSER }}
+        bskypass: ${{ secrets.BSKYPASS }}
         
     - name: Commit and push changes
       run: |

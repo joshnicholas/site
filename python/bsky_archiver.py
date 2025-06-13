@@ -38,6 +38,8 @@ user = os.getenv('bskyuser')
 passy = os.getenv('bskypass')
 claudy = os.getenv('claudy')
 
+# %%
+
 # user = dotenv_values(".env")['bskyuser']
 # passy = dotenv_values(".env")['bskypass']
 # claudy = dotenv_values(".env")['claudy']
@@ -45,9 +47,18 @@ claudy = os.getenv('claudy')
 client = Client()
 client.login(user,passy)
 
-image_outty = '/Users/josh/Github/site/static/images/'
-image_backup = '/Users/josh/Github/site/python/image_archive/'
-csv_outty = '/Users/josh/Github/site/python/scrap'
+# Get the directory where your script is located
+script_dir = pathlib.Path(__file__).parent
+
+# Go up one level to the site directory, then into static/images
+image_outty = script_dir.parent / "static" / "images"
+image_backup = script_dir.parent / "python" / 'image_archive/'
+
+csv_outty = script_dir.parent / 'python' / 'scrap'
+
+# image_outty = '/Users/josh/Github/site/static/images/'
+# image_backup = '/Users/josh/Github/site/python/image_archive/'
+# csv_outty = '/Users/josh/Github/site/python/scrap'
 
 # %%
 
