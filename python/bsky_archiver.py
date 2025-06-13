@@ -34,9 +34,13 @@ load_dotenv()
 
 # %%
 
-user = dotenv_values(".env")['bskyuser']
-passy = dotenv_values(".env")['bskypass']
-claudy = dotenv_values(".env")['claudy']
+user = os.getenv('bskyuser')
+passy = os.getenv('bskypass')
+claudy = os.getenv('claudy')
+
+# user = dotenv_values(".env")['bskyuser']
+# passy = dotenv_values(".env")['bskypass']
+# claudy = dotenv_values(".env")['claudy']
 
 client = Client()
 client.login(user,passy)
