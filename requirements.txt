@@ -8,4 +8,4 @@ sudulunu
 fuzzywuzzy
 python-Levenshtein
 anthropic
-pillow_avif
+pillow-avif-plugin
