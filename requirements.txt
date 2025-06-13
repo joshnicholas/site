@@ -1,0 +1,7 @@
+atproto
+pandas
+Pillow
+requests
+pytz
+python-dotenv
+sudulunu
