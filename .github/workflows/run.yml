@@ -4,7 +4,7 @@ on:
   schedule:
     # Runs at 10:00 UTC (8:00 PM Melbourne time during standard time)
     # Note: Melbourne observes daylight saving, so this will be 9:00 PM during DST
-    - cron: '0 10 * * *'
+    # - cron: '0 10 * * *'
   workflow_dispatch: # Allows manual triggering
 
 jobs:
