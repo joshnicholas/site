@@ -54,6 +54,7 @@ let showNext = $derived(!hasNextPage ?  'hidden' : "visible")
    return parts.slice(-2).join('.');
    
  } catch (error) {
+    console.log("Error: ", url)
    console.error('Invalid URL:', error);
    return null;
  }
@@ -81,6 +82,8 @@ function colouriser(thingo){
     }
 
 }
+
+console.log("Rows: ", rows)
 
     </script>
 
@@ -132,10 +135,11 @@ function colouriser(thingo){
 <div class="container gap-6 mx-auto items-center text-center">
 
 
+
         {#each rows as item}
         <div class='p-5 max-w-[600px] mt-5 mb-5 [&:not(:last-child)]:border mx-auto' style="border-color:{colouriser(item.Category)}; border-width: 5px; border-opacity:0.1">
           {#if item.Title}
-          <a href='{item.URL}' target='_blank'><h2 class='text-lg font-bold mb-4'>
+          <a href='{item.Url}' target='_blank'><h2 class='text-lg font-bold mb-4'>
               {item.Title}
           </h2></a>
           {/if}
@@ -151,13 +155,13 @@ function colouriser(thingo){
                     {item.Text}
                 </p>
             {/if}
-            <a href='{item.URL}' target='_blank'>{getBaseUrl(item.URL)}</a>
+            <a href='{item.Url}' target='_blank'>{getBaseUrl(item.Url)}</a>
             <p class='text-xs italic'>Added: {fixDate(item.Date)}</p>
             <p class='text-xs italic'> {item.Tool}</p>
         </div>
     {/each}
 
-
+<!-- {getBaseUrl(item.URL)} -->
 </div>
 
 

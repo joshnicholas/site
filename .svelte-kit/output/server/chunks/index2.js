@@ -158,11 +158,11 @@ function ensure_array_like(array_like_or_iterator) {
 }
 export {
   HYDRATION_ERROR as H,
-  escape_html as a,
-  push as b,
+  push as a,
+  ensure_array_like as b,
   bind_props as c,
   slot as d,
-  ensure_array_like as e,
+  escape_html as e,
   copy_payload as f,
   assign_payload as g,
   head as h,

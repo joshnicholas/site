@@ -1,4 +1,4 @@
-import { a as escape_html } from "./index2.js";
+import { e as escape_html } from "./index2.js";
 import "clsx";
 const replacements = {
   translate: /* @__PURE__ */ new Map([

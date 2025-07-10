@@ -26,12 +26,12 @@ from PIL import Image, ImageOps
 # pathos = 'static/'
 # out_path = 'static/'
 
-# pathos = '/Users/josh/Github/site/python/image_archive/'
-# out_path = '/Users/josh/Github/site/static/images/'
+pathos = '/Users/josh/Github/site/python/image_archive/'
+out_path = '/Users/josh/Github/site/static/images/'
 
-script_dir = pathlib.Path(__file__).parent
+# script_dir = pathlib.Path(__file__).parent
 
-out_path = script_dir.parent / "static" / "images"
+# out_path = script_dir.parent / "static" / "images"
 
 to_do = os.listdir(pathos)
 

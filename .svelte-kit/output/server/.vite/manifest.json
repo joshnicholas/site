@@ -105,7 +105,7 @@
       "_attributes.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.BpNN1Omf.css",
+      "_app/immutable/assets/_layout.CJCHdTc-.css",
       "_app/immutable/assets/nav.C7DIyg2k.css"
     ]
   },
@@ -159,22 +159,23 @@
     "src": "src/routes/experiment/+page.svelte",
     "isEntry": true
   },
-  "src/routes/linklog/+page.server.js": {
-    "file": "entries/pages/linklog/_page.server.js",
-    "name": "entries/pages/linklog/_page.server",
-    "src": "src/routes/linklog/+page.server.js",
+  "src/routes/links/+page.server.js": {
+    "file": "entries/pages/links/_page.server.js",
+    "name": "entries/pages/links/_page.server",
+    "src": "src/routes/links/+page.server.js",
     "isEntry": true
   },
-  "src/routes/linklog/+page.svelte": {
-    "file": "entries/pages/linklog/_page.svelte.js",
-    "name": "entries/pages/linklog/_page.svelte",
-    "src": "src/routes/linklog/+page.svelte",
+  "src/routes/links/+page.svelte": {
+    "file": "entries/pages/links/_page.svelte.js",
+    "name": "entries/pages/links/_page.svelte",
+    "src": "src/routes/links/+page.svelte",
     "isEntry": true,
     "imports": [
       "_index2.js",
       "_attributes.js"
     ],
     "css": [
+      "_app/immutable/assets/_page.tn0RQdqM.css",
       "_app/immutable/assets/nav.C7DIyg2k.css",
       "_app/immutable/assets/postList.DjdvdsIi.css"
     ]

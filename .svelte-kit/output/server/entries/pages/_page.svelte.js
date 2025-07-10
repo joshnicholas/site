@@ -1,4 +1,4 @@
-import { e as ensure_array_like, a as escape_html, c as bind_props, p as pop, b as push, f as copy_payload, g as assign_payload } from "../../chunks/index2.js";
+import { b as ensure_array_like, e as escape_html, c as bind_props, p as pop, a as push, f as copy_payload, g as assign_payload } from "../../chunks/index2.js";
 import { a as attr } from "../../chunks/attributes.js";
 import { shuffle, ascending, descending } from "d3-array";
 import { timeParse } from "d3-time-format";

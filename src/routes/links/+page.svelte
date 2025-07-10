@@ -22,6 +22,8 @@ let isNotMobile = $derived(innerWidth >= mobileBreakpoint);
 
     let { data } = $props();
 
+    // console.log(data.data[0].Url)
+
 // // Sort data by date (newest first)
 // const sortedData = $derived(
 //     data.data.slice().sort((a, b) => new Date(b.Date) - new Date(a.Date))

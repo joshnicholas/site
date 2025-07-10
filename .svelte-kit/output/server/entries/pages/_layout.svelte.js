@@ -1,4 +1,4 @@
-import { c as bind_props, p as pop, b as push, h as head, d as slot } from "../../chunks/index2.js";
+import { c as bind_props, p as pop, a as push, h as head, d as slot } from "../../chunks/index2.js";
 /* empty css                                             */
 import { f as fallback } from "../../chunks/utils.js";
 import { a as attr } from "../../chunks/attributes.js";

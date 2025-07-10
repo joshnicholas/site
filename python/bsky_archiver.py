@@ -51,13 +51,17 @@ client.login(user,passy)
 script_dir = pathlib.Path(__file__).parent
 
 # Go up one level to the site directory, then into static/images
-image_outty = script_dir.parent / "static" / "images"
-image_backup = script_dir.parent / "python" / 'image_archive/'
-csv_outty = script_dir.parent / 'python' / 'scrap'
+# image_outty = script_dir.parent / "static" / "images"
+# image_backup = script_dir.parent / "python" / 'image_archive/'
+# csv_outty = script_dir.parent / 'python' / 'scrap'
 
-# image_outty = '/Users/josh/Github/site/static/images/'
-# image_backup = '/Users/josh/Github/site/python/image_archive/'
-# csv_outty = '/Users/josh/Github/site/python/scrap'
+image_outty = '/Users/josh/Github/site/static/images/'
+image_backup = '/Users/josh/Github/site/python/image_archive/'
+csv_outty = '/Users/josh/Github/site/python/scrap'
+
+print(image_outty)
+print(image_backup)
+print(csv_outty)
 
 # %%
 
@@ -269,7 +273,8 @@ for i in range(0,5):
         except Exception as e:
             print(e)
             print(thingo.post.record.embed.images)
-            continue
+            # continue
+            break
 
 
 

@@ -1,4 +1,4 @@
-import { p as pop, b as push, e as ensure_array_like, s as stringify } from "../../../../chunks/index2.js";
+import { p as pop, a as push, b as ensure_array_like, s as stringify } from "../../../../chunks/index2.js";
 import "clsx";
 /* empty css                                                   */
 import { a as attr } from "../../../../chunks/attributes.js";

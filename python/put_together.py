@@ -128,22 +128,25 @@ dumbo = pd.merge(combo, sizes, on='img_path', how='left')
 
 # %%
 
-# with open('/Users/josh/Github/site/src/lib/data/scribbles.json', 'w') as f:
-#     combo.to_json(f, orient='records')
-
-# with open('/Users/josh/Github/site/scribbles.json', 'w') as f:
-#     combo.to_json(f, orient='records')
-
-script_dir = pathlib.Path(__file__).parent
-
-# Go up one level to the site directory, then into static/images
-saucey = script_dir.parent / "src" / "lib"
-
-with open(f'{saucey}/scribbles.json', 'w') as f:
+with open('/Users/josh/Github/site/src/lib/data/scribbles.json', 'w') as f:
     combo.to_json(f, orient='records')
 
-with open(f'{saucey}/scribbles.json', 'w') as f:
-    dumbo.to_json(f, orient='records')
+with open('/Users/josh/Github/site/src/lib/scribbles.json', 'w') as f:
+    combo.to_json(f, orient='records')
+
+with open('/Users/josh/Github/site/scribbles.json', 'w') as f:
+    combo.to_json(f, orient='records')
+
+# script_dir = pathlib.Path(__file__).parent
+
+# # Go up one level to the site directory, then into static/images
+# saucey = script_dir.parent / "src" / "lib"
+
+# with open(f'{saucey}/scribbles.json', 'w') as f:
+#     combo.to_json(f, orient='records')
+
+# with open(f'{saucey}/scribbles.json', 'w') as f:
+#     dumbo.to_json(f, orient='records')
 
 dumper('scrap', 'together', dumbo)
 

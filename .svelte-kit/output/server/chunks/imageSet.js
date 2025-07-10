@@ -1,4 +1,4 @@
-import { s as stringify, a as escape_html, c as bind_props, p as pop, b as push, f as copy_payload, g as assign_payload, e as ensure_array_like } from "./index2.js";
+import { s as stringify, e as escape_html, c as bind_props, p as pop, a as push, f as copy_payload, g as assign_payload, b as ensure_array_like } from "./index2.js";
 import { f as fallback } from "./utils.js";
 import { timeParse, timeFormat } from "d3-time-format";
 import { a as attr } from "./attributes.js";
