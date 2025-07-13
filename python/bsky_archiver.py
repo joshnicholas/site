@@ -254,7 +254,7 @@ for i in range(0,5):
 
             if handle.lower() == user:
                 uri = thingo.post.uri
-                if (difference.days > 30):
+                if (difference.days > 14):
                     
                     if thingo.post.uri not in dont_delete:
 
