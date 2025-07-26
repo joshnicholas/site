@@ -27,15 +27,19 @@ const options = ['Random', 'Newest', 'Oldest', 'Favs']
 
 // let containerWidth = $state();
 
+let removed = ["240725_sending-a-whoooooole_0.jpg",]
 let feature = ["240711_last-full-day_0.jpg","240714_escaping-the-hu_0.jpg","240117-misty-sydney-cbd.jpg",
-        "240719_pretty-sparkling-day_0.jpg","uncle_e.jpg","240425_its-getting-cold_0.jpg","240725_sending-a-whoooooole_0.jpg",
+        "240719_pretty-sparkling-day_0.jpg","uncle_e.jpg","240425_its-getting-cold_0.jpg",
         '240711_last-full-day_0.jpg','40402_decided-to-challenge_counter.jpg','230620-escaping-the-heat.jpeg',
         '231008_streetball.jpeg','240124-sydney-ferry.jpg','purple_head.jpg',
         '230613-ipoh-french-patisserie.jpeg', '230621-penang-town-hall.jpeg',
         '230623-the-hotel.jpeg','240726_food-here-has_0.jpg','240710_had-another-crack_0.jpg',
         'bafkreiebe4cdzj5eoovpgpf25yri6a3gcbe3pz4bepvd6ibquy22ihyb2u.jpg','bafkreielepiii3lhuzunv6bhhrgc3kstq2ta7azgks7bywkf3w27gu7ine.jpg',
         'bafkreiamgekie2fpvpehuynwfaic3ck5jbvnubebls37gmivgnrcew2mdu.jpg','bafkreib64zsamf3z2s23bmrigo457riaqgpzj7zvihwbwjl5yvftljo6zq.jpg',
-        'bafkreicmocizke57lx7km6s3jgq22bzyuwsnaplbqrsa5crgdykctmxeza.jpg'
+        'bafkreicmocizke57lx7km6s3jgq22bzyuwsnaplbqrsa5crgdykctmxeza.jpg',
+        'bafkreictzaz4oeshhzwuyzbz55qtieuopnatijpqbknebn5nfsycyxaqry.jpg','bafkreickngshyrlldojxnacpksidqihsmb4misoyecwauwpeckjttml6zi.jpg',
+        'bafkreidcm772nxcggw75zkao4rvgdyg5s4or3227ijbkqv3utlt4a7fkqy.jpg','bafkreidpxkyafq2q37ae66tumqdgyiymzxyipsk2amrq4gx2jphdg7ti5i.jpg',
+        'bafkreig7mwkri7cii4lsf2d7b5y45ricnpyqsleun2p4tbjs3zwpxs6j7a.jpg'
 
         ]
 
