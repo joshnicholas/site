@@ -5,7 +5,7 @@
 
 let { data, imageDataArray } = $props();
 
-
+// console.log("data: ", data)
 
 import { setContext } from 'svelte';
 

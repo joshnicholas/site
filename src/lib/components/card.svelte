@@ -15,6 +15,7 @@ $: modalShow = modalOpen == false ? "none" : 'block'
 // [ "Date", "Title", "img_path", "Caption", "Colours", "Style", "Subject", "Keywords", "Category" ]
 
 // console.log("row: ", row)
+// console.log("row['Height']: ", row['Height'])
 // console.log("row.image_path: ", row["img_path"])
 
 let colours = ['#DC5F00', '#B1C29E', '#789DBC', '#8967B3']
