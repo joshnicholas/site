@@ -137,7 +137,7 @@ console.log("Rows: ", rows)
 
 
         {#each rows as item}
-        <div class='p-5 max-w-[600px] mt-5 mb-5 [&:not(:last-child)]:border mx-auto' style="border-color:{colouriser(item.Category)}; border-width: 5px; border-opacity:0.1">
+        <div class='p-5 max-w-[800px] mt-5 mb-5 [&:not(:last-child)]:border mx-auto' style="border-color:{colouriser(item.Category)}; border-width: 5px; border-opacity:0.1">
           {#if item.Title}
           <a href='{item.Url}' target='_blank'><h2 class='text-lg font-bold mb-4'>
               {item.Title}
