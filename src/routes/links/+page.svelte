@@ -4,6 +4,7 @@
 
     import Linklist from '$lib/components/linklist.svelte'
 
+
 // import * from "d3" as d3
 
 let mobileBreakpoint = 768;
@@ -46,7 +47,7 @@ let sortedData = $derived((selectedCat === 'All'
 
 let i = Math.floor(Math.random() * colours.length);
 
-let colourdict = {"Tool": '#e64c5b', "Article":'#B1C29E', "Guide": '#789DBC'}
+let colourdict = {"Tool": '#e64c5b', "Article":'#B1C29E', "Misc": '#789DBC'}
 
 </script>
 
@@ -58,21 +59,24 @@ let colourdict = {"Tool": '#e64c5b', "Article":'#B1C29E', "Guide": '#789DBC'}
 
 <div class='mx-auto max-w-[800px] min-h-[425px]'>
 
-  <div class="flex items-center justify-center gap-2">
+<div class="flex flex-col md:flex-row items-center justify-center gap-4">
+  <div class="flex items-center gap-2">
     <span>Filter:</span>
     <select
       bind:value={selectedCat}
       class="px-4 py-2 text-center bg-transparent border-2 border-black focus:outline-none focus:ring-0"
     >
-    {#each categories as cat}
-      <option value={cat}>
-        {cat}
-      </option>
-    {/each}
+      <option value="All">All</option>
+      {#each Object.keys(colourdict) as cat}
+        <option value={cat}>
+          {cat}
+        </option>
+      {/each}
     </select>
-   </div>
-
-   <div class="mt-5 flex gap-4 justify-center">
+  </div>
+  
+  <!-- Legend items -->
+  <div class="flex items-center gap-4 flex-wrap justify-center">
     {#each Object.entries(colourdict) as [key, color]}
       <div class="flex items-center gap-2">
         <div 
@@ -82,10 +86,11 @@ let colourdict = {"Tool": '#e64c5b', "Article":'#B1C29E', "Guide": '#789DBC'}
         <span>{key}</span>
       </div>
     {/each}
-   </div>
+  </div>
+</div>
 
    {#key sortedData}
-  <Linklist {sortedData} pageLimit={4} {colourdict}/>
+  <Linklist {sortedData} pageLimit={8} {colourdict}/>
    {/key}
   
 <div class='pt-10'>This is an experiment in publishing from a <a href='https://docs.google.com/spreadsheets/d/10-Z3-zH1OVf8JQdKqB3GnKEIropYv1AT9-Mm8h536K8/edit?gid=0#gid=0' target='_blank'>Google sheet</a>. This feed currently only gets updated when I update the entire site. I'm working on an rss version and a search bar. Everything will probably break.</div>

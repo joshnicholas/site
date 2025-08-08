@@ -63,7 +63,7 @@ let isNotMobile = $derived(innerWidth >= mobileBreakpoint);
 
       <p>There used to be a much-neglected blog at this site. It's now where I gather <a href='https://www.theguardian.com/lifeandstyle/2022/aug/15/i-used-to-think-art-required-natural-talent-then-i-taught-myself-to-draw'>my scribbles</a> from various platforms.</p><br>
 
-      <p>I also use this site to tinker and learn new things. Its in a constant state of flux and things may randomly break.</p><br>
+      <p>I also use this site to <a href='http://localhost:5173/tinkering'>tinker</a> and learn new things. Things may randomly break.</p><br>
               
       <p>I'm aiming to run an update script about once a week. I post more regularly on <a href='https://www.instagram.com/joshcnicholas' target='_blank' rel="me">Instagram</a>.</p><br>
 
