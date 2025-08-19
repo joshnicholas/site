@@ -1,10 +1,10 @@
-name: Daily Python Script Runner
+name: Scheduled Python Script
 
 on:
   schedule:
     # Runs at 10:00 UTC (8:00 PM Melbourne time during standard time)
     # Note: Melbourne observes daylight saving, so this will be 9:00 PM during DST
-    # - cron: '0 10 * * *'
+    - cron: '0 10 * * *'
   workflow_dispatch: # Allows manual triggering
 
 jobs:
@@ -12,33 +12,32 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.11' # Adjust version as needed
+      - name: Checkout repository
+        uses: actions/checkout@v4
         
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-        # Add any other dependency installation commands here
-        
-    - name: Run Python script
-      run: python python/run.py
-      env:
-        claudy: ${{ secrets.CLAUDY }}
-        bskyuser: ${{ secrets.BSKYUSER }}
-        bskypass: ${{ secrets.BSKYPASS }}
-        
-    - name: Commit and push changes
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add -A
-        git diff --staged --quiet || git commit -m "Auto-update from scheduled run"
-        git push
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11' # Adjust version as needed
+          
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          # Add any other dependency installation commands here
+          
+      - name: Run Python script
+        run: python python/run.py
+        env:
+          claudy: ${{ secrets.CLAUDY }}
+          bskyuser: ${{ secrets.BSKYUSER }}
+          bskypass: ${{ secrets.BSKYPASS }}
+          
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git diff --staged --quiet || git commit -m "Auto-update from scheduled run"
+          git push
