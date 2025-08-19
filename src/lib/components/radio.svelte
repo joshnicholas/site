@@ -34,7 +34,7 @@
   <style>
 
 #sortRow {
-  border-bottom: 2px solid
+  /* border-bottom: 2px solid */
 }
 
 

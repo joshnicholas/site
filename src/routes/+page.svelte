@@ -23,7 +23,8 @@ let pageLimit = 4
 let sortBy = $state()
 sortBy = 'Random'
 
-const options = ['Random', 'Newest', 'Oldest', 'Favs']
+// const options = ['Random', 'Newest', 'Oldest', 'Favs']
+const options = ['Random', 'Date', 'Favs']
 
 // let containerWidth = $state();
 
@@ -48,21 +49,37 @@ function sorter(array, how){
     if (how.toLowerCase() == 'random'){
         // console.log(`${how}: `, array)
         return shuffle(array)
-    } else if (how.toLowerCase() == 'oldest'){
-        // console.log(`:${how}`, array)
-        let outty = array.sort(function(a, b) {
-        return ascending(dateparser(a['Date']), dateparser(b['Date']))
-    })
-    return outty
-        // return shuffle(array)        
-    } else if (how.toLowerCase() == 'newest'){
+    } 
+
+    else if (how.toLowerCase() == 'date'){
         // console.log(`:${how}`, array)
         let outty = array.sort(function(a, b) {
         return descending(dateparser(a['Date']), dateparser(b['Date']))
     })
     return outty
+        // return shuffle(array)        
+    } 
     
-    } else if (how.toLowerCase() == 'favs'){
+    // else if (how.toLowerCase() == 'oldest'){
+    //     // console.log(`:${how}`, array)
+    //     let outty = array.sort(function(a, b) {
+    //     return ascending(dateparser(a['Date']), dateparser(b['Date']))
+    // })
+    // return outty
+    //     // return shuffle(array)        
+    // } 
+    
+    // else if (how.toLowerCase() == 'newest'){
+    //     // console.log(`:${how}`, array)
+    //     let outty = array.sort(function(a, b) {
+    //     return descending(dateparser(a['Date']), dateparser(b['Date']))
+    // })
+    // return outty
+    
+    // } 
+    
+    
+    else if (how.toLowerCase() == 'favs'){
         
         let keep = [... new Set(feature.map(d => d))]
 
@@ -71,14 +88,15 @@ function sorter(array, how){
 }
 }
 
-console.log("Hi!")
+// console.log("Hi!")
 
 </script>
 
 <!-- <div id='Biggest' bind:clientWidth={containerWidth}> -->
 
+<div class="container mx-auto">
     <Radio {options} bind:sortBy={sortBy}/>
-
+</div>
     {#key sortBy}
     <Imageset {pageLimit} datah={sorter(data.data, sortBy)} /> 
     {/key}

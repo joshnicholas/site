@@ -1,31 +1,24 @@
+<!-- Modal Component (Svelte 5) -->
 <script>
+  let { modalImage, rows } = $props();
+  // console.log("row: ", rows)
 
-export let modalImage
-export let rows
-// console.log("row: ", rows)
-
-let colours = ['#DC5F00', '#B1C29E', '#789DBC', '#8967B3']
-let i = Math.floor(Math.random() * colours.length);
-
+  const colours = ['#DC5F00', '#B1C29E', '#789DBC', '#8967B3'];
+  const i = Math.floor(Math.random() * colours.length);
 </script>
 
 <!-- alt="/images{modalRow["Title"]}" -->
-
 <div class="mySlides">
-    <img style='border-color:{colours[i]}' 
+  <img 
+    style='border-color:{colours[i]}' 
     src="/images/{modalImage}" 
+    class='max-h-[500px]'
+    alt=""
+  />
+</div>
 
-    class = 'max-h-[500px]'
-    >
-
-  </div>
-
-
-
-
-  <style>
-
-img {
+<style>
+  img {
     border-width: 15px;
-}	
-  </style>
+  }	
+</style>

@@ -48,7 +48,7 @@ let dateFormat = timeFormat("%b %Y")
 
 <div>
 
-<img class='cardy mx-auto' 
+<!-- <img class='cardy mx-auto' 
 id={index}
 width={row["Width"]}
 height={row['Height']}
@@ -59,7 +59,43 @@ on:click={() => modalOpen = true}
 on:click={() => modalImage = row["img_path"]}
 on:click={() => modalIndex = index}
 
->
+> -->
+
+<!-- <img 
+  class='cardy mx-auto' 
+  id={index}
+  width={row["Width"]}
+  height={row['Height']}
+  style='border-color:{colours[i]};background-color:"{colours[i]}"' 
+  src="/images/{row["img_path"]}" 
+  alt={row["Title"]}
+  loading="lazy"
+  decoding="async"
+  fetchpriority={index < 3 ? "high" : "auto"}
+  onclick={() => {
+    modalOpen = true;
+    modalImage = row["img_path"];
+    modalIndex = index;
+  }}
+/> -->
+
+<img 
+  class='cardy mx-auto' 
+  id={index}
+  width={row["Width"]}
+  height={row['Height']}
+  style='border-color:{colours[i]};background-color:"{colours[i]}"' 
+  src="/images/{row['webp_path']}" 
+  alt={row["Title"]}
+  loading="lazy"
+  decoding="async"
+  fetchpriority={index < 3 ? "high" : "auto"}
+  onclick={() => {
+    modalOpen = true;
+    modalImage = row['webp_path'];
+    modalIndex = index;
+  }}
+/>
 
 <!-- <div style='border-color:{colours[i]};border-width: 10px;' >
 <enhanced:img src="{images[`/src/lib/images/${imagePathos}`]}"  alt="An alt text" />
