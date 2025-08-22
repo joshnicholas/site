@@ -5,16 +5,33 @@
   const minIndex = $derived(0);
   const maxIndex = $derived(sortedData.length - 1);
   const indexPosition = $derived(((selectedIndex - minIndex) / (maxIndex - minIndex)) * 100);
-  
-  // Get the date from the selected index
+
   const selectedDate = $derived(sortedData[selectedIndex]?.Date);
 
-  // console.log("selectedDate: ", selectedDate)
-  
+  function goToPrev() {
+    if (selectedIndex > minIndex) {
+      selectedIndex--;
+      scrolly?.scrollIntoView(false);
+    }
+  }
 
+  function goToNext() {
+    if (selectedIndex < maxIndex) {
+      selectedIndex++;
+      scrolly?.scrollIntoView(false);
+    }
+  }
 </script>
 
 <div class="mt-2.5 w-full flex items-center gap-2 py-5">
+  <button 
+    class="text-black cursor-pointer hover:opacity-70 select-none font-medium"
+    onclick={goToPrev}
+    disabled={selectedIndex <= minIndex}
+  >
+    Prev
+  </button>
+  
   <div class="flex-1 relative px-6">
     <input 
       type="range" 
@@ -24,31 +41,18 @@
       step="1"
       bind:value={selectedIndex}
       oninput={() => {
-        // console.log('Current index:', selectedIndex);
-        // console.log("selectedDate: ", selectedDate)
         scrolly?.scrollIntoView(false);
       }}
     />
-    
-    <!-- Index text that follows slider position -->
-    <!-- <div 
-      style="
-        position: absolute;
-        left: {indexPosition}%;
-        {indexBelow ? 'bottom: -25px;' : 'top: -25px;'}
-        font-size: 0.75rem;
-        pointer-events: none;
-        z-index: 10;
-        white-space: nowrap;
-        transform: translateX(-50%);
-        max-width: calc(100% - 50px);
-        overflow: hidden;
-        text-overflow: ellipsis;
-      "
-    >
-      {selectedIndex}
-    </div> -->
   </div>
+
+  <button 
+    class="text-black cursor-pointer hover:opacity-70 select-none font-medium"
+    onclick={goToNext}
+    disabled={selectedIndex >= maxIndex}
+  >
+    Next
+  </button>
 </div>
 
 <style>
@@ -67,5 +71,10 @@
     background: black;
     cursor: pointer;
     border: none;
+  }
+
+  button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
   }
 </style>

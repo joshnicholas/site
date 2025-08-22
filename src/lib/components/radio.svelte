@@ -12,7 +12,7 @@
       // $:console.log(userSelected)
   </script>
 
-<div id='sortRow' class="flex justify-between text-l font-semibold" style='padding-bottom:0.5rem;'>
+<div id='sortRow' class="flex justify-between text-l font-semibold px-10" style='padding-top:0.5rem;'>
 
   {#each options as option}
   <!-- <div> -->

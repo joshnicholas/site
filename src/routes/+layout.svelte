@@ -16,8 +16,9 @@
 
 	<div class="mx-auto max-w-[800px] min-h-[600px]">
 
+
 		<slot />
-	
+
 		<Navvy/>
 
 	</div>

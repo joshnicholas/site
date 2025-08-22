@@ -65,9 +65,9 @@ scribbles = []
 dont_delete = ['at://did:plc:3kqj3ksyfct7pip5j5dnmjcu/app.bsky.feed.post/3lkweaztywc2t']
 
 curse = None
-for i in range(0,5):
+# for i in range(0,5):
 # for i in range(0,9):
-# for i in range(0,2):
+for i in range(0,1):
     print("eye: ", i)
     next = client.get_author_feed(user, cursor=curse, limit=100)
     # next = client.get_author_feed(user, cursor=curse, limit=20)
@@ -101,6 +101,11 @@ for i in range(0,5):
                     difference = today - created
 
                     text = thingo.post.record.text
+                    print(text)
+                    print(thingo.post.uri)
+
+                    if "While airdrops can create the perception that something is being don" in text:
+                        savvo = thingo.post.record
 
                     if "I wrote a thing about drawing and Melbourne" in text:
 
@@ -111,3 +116,16 @@ for i in range(0,5):
         except Exception as e:
             print(e)
             break
+
+# %%
+
+text = thingo.post.record.text
+print(text)
+print(thingo.post.uri)
+
+# %%
+
+if ".com" in thingo.post.record.text:
+
+    print(str(thingo.post.record.text))
+# %%

@@ -254,7 +254,7 @@ for i in range(0,5):
 
             if handle.lower() == user:
                 uri = thingo.post.uri
-                if (difference.days > 14):
+                if (difference.days > 7):
                     
                     if thingo.post.uri not in dont_delete:
 
@@ -264,7 +264,7 @@ for i in range(0,5):
                         print("Deleted: ", deleted)
             else:
                 uri = thingo.post.viewer.repost
-                if (difference.days > 14):
+                if (difference.days > 7):
                     if thingo.post.uri not in dont_delete:
                         client.delete_repost(uri)
                         # record['Deleted'] = True

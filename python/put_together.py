@@ -150,11 +150,11 @@ def convert_jpg_to_webp_with_base_dir(df, base_dir="static/images/"):
             webp_filename = os.path.splitext(row['img_path'])[0] + '.webp'
             webp_full_path = os.path.join(base_dir, webp_filename)
             
-            # # Check if WebP already exists
-            # if os.path.exists(webp_full_path):
-            #     webp_paths.append(webp_filename)  # Store relative path
-            #     # print(f"→ Already exists: {webp_full_path}")
-            #     continue
+            # Check if WebP already exists
+            if os.path.exists(webp_full_path):
+                webp_paths.append(webp_filename)  # Store relative path
+                # print(f"→ Already exists: {webp_full_path}")
+                continue
             
             # Read and convert image
             with Image.open(original_path) as img:

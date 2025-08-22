@@ -67,24 +67,22 @@ $effect(() => {
     return;
   }
   
-  // Calculate which page the currentIndex is on
-  let pageNumber = Math.floor(currentIndex / imagesPerPage);
+  // Simple approach: start index equals currentIndex, show 4 consecutive images
+  const startIndex = currentIndex;
+  const endIndex = Math.min(currentIndex + 4, totalLength);
   
-  // Calculate start and end indices for this page
-  let startIndex = pageNumber * imagesPerPage;
-  let endIndex = startIndex + imagesPerPage;
+  // If we can't show 4 full images from currentIndex, shift back
+  const finalStartIndex = endIndex - startIndex < 4 ? Math.max(0, totalLength - 4) : startIndex;
+  const finalEndIndex = finalStartIndex + 4;
   
-  // If we're too close to the end, adjust to show the last 4 images
-  if (endIndex > totalLength) {
-    endIndex = totalLength;
-    startIndex = totalLength - imagesPerPage;
-  }
+  // Debug logging
+  // console.log(`currentIndex: ${currentIndex}, finalStartIndex: ${finalStartIndex}, finalEndIndex: ${finalEndIndex}`);
   
   // Update state variables
   lenno = totalLength;
-  rows = datah.slice(startIndex, endIndex);
-  firstImage = startIndex;
-  lastImage = endIndex;
+  rows = datah.slice(finalStartIndex, finalEndIndex);
+  firstImage = finalStartIndex;
+  lastImage = finalEndIndex;
 });
 
 </script>
@@ -130,6 +128,12 @@ $effect(() => {
 {/each}
 
 
+</div>
+
+
+<div class="container mx-auto pb-2.5">
+
+<IndexSlider sortedData={datah} bind:selectedIndex={currentIndex} /> 
 </div>
 
 <!-- <div id='pagination' class='mx-auto flex items-center justify-between text-xl pt-10'>
