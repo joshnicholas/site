@@ -101,9 +101,13 @@ on:click={() => modalIndex = index}
 <enhanced:img src="{images[`/src/lib/images/${imagePathos}`]}"  alt="An alt text" />
 </div> -->
 
+<div class=' mt-2 mb-4'>
 <span class='text-l'>{row["Title"]}</span><br>
 
 <span class='text-xs'>{dateFormat(dateParse(row["Date"]))}</span>
+
+</div>
+
 <!-- <span>{row["Date"]}</span> -->
 
 
@@ -121,7 +125,8 @@ on:click={() => modalIndex = index}
 
 
 img {
-    border-width: 10px;
+    border-width: 6px;
+    /* border-style: dotted; */
     /* border-color: #B1C29E; */
     /* border-color: #F0A04B; */
 
