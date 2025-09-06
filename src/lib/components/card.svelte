@@ -79,6 +79,7 @@ on:click={() => modalIndex = index}
   }}
 /> -->
 
+  <!-- loading="lazy" -->
 <img 
   class='cardy mx-auto' 
   id={index}
@@ -87,7 +88,7 @@ on:click={() => modalIndex = index}
   style='border-color:{colours[i]};background-color:"{colours[i]}"' 
   src="/images/{row['webp_path']}" 
   alt={row["Title"]}
-  loading="lazy"
+
   decoding="async"
   fetchpriority={index < 3 ? "high" : "auto"}
   onclick={() => {
