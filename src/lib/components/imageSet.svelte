@@ -115,7 +115,7 @@ $effect(() => {
 </div>
 
 
-<div class="container grid grid-cols-1 md:grid-cols-2 gap-2 mx-auto items-center text-center">
+<div class="container min-h-[900px] grid grid-cols-1 md:grid-cols-2 gap-2 mx-auto items-center text-center">
 
 
   

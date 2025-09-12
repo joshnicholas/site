@@ -43,11 +43,11 @@ let sortedData = $derived((selectedCat === 'All'
    .sort((a, b) => new Date(b.Date) - new Date(a.Date)));
 
 
-   let colours = ['#DC5F00', '#B1C29E', '#789DBC', '#8967B3']
+   let colours = ['#DC5F00', '#B1C29E', '#789DBC', '#8967B3', '#A272AD']
 
 let i = Math.floor(Math.random() * colours.length);
 
-let colourdict = {"Tool": '#e64c5b', "Article":'#B1C29E', "Misc": '#789DBC'}
+let colourdict = {"Tool": '#e64c5b', "Article":'#B1C29E', "Misc": '#789DBC', "Data": '#A272AD'}
 
 </script>
 

@@ -1,6 +1,6 @@
 <!-- IndexSlider.svelte -->
 <script>
-  let { sortedData, selectedIndex = $bindable(0), indexBelow = false, scrolly = null } = $props();
+  let { sortedData, selectedIndex = $bindable(0), increment = 4, indexBelow = false, scrolly = null } = $props();
   
   const minIndex = $derived(0);
   const maxIndex = $derived(sortedData.length - 1);
@@ -10,14 +10,14 @@
 
   function goToPrev() {
     if (selectedIndex > minIndex) {
-      selectedIndex--;
+      selectedIndex = Math.max(selectedIndex - increment, minIndex);
       scrolly?.scrollIntoView(false);
     }
   }
 
   function goToNext() {
     if (selectedIndex < maxIndex) {
-      selectedIndex++;
+      selectedIndex = Math.min(selectedIndex + increment, maxIndex);
       scrolly?.scrollIntoView(false);
     }
   }
@@ -38,8 +38,8 @@
       class="index-slider w-full h-4 cursor-pointer bg-transparent border border-black rounded-lg appearance-none"
       min={minIndex} 
       max={maxIndex} 
-      step="1"
-      bind:value={selectedIndex}
+      step={increment}
+      bind:value={selectedIndex}  
       oninput={() => {
         scrolly?.scrollIntoView(false);
       }}
