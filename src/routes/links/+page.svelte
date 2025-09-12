@@ -93,6 +93,6 @@ let colourdict = {"Tool": '#e64c5b', "Article":'#B1C29E', "Misc": '#789DBC', "Da
   <Linklist {sortedData} pageLimit={8} {colourdict}/>
    {/key}
   
-<div class='pt-10'>This is an experiment in publishing from a <a href='https://docs.google.com/spreadsheets/d/10-Z3-zH1OVf8JQdKqB3GnKEIropYv1AT9-Mm8h536K8/edit?gid=0#gid=0' target='_blank'>Google sheet</a>. This feed currently only gets updated when I update the entire site. I'm working on an rss version and a search bar. Everything will probably break.</div>
+<div class='pt-10'>This is basically a front end for my <a href='https://docs.google.com/spreadsheets/d/10-Z3-zH1OVf8JQdKqB3GnKEIropYv1AT9-Mm8h536K8/edit?gid=0#gid=0' target='_blank'>Google sheet of useful links</a>. This currently only gets updated with the resut of the site. I'm working on an rss version and a search bar. Everything will probably break.</div>
 </div>
 

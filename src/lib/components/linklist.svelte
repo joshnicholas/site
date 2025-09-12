@@ -87,7 +87,7 @@ $effect(() => {
                 {/if}
 
                 {#if item.Quote}
-                    <span class='italic'>
+                    <span class='italic quote-fade tooltip-container' title='"{item.Quote}"'>
                         "{item.Quote}"
                     </span>
                 {/if}
@@ -108,5 +108,23 @@ $effect(() => {
 </div>
 
 <style>
-    /* Component styles */
+    .quote-fade {
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: 100%;
+        position: relative;
+        cursor: help;
+    }
+    
+    .quote-fade::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 10px;
+        height: 100%;
+        background: linear-gradient(to right, transparent, #FADA7A);
+        pointer-events: none;
+    }
 </style>

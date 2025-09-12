@@ -135,7 +135,7 @@ $effect(() => {
 
 <!-- <IndexSlider sortedData={datah} bind:selectedIndex={currentIndex} />  -->
 <!-- <IndexSlider sortedData={datah} bind:selectedIndex={currentIndex} anchorPosition="top" /> -->
-<IndexSlider sortedData={datah} bind:selectedIndex={currentIndex} anchorPosition="bottom" />
+<!-- <IndexSlider sortedData={datah} bind:selectedIndex={currentIndex} anchorPosition="bottom" /> -->
 
 
 
