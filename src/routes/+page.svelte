@@ -40,7 +40,8 @@ let feature = ["240711_last-full-day_0.jpg","240714_escaping-the-hu_0.jpg","2401
         'bafkreicmocizke57lx7km6s3jgq22bzyuwsnaplbqrsa5crgdykctmxeza.jpg',
         'bafkreictzaz4oeshhzwuyzbz55qtieuopnatijpqbknebn5nfsycyxaqry.jpg','bafkreickngshyrlldojxnacpksidqihsmb4misoyecwauwpeckjttml6zi.jpg',
         'bafkreidcm772nxcggw75zkao4rvgdyg5s4or3227ijbkqv3utlt4a7fkqy.jpg','bafkreidpxkyafq2q37ae66tumqdgyiymzxyipsk2amrq4gx2jphdg7ti5i.jpg',
-        'bafkreig7mwkri7cii4lsf2d7b5y45ricnpyqsleun2p4tbjs3zwpxs6j7a.jpg'
+        'bafkreig7mwkri7cii4lsf2d7b5y45ricnpyqsleun2p4tbjs3zwpxs6j7a.jpg','bafkreihhzksklqyyz5dh444fwwuvbm5shpaaqyma7tszc43e4ji4jcgbiu.jpg',
+        'bafkreifjqcy2tfifsiasvvfp5ti5mvdjiueuvov247xnbi5bkkc6abupwa.jpg'
 
         ]
 
@@ -82,6 +83,7 @@ function sorter(array, how){
     else if (how.toLowerCase() == 'favs'){
         
         let keep = [... new Set(feature.map(d => d))]
+        console.log("keep: ", keep)
 
         return shuffle(array.filter(row => keep.includes(row['img_path'])))
     
