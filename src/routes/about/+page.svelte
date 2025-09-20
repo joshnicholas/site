@@ -45,7 +45,7 @@ let isNotMobile = $derived(innerWidth >= mobileBreakpoint);
       <!-- <img alt='about image' src='/yellow.jpg' class=" md:max-h-[25rem] mx-auto rounded rounded-2xl"/> -->
 
       <img alt='about image'  srcset="/blueyellow200.jpg 200w, /blueyellow340.jpg 380w" sizes="(max-width: 600px) 380px,
-         380px" class="mx-auto" style='border-color:#DC5F00;border-width: 10px;'/>
+         380px" class="mx-auto mb-2.5" style='border-color:#DC5F00;border-width: 10px;'/>
 
     </div>
 
@@ -57,15 +57,15 @@ let isNotMobile = $derived(innerWidth >= mobileBreakpoint);
       <br>
       <br>
 
-      <p class=''>Ello.</p><br>
+      <p class='mt-2.5'>Ello.</p><br>
       <!-- , <a href='https://joshnicholas.com/projects'>projects</a> I'm working on -->
       <p>My name is <span class="font-semibold">Josh</span>. I'm a scribbler and <a href='https://www.theguardian.com/profile/josh-nicholas' target='_blank' rel="me">journalist</a>.</p><br>
 
-      <p>There used to be a much-neglected blog at this site. It's now where I gather <a href='https://www.theguardian.com/lifeandstyle/2022/aug/15/i-used-to-think-art-required-natural-talent-then-i-taught-myself-to-draw'>my scribbles</a> from various platforms.</p><br>
+      <p>There used to be a much-neglected blog here. It's now a place for <a href='https://www.theguardian.com/lifeandstyle/2022/aug/15/i-used-to-think-art-required-natural-talent-then-i-taught-myself-to-draw'>scribbles</a> and various <a href='/tinkering'>experiments</a>. Things may randomly break.</p><br>
 
-      <p>I also use this site to <a href='http://localhost:5173/tinkering'>tinker</a> and learn new things. Things may randomly break.</p><br>
+      <!-- <p>I also use this site to <a href='https://joshnicholas.com/tinkering'>tinker</a> and learn new things. Things may randomly break.</p><br> -->
               
-      <p>I'm aiming to run an update script about once a week. I post more regularly on <a href='https://www.instagram.com/joshcnicholas' target='_blank' rel="me">Instagram</a>.</p><br>
+      <p>I'm aiming to run an update script about once a week. I post more regularly on <a href='https://www.instagram.com/joshcnicholas' target='_blank' rel="me">insta</a>.</p><br>
 
       </div>
 
