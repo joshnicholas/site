@@ -5,6 +5,9 @@
 	"/about": [
 		"src/routes/about/+page.js"
 	],
+	"/dash": [
+		"src/routes/dash/+page.js"
+	],
 	"/experiment": [
 		"src/routes/experiment/+page.js"
 	],
