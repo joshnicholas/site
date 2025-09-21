@@ -3,6 +3,7 @@
 /** @type {{ data: import('./$types').PageData }} */
 
     import Linklist from '$lib/components/linklist.svelte'
+    import SearchComponent from '$lib/components/SearchComponent.svelte'
 
 
 // import * from "d3" as d3
@@ -35,12 +36,16 @@ let categories = [... new Set(data.data.map(d => d.Category))]
 categories = categories.toSpliced(0, 0, "All")
 
 let selectedCat = $state('All')
+let searchFilteredData = $state(data.data)
 
+let sortedData = $derived((selectedCat === 'All'
+   ? searchFilteredData
+   : searchFilteredData.filter(item => item.Category === selectedCat))
+   .slice().sort((a, b) => new Date(b.Date) - new Date(a.Date)));
 
-let sortedData = $derived((selectedCat === 'All' 
-   ? data.data 
-   : data.data.filter(item => item.Category === selectedCat))
-   .sort((a, b) => new Date(b.Date) - new Date(a.Date)));
+function handleFilteredData(filtered) {
+    searchFilteredData = filtered;
+}
 
 
    let colours = ['#DC5F00', '#B1C29E', '#789DBC', '#8967B3', '#A272AD']
@@ -59,7 +64,9 @@ let colourdict = {"Tool": '#e64c5b', "Article":'#B1C29E', "Misc": '#789DBC', "Da
 
 <div class='mx-auto max-w-[800px] min-h-[425px]'>
 
-<div class="flex flex-col md:flex-row items-center justify-center gap-4">
+<div class="flex flex-col md:flex-row items-center justify-center gap-4 mb-6">
+  <SearchComponent data={data.data} onFilteredData={handleFilteredData} />
+
   <div class="flex items-center gap-2">
     <span>Filter:</span>
     <select
@@ -93,6 +100,6 @@ let colourdict = {"Tool": '#e64c5b', "Article":'#B1C29E', "Misc": '#789DBC', "Da
   <Linklist {sortedData} pageLimit={8} {colourdict}/>
    {/key}
   
-<div class='pt-10'>This is basically a front end for my <a href='https://docs.google.com/spreadsheets/d/10-Z3-zH1OVf8JQdKqB3GnKEIropYv1AT9-Mm8h536K8/edit?gid=0#gid=0' target='_blank'>Google sheet of useful links</a>. This page only gets updated about once a week, when the site gets rebuilt. I'm working on an rss version and a search bar. Everything will probably break.</div>
+<div class='pt-10'>This is basically a front end for my <a href='https://docs.google.com/spreadsheets/d/10-Z3-zH1OVf8JQdKqB3GnKEIropYv1AT9-Mm8h536K8/edit?gid=0#gid=0' target='_blank'>Google sheet of useful links</a>. This page only gets updated about once a week, when the site gets rebuilt. Still under development and highly likely to randomly break.</div>
 </div>
 

@@ -4,9 +4,15 @@
     let { sortedData, pageLimit, colourdict } = $props();
 
     // console.log('SortedData: ', sortedData)
-    console.log(Object.keys(sortedData[0]))
+    // console.log(Object.keys(sortedData[0]))
 
     // Start at index 0, showing first 9 items
+
+    $effect(() => {
+        console.log(sortedData.length)
+        console.log(sortedData)
+    })
+
     let selectedIndex = $state(0);
 
     let formattedDate = $state('')
@@ -109,22 +115,7 @@ $effect(() => {
 
 <style>
     .quote-fade {
-        display: inline-block;
-        white-space: nowrap;
-        overflow: hidden;
-        max-width: 100%;
-        position: relative;
+        display: inline;
         cursor: help;
-    }
-    
-    .quote-fade::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 10px;
-        height: 100%;
-        background: linear-gradient(to right, transparent, #FADA7A);
-        pointer-events: none;
     }
 </style>
