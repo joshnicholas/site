@@ -1,11 +1,12 @@
 # %%
 
 from atproto import Client
+from pathlib import Path
 
 import datetime
 import pytz
-import time 
-import pandas as pd 
+import time
+import pandas as pd
 import json 
 
 from PIL import Image, ImageOps
@@ -55,9 +56,13 @@ script_dir = pathlib.Path(__file__).parent
 # image_backup = script_dir.parent / "python" / 'image_archive/'
 # csv_outty = script_dir.parent / 'python' / 'scrap'
 
-image_outty = '/Users/josh/Github/site/static/images/'
-image_backup = '/Users/josh/Github/site/python/image_archive/'
-csv_outty = '/Users/josh/Github/site/python/scrap'
+# Get the script's directory and build relative paths
+script_dir = Path(__file__).parent
+project_root = script_dir.parent
+
+image_outty = project_root / 'static' / 'images'
+image_backup = script_dir / 'image_archive'
+csv_outty = script_dir / 'scrap'
 
 print(image_outty)
 print(image_backup)

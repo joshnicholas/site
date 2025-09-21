@@ -10,12 +10,12 @@
         <li class="mr-0">
             <a href='/'>scribbles</a>
         </li >
-        <!-- <li class="mr-0">
-            <a href='/tinkering'>tinkering</a>
-        </li > -->
         <li class="mr-0">
             <a href='/links'>links</a>
         </li >
+        <!-- <li class="mr-0">
+            <a href='/tinkering'>tinkering</a>
+        </li > -->
         <li class="mr-0">
             <a href='/about'>about</a>
         </li >

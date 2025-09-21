@@ -14,10 +14,15 @@ today = datetime.datetime.now().astimezone(pytz.timezone("Australia/Brisbane"))
 
 from sudulunu.helpers import dumper, pp
 
-import os 
+import os
 import pathlib
-pathos = pathlib.Path(__file__).parent
-os.chdir(pathos)
+from pathlib import Path
+
+# Get paths relative to script location
+script_dir = Path(__file__).parent
+project_root = script_dir.parent
+
+os.chdir(script_dir)
 
 print(os.getcwd())
 
@@ -139,7 +144,7 @@ def convert_jpg_to_webp_with_base_dir(df, base_dir="static/images/"):
         pandas DataFrame with added 'webp_path' column
     """
     webp_paths = []
-    origin_dir = '/Users/josh/Github/site/python/image_archive/'
+    origin_dir = script_dir / 'image_archive'
     
     for index, row in df.iterrows():
         try:
@@ -182,7 +187,7 @@ def convert_jpg_to_webp_with_base_dir(df, base_dir="static/images/"):
     df['webp_path'] = webp_paths
     return df
 
-fumbo = convert_jpg_to_webp_with_base_dir(dumbo, base_dir="/Users/josh/Github/site/static/images/")
+fumbo = convert_jpg_to_webp_with_base_dir(dumbo, base_dir=str(project_root / "static" / "images") + "/")
 
 # pp(fumbo)
 
@@ -215,13 +220,13 @@ dumper('scrap', 'together_2', fumbo)
 # with open('/Users/josh/Github/site/scribbles.json', 'w') as f:
 #     dumbo.to_json(f, orient='records')
 
-with open('/Users/josh/Github/site/src/lib/data/scribbles.json', 'w') as f:
+with open(project_root / 'src' / 'lib' / 'data' / 'scribbles.json', 'w') as f:
     fumbo.to_json(f, orient='records')
 
-with open('/Users/josh/Github/site/src/lib/scribbles.json', 'w') as f:
+with open(project_root / 'src' / 'lib' / 'scribbles.json', 'w') as f:
     fumbo.to_json(f, orient='records')
 
-with open('/Users/josh/Github/site/scribbles.json', 'w') as f:
+with open(project_root / 'scribbles.json', 'w') as f:
     fumbo.to_json(f, orient='records')
 
 # script_dir = pathlib.Path(__file__).parent
