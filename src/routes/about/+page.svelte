@@ -2,6 +2,8 @@
 // export let data 
 /** @type {{ data: import('./$types').PageData }} */
 
+import RssFeed from '$lib/components/RssFeed.svelte'
+
 let mobileBreakpoint = 768;
 let innerWidth = $state(620);
 let isNotMobile = $derived(innerWidth >= mobileBreakpoint);
@@ -83,7 +85,8 @@ let isNotMobile = $derived(innerWidth >= mobileBreakpoint);
 
       </div>
 
-      
+      <p>Some recent stories:</p>
+  <RssFeed url='https://www.theguardian.com/profile/josh-nicholas/rss' maxN={5} filter={['The Crunch:', 'australia-politics-live']}/>      
 
 
       <div style="clear: both; display: block; visibility: visible; width: 100%; height: 0; content: ''; overflow: hidden;"></div>
