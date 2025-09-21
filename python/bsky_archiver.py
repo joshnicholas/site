@@ -187,11 +187,11 @@ for i in range(0,5):
                             r = requests.get(picco, stream=True)
 
                             if r.status_code == 200:
-                                with open(f'{image_backup}{stemmo}.jpg', 'wb') as f:
+                                with open(f'{image_backup}/{stemmo}.jpg', 'wb') as f:
                                     for chunk in r:
                                         f.write(chunk)
                             try:
-                                messy = get_caption(f'{image_backup}{stemmo}.jpg')
+                                messy = get_caption(f'{image_backup}/{stemmo}.jpg')
                             except:
                                 break
                             # new_image = Image.open(f'{image_backup}{stemmo}.jpg')

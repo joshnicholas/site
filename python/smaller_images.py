@@ -6,10 +6,15 @@ import pandas as pd
 
 from sudulunu.helpers import dumper, pp 
 
-import os 
+import os
 import pathlib
-pathos = pathlib.Path(__file__).parent
-os.chdir(pathos)
+from pathlib import Path
+
+# Get paths relative to script location
+script_dir = Path(__file__).parent
+project_root = script_dir.parent
+
+os.chdir(script_dir)
 
 import pillow_avif  # Have to import this before importing PIL
 from PIL import Image, ImageOps
@@ -26,8 +31,8 @@ from PIL import Image, ImageOps
 # pathos = 'static/'
 # out_path = 'static/'
 
-pathos = '/Users/josh/Github/site/python/image_archive/'
-out_path = '/Users/josh/Github/site/static/images/'
+pathos = script_dir / 'image_archive'
+out_path = project_root / 'static' / 'images'
 
 # script_dir = pathlib.Path(__file__).parent
 
@@ -53,7 +58,7 @@ for fillo in fillos:
 
     stemmo = fillo.split(".")[0].strip()
 
-    inter = f"{pathos}{fillo}"
+    inter = pathos / fillo
 
     im = Image.open(inter)
 
@@ -61,7 +66,7 @@ for fillo in fillos:
     wpercent = (mywidth/float(im.size[0]))
     hsize = int((float(im.size[1])*float(wpercent)))
     img = im.resize((mywidth,hsize))
-    img.save(f"{out_path}{fillo}")
+    img.save(out_path / fillo)
 
     # record = {"img_path": fillo, 'Width': img.size[0], 'Height': img.size[1]}
     # records.append(record)
