@@ -28,7 +28,7 @@ const options = ['Random', 'Date', 'Favs']
 
 // let containerWidth = $state();
 
-let removed = ["240725_sending-a-whoooooole_0.jpg",]
+let removed = ["240725_sending-a-whoooooole_0.jpg",'bafkreiarmnd426qm2jj2cpsyafegwkunnq3qu2ugs2nqpihzlp7272hcm4.webp', 'bafkreiarmnd426qm2jj2cpsyafegwkunnq3qu2ugs2nqpihzlp7272hcm4.jpg']
 let feature = ["240711_last-full-day_0.jpg","240714_escaping-the-hu_0.jpg","240117-misty-sydney-cbd.jpg",
         "240719_pretty-sparkling-day_0.jpg","uncle_e.jpg","240425_its-getting-cold_0.jpg",
         '240711_last-full-day_0.jpg','40402_decided-to-challenge_counter.jpg','230620-escaping-the-heat.jpeg',
@@ -44,6 +44,9 @@ let feature = ["240711_last-full-day_0.jpg","240714_escaping-the-hu_0.jpg","2401
         'bafkreifjqcy2tfifsiasvvfp5ti5mvdjiueuvov247xnbi5bkkc6abupwa.jpg'
 
         ]
+
+// Filter out removed images first
+let filteredData = $derived(data.data.filter(item => !removed.includes(item.img_path)))
 
 function sorter(array, how){
     // console.log("how: ", how)
@@ -83,14 +86,14 @@ function sorter(array, how){
     else if (how.toLowerCase() == 'favs'){
         
         let keep = [... new Set(feature.map(d => d))]
-        console.log("keep: ", keep)
+        // console.log("keep: ", keep)
 
         return shuffle(array.filter(row => keep.includes(row['img_path'])))
     
 }
 }
 
-// console.log("Hi!")
+
 
 </script>
 
@@ -100,7 +103,7 @@ function sorter(array, how){
     <Radio {options} bind:sortBy={sortBy}/>
 </div>
     {#key sortBy}
-    <Imageset {pageLimit} datah={sorter(data.data, sortBy)} /> 
+    <Imageset {pageLimit} datah={sorter(filteredData, sortBy)} />
     {/key}
 
 

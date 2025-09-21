@@ -70,6 +70,7 @@ let isNotMobile = $derived(innerWidth >= mobileBreakpoint);
 
 <div style="clear: both; display: block; visibility: visible; width: 100%; height: 0; content: ''; overflow: hidden;"></div>
 
+<br>
     <p>Some current projects:</p>
 
     <ul class='list-disc pl-10 pb-10'>
