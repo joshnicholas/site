@@ -76,6 +76,8 @@ let isNotMobile = $derived(innerWidth >= mobileBreakpoint);
     <p>Some current projects:</p>
 
     <ul class='list-disc pl-10 pb-10'>
+        
+        <li class='pt-3'>Melbourne <a href='https://joshnicholas.github.io/oz_weather_scraper/'>weather</a></li>
         <li class='pt-3'>Dashboard of <a href='https://joshnicholas.github.io/dash/'>Australian news top stories</a></li>
         <li class='pt-3'>Google sheet populated <a href='/links'>linklog</a></li>
         <li class='pt-3'>Filtering images <a href='/tinkering/filter'>by keyword</a></li>

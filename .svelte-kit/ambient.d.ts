@@ -33,8 +33,8 @@ declare module '$env/static/private' {
 	export const NVM_CD_FLAGS: string;
 	export const TERM: string;
 	export const SHELL: string;
-	export const TMPDIR: string;
 	export const HOMEBREW_REPOSITORY: string;
+	export const TMPDIR: string;
 	export const npm_config_global_prefix: string;
 	export const VSCODE_PYTHON_AUTOACTIVATE_GUARD: string;
 	export const TERM_PROGRAM_VERSION: string;
@@ -45,8 +45,8 @@ declare module '$env/static/private' {
 	export const npm_config_noproxy: string;
 	export const npm_config_local_prefix: string;
 	export const ENABLE_IDE_INTEGRATION: string;
-	export const USER: string;
 	export const NVM_DIR: string;
+	export const USER: string;
 	export const COMMAND_MODE: string;
 	export const npm_config_globalconfig: string;
 	export const CLAUDE_CODE_SSE_PORT: string;
@@ -69,7 +69,6 @@ declare module '$env/static/private' {
 	export const EDITOR: string;
 	export const npm_package_name: string;
 	export const LANG: string;
-	export const LOCAL_GIT_DIRECTORY: string;
 	export const PYTHONSTARTUP: string;
 	export const BUNDLED_DEBUGPY_PATH: string;
 	export const npm_config_npm_version: string;
@@ -81,8 +80,8 @@ declare module '$env/static/private' {
 	export const XPC_SERVICE_NAME: string;
 	export const VSCODE_INJECTION: string;
 	export const VSCODE_DEBUGPY_ADAPTER_ENDPOINTS: string;
-	export const HOME: string;
 	export const SHLVL: string;
+	export const HOME: string;
 	export const VSCODE_GIT_ASKPASS_MAIN: string;
 	export const PYTHON_BASIC_REPL: string;
 	export const HOMEBREW_PREFIX: string;
@@ -94,8 +93,8 @@ declare module '$env/static/private' {
 	export const npm_config_user_agent: string;
 	export const VSCODE_GIT_ASKPASS_NODE: string;
 	export const GIT_ASKPASS: string;
-	export const HOMEBREW_CELLAR: string;
 	export const INFOPATH: string;
+	export const HOMEBREW_CELLAR: string;
 	export const npm_node_execpath: string;
 	export const npm_config_prefix: string;
 	export const COLORTERM: string;
@@ -138,8 +137,8 @@ declare module '$env/dynamic/private' {
 		NVM_CD_FLAGS: string;
 		TERM: string;
 		SHELL: string;
-		TMPDIR: string;
 		HOMEBREW_REPOSITORY: string;
+		TMPDIR: string;
 		npm_config_global_prefix: string;
 		VSCODE_PYTHON_AUTOACTIVATE_GUARD: string;
 		TERM_PROGRAM_VERSION: string;
@@ -150,8 +149,8 @@ declare module '$env/dynamic/private' {
 		npm_config_noproxy: string;
 		npm_config_local_prefix: string;
 		ENABLE_IDE_INTEGRATION: string;
-		USER: string;
 		NVM_DIR: string;
+		USER: string;
 		COMMAND_MODE: string;
 		npm_config_globalconfig: string;
 		CLAUDE_CODE_SSE_PORT: string;
@@ -174,7 +173,6 @@ declare module '$env/dynamic/private' {
 		EDITOR: string;
 		npm_package_name: string;
 		LANG: string;
-		LOCAL_GIT_DIRECTORY: string;
 		PYTHONSTARTUP: string;
 		BUNDLED_DEBUGPY_PATH: string;
 		npm_config_npm_version: string;
@@ -186,8 +184,8 @@ declare module '$env/dynamic/private' {
 		XPC_SERVICE_NAME: string;
 		VSCODE_INJECTION: string;
 		VSCODE_DEBUGPY_ADAPTER_ENDPOINTS: string;
-		HOME: string;
 		SHLVL: string;
+		HOME: string;
 		VSCODE_GIT_ASKPASS_MAIN: string;
 		PYTHON_BASIC_REPL: string;
 		HOMEBREW_PREFIX: string;
@@ -199,8 +197,8 @@ declare module '$env/dynamic/private' {
 		npm_config_user_agent: string;
 		VSCODE_GIT_ASKPASS_NODE: string;
 		GIT_ASKPASS: string;
-		HOMEBREW_CELLAR: string;
 		INFOPATH: string;
+		HOMEBREW_CELLAR: string;
 		npm_node_execpath: string;
 		npm_config_prefix: string;
 		COLORTERM: string;

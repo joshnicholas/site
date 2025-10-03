@@ -28,5 +28,8 @@
 	],
 	"/tinkering/sinhalacards": [
 		"src/routes/tinkering/sinhalacards/+page.js"
+	],
+	"/weather": [
+		"src/routes/weather/+page.js"
 	]
 }
