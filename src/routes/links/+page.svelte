@@ -103,6 +103,6 @@ let colourdict = {"Tool": '#e64c5b', "Article":'#B1C29E', "Misc": '#789DBC', "Da
   <Linklist {sortedData} pageLimit={8} {colourdict}/>
    {/key}
   
-<div class='pt-10'>This is basically a front end for my <a href='https://docs.google.com/spreadsheets/d/10-Z3-zH1OVf8JQdKqB3GnKEIropYv1AT9-Mm8h536K8/edit?gid=0#gid=0' target='_blank'>Google sheet of useful links</a>. This page only gets updated about once a week, when the site gets rebuilt. Still under development and highly likely to randomly break.</div>
-</div>
+<div class='pt-10'>This page only gets updated about once a week, when the site gets rebuilt. Still under development and highly likely to randomly break.</div>
 
+</div>
