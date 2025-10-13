@@ -1,18 +1,14 @@
-import { b as ensure_array_like, e as escape_html, s as stringify, p as pop, a as push } from "../../../chunks/index2.js";
+import { f as copy_payload, g as assign_payload, p as pop, c as ensure_array_like, e as escape_html, s as stringify, a as push } from "../../../chunks/index.js";
+import { I as IndexSlider } from "../../../chunks/IndexSlider.js";
 import { a as attr } from "../../../chunks/attributes.js";
 /* empty css                                                */
 /* empty css                                                     */
 function Linklist($$payload, $$props) {
   push();
   let { sortedData, pageLimit, colourdict } = $$props;
-  let firstCard = 0;
-  let lastCard = firstCard + pageLimit;
-  let lenno = sortedData.length;
-  let rows = sortedData.slice(firstCard, lastCard);
-  let isFirstPage = lastCard - pageLimit == 0 ? true : false;
-  let hasNextPage = lastCard >= lenno ? false : true;
-  let showPrev = isFirstPage ? "hidden" : "visible";
-  let showNext = !hasNextPage ? "hidden" : "visible";
+  let selectedIndex = 0;
+  let formattedDate = "";
+  let rows = sortedData.slice(selectedIndex, selectedIndex + 9);
   function getBaseUrl(url) {
     try {
       const urlObj = new URL(url);
@@ -45,75 +41,121 @@ function Linklist($$payload, $$props) {
       return null;
     }
   }
-  function fixDate(thingo) {
-    const date = new Date(thingo);
-    return `${date.getDate()} ${date.toLocaleDateString("en-US", { month: "short" })} ${date.getFullYear()}`;
+  function colouriser(category) {
+    return colourdict[category] || "#007cc9";
   }
-  function colouriser(thingo) {
-    if (Object.keys(colourdict).includes(thingo)) {
-      return colourdict[thingo];
+  let scrolly;
+  let $$settled = true;
+  let $$inner_payload;
+  function $$render_inner($$payload2) {
+    const each_array = ensure_array_like(rows);
+    $$payload2.out += `<div></div> <div class="min-h-[600px] container gap-6 mx-auto items-center text-center">`;
+    IndexSlider($$payload2, {
+      sortedData,
+      increment: 1,
+      scrolly,
+      get selectedIndex() {
+        return selectedIndex;
+      },
+      set selectedIndex($$value) {
+        selectedIndex = $$value;
+        $$settled = false;
+      }
+    });
+    $$payload2.out += `<!----> <div class="text-center pb-5"><span class="text-lg font-medium">${escape_html(formattedDate)}</span></div> <ul class="max-w-[800px] mx-auto space-y-2 list-none"><!--[-->`;
+    for (let $$index = 0, $$length = each_array.length; $$index < $$length; $$index++) {
+      let item = each_array[$$index];
+      $$payload2.out += `<li class="relative pl-6 text-left"><div class="absolute left-0 top-2 w-3 h-3 rounded-full"${attr("style", `background-color: ${stringify(colouriser(item.category))}`)}></div> `;
+      if (item.title) {
+        $$payload2.out += "<!--[-->";
+        $$payload2.out += `<a${attr("href", item.url)} target="_blank" class="font-bold text-black">${escape_html(item.title)}</a>`;
+      } else {
+        $$payload2.out += "<!--[!-->";
+      }
+      $$payload2.out += `<!--]--> `;
+      if (item.quote && item.title) {
+        $$payload2.out += "<!--[-->";
+        $$payload2.out += `<span>-</span>`;
+      } else {
+        $$payload2.out += "<!--[!-->";
+      }
+      $$payload2.out += `<!--]--> `;
+      if (item.quote) {
+        $$payload2.out += "<!--[-->";
+        $$payload2.out += `<span class="italic quote-fade tooltip-container svelte-btw94a"${attr("title", `"${stringify(item.quote)}"`)}>"${escape_html(item.quote)}"</span>`;
+      } else {
+        $$payload2.out += "<!--[!-->";
+      }
+      $$payload2.out += `<!--]--> `;
+      if (item.text) {
+        $$payload2.out += "<!--[-->";
+        $$payload2.out += `<span>${escape_html(item.text)}</span>`;
+      } else {
+        $$payload2.out += "<!--[!-->";
+      }
+      $$payload2.out += `<!--]--> <span>-</span> <span><a${attr("href", item.url)} target="_blank">${escape_html(getBaseUrl(item.url))}</a></span></li>`;
     }
+    $$payload2.out += `<!--]--></ul></div>`;
   }
-  const each_array = ensure_array_like(rows);
-  $$payload.out += `<div></div> <div id="pagination" class="mx-auto flex items-center justify-between text-xl pb-5 pt-5"><button id="left"${attr("style", `visibility: ${stringify(showPrev)}`)}>Prev</button> <span class="text-xs font-semibold">${escape_html(lastCard)}/${escape_html(lenno)}</span> <button id="right"${attr("style", `visibility: ${stringify(showNext)}`)}>Next</button></div> <div class="container gap-6 mx-auto items-center text-center"><!--[-->`;
-  for (let $$index = 0, $$length = each_array.length; $$index < $$length; $$index++) {
-    let item = each_array[$$index];
-    $$payload.out += `<div class="p-5 max-w-[600px] mt-5 mb-5 [&amp;:not(:last-child)]:border mx-auto"${attr("style", `border-color:${stringify(colouriser(item.Category))}; border-width: 5px; border-opacity:0.1`)}>`;
-    if (item.Title) {
-      $$payload.out += "<!--[-->";
-      $$payload.out += `<a${attr("href", item.URL)} target="_blank"><h2 class="text-lg font-bold mb-4">${escape_html(item.Title)}</h2></a> <p>${escape_html(item.URL)}</p>`;
-    } else {
-      $$payload.out += "<!--[!-->";
-    }
-    $$payload.out += `<!--]--> `;
-    if (item.Quote) {
-      $$payload.out += "<!--[-->";
-      $$payload.out += `<blockquote class="text-lg italic mb-4 border-l-4 border-black pl-4">"${escape_html(item.Quote)}"</blockquote>`;
-    } else {
-      $$payload.out += "<!--[!-->";
-    }
-    $$payload.out += `<!--]--> `;
-    if (item.Text) {
-      $$payload.out += "<!--[-->";
-      $$payload.out += `<p class="mb-4">${escape_html(item.Text)}</p>`;
-    } else {
-      $$payload.out += "<!--[!-->";
-    }
-    $$payload.out += `<!--]--> <a${attr("href", item.URL)} target="_blank">${escape_html(getBaseUrl(item.URL))}</a> <p class="text-xs italic">Added: ${escape_html(fixDate(item.Date))}</p> <p class="text-xs italic">${escape_html(item.Tool)}</p></div>`;
+  do {
+    $$settled = true;
+    $$inner_payload = copy_payload($$payload);
+    $$render_inner($$inner_payload);
+  } while (!$$settled);
+  assign_payload($$payload, $$inner_payload);
+  pop();
+}
+function SearchComponent($$payload, $$props) {
+  push();
+  let searchTerm = "";
+  $$payload.out += `<div class="flex items-center gap-2"><label for="search" class="text-sm font-medium">Search:</label> <div class="relative"><input id="search" type="text"${attr("value", searchTerm)} placeholder="Search title, quote, text, category..." class="px-4 py-2 pr-10 border-2 border-black focus:outline-none focus:ring-0 bg-transparent w-36 md:w-64 text-black placeholder-gray-500"> `;
+  {
+    $$payload.out += "<!--[!-->";
   }
-  $$payload.out += `<!--]--></div> <div id="pagination" class="mx-auto flex items-center justify-between text-xl pt-10"><button id="left"${attr("style", `visibility: ${stringify(showPrev)}`)}>Prev</button> <span class="text-xs font-semibold">${escape_html(lastCard)}/${escape_html(lenno)}</span> <button id="right"${attr("style", `visibility: ${stringify(showNext)}`)}>Next</button></div>`;
+  $$payload.out += `<!--]--></div></div>`;
   pop();
 }
 function _page($$payload, $$props) {
   push();
   let { data } = $$props;
   let categories = [
-    ...new Set(data.data.map((d) => d.Category))
+    ...new Set(data.data.map((d) => d.category))
   ];
   categories = categories.toSpliced(0, 0, "All");
-  let sortedData = data.data.sort((a, b) => new Date(b.Date) - new Date(a.Date));
+  let searchFilteredData = data.data;
+  let sortedData = searchFilteredData.slice().sort((a, b) => new Date(b.date) - new Date(a.date));
+  function handleFilteredData(filtered) {
+    searchFilteredData = filtered;
+  }
   let colourdict = {
     "Tool": "#e64c5b",
     "Article": "#B1C29E",
-    "Guide": "#789DBC"
+    "Misc": "#789DBC",
+    "Data": "#A272AD",
+    "Vis": "#DAFA7A"
   };
-  const each_array = ensure_array_like(categories);
+  const each_array = ensure_array_like(Object.keys(colourdict));
   const each_array_1 = ensure_array_like(Object.entries(colourdict));
-  $$payload.out += `<div class="mx-auto max-w-[800px] min-h-[425px]"><div class="flex items-center justify-center gap-2"><span>Filter:</span> <select class="px-4 py-2 text-center bg-transparent border-2 border-black focus:outline-none focus:ring-0"><!--[-->`;
+  $$payload.out += `<div class="mx-auto max-w-[800px] min-h-[425px]"><div class="flex flex-col md:flex-row items-center justify-center gap-2"><div class="flex flex-row items-center justify-center gap-2 md:gap-4">`;
+  SearchComponent($$payload, {
+    data: data.data,
+    onFilteredData: handleFilteredData
+  });
+  $$payload.out += `<!----> <div class="flex items-center gap-2"><span>Filter:</span> <select class="px-4 py-2 text-center bg-transparent border-2 border-black focus:outline-none focus:ring-0"><option value="All">All</option><!--[-->`;
   for (let $$index = 0, $$length = each_array.length; $$index < $$length; $$index++) {
     let cat = each_array[$$index];
     $$payload.out += `<option${attr("value", cat)}>${escape_html(cat)}</option>`;
   }
-  $$payload.out += `<!--]--></select></div> <div class="mt-5 flex gap-4 justify-center"><!--[-->`;
+  $$payload.out += `<!--]--></select></div></div> <div class="flex items-center gap-2 flex-wrap justify-center"><!--[-->`;
   for (let $$index_1 = 0, $$length = each_array_1.length; $$index_1 < $$length; $$index_1++) {
     let [key, color] = each_array_1[$$index_1];
-    $$payload.out += `<div class="flex items-center gap-2"><div class="w-3 h-3"${attr("style", `background-color: ${stringify(color)}`)}></div> <span>${escape_html(key)}</span></div>`;
+    $$payload.out += `<div class="flex items-center gap-1"><div class="w-3 h-3"${attr("style", `background-color: ${stringify(color)}`)}></div> <span class="text-sm">${escape_html(key)}</span></div>`;
   }
-  $$payload.out += `<!--]--></div> <!---->`;
+  $$payload.out += `<!--]--></div></div> <!---->`;
   {
-    Linklist($$payload, { sortedData, pageLimit: 4, colourdict });
+    Linklist($$payload, { sortedData, pageLimit: 8, colourdict });
   }
-  $$payload.out += `<!----> <div class="pt-10">This is an experiment in publishing from a <a href="https://docs.google.com/spreadsheets/d/10-Z3-zH1OVf8JQdKqB3GnKEIropYv1AT9-Mm8h536K8/edit?gid=0#gid=0" target="_blank">Google sheet</a>. This feed currently only gets updated when I update the entire site. I'm working on an rss version and a search bar. Everything will probably break.</div></div>`;
+  $$payload.out += `<!----> <div class="pt-10">This is basically a front end for my <a href="https://docs.google.com/spreadsheets/d/10-Z3-zH1OVf8JQdKqB3GnKEIropYv1AT9-Mm8h536K8/edit?gid=0#gid=0" target="_blank">Google sheet of useful links</a>. This page only gets updated about once a week, when the site gets rebuilt. Still under development and highly likely to randomly break.</div></div>`;
   pop();
 }
 export {

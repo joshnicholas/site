@@ -11,6 +11,7 @@
   let lenno = $state(0);
   let rows = $state([]);
   let scrolly = $state();
+  let scrollBottom = $state();
   let currentIndex = $state(0);
 
   // Derived values
@@ -111,7 +112,7 @@ $effect(() => {
 
 <div class="container mx-auto pb-2.5">
 
-<IndexSlider sortedData={datah} bind:selectedIndex={currentIndex} /> 
+<IndexSlider sortedData={datah} bind:selectedIndex={currentIndex} {scrolly} />
 </div>
 
 
@@ -133,17 +134,39 @@ $effect(() => {
 
 <div class="container mx-auto pb-2.5">
 
-<!-- <IndexSlider sortedData={datah} bind:selectedIndex={currentIndex} />  -->
-<!-- <IndexSlider sortedData={datah} bind:selectedIndex={currentIndex} anchorPosition="top" /> -->
-<!-- <IndexSlider sortedData={datah} bind:selectedIndex={currentIndex} anchorPosition="bottom" /> -->
+<div class="mt-1.5 w-full flex items-center justify-between py-2.5">
+  <button
+    class="text-black cursor-pointer hover:opacity-70 select-none font-medium"
+    onclick={() => {
+      if (currentIndex > 0) {
+        currentIndex = Math.max(currentIndex - 4, 0);
+        setTimeout(() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' }), 0);
+      }
+    }}
+    disabled={currentIndex <= 0}
+  >
+    Prev
+  </button>
 
-
+  <button
+    class="text-black cursor-pointer hover:opacity-70 select-none font-medium"
+    onclick={() => {
+      if (currentIndex < datah.length - 1) {
+        currentIndex = Math.min(currentIndex + 4, datah.length - 1);
+        setTimeout(() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' }), 0);
+      }
+    }}
+    disabled={currentIndex >= datah.length - 1}
+  >
+    Next
+  </button>
+</div>
 
 </div>
 
 <!-- <div id='pagination' class='mx-auto flex items-center justify-between text-xl pt-10'>
-  <button 
-    id='left' 
+  <button
+    id='left'
     onclick={handlePrevClick}
     style='visibility: {showPrev}'
   >
@@ -152,8 +175,8 @@ $effect(() => {
 
   <span class='text-xs font-semibold'>{lastImage}/{lenno}</span>
 
-  <button 
-    id='right' 
+  <button
+    id='right'
     onclick={handleNextClick}
     style='visibility: {showNext}'
   >
@@ -165,4 +188,9 @@ $effect(() => {
 /* The Modal (background) */
 
 /* Modal Content/Box */
+
+  button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
 </style>

@@ -1,6 +1,6 @@
-import { b as ensure_array_like, e as escape_html, c as bind_props, p as pop, a as push, f as copy_payload, g as assign_payload } from "../../chunks/index2.js";
+import { c as ensure_array_like, e as escape_html, b as bind_props, p as pop, a as push, f as copy_payload, g as assign_payload } from "../../chunks/index.js";
 import { a as attr } from "../../chunks/attributes.js";
-import { shuffle, ascending, descending } from "d3-array";
+import { shuffle, descending } from "d3-array";
 import { timeParse } from "d3-time-format";
 import { I as ImageSet } from "../../chunks/imageSet.js";
 function Radio($$payload, $$props) {
@@ -9,10 +9,10 @@ function Radio($$payload, $$props) {
   let sortBy = $$props["sortBy"];
   const slugify = (str = "") => str.toLowerCase().replace(/ /g, "-").replace(/\./g, "");
   const each_array = ensure_array_like(options);
-  $$payload.out += `<div id="sortRow" class="flex justify-between text-l font-semibold svelte-1r6hi8v" style="padding-bottom:0.5rem;"><!--[-->`;
+  $$payload.out += `<div id="sortRow" class="flex justify-between text-l font-semibold px-10 svelte-16ej0y3" style="padding-top:0.5rem;"><!--[-->`;
   for (let $$index = 0, $$length = each_array.length; $$index < $$length; $$index++) {
     let option = each_array[$$index];
-    $$payload.out += `<input class="sr-only mr-2 svelte-1r6hi8v" type="radio"${attr("id", slugify(option))}${attr("checked", sortBy === option, true)}${attr("value", option)}> <label${attr("for", slugify(option))} class="svelte-1r6hi8v">${escape_html(option)}</label>`;
+    $$payload.out += `<input class="sr-only mr-2 svelte-16ej0y3" type="radio"${attr("id", slugify(option))}${attr("checked", sortBy === option, true)}${attr("value", option)}> <label${attr("for", slugify(option))} class="svelte-16ej0y3">${escape_html(option)}</label>`;
   }
   $$payload.out += `<!--]--></div>`;
   bind_props($$props, { options, sortBy });
@@ -25,7 +25,12 @@ function _page($$payload, $$props) {
   let pageLimit = 4;
   let sortBy = void 0;
   sortBy = "Random";
-  const options = ["Random", "Newest", "Oldest", "Favs"];
+  const options = ["Random", "Date", "Favs"];
+  let removed = [
+    "240725_sending-a-whoooooole_0.jpg",
+    "bafkreiarmnd426qm2jj2cpsyafegwkunnq3qu2ugs2nqpihzlp7272hcm4.webp",
+    "bafkreiarmnd426qm2jj2cpsyafegwkunnq3qu2ugs2nqpihzlp7272hcm4.jpg"
+  ];
   let feature = [
     "240711_last-full-day_0.jpg",
     "240714_escaping-the-hu_0.jpg",
@@ -33,7 +38,6 @@ function _page($$payload, $$props) {
     "240719_pretty-sparkling-day_0.jpg",
     "uncle_e.jpg",
     "240425_its-getting-cold_0.jpg",
-    "240725_sending-a-whoooooole_0.jpg",
     "240711_last-full-day_0.jpg",
     "40402_decided-to-challenge_counter.jpg",
     "230620-escaping-the-heat.jpeg",
@@ -49,17 +53,20 @@ function _page($$payload, $$props) {
     "bafkreielepiii3lhuzunv6bhhrgc3kstq2ta7azgks7bywkf3w27gu7ine.jpg",
     "bafkreiamgekie2fpvpehuynwfaic3ck5jbvnubebls37gmivgnrcew2mdu.jpg",
     "bafkreib64zsamf3z2s23bmrigo457riaqgpzj7zvihwbwjl5yvftljo6zq.jpg",
-    "bafkreicmocizke57lx7km6s3jgq22bzyuwsnaplbqrsa5crgdykctmxeza.jpg"
+    "bafkreicmocizke57lx7km6s3jgq22bzyuwsnaplbqrsa5crgdykctmxeza.jpg",
+    "bafkreictzaz4oeshhzwuyzbz55qtieuopnatijpqbknebn5nfsycyxaqry.jpg",
+    "bafkreickngshyrlldojxnacpksidqihsmb4misoyecwauwpeckjttml6zi.jpg",
+    "bafkreidcm772nxcggw75zkao4rvgdyg5s4or3227ijbkqv3utlt4a7fkqy.jpg",
+    "bafkreidpxkyafq2q37ae66tumqdgyiymzxyipsk2amrq4gx2jphdg7ti5i.jpg",
+    "bafkreig7mwkri7cii4lsf2d7b5y45ricnpyqsleun2p4tbjs3zwpxs6j7a.jpg",
+    "bafkreihhzksklqyyz5dh444fwwuvbm5shpaaqyma7tszc43e4ji4jcgbiu.jpg",
+    "bafkreifjqcy2tfifsiasvvfp5ti5mvdjiueuvov247xnbi5bkkc6abupwa.jpg"
   ];
+  let filteredData = data.data.filter((item) => !removed.includes(item.img_path));
   function sorter(array, how) {
     if (how.toLowerCase() == "random") {
       return shuffle(array);
-    } else if (how.toLowerCase() == "oldest") {
-      let outty = array.sort(function(a, b) {
-        return ascending(dateparser(a["Date"]), dateparser(b["Date"]));
-      });
-      return outty;
-    } else if (how.toLowerCase() == "newest") {
+    } else if (how.toLowerCase() == "date") {
       let outty = array.sort(function(a, b) {
         return descending(dateparser(a["Date"]), dateparser(b["Date"]));
       });
@@ -69,10 +76,10 @@ function _page($$payload, $$props) {
       return shuffle(array.filter((row) => keep.includes(row["img_path"])));
     }
   }
-  console.log("Hi!");
   let $$settled = true;
   let $$inner_payload;
   function $$render_inner($$payload2) {
+    $$payload2.out += `<div class="container mx-auto">`;
     Radio($$payload2, {
       options,
       get sortBy() {
@@ -83,11 +90,11 @@ function _page($$payload, $$props) {
         $$settled = false;
       }
     });
-    $$payload2.out += `<!----> <!---->`;
+    $$payload2.out += `<!----></div> <!---->`;
     {
       ImageSet($$payload2, {
         pageLimit,
-        datah: sorter(data.data, sortBy)
+        datah: sorter(filteredData, sortBy)
       });
     }
     $$payload2.out += `<!---->`;

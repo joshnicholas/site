@@ -8,11 +8,22 @@
       "_internal.js"
     ]
   },
+  "_IndexSlider.js": {
+    "file": "chunks/IndexSlider.js",
+    "name": "IndexSlider",
+    "imports": [
+      "_index.js",
+      "_attributes.js"
+    ],
+    "css": [
+      "_app/immutable/assets/IndexSlider.DFb0jq5f.css"
+    ]
+  },
   "_attributes.js": {
     "file": "chunks/attributes.js",
     "name": "attributes",
     "imports": [
-      "_index2.js"
+      "_index.js"
     ]
   },
   "_equality.js": {
@@ -31,12 +42,12 @@
     "file": "chunks/imageSet.js",
     "name": "imageSet",
     "imports": [
-      "_index2.js",
-      "_utils.js",
-      "_attributes.js"
+      "_index.js",
+      "_attributes.js",
+      "_IndexSlider.js"
     ],
     "css": [
-      "_app/immutable/assets/imageSet.DwfmQDzx.css"
+      "_app/immutable/assets/imageSet.DqNHSGR4.css"
     ]
   },
   "_index.js": {
@@ -53,11 +64,11 @@
     "imports": [
       "_utils.js",
       "_equality.js",
-      "_index2.js"
+      "_index.js"
     ]
   },
   "_nav.svelte_svelte_type_style_lang.js": {
-    "file": "_app/immutable/assets/nav.C7DIyg2k.css",
+    "file": "_app/immutable/assets/nav.BhJx0oSA.css",
     "src": "_nav.svelte_svelte_type_style_lang.js"
   },
   "_postList.svelte_svelte_type_style_lang.js": {
@@ -78,7 +89,7 @@
     "src": "node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte",
     "isEntry": true,
     "imports": [
-      "_index2.js",
+      "_index.js",
       "_utils.js",
       "_exports.js"
     ]
@@ -90,7 +101,7 @@
     "isEntry": true,
     "imports": [
       "_internal.js",
-      "_index.js",
+      "_index2.js",
       "_exports.js"
     ]
   },
@@ -100,13 +111,13 @@
     "src": "src/routes/+layout.svelte",
     "isEntry": true,
     "imports": [
-      "_index2.js",
+      "_index.js",
       "_utils.js",
       "_attributes.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.CJCHdTc-.css",
-      "_app/immutable/assets/nav.C7DIyg2k.css"
+      "_app/immutable/assets/_layout.DfIVLysG.css",
+      "_app/immutable/assets/nav.BhJx0oSA.css"
     ]
   },
   "src/routes/+page.js": {
@@ -124,12 +135,12 @@
     "src": "src/routes/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index2.js",
+      "_index.js",
       "_attributes.js",
       "_imageSet.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.DNgQiKkQ.css"
+      "_app/immutable/assets/_page.rPu_IYZD.css"
     ]
   },
   "src/routes/about/+page.js": {
@@ -142,7 +153,32 @@
     "file": "entries/pages/about/_page.svelte.js",
     "name": "entries/pages/about/_page.svelte",
     "src": "src/routes/about/+page.svelte",
-    "isEntry": true
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_attributes.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.DAwqqHzo.css"
+    ]
+  },
+  "src/routes/dash/+page.js": {
+    "file": "entries/pages/dash/_page.js",
+    "name": "entries/pages/dash/_page",
+    "src": "src/routes/dash/+page.js",
+    "isEntry": true,
+    "imports": [
+      "_index2.js"
+    ]
+  },
+  "src/routes/dash/+page.svelte": {
+    "file": "entries/pages/dash/_page.svelte.js",
+    "name": "entries/pages/dash/_page.svelte",
+    "src": "src/routes/dash/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js"
+    ]
   },
   "src/routes/experiment/+page.js": {
     "file": "entries/pages/experiment/_page.js",
@@ -150,7 +186,7 @@
     "src": "src/routes/experiment/+page.js",
     "isEntry": true,
     "imports": [
-      "_index.js"
+      "_index2.js"
     ]
   },
   "src/routes/experiment/+page.svelte": {
@@ -171,12 +207,13 @@
     "src": "src/routes/links/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index2.js",
+      "_index.js",
+      "_IndexSlider.js",
       "_attributes.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.tn0RQdqM.css",
-      "_app/immutable/assets/nav.C7DIyg2k.css",
+      "_app/immutable/assets/_page.CD0Vp3_Z.css",
+      "_app/immutable/assets/nav.BhJx0oSA.css",
       "_app/immutable/assets/postList.DjdvdsIi.css"
     ]
   },
@@ -198,7 +235,7 @@
     "src": "src/routes/tinkering/+page.svelte",
     "isEntry": true,
     "css": [
-      "_app/immutable/assets/nav.C7DIyg2k.css"
+      "_app/immutable/assets/nav.BhJx0oSA.css"
     ]
   },
   "src/routes/tinkering/colourmatch/+page.js": {
@@ -213,12 +250,12 @@
     "src": "src/routes/tinkering/colourmatch/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index2.js",
+      "_index.js",
       "_attributes.js"
     ],
     "css": [
       "_app/immutable/assets/_page.gPmmZy0Y.css",
-      "_app/immutable/assets/nav.C7DIyg2k.css",
+      "_app/immutable/assets/nav.BhJx0oSA.css",
       "_app/immutable/assets/postList.DjdvdsIi.css"
     ]
   },
@@ -237,12 +274,12 @@
     "src": "src/routes/tinkering/filter/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index2.js",
+      "_index.js",
       "_imageSet.js",
       "_attributes.js"
     ],
     "css": [
-      "_app/immutable/assets/nav.C7DIyg2k.css",
+      "_app/immutable/assets/nav.BhJx0oSA.css",
       "_app/immutable/assets/postList.DjdvdsIi.css"
     ]
   },
@@ -258,12 +295,21 @@
     "src": "src/routes/tinkering/sinhalacards/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index2.js",
+      "_index.js",
       "_attributes.js"
     ],
     "css": [
-      "_app/immutable/assets/nav.C7DIyg2k.css",
+      "_app/immutable/assets/nav.BhJx0oSA.css",
       "_app/immutable/assets/postList.DjdvdsIi.css"
+    ]
+  },
+  "src/routes/weather/+page.js": {
+    "file": "entries/pages/weather/_page.js",
+    "name": "entries/pages/weather/_page",
+    "src": "src/routes/weather/+page.js",
+    "isEntry": true,
+    "imports": [
+      "_index2.js"
     ]
   }
 }

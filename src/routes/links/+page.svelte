@@ -32,7 +32,7 @@ let isNotMobile = $derived(innerWidth >= mobileBreakpoint);
 // );
 
 
-let categories = [... new Set(data.data.map(d => d.Category))]
+let categories = [... new Set(data.data.map(d => d.category))]
 categories = categories.toSpliced(0, 0, "All")
 
 let selectedCat = $state('All')
@@ -40,8 +40,8 @@ let searchFilteredData = $state(data.data)
 
 let sortedData = $derived((selectedCat === 'All'
    ? searchFilteredData
-   : searchFilteredData.filter(item => item.Category === selectedCat))
-   .slice().sort((a, b) => new Date(b.Date) - new Date(a.Date)));
+   : searchFilteredData.filter(item => item.category === selectedCat))
+   .slice().sort((a, b) => new Date(b.date) - new Date(a.date)));
 
 function handleFilteredData(filtered) {
     searchFilteredData = filtered;
@@ -52,7 +52,7 @@ function handleFilteredData(filtered) {
 
 let i = Math.floor(Math.random() * colours.length);
 
-let colourdict = {"Tool": '#e64c5b', "Article":'#B1C29E', "Misc": '#789DBC', "Data": '#A272AD'}
+let colourdict = {"Tool": '#e64c5b', "Article":'#B1C29E', "Misc": '#789DBC', "Data": '#A272AD', "Vis": '#DAFA7A'}
 
 </script>
 
@@ -64,33 +64,36 @@ let colourdict = {"Tool": '#e64c5b', "Article":'#B1C29E', "Misc": '#789DBC', "Da
 
 <div class='mx-auto max-w-[800px] min-h-[425px]'>
 
-<div class="flex flex-col md:flex-row items-center justify-center gap-4 mb-6">
-  <SearchComponent data={data.data} onFilteredData={handleFilteredData} />
+<div class="flex flex-col md:flex-row items-center justify-center gap-2">
+  <!-- Search and Filter on same line -->
+  <div class="flex flex-row items-center justify-center gap-2 md:gap-4">
+    <SearchComponent data={data.data} onFilteredData={handleFilteredData} />
 
-  <div class="flex items-center gap-2">
-    <span>Filter:</span>
-    <select
-      bind:value={selectedCat}
-      class="px-4 py-2 text-center bg-transparent border-2 border-black focus:outline-none focus:ring-0"
-    >
-      <option value="All">All</option>
-      {#each Object.keys(colourdict) as cat}
-        <option value={cat}>
-          {cat}
-        </option>
-      {/each}
-    </select>
+    <div class="flex items-center gap-2">
+      <span>Filter:</span>
+      <select
+        bind:value={selectedCat}
+        class="px-4 py-2 text-center bg-transparent border-2 border-black focus:outline-none focus:ring-0"
+      >
+        <option value="All">All</option>
+        {#each Object.keys(colourdict) as cat}
+          <option value={cat}>
+            {cat}
+          </option>
+        {/each}
+      </select>
+    </div>
   </div>
-  
+
   <!-- Legend items -->
-  <div class="flex items-center gap-4 flex-wrap justify-center">
+  <div class="flex items-center gap-2 flex-wrap justify-center">
     {#each Object.entries(colourdict) as [key, color]}
-      <div class="flex items-center gap-2">
-        <div 
-          class="w-3 h-3" 
+      <div class="flex items-center gap-1">
+        <div
+          class="w-3 h-3"
           style="background-color: {color}">
         </div>
-        <span>{key}</span>
+        <span class="text-sm">{key}</span>
       </div>
     {/each}
   </div>

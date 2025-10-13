@@ -33,11 +33,11 @@
         if (!term.trim()) return items;
 
         const scored = items.map(item => {
-            const titleScore = calculateSimilarity(item.Title || '', term) * 3;
-            const quoteScore = calculateSimilarity(item.Quote || '', term) * 2;
-            const textScore = calculateSimilarity(item.Text || '', term) * 2;
-            const categoryScore = calculateSimilarity(item.Category || '', term) * 1.5;
-            const urlScore = calculateSimilarity(item.Url || '', term) * 0.5;
+            const titleScore = calculateSimilarity(item.title || '', term) * 3;
+            const quoteScore = calculateSimilarity(item.quote || '', term) * 2;
+            const textScore = calculateSimilarity(item.text || '', term) * 2;
+            const categoryScore = calculateSimilarity(item.category || '', term) * 1.5;
+            const urlScore = calculateSimilarity(item.url || '', term) * 2;
 
             const totalScore = titleScore + quoteScore + textScore + categoryScore + urlScore;
 
@@ -61,7 +61,7 @@
             type="text"
             bind:value={searchTerm}
             placeholder="Search title, quote, text, category..."
-            class="px-4 py-2 pr-10 border-2 border-black focus:outline-none focus:ring-0 bg-transparent w-64 text-black placeholder-gray-500"
+            class="px-4 py-2 pr-10 border-2 border-black focus:outline-none focus:ring-0 bg-transparent w-36 md:w-64 text-black placeholder-gray-500"
         />
         {#if searchTerm}
             <button

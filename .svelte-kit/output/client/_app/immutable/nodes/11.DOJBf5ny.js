@@ -1,0 +1,1 @@
+import{r as e}from"../chunks/B90CZVMX.js";function o(){throw e(302,"https://joshnicholas.github.io/oz_weather_scraper/")}const t=Object.freeze(Object.defineProperty({__proto__:null,load:o},Symbol.toStringTag,{value:"Module"}));export{t as universal};

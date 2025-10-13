@@ -1,4 +1,4 @@
-import { p as pop, s as stringify, a as push } from "../../../../chunks/index2.js";
+import { p as pop, s as stringify, a as push } from "../../../../chunks/index.js";
 import { I as ImageSet } from "../../../../chunks/imageSet.js";
 import { shuffle, ascending, descending } from "d3-array";
 import "bad-words";

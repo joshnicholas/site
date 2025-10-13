@@ -8,20 +8,20 @@
 
     // Start at index 0, showing first 9 items
 
-    $effect(() => {
-        console.log(sortedData.length)
-        console.log(sortedData)
-    })
+    // $effect(() => {
+    //     console.log(sortedData.length)
+    //     console.log(sortedData)
+    // })
 
     let selectedIndex = $state(0);
 
     let formattedDate = $state('')
 $effect(() => {
     if (sortedData && sortedData[selectedIndex]) {
-        const dateObj = new Date(sortedData[selectedIndex].Date);
-        formattedDate = dateObj.toLocaleDateString('en-US', { 
-            month: 'long', 
-            year: 'numeric' 
+        const dateObj = new Date(sortedData[selectedIndex].date);
+        formattedDate = dateObj.toLocaleDateString('en-US', {
+            month: 'long',
+            year: 'numeric'
         });
         // console.log(formattedDate);
     }
@@ -77,36 +77,36 @@ $effect(() => {
     <ul class="max-w-[800px] mx-auto space-y-2 list-none">
         {#each rows as item}
             <li class="relative pl-6 text-left">
-                <div 
-                    class="absolute left-0 top-2 w-3 h-3 rounded-full" 
-                    style="background-color: {colouriser(item.Category)}">
+                <div
+                    class="absolute left-0 top-2 w-3 h-3 rounded-full"
+                    style="background-color: {colouriser(item.category)}">
                 </div>
-                
-                {#if item.Title}
-                    <a href='{item.Url}' target='_blank' class='font-bold text-black'>
-                        {item.Title}
+
+                {#if item.title}
+                    <a href='{item.url}' target='_blank' class='font-bold text-black'>
+                        {item.title}
                     </a>
                 {/if}
 
-                {#if item.Quote && item.Title}
+                {#if item.quote && item.title}
                     <span> - </span>
                 {/if}
 
-                {#if item.Quote}
-                    <span class='italic quote-fade tooltip-container' title='"{item.Quote}"'>
-                        "{item.Quote}"
+                {#if item.quote}
+                    <span class='italic quote-fade tooltip-container' title='"{item.quote}"'>
+                        "{item.quote}"
                     </span>
                 {/if}
-                
-                {#if item.Text}
+
+                {#if item.text}
                     <span>
-                        {item.Text}
+                        {item.text}
                     </span>
                 {/if}
-                
+
                 <span> - </span>
                 <span>
-                    <a href='{item.Url}' target='_blank'>{getBaseUrl(item.Url)}</a>
+                    <a href='{item.url}' target='_blank'>{getBaseUrl(item.url)}</a>
                 </span>
             </li>
         {/each}
