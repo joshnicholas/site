@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "description": "Custom routes configuration to avoid exceeding Cloudflare limits",
+  "include": ["/*"],
+  "exclude": [
+    "/_app/*",
+    "/images/*",
+    "/calendars/*",
+    "/*.jpg",
+    "/*.png",
+    "/*.ico",
+    "/*.csv",
+    "/.DS_Store"
+  ]
+}
