@@ -7,7 +7,7 @@
   let { datah, pageLimit, isSortTime = false } = $props();
 
   let firstImage = $state(0);
-  let lastImage = $state(firstImage + pageLimit);
+  let lastImage = $state(0);
   let lenno = $state(0);
   let rows = $state([]);
   let scrolly = $state();

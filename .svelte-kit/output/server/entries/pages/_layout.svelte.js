@@ -11,7 +11,6 @@ function Nav($$payload, $$props) {
   pop();
 }
 function _layout($$payload, $$props) {
-  const prerender = false;
   head($$payload, ($$payload2) => {
     $$payload2.title = `<title>Josh Nicholas</title>`;
     $$payload2.out += `<meta name="description" content="Josh Nicholas is a journalist and scribbler"> <meta name="keywords" content="Josh Nicholas,data journalist,interactive journalist,interactive artist,visual journalist,data visualization,scribbles,scribbler,Guardian,Guardian Australia,The Guardian,2ser,The Wire,The Conversation">`;
@@ -21,7 +20,6 @@ function _layout($$payload, $$props) {
   $$payload.out += `<!----> `;
   Nav($$payload, {});
   $$payload.out += `<!----></div></div>`;
-  bind_props($$props, { prerender });
 }
 export {
   _layout as default

@@ -11,7 +11,7 @@ function Card($$payload, $$props) {
   let i = Math.floor(Math.random() * colours.length);
   let dateParse = timeParse("%Y-%m-%d");
   let dateFormat = timeFormat("%b %Y");
-  $$payload.out += `<div><img class="cardy mx-auto svelte-1h8huwi"${attr("id", index)}${attr("width", row["Width"])}${attr("height", row["Height"])}${attr("style", `border-color:${stringify(colours[i])};background-color:"${stringify(colours[i])}"`)}${attr("src", `/images/${stringify(row["webp_path"])}`)}${attr("alt", row["Title"])} decoding="async"${attr("fetchpriority", index < 3 ? "high" : "auto")}> <div class="mt-2 mb-4"><span class="text-l">${escape_html(row["Title"])}</span><br> <span class="text-xs">${escape_html(dateFormat(dateParse(row["Date"])))}</span></div></div>`;
+  $$payload.out += `<div><button type="button" class="border-0 p-0 bg-transparent cursor-pointer"><img class="cardy mx-auto svelte-1h8huwi"${attr("id", index)}${attr("width", row["Width"])}${attr("height", row["Height"])}${attr("style", `border-color:${stringify(colours[i])};background-color:"${stringify(colours[i])}"`)}${attr("src", `/images/${stringify(row["webp_path"])}`)}${attr("alt", row["Title"])} decoding="async"${attr("fetchpriority", index < 3 ? "high" : "auto")}></button> <div class="mt-2 mb-4"><span class="text-l">${escape_html(row["Title"])}</span><br> <span class="text-xs">${escape_html(dateFormat(dateParse(row["Date"])))}</span></div></div>`;
   bind_props($$props, { row, modalOpen, index });
   pop();
 }

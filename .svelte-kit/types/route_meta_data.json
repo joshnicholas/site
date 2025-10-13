@@ -1,35 +1,46 @@
 {
 	"/": [
-		"src/routes/+page.js"
+		"src/routes/+page.js",
+		"src/routes/+layout.js",
+		"src/routes/+layout.js"
 	],
 	"/about": [
-		"src/routes/about/+page.js"
+		"src/routes/about/+page.js",
+		"src/routes/+layout.js"
 	],
 	"/dash": [
-		"src/routes/dash/+page.js"
+		"src/routes/dash/+page.js",
+		"src/routes/+layout.js"
 	],
 	"/experiment": [
-		"src/routes/experiment/+page.js"
+		"src/routes/experiment/+page.js",
+		"src/routes/+layout.js"
 	],
 	"/links": [
-		"src/routes/links/+page.server.js"
+		"src/routes/links/+page.server.js",
+		"src/routes/+layout.js"
 	],
 	"/sitemap.xml": [
 		"src/routes/sitemap.xml/+server.js"
 	],
 	"/tinkering": [
-		"src/routes/tinkering/+page.js"
+		"src/routes/tinkering/+page.js",
+		"src/routes/+layout.js"
 	],
 	"/tinkering/colourmatch": [
-		"src/routes/tinkering/colourmatch/+page.js"
+		"src/routes/tinkering/colourmatch/+page.js",
+		"src/routes/+layout.js"
 	],
 	"/tinkering/filter": [
-		"src/routes/tinkering/filter/+page.js"
+		"src/routes/tinkering/filter/+page.js",
+		"src/routes/+layout.js"
 	],
 	"/tinkering/sinhalacards": [
-		"src/routes/tinkering/sinhalacards/+page.js"
+		"src/routes/tinkering/sinhalacards/+page.js",
+		"src/routes/+layout.js"
 	],
 	"/weather": [
-		"src/routes/weather/+page.js"
+		"src/routes/weather/+page.js",
+		"src/routes/+layout.js"
 	]
 }

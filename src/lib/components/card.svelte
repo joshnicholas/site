@@ -80,23 +80,27 @@ on:click={() => modalIndex = index}
 /> -->
 
   <!-- loading="lazy" -->
-<img 
-  class='cardy mx-auto' 
-  id={index}
-  width={row["Width"]}
-  height={row['Height']}
-  style='border-color:{colours[i]};background-color:"{colours[i]}"' 
-  src="/images/{row['webp_path']}" 
-  alt={row["Title"]}
-
-  decoding="async"
-  fetchpriority={index < 3 ? "high" : "auto"}
+<button
+  type="button"
+  class="border-0 p-0 bg-transparent cursor-pointer"
   onclick={() => {
     modalOpen = true;
     modalImage = row['webp_path'];
     modalIndex = index;
   }}
-/>
+>
+  <img
+    class='cardy mx-auto'
+    id={index}
+    width={row["Width"]}
+    height={row['Height']}
+    style='border-color:{colours[i]};background-color:"{colours[i]}"'
+    src="/images/{row['webp_path']}"
+    alt={row["Title"]}
+    decoding="async"
+    fetchpriority={index < 3 ? "high" : "auto"}
+  />
+</button>
 
 <!-- <div style='border-color:{colours[i]};border-width: 10px;' >
 <enhanced:img src="{images[`/src/lib/images/${imagePathos}`]}"  alt="An alt text" />

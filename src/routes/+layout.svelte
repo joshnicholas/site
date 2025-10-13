@@ -1,8 +1,7 @@
 <script>
 	import '../app.css'
-  
+
 	  import Navvy from '$lib/components/nav.svelte'
-	  export const prerender = false
 
   </script>
 
