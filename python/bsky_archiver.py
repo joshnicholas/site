@@ -96,7 +96,7 @@ def get_caption(image_path):
         media_type = "image/jpeg"
 
     message = anthro_client.messages.create(
-        model="claude-3-5-sonnet-20241022",
+        model="claude-sonnet-4-5",
         max_tokens=1024,
         messages=[
             {
@@ -175,10 +175,12 @@ for i in range(0,5):
                     
                         for image in thingo.post.record.embed.images:
 
+
                             record = {"Date": created.strftime("%Y-%m-%d"), "Title": text, "Uri": uri}
 
                             stemmo = image.image.cid
                             record['img_alt'] = image.alt
+                            # print(stemmo)
                             # print(image.alt)
                             record["img_path"] = f"{stemmo}.jpg"
 
@@ -192,7 +194,8 @@ for i in range(0,5):
                                         f.write(chunk)
                             try:
                                 messy = get_caption(f'{image_backup}/{stemmo}.jpg')
-                            except:
+                            except Exception as e:
+                                print(f"Error getting caption: {e}")
                                 break
                             # new_image = Image.open(f'{image_backup}{stemmo}.jpg')
                             # image_stats = os.stat(f'{image_backup}{stemmo}.jpg')
@@ -204,7 +207,7 @@ for i in range(0,5):
                             #         new_image = new_image.resize((new_w, new_h))
 
                             #         new_image.save(f'{image_outty}{stemmo}.jpg')
-                            
+
                             # else:
                             #         new_image.save(f'{image_outty}{stemmo}.jpg')
 
@@ -216,7 +219,23 @@ for i in range(0,5):
                             # new_i_df_2 = pd.concat([old_image_df, new_i_df])
                             # dumper('/Users/josh/Github/site/python/scrap', 'image_sizes', new_i_df_2)
 
-                            jsony = json.loads(messy.content[0].text)
+                            # Extract JSON from the response, handling markdown code blocks
+                            response_text = messy.content[0].text
+
+                            # Remove markdown code blocks if present
+                            if response_text.strip().startswith('```'):
+                                # Extract content between ```json and ``` or ``` and ```
+                                import re
+                                json_match = re.search(r'```(?:json)?\s*\n(.*?)\n```', response_text, re.DOTALL)
+                                if json_match:
+                                    response_text = json_match.group(1)
+
+                            try:
+                                jsony = json.loads(response_text)
+                            except json.JSONDecodeError as e:
+                                print(f"JSON decode error for {stemmo}: {e}")
+                                print(f"Response text: {response_text[:200]}...")  # Print first 200 chars
+                                continue  # Skip this image and continue with the next one
 
                             record["Caption"] = jsony['Caption'],
                             record["Colours"] = jsony['Colours'],

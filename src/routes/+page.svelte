@@ -28,7 +28,12 @@ const options = ['Random', 'Date', 'Favs']
 
 // let containerWidth = $state();
 
-let removed = ["240725_sending-a-whoooooole_0.jpg",'bafkreiarmnd426qm2jj2cpsyafegwkunnq3qu2ugs2nqpihzlp7272hcm4.webp', 'bafkreiarmnd426qm2jj2cpsyafegwkunnq3qu2ugs2nqpihzlp7272hcm4.jpg']
+let removed = ["240725_sending-a-whoooooole_0.jpg",'bafkreiarmnd426qm2jj2cpsyafegwkunnq3qu2ugs2nqpihzlp7272hcm4.webp', 'bafkreiarmnd426qm2jj2cpsyafegwkunnq3qu2ugs2nqpihzlp7272hcm4.jpg',
+    'bafkreihj62fpumwbo6oyegyimtwqvh42xjchanogk6v5i7r2zg2jfb3npa.jpg'
+]
+
+
+
 let feature = ["240711_last-full-day_0.jpg","240714_escaping-the-hu_0.jpg","240117-misty-sydney-cbd.jpg",
         "240719_pretty-sparkling-day_0.jpg","uncle_e.jpg","240425_its-getting-cold_0.jpg",
         '240711_last-full-day_0.jpg','40402_decided-to-challenge_counter.jpg','230620-escaping-the-heat.jpeg',
