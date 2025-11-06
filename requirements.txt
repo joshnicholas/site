@@ -9,3 +9,4 @@ fuzzywuzzy
 python-Levenshtein
 anthropic
 pillow-avif-plugin
+redis
