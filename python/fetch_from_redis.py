@@ -20,8 +20,6 @@ print(f"Working directory: {os.getcwd()}\n")
 
 # Connect to Redis
 redis_url = os.getenv('REDIS_URL')
-if not redis_url:
-    raise ValueError("REDIS_URL not found in environment variables")
 
 print("Connecting to Redis...")
 r = redis.from_url(redis_url, decode_responses=True)

@@ -33,6 +33,7 @@ jobs:
           claudy: ${{ secrets.CLAUDY }}
           bskyuser: ${{ secrets.BSKYUSER }}
           bskypass: ${{ secrets.BSKYPASS }}
+          REDIS_URL: ${{ secrets.REDIS_URL }}
           
       - name: Commit and push changes
         run: |
