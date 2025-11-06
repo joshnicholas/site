@@ -288,15 +288,14 @@ for i in range(0,5):
                         print("Deleted: ", deleted)
             else:
                 uri = thingo.post.viewer.repost
-                if (difference.days > 7):
+                if uri and (difference.days > 7):
                     if thingo.post.uri not in dont_delete:
                         client.delete_repost(uri)
                         # record['Deleted'] = True
                         deleted += 1
                         print("Deleted: ", deleted)
         except Exception as e:
-            print(e)
-            print(thingo.post.record.embed.images)
+            print(f"Error processing post: {e}")
             # continue
             break
 
