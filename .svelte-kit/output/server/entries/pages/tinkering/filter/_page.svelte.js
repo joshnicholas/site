@@ -12,7 +12,16 @@ function _page($$payload, $$props) {
   sortBy = "Random";
   let { data } = $$props;
   let searchQuery = "";
-  let hashes = data.data.map((d) => d["Keywords"].replace(/\[|\]/g, "").split(",").map((d2) => d2.trim()).map((d2) => d2.replace(/'/g, "")));
+  let hashes = data.data.map((d) => {
+    const keywords = d["Keywords"];
+    if (Array.isArray(keywords)) {
+      return keywords;
+    }
+    if (typeof keywords === "string") {
+      return keywords.replace(/\[|\]/g, "").split(",").map((d2) => d2.trim()).map((d2) => d2.replace(/'/g, ""));
+    }
+    return [];
+  });
   [...new Set(hashes.flat())];
   let filteredResults = filterPosts([...data.data]);
   function filterPosts(arrayo, settoVar, searchQuery2, indexReady) {

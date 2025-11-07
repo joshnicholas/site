@@ -133,7 +133,19 @@ $effect(() => {
 }
 
 
-let hashes = data.data.map(d => d['Keywords'].replace(/\[|\]/g,'').split(',').map(d => d.trim()).map(d => d.replace(/'/g, '')))
+let hashes = data.data.map(d => {
+  const keywords = d['Keywords'];
+  // If it's already an array, use it directly
+  if (Array.isArray(keywords)) {
+    return keywords;
+  }
+  // If it's a string, parse it
+  if (typeof keywords === 'string') {
+    return keywords.replace(/\[|\]/g,'').split(',').map(d => d.trim()).map(d => d.replace(/'/g, ''));
+  }
+  // If it's null/undefined, return empty array
+  return [];
+})
 let setto = [... new Set(hashes.flat())]
 // console.log("setto: ", setto)
 // let sorted = sortUniqueStringsByFrequency(hashes)

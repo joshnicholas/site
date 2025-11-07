@@ -29,7 +29,8 @@ function _page($$payload, $$props) {
   let removed = [
     "240725_sending-a-whoooooole_0.jpg",
     "bafkreiarmnd426qm2jj2cpsyafegwkunnq3qu2ugs2nqpihzlp7272hcm4.webp",
-    "bafkreiarmnd426qm2jj2cpsyafegwkunnq3qu2ugs2nqpihzlp7272hcm4.jpg"
+    "bafkreiarmnd426qm2jj2cpsyafegwkunnq3qu2ugs2nqpihzlp7272hcm4.jpg",
+    "bafkreihj62fpumwbo6oyegyimtwqvh42xjchanogk6v5i7r2zg2jfb3npa.jpg"
   ];
   let feature = [
     "240711_last-full-day_0.jpg",
