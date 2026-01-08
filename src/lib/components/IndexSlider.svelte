@@ -1,6 +1,6 @@
 <!-- IndexSlider.svelte -->
 <script>
-  let { sortedData, selectedIndex = $bindable(0), increment = 4, indexBelow = false, scrolly = null } = $props();
+  let { sortedData, selectedIndex = $bindable(0), increment = 12, indexBelow = false, scrolly = null } = $props();
   
   const minIndex = $derived(0);
   const maxIndex = $derived(sortedData.length - 1);

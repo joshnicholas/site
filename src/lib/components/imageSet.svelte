@@ -55,30 +55,30 @@
 
 $effect(() => {
   if (!datah || typeof currentIndex !== 'number') return;
-  
+
   const totalLength = datah.length;
-  const imagesPerPage = 4;
-  
+  const imagesPerPage = 12;
+
   if (totalLength <= imagesPerPage) {
-    // If we have 4 or fewer total images, show them all
+    // If we have 12 or fewer total images, show them all
     lenno = totalLength;
     rows = datah;
     firstImage = 0;
     lastImage = totalLength;
     return;
   }
-  
-  // Simple approach: start index equals currentIndex, show 4 consecutive images
+
+  // Simple approach: start index equals currentIndex, show 12 consecutive images
   const startIndex = currentIndex;
-  const endIndex = Math.min(currentIndex + 4, totalLength);
-  
-  // If we can't show 4 full images from currentIndex, shift back
-  const finalStartIndex = endIndex - startIndex < 4 ? Math.max(0, totalLength - 4) : startIndex;
-  const finalEndIndex = finalStartIndex + 4;
-  
+  const endIndex = Math.min(currentIndex + 12, totalLength);
+
+  // If we can't show 12 full images from currentIndex, shift back
+  const finalStartIndex = endIndex - startIndex < 12 ? Math.max(0, totalLength - 12) : startIndex;
+  const finalEndIndex = finalStartIndex + 12;
+
   // Debug logging
   // console.log(`currentIndex: ${currentIndex}, finalStartIndex: ${finalStartIndex}, finalEndIndex: ${finalEndIndex}`);
-  
+
   // Update state variables
   lenno = totalLength;
   rows = datah.slice(finalStartIndex, finalEndIndex);
@@ -116,7 +116,7 @@ $effect(() => {
 </div>
 
 
-<div class="container min-h-[900px] grid grid-cols-1 md:grid-cols-2 gap-2 mx-auto items-center text-center">
+<div class="container mx-auto image-columns">
 
 
   
@@ -125,7 +125,7 @@ $effect(() => {
   {/each} -->
 
 {#each rows as row, index}
-  <Card {index} {row} {currentIndex} selected={currentIndex === (displayIndices.startIndex + index)}/>
+  <Card {index} {row} {rows} {currentIndex} selected={currentIndex === (firstImage + index)}/>
 {/each}
 
 
@@ -139,7 +139,7 @@ $effect(() => {
     class="text-black cursor-pointer hover:opacity-70 select-none font-medium"
     onclick={() => {
       if (currentIndex > 0) {
-        currentIndex = Math.max(currentIndex - 4, 0);
+        currentIndex = Math.max(currentIndex - 12, 0);
         setTimeout(() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' }), 0);
       }
     }}
@@ -152,7 +152,7 @@ $effect(() => {
     class="text-black cursor-pointer hover:opacity-70 select-none font-medium"
     onclick={() => {
       if (currentIndex < datah.length - 1) {
-        currentIndex = Math.min(currentIndex + 4, datah.length - 1);
+        currentIndex = Math.min(currentIndex + 12, datah.length - 1);
         setTimeout(() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' }), 0);
       }
     }}
@@ -192,5 +192,22 @@ $effect(() => {
   button:disabled {
     opacity: 0.3;
     cursor: not-allowed;
+  }
+
+  .image-columns {
+    column-count: 2;
+    column-gap: 5px;
+  }
+
+  @media (min-width: 768px) {
+    .image-columns {
+      column-count: 3;
+    }
+  }
+
+  .image-columns > :global(*) {
+    break-inside: avoid;
+    display: block;
+    margin: 0 0 5px 0;
   }
 </style>

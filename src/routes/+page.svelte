@@ -18,7 +18,7 @@ let dateparser = timeParse("%Y-%m-%d")
 import Imageset from '$lib/components/imageSet.svelte'
 
 
-let pageLimit = 4
+let pageLimit = 12
 // let sortBy = $state({'Random'})
 let sortBy = $state()
 sortBy = 'Random'
