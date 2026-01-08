@@ -124,8 +124,8 @@ $effect(() => {
     <Card {index} {row}/>
   {/each} -->
 
-{#each rows as row, index}
-  <Card {index} {row} {rows} {currentIndex} selected={currentIndex === (firstImage + index)}/>
+{#each rows as row, index (row.webp_path)}
+  <Card {index} {row} {currentIndex} selected={currentIndex === (firstImage + index)}/>
 {/each}
 
 
@@ -195,7 +195,7 @@ $effect(() => {
   }
 
   .image-columns {
-    column-count: 2;
+    column-count: 1;
     column-gap: 5px;
   }
 
