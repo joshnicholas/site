@@ -11,7 +11,7 @@
             <a href='/'>scribbles</a>
         </li >
         <li class="mr-0">
-            <a href='/links'>links</a>
+            <a href='http://joshnicholas.blog/' rel="me">blog</a>
         </li >
         <!-- <li class="mr-0">
             <a href='/tinkering'>tinkering</a>

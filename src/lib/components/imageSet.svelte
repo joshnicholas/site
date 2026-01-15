@@ -208,6 +208,12 @@ $effect(() => {
   .image-columns > :global(*) {
     break-inside: avoid;
     display: block;
-    margin: 0 0 5px 0;
+    margin: 0 0 1.25rem 0;
+  }
+
+  @media (min-width: 768px) {
+    .image-columns > :global(*) {
+      margin: 0 0 5px 0;
+    }
   }
 </style>
