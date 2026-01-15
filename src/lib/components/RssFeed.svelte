@@ -52,11 +52,7 @@
 </script>
 
 <div class="rss-feed">
-    {#if loading}
-        <p>Loading RSS feed...</p>
-    {:else if error}
-        <p class="error">Error: {error}</p>
-    {:else if feedItems.length > 0}
+    {#if feedItems.length > 0}
         <ul class="list-disc pl-10 pb-10">
             {#each feedItems as item}
                 <li class="pt-3">
@@ -66,24 +62,12 @@
                 </li>
             {/each}
         </ul>
-    {:else}
-        <p>No items found in RSS feed.</p>
     {/if}
 </div>
 
 <style>
     .rss-feed {
         font-family: inherit;
-    }
-
-
-
-
-    .error {
-        color: #d32f2f;
-        background-color: #ffebee;
-        padding: 0.5rem;
-        border-radius: 4px;
-        border-left: 3px solid #d32f2f;
+        min-height: 220px;
     }
 </style>

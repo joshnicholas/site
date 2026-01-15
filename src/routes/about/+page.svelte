@@ -63,11 +63,11 @@ let isNotMobile = $derived(innerWidth >= mobileBreakpoint);
       <!-- , <a href='https://joshnicholas.com/projects'>projects</a> I'm working on -->
       <p>My name is <span class="font-semibold">Josh</span>. I'm a scribbler and <a href='https://www.theguardian.com/profile/josh-nicholas' target='_blank' rel="me">journalist</a>.</p><br>
 
-      <p>There used to be a much-neglected blog here. It's now a place for <a href='https://www.theguardian.com/lifeandstyle/2022/aug/15/i-used-to-think-art-required-natural-talent-then-i-taught-myself-to-draw'>scribbles</a> and various <a href='/tinkering'>experiments</a>. Things may randomly break.</p><br>
+      <p>This is a collection of apps, including a <a href='http://joshnicholas.blog/' rel='me'>blog</a> and a collection of <a href='https://joshnicholas.com/' rel='me'>scribbles</a>. It's all a big experiment so things will randomly break.</p><br>
 
       <!-- <p>I also use this site to <a href='https://joshnicholas.com/tinkering'>tinker</a> and learn new things. Things may randomly break.</p><br> -->
               
-      <p>I'm aiming to run an update script about once a week. I post more regularly on <a href='https://www.instagram.com/joshcnicholas' target='_blank' rel="me">insta</a>.</p><br>
+      <p>I'm aiming to run an update script about once a week. I post more regularly on <a href='https://www.instagram.com/joshcnicholas' target='_blank' rel="me">insta</a>. You can follow my posts using rss <a href='https://joshnicholas.blog/feed'>here</a>.<br></p> 
 
 
 <div style="clear: both; display: block; visibility: visible; width: 100%; height: 0; content: ''; overflow: hidden;"></div>
@@ -77,7 +77,7 @@ let isNotMobile = $derived(innerWidth >= mobileBreakpoint);
 
     <ul class='list-disc pl-10 pb-10'>
         
-      
+      <li class='pt-3'>2025 Audio advent calendar<a href='https://audio-advent.vercel.app/'>calculator</a></li>      
       <li class='pt-3'>Four day workweek <a href='https://joshnicholas.github.io/four-day-calculator/'>calculator</a></li>
         <li class='pt-3'>Melbourne <a href='https://joshnicholas.github.io/oz_weather_scraper/'>weather</a></li>
         <li class='pt-3'>Dashboard of <a href='https://joshnicholas.github.io/dash/'>Australian news top stories</a></li>
