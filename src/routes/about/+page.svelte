@@ -77,7 +77,7 @@ let isNotMobile = $derived(innerWidth >= mobileBreakpoint);
 
     <ul class='list-disc pl-10 pb-10'>
         
-      <li class='pt-3'>2025 Audio advent calendar<a href='https://audio-advent.vercel.app/'>calculator</a></li>      
+      <li class='pt-3'>2025 Audio advent <a href='https://audio-advent.vercel.app/'>calendar</a></li>      
       <li class='pt-3'>Four day workweek <a href='https://joshnicholas.github.io/four-day-calculator/'>calculator</a></li>
         <li class='pt-3'>Melbourne <a href='https://joshnicholas.github.io/oz_weather_scraper/'>weather</a></li>
         <li class='pt-3'>Dashboard of <a href='https://joshnicholas.github.io/dash/'>Australian news top stories</a></li>
