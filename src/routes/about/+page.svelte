@@ -3,7 +3,9 @@
 /** @type {{ data: import('./$types').PageData }} */
 
 import RssFeed from '$lib/components/RssFeed.svelte'
+import { getRandomBorderColor } from '$lib/config/colors.js'
 
+let borderColor = getRandomBorderColor()
 let mobileBreakpoint = 768;
 let innerWidth = $state(620);
 let isNotMobile = $derived(innerWidth >= mobileBreakpoint);
@@ -47,7 +49,7 @@ let isNotMobile = $derived(innerWidth >= mobileBreakpoint);
       <!-- <img alt='about image' src='/yellow.jpg' class=" md:max-h-[25rem] mx-auto rounded rounded-2xl"/> -->
 
       <img alt='about image'  srcset="/blueyellow200.jpg 200w, /blueyellow340.jpg 380w" sizes="(max-width: 600px) 380px,
-         380px" class="mx-auto mb-2.5" style='border-color:#DC5F00;border-width: 10px;'/>
+         380px" class="mx-auto mb-2.5" style='border-color:{borderColor};border-width:var(--image-border-width);border-style:solid;'/>
 
     </div>
 

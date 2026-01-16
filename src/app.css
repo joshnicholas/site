@@ -2,14 +2,25 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+:root {
+    --color-background: #FFDB77;
+    --color-text: #000000;
+    --color-link: #DC5F00;
+    --image-border-color: #DC5F00;
+    --image-border-width: 10px;
+}
 
-/* #E1C12F  */
+@media (min-width: 768px) {
+    :root {
+        --image-border-width: 5px;
+    }
+}
 
 body {
-    background-color: #FADA7A;
-    /* background-color: #373A40; */
+    background-color: var(--color-background);
+    color: var(--color-text);
 }
 
 a {
-    color: #DC5F00;
+    color: var(--color-link);
 }

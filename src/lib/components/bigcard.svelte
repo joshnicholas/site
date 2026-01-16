@@ -1,24 +1,17 @@
 <!-- Modal Component (Svelte 5) -->
 <script>
-  let { modalImage, rows } = $props();
-  // console.log("row: ", rows)
+  import { getRandomBorderColor } from '$lib/config/colors.js'
 
-  const colours = ['#DC5F00', '#B1C29E', '#789DBC', '#8967B3'];
-  const i = Math.floor(Math.random() * colours.length);
+  let { modalImage, rows } = $props();
+  let borderColor = getRandomBorderColor()
 </script>
 
 <!-- alt="/images{modalRow["Title"]}" -->
 <div class="mySlides">
-  <img 
-    style='border-color:{colours[i]}' 
-    src="/images/{modalImage}" 
+  <img
+    style='border-color:{borderColor};border-width:var(--image-border-width);border-style:solid;'
+    src="/images/{modalImage}"
     class='max-h-[500px]'
     alt=""
   />
 </div>
-
-<style>
-  img {
-    border-width: 15px;
-  }	
-</style>

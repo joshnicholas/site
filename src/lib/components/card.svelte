@@ -1,17 +1,14 @@
 <script>
+import { timeParse, timeFormat } from 'd3-time-format'
+import { getRandomBorderColor } from '$lib/config/colors.js'
 
 let { row, index } = $props();
 
-import { timeParse, timeFormat } from 'd3-time-format'
-
 let showText = $state(false)
-
-let colours = ['#DC5F00', '#B1C29E', '#789DBC', '#8967B3']
-let i = Math.floor(Math.random() * colours.length)
+let borderColor = getRandomBorderColor()
 
 let dateParse = timeParse("%Y-%m-%d")
 let dateFormat = timeFormat("%b %Y")
-
 </script>
 
 <button
@@ -24,7 +21,7 @@ let dateFormat = timeFormat("%b %Y")
     id={index}
     width={row["Width"]}
     height={row['Height']}
-    style='border-color:{colours[i]};border-width:5px;border-style:solid;'
+    style='border-color:{borderColor};border-width:var(--image-border-width);border-style:solid;'
     src="/images/{row['webp_path']}"
     alt={row["Title"]}
     decoding="async"

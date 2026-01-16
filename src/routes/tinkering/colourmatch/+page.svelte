@@ -19,8 +19,10 @@ import { scaleTime } from 'd3-scale';
 import { extent } from 'd3-array';
 import { timeFormat } from 'd3-time-format';
 import { onMount } from 'svelte';
+import { getRandomBorderColor } from '$lib/config/colors.js'
 
 let { data } = $props();
+let borderColor = getRandomBorderColor();
 
 // console.log(data);
 
@@ -52,8 +54,6 @@ function setRandomImage(data) {
     }
 }
 
-let colours = ['#DC5F00', '#B1C29E', '#789DBC', '#8967B3']
-let i = Math.floor(Math.random() * colours.length);
 
 // $inspect(chartData)
 // $inspect(selectedImage)
@@ -75,7 +75,7 @@ let i = Math.floor(Math.random() * colours.length);
                     <img 
                         src={`/images/${selectedImage}`} 
                         alt="Selected image" 
-                        style="border-color:{colours[i]};border-width:5px;border-style:solid;" 
+                        style="border-color:{borderColor};border-width:var(--image-border-width);border-style:solid;" 
                         class="max-w-full max-h-[300px] w-auto h-auto mx-auto"
                     />
                 </div>
