@@ -1,14 +1,22 @@
 <script>
-// export let data 
+// export let data
 /** @type {{ data: import('./$types').PageData }} */
 
 import RssFeed from '$lib/components/RssFeed.svelte'
-import { getRandomBorderColor } from '$lib/config/colors.js'
 
-let borderColor = getRandomBorderColor()
+let borderColor = '#FF8C68'
 let mobileBreakpoint = 768;
 let innerWidth = $state(620);
 let isNotMobile = $derived(innerWidth >= mobileBreakpoint);
+
+$effect(() => {
+  const originalBg = document.body.style.backgroundColor;
+  // document.body.style.backgroundColor = '#70CBFF'; 
+
+  return () => {
+    document.body.style.backgroundColor = originalBg;
+  };
+});
 
 
 // $inspect(innerWidth)
@@ -79,9 +87,11 @@ let isNotMobile = $derived(innerWidth >= mobileBreakpoint);
 
     <ul class='list-disc pl-10 pb-10'>
         
+      
+      <li class='pt-3'>Wynne prize finalist <a href='https://wynne-two.vercel.app/'>gallery</a></li>  
       <li class='pt-3'>2025 Audio advent <a href='https://audio-advent.vercel.app/'>calendar</a></li>      
       <li class='pt-3'>Four day workweek <a href='https://joshnicholas.github.io/four-day-calculator/'>calculator</a></li>
-        <li class='pt-3'>Melbourne <a href='https://joshnicholas.github.io/oz_weather_scraper/'>weather</a></li>
+        <li class='pt-3'>Melbourne <a href='https://joshnicholas.github.io/oz_weather_scraper/'>weather dashboard</a></li>
         <li class='pt-3'>Dashboard of <a href='https://joshnicholas.github.io/dash/'>Australian news top stories</a></li>
         <!-- <li class='pt-3'>Google sheet populated <a href='/links'>linklog</a></li> -->
         <li class='pt-3'>Filtering images <a href='/tinkering/filter'>by keyword</a></li>
@@ -105,4 +115,8 @@ let isNotMobile = $derived(innerWidth >= mobileBreakpoint);
 
 
 </div>
+
+<style>
+
+</style>
 
