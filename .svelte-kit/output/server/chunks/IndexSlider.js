@@ -5,7 +5,7 @@ function IndexSlider($$payload, $$props) {
   let {
     sortedData,
     selectedIndex = 0,
-    increment = 4,
+    increment = 12,
     indexBelow = false,
     scrolly = null
   } = $$props;

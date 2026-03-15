@@ -22,7 +22,7 @@ function _page($$payload, $$props) {
   push();
   let { data, imageDataArray } = $$props;
   let dateparser = timeParse("%Y-%m-%d");
-  let pageLimit = 4;
+  let pageLimit = 12;
   let sortBy = void 0;
   sortBy = "Random";
   const options = ["Random", "Date", "Favs"];

@@ -28,8 +28,13 @@ const options = ['Random', 'Date', 'Favs']
 
 // let containerWidth = $state();
 
+
+// <img class="cardy w-full h-auto block s-WkVf_r6iowHw" decoding="async" style="border-color:#789DBC;border-width:var(--image-border-width);border-style:solid;" id="0" width="340" height="453" src="/images/bafkreig6xiy7mjocxtdfwanw7k3jskg5lr7dvrmu7mykcdy7vnucgifur4.webp" alt="How's Perth, you ask #scribble" fetchpriority="high">
+
 let removed = ["240725_sending-a-whoooooole_0.jpg",'bafkreiarmnd426qm2jj2cpsyafegwkunnq3qu2ugs2nqpihzlp7272hcm4.webp', 'bafkreiarmnd426qm2jj2cpsyafegwkunnq3qu2ugs2nqpihzlp7272hcm4.jpg',
-    'bafkreihj62fpumwbo6oyegyimtwqvh42xjchanogk6v5i7r2zg2jfb3npa.jpg'
+    'bafkreihj62fpumwbo6oyegyimtwqvh42xjchanogk6v5i7r2zg2jfb3npa.jpg',
+    'bafkreig6xiy7mjocxtdfwanw7k3jskg5lr7dvrmu7mykcdy7vnucgifur4.webp',
+    'bafkreig6xiy7mjocxtdfwanw7k3jskg5lr7dvrmu7mykcdy7vnucgifur4.jpg'
 ]
 
 
