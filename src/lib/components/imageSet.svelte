@@ -7,9 +7,9 @@
   let { datah, pageLimit, isSortTime = false } = $props();
 
   let firstImage = $state(0);
-  let lastImage = $state(0);
-  let lenno = $state(0);
-  let rows = $state([]);
+  let lastImage = $state(Math.min(12, datah?.length ?? 0));
+  let lenno = $state(datah?.length ?? 0);
+  let rows = $state(datah ? datah.slice(0, Math.min(12, datah.length)) : []);
   let scrolly = $state();
   let scrollBottom = $state();
   let currentIndex = $state(0);
