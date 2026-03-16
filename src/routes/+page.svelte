@@ -1,6 +1,6 @@
 <script>
-// import { onMount } from 'svelte';
-// export let data 
+import { onMount } from 'svelte';
+import { browser } from '$app/environment';
 /** @type {{ data: import('./$types').PageData }} */
 
 let { data, imageDataArray } = $props();
@@ -12,6 +12,9 @@ import { setContext } from 'svelte';
 import Radio from '$lib/components/radio.svelte'
 import { shuffle, descending, ascending } from 'd3-array';
 import { timeParse } from 'd3-time-format'
+
+let mounted = $state(false);
+onMount(() => { mounted = true; });
 
 let dateparser = timeParse("%Y-%m-%d")
 
@@ -62,8 +65,8 @@ function sorter(array, how){
     // console.log("how: ", how)
     if (how.toLowerCase() == 'random'){
         // console.log(`${how}: `, array)
-        return shuffle(array)
-    } 
+        return browser ? shuffle([...array]) : [...array]
+    }
 
     else if (how.toLowerCase() == 'date'){
         // console.log(`:${how}`, array)
@@ -112,7 +115,7 @@ function sorter(array, how){
 <div class="container mx-auto">
     <Radio {options} bind:sortBy={sortBy}/>
 </div>
-    {#key sortBy}
+    {#key `${sortBy}-${mounted}`}
     <Imageset {pageLimit} datah={sorter(filteredData, sortBy)} />
     {/key}
 
