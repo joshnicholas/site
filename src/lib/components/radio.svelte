@@ -114,7 +114,7 @@
     }  
     
     input[type="radio"]:disabled + label {
-      color: darken(var(--black, #ccc), 10);
+      color: #999;
     }
   
     input[type="radio"]:disabled + label::before {

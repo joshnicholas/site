@@ -1,8 +1,7 @@
 <script>
-    let { url, maxN = 5, filter = [] } = $props();
+    let { url, maxN = 5, filter = [], loading = $bindable(true) } = $props();
 
     let feedItems = $state([]);
-    let loading = $state(false);
     let error = $state(null);
 
     async function fetchRssFeed() {
