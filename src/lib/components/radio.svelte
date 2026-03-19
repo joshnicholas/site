@@ -47,6 +47,7 @@
 
     label {
       user-select: none;
+      cursor: pointer;
       /* padding-right:0.5em; */
 
     }
