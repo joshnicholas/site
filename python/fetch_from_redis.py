@@ -48,6 +48,15 @@ else:
     fetched_post_ids = set()
     print("No tracking CSV found - starting fresh")
 
+# Load all previously fetched Redis posts (so we can always merge them back in)
+redis_posts_path = script_dir / 'scrap' / 'redis_posts.csv'
+if redis_posts_path.exists():
+    all_redis_df = pd.read_csv(redis_posts_path)
+    print(f"Loaded {len(all_redis_df)} previously fetched Redis posts")
+else:
+    all_redis_df = pd.DataFrame()
+    print("No redis_posts.csv found - starting fresh")
+
 # Get all post IDs from Redis
 post_ids = r.smembers('posts:all')
 print(f"\nFound {len(post_ids)} post IDs in Redis 'posts:all'")
@@ -128,39 +137,18 @@ print(f"Fetched {len(new_posts)} new posts from Redis")
 print(f"{'='*60}\n")
 
 if new_posts:
-    # Create DataFrame from new posts
     new_df = pd.DataFrame(new_posts)
 
-    # Combine with existing data
-    if not existing_df.empty:
-        combined_df = pd.concat([existing_df, new_df], ignore_index=True)
+    # Update the canonical Redis-only posts CSV
+    if not all_redis_df.empty:
+        all_redis_df = pd.concat([all_redis_df, new_df], ignore_index=True)
+        all_redis_df.drop_duplicates(subset=['img_path'], keep='first', inplace=True)
     else:
-        combined_df = new_df
+        all_redis_df = new_df
 
-    # Sort by date descending
-    combined_df.sort_values(by=['Date'], ascending=False, inplace=True)
-
-    # Remove duplicates based on img_path
-    combined_df.drop_duplicates(subset=['img_path'], keep='first', inplace=True)
-
-    print(f"Total scribbles after merge: {len(combined_df)}")
-
-    # Save to scribbles.json in all 3 locations (like put_together.py)
-    with open(project_root / 'src' / 'lib' / 'data' / 'scribbles.json', 'w') as f:
-        combined_df.to_json(f, orient='records')
-
-    with open(project_root / 'src' / 'lib' / 'scribbles.json', 'w') as f:
-        combined_df.to_json(f, orient='records')
-
-    with open(project_root / 'scribbles.json', 'w') as f:
-        combined_df.to_json(f, orient='records')
-
-    print("✓ Updated scribbles.json in 3 locations")
-
-    # Save to CSV
-    dumper('scrap', 'redis_combined', combined_df)
+    dumper('scrap', 'redis_posts', all_redis_df)
     dumper('scrap', 'redis_new', new_df)
-    print("✓ Saved CSV files")
+    print(f"✓ Updated redis_posts.csv ({len(all_redis_df)} total Redis posts)")
 
     # Update tracking CSV
     if new_tracking:
@@ -176,3 +164,28 @@ if new_posts:
 
 else:
     print("No new posts to fetch!")
+
+# Always merge all Redis posts back into scribbles.json,
+# since put_together.py overwrites it with only Bluesky+Blog data.
+if not all_redis_df.empty:
+    if not existing_df.empty:
+        combined_df = pd.concat([existing_df, all_redis_df], ignore_index=True)
+    else:
+        combined_df = all_redis_df
+
+    combined_df.sort_values(by=['Date'], ascending=False, inplace=True)
+    combined_df.drop_duplicates(subset=['img_path'], keep='first', inplace=True)
+
+    print(f"\nTotal scribbles after merging Redis posts: {len(combined_df)}")
+
+    with open(project_root / 'src' / 'lib' / 'data' / 'scribbles.json', 'w') as f:
+        combined_df.to_json(f, orient='records')
+
+    with open(project_root / 'src' / 'lib' / 'scribbles.json', 'w') as f:
+        combined_df.to_json(f, orient='records')
+
+    with open(project_root / 'scribbles.json', 'w') as f:
+        combined_df.to_json(f, orient='records')
+
+    dumper('scrap', 'redis_combined', combined_df)
+    print("✓ Updated scribbles.json in 3 locations")
