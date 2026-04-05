@@ -7,12 +7,27 @@
   let { datah, pageLimit, isSortTime = false } = $props();
 
   let firstImage = $state(0);
-  let lastImage = $state(Math.min(12, datah?.length ?? 0));
+  let lastImage = $state(Math.min(pageLimit, datah?.length ?? 0));
   let lenno = $state(datah?.length ?? 0);
-  let rows = $state(datah ? datah.slice(0, Math.min(12, datah.length)) : []);
+  let rows = $state(datah ? datah.slice(0, Math.min(pageLimit, datah.length)) : []);
   let scrolly = $state();
   let scrollBottom = $state();
   let currentIndex = $state(0);
+
+  // Split rows into 3 columns round-robin for staggered desktop layout
+  const columns = $derived([
+    rows.map((row, i) => ({ row, i })).filter((_, i) => i % 3 === 0),
+    rows.map((row, i) => ({ row, i })).filter((_, i) => i % 3 === 1),
+    rows.map((row, i) => ({ row, i })).filter((_, i) => i % 3 === 2),
+  ]);
+
+  // Random stagger offsets — re-roll whenever rows changes
+  let columnOffsets = $state([0, 0, 0]);
+  $effect(() => {
+    rows; // depend on rows so it re-randomises on each page/sort change
+    const max = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--column-stagger')) || 40;
+    columnOffsets = [0, Math.random() * max, Math.random() * max];
+  });
 
   // Derived values
   const isFirstPage = $derived(lastImage - pageLimit == 0);
@@ -57,10 +72,10 @@ $effect(() => {
   if (!datah || typeof currentIndex !== 'number') return;
 
   const totalLength = datah.length;
-  const imagesPerPage = 12;
+  const imagesPerPage = pageLimit;
 
   if (totalLength <= imagesPerPage) {
-    // If we have 12 or fewer total images, show them all
+    // If we have pageLimit or fewer total images, show them all
     lenno = totalLength;
     rows = datah;
     firstImage = 0;
@@ -68,13 +83,13 @@ $effect(() => {
     return;
   }
 
-  // Simple approach: start index equals currentIndex, show 12 consecutive images
+  // Simple approach: start index equals currentIndex, show pageLimit consecutive images
   const startIndex = currentIndex;
-  const endIndex = Math.min(currentIndex + 12, totalLength);
+  const endIndex = Math.min(currentIndex + pageLimit, totalLength);
 
-  // If we can't show 12 full images from currentIndex, shift back
-  const finalStartIndex = endIndex - startIndex < 12 ? Math.max(0, totalLength - 12) : startIndex;
-  const finalEndIndex = finalStartIndex + 12;
+  // If we can't show pageLimit full images from currentIndex, shift back
+  const finalStartIndex = endIndex - startIndex < pageLimit ? Math.max(0, totalLength - pageLimit) : startIndex;
+  const finalEndIndex = finalStartIndex + pageLimit;
 
   // Debug logging
   // console.log(`currentIndex: ${currentIndex}, finalStartIndex: ${finalStartIndex}, finalEndIndex: ${finalEndIndex}`);
@@ -116,19 +131,26 @@ $effect(() => {
 </div>
 
 
-<div class="container mx-auto image-columns">
+<!-- Mobile: single column -->
+<div class="container mx-auto md:hidden">
+  {#each rows as row, index (row.webp_path)}
+    <div class="mb-5">
+      <Card {index} {row} {currentIndex} selected={currentIndex === (firstImage + index)}/>
+    </div>
+  {/each}
+</div>
 
-
-  
-  <!-- {#each rows as row, index}
-    <Card {index} {row}/>
-  {/each} -->
-
-{#each rows as row, index (row.webp_path)}
-  <Card {index} {row} {currentIndex} selected={currentIndex === (firstImage + index)}/>
-{/each}
-
-
+<!-- Desktop: 3 explicit staggered columns -->
+<div class="container mx-auto hidden md:flex gap-[5px] items-start">
+  {#each columns as col, c}
+    <div class="flex-1" style="padding-top: {columnOffsets[c]}px">
+      {#each col as { row, i } (row.webp_path)}
+        <div class="mb-[5px]">
+          <Card index={i} {row} {currentIndex} selected={currentIndex === (firstImage + i)}/>
+        </div>
+      {/each}
+    </div>
+  {/each}
 </div>
 
 
@@ -136,10 +158,10 @@ $effect(() => {
 
 <div class="mt-1.5 w-full flex items-center justify-between py-2.5">
   <button
-    class="text-black cursor-pointer hover:opacity-70 select-none font-medium"
+    class="cursor-pointer hover:opacity-70 select-none font-medium"
     onclick={() => {
       if (currentIndex > 0) {
-        currentIndex = Math.max(currentIndex - 12, 0);
+        currentIndex = Math.max(currentIndex - pageLimit, 0);
         setTimeout(() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' }), 0);
       }
     }}
@@ -149,10 +171,10 @@ $effect(() => {
   </button>
 
   <button
-    class="text-black cursor-pointer hover:opacity-70 select-none font-medium"
+    class="cursor-pointer hover:opacity-70 select-none font-medium"
     onclick={() => {
       if (currentIndex < datah.length - 1) {
-        currentIndex = Math.min(currentIndex + 12, datah.length - 1);
+        currentIndex = Math.min(currentIndex + pageLimit, datah.length - 1);
         setTimeout(() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' }), 0);
       }
     }}
@@ -189,31 +211,13 @@ $effect(() => {
 
 /* Modal Content/Box */
 
+  button {
+    color: var(--color-ui-accent);
+  }
+
   button:disabled {
     opacity: 0.3;
     cursor: not-allowed;
   }
 
-  .image-columns {
-    column-count: 1;
-    column-gap: 5px;
-  }
-
-  @media (min-width: 768px) {
-    .image-columns {
-      column-count: 3;
-    }
-  }
-
-  .image-columns > :global(*) {
-    break-inside: avoid;
-    display: block;
-    margin: 0 0 1.25rem 0;
-  }
-
-  @media (min-width: 768px) {
-    .image-columns > :global(*) {
-      margin: 0 0 5px 0;
-    }
-  }
 </style>

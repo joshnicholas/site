@@ -40,14 +40,15 @@
 
 
               :root {
-          --accent-color: black;
-          --gray: black;
+          --accent-color: var(--color-ui-accent);
+          --gray: var(--color-ui-accent);
       }
       
 
     label {
       user-select: none;
       cursor: pointer;
+      color: var(--color-ui-accent);
       /* padding-right:0.5em; */
 
     }

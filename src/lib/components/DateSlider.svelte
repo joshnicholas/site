@@ -37,7 +37,7 @@
       max={maxDate} 
       bind:value={selectedDate}
       oninput={() => scrolly?.scrollIntoView(false)}
-      style="direction: rtl; width: 100%; height: 1rem; cursor: pointer; background: transparent; border: 1px solid black; border-radius: 0.5rem; appearance: none;"
+      style="direction: rtl; width: 100%; height: 1rem; cursor: pointer; background: transparent; border: 1px solid var(--color-ui-accent); border-radius: 0.5rem; appearance: none;"
     />
     
     <!-- Date text that follows slider position -->
@@ -65,14 +65,14 @@
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: black;
+    background: var(--color-ui-accent);
     cursor: pointer;
   }
   .date-slider::-moz-range-thumb {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: black;
+    background: var(--color-ui-accent);
     cursor: pointer;
     border: none;
   }

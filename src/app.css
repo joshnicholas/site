@@ -3,11 +3,13 @@
 @import 'tailwindcss/utilities';
 
 :root {
-    --color-background: #FFDB77;
-    --color-text: #000000;
-    --color-link: #DC5F00;
-    --image-border-color: #DC5F00;
+    --color-background: #5c506f;
+    --color-text: #fff;
+    --color-link: #ffbb95;
+    --image-border-color: #a595bd;
     --image-border-width: 10px;
+    --color-ui-accent: #ffbb95;
+    --column-stagger: 40px;
 }
 
 @media (min-width: 768px) {

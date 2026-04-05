@@ -1,7 +1,7 @@
 <script>
     export let upDown = 'down'
 
-    let csso = upDown.toLowerCase() == 'down' ? 'border-top: 2px solid;margin-top:1.25rem;padding-top:0.5rem;display:inline-block;' : 'border-bottom: 2px solid;margin-bottom:1.25rem;padding-bottom:0.5rem;display:inline-block;'
+    let csso = upDown.toLowerCase() == 'down' ? 'border-top: 2px solid var(--color-ui-accent);margin-top:1.25rem;padding-top:0.5rem;display:inline-block;' : 'border-bottom: 2px solid var(--color-ui-accent);margin-bottom:1.25rem;padding-bottom:0.5rem;display:inline-block;'
 </script>
 
 <div class='text-center'>
@@ -28,12 +28,3 @@
     </ul>
 </div>
 </div>
-
-<style>
-    /* #navblock {
-        border-top: 2px solid;
-    } */
-
-    a {
-    color: black !important;}
-</style>

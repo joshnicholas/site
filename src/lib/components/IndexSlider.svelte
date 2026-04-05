@@ -24,18 +24,18 @@
 </script>
 
 <div class="mt-2.5 w-full flex items-center gap-2 py-5">
-  <button 
-    class="text-black cursor-pointer hover:opacity-70 select-none font-medium"
+  <button
+    class="cursor-pointer hover:opacity-70 select-none font-medium"
     onclick={goToPrev}
     disabled={selectedIndex <= minIndex}
   >
     Prev
   </button>
-  
+
   <div class="flex-1 relative px-6">
-    <input 
-      type="range" 
-      class="index-slider w-full h-4 cursor-pointer bg-transparent border border-black rounded-lg appearance-none"
+    <input
+      type="range"
+      class="index-slider w-full h-4 cursor-pointer bg-transparent border rounded-lg appearance-none"
       min={minIndex} 
       max={maxIndex} 
       step={increment}
@@ -46,8 +46,8 @@
     />
   </div>
 
-  <button 
-    class="text-black cursor-pointer hover:opacity-70 select-none font-medium"
+  <button
+    class="cursor-pointer hover:opacity-70 select-none font-medium"
     onclick={goToNext}
     disabled={selectedIndex >= maxIndex}
   >
@@ -56,21 +56,28 @@
 </div>
 
 <style>
+  .index-slider {
+    border-color: var(--color-ui-accent);
+  }
   .index-slider::-webkit-slider-thumb {
     appearance: none;
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: black;
+    background: var(--color-ui-accent);
     cursor: pointer;
   }
   .index-slider::-moz-range-thumb {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: black;
+    background: var(--color-ui-accent);
     cursor: pointer;
     border: none;
+  }
+
+  button {
+    color: var(--color-ui-accent);
   }
 
   button:disabled {
