@@ -1,6 +1,5 @@
 import { p as pop, a as push, c as ensure_array_like, s as stringify } from "../../../../chunks/index.js";
 import "clsx";
-/* empty css                                                   */
 import { a as attr } from "../../../../chunks/attributes.js";
 /* empty css                                                        */
 function Vocabcard($$payload, $$props) {

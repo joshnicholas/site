@@ -1,7 +1,6 @@
 import { f as copy_payload, g as assign_payload, p as pop, c as ensure_array_like, e as escape_html, s as stringify, a as push } from "../../../chunks/index.js";
 import { I as IndexSlider } from "../../../chunks/IndexSlider.js";
 import { a as attr } from "../../../chunks/attributes.js";
-/* empty css                                                */
 /* empty css                                                     */
 function Linklist($$payload, $$props) {
   push();

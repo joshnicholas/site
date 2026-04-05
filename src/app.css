@@ -27,11 +27,7 @@ a {
     color: var(--color-link);
 }
 
-/* iPad Safari desktop mode: prevent gesture delay on interactive elements */
+/* Prevent double-tap zoom delay on interactive elements */
 button, label, input {
     touch-action: manipulation;
-}
-
-input[type="range"] {
-    touch-action: none;
 }

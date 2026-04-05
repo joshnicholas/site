@@ -35,7 +35,7 @@
   <div class="flex-1 relative px-6">
     <input
       type="range"
-      class="index-slider w-full h-4 cursor-pointer bg-transparent border rounded-lg appearance-none"
+      class="index-slider w-full cursor-pointer bg-transparent appearance-none"
       min={minIndex} 
       max={maxIndex} 
       step={increment}
@@ -58,18 +58,33 @@
 <style>
   .index-slider {
     border-color: var(--color-ui-accent);
+    height: 4px;
+  }
+  .index-slider::-webkit-slider-runnable-track {
+    height: 4px;
+    background: var(--color-ui-accent);
+    border-radius: 2px;
+    opacity: 0.4;
   }
   .index-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
     appearance: none;
-    width: 25px;
-    height: 25px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     background: var(--color-ui-accent);
     cursor: pointer;
+    margin-top: -7px;
+  }
+  .index-slider::-moz-range-track {
+    height: 4px;
+    background: var(--color-ui-accent);
+    border-radius: 2px;
+    opacity: 0.4;
   }
   .index-slider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     background: var(--color-ui-accent);
     cursor: pointer;

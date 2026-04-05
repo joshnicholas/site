@@ -1,5 +1,4 @@
 import { c as ensure_array_like, i as add_styles, p as pop, s as stringify, a as push } from "../../../../chunks/index.js";
-/* empty css                                                   */
 import { a as attr } from "../../../../chunks/attributes.js";
 /* empty css                                                        */
 function _page($$payload, $$props) {

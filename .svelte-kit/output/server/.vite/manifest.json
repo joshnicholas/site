@@ -16,7 +16,7 @@
       "_attributes.js"
     ],
     "css": [
-      "_app/immutable/assets/IndexSlider.DFb0jq5f.css"
+      "_app/immutable/assets/IndexSlider.CsIv3fAU.css"
     ]
   },
   "_attributes.js": {
@@ -47,7 +47,7 @@
       "_IndexSlider.js"
     ],
     "css": [
-      "_app/immutable/assets/imageSet.ayyY-9wR.css"
+      "_app/immutable/assets/imageSet.DalCXP0D.css"
     ]
   },
   "_index.js": {
@@ -66,10 +66,6 @@
       "_equality.js",
       "_index.js"
     ]
-  },
-  "_nav.svelte_svelte_type_style_lang.js": {
-    "file": "_app/immutable/assets/nav.BhJx0oSA.css",
-    "src": "_nav.svelte_svelte_type_style_lang.js"
   },
   "_postList.svelte_svelte_type_style_lang.js": {
     "file": "_app/immutable/assets/postList.DjdvdsIi.css",
@@ -122,8 +118,7 @@
       "_attributes.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.es-ScB7s.css",
-      "_app/immutable/assets/nav.BhJx0oSA.css"
+      "_app/immutable/assets/_layout.CBR3Ogzs.css"
     ]
   },
   "src/routes/+page.js": {
@@ -146,7 +141,7 @@
       "_imageSet.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.rPu_IYZD.css"
+      "_app/immutable/assets/_page.DhQftWuA.css"
     ]
   },
   "src/routes/about/+page.js": {
@@ -219,7 +214,6 @@
     ],
     "css": [
       "_app/immutable/assets/_page.CD0Vp3_Z.css",
-      "_app/immutable/assets/nav.BhJx0oSA.css",
       "_app/immutable/assets/postList.DjdvdsIi.css"
     ]
   },
@@ -239,10 +233,7 @@
     "file": "entries/pages/tinkering/_page.svelte.js",
     "name": "entries/pages/tinkering/_page.svelte",
     "src": "src/routes/tinkering/+page.svelte",
-    "isEntry": true,
-    "css": [
-      "_app/immutable/assets/nav.BhJx0oSA.css"
-    ]
+    "isEntry": true
   },
   "src/routes/tinkering/colourmatch/+page.js": {
     "file": "entries/pages/tinkering/colourmatch/_page.js",
@@ -261,7 +252,6 @@
     ],
     "css": [
       "_app/immutable/assets/_page.gPmmZy0Y.css",
-      "_app/immutable/assets/nav.BhJx0oSA.css",
       "_app/immutable/assets/postList.DjdvdsIi.css"
     ]
   },
@@ -285,7 +275,6 @@
       "_attributes.js"
     ],
     "css": [
-      "_app/immutable/assets/nav.BhJx0oSA.css",
       "_app/immutable/assets/postList.DjdvdsIi.css"
     ]
   },
@@ -305,7 +294,6 @@
       "_attributes.js"
     ],
     "css": [
-      "_app/immutable/assets/nav.BhJx0oSA.css",
       "_app/immutable/assets/postList.DjdvdsIi.css"
     ]
   },

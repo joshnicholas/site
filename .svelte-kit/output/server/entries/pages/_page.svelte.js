@@ -1,6 +1,6 @@
 import { c as ensure_array_like, e as escape_html, b as bind_props, p as pop, a as push, f as copy_payload, g as assign_payload } from "../../chunks/index.js";
 import { a as attr } from "../../chunks/attributes.js";
-import { shuffle, descending } from "d3-array";
+import { descending, shuffle } from "d3-array";
 import { timeParse } from "d3-time-format";
 import { I as ImageSet } from "../../chunks/imageSet.js";
 function Radio($$payload, $$props) {
@@ -9,10 +9,10 @@ function Radio($$payload, $$props) {
   let sortBy = $$props["sortBy"];
   const slugify = (str = "") => str.toLowerCase().replace(/ /g, "-").replace(/\./g, "");
   const each_array = ensure_array_like(options);
-  $$payload.out += `<div id="sortRow" class="flex justify-between text-l font-semibold px-10 svelte-16ej0y3" style="padding-top:0.5rem;"><!--[-->`;
+  $$payload.out += `<div id="sortRow" class="flex justify-between text-l font-semibold px-10 svelte-18ykmbo" style="padding-top:0.5rem;"><!--[-->`;
   for (let $$index = 0, $$length = each_array.length; $$index < $$length; $$index++) {
     let option = each_array[$$index];
-    $$payload.out += `<input class="sr-only mr-2 svelte-16ej0y3" type="radio"${attr("id", slugify(option))}${attr("checked", sortBy === option, true)}${attr("value", option)}> <label${attr("for", slugify(option))} class="svelte-16ej0y3">${escape_html(option)}</label>`;
+    $$payload.out += `<input class="sr-only mr-2 svelte-18ykmbo" type="radio"${attr("id", slugify(option))}${attr("checked", sortBy === option, true)}${attr("value", option)}> <label${attr("for", slugify(option))} class="svelte-18ykmbo">${escape_html(option)}</label>`;
   }
   $$payload.out += `<!--]--></div>`;
   bind_props($$props, { options, sortBy });
@@ -22,7 +22,7 @@ function _page($$payload, $$props) {
   push();
   let { data, imageDataArray } = $$props;
   let dateparser = timeParse("%Y-%m-%d");
-  let pageLimit = 12;
+  let pageLimit = 9;
   let sortBy = void 0;
   sortBy = "Random";
   const options = ["Random", "Date", "Favs"];
@@ -30,7 +30,9 @@ function _page($$payload, $$props) {
     "240725_sending-a-whoooooole_0.jpg",
     "bafkreiarmnd426qm2jj2cpsyafegwkunnq3qu2ugs2nqpihzlp7272hcm4.webp",
     "bafkreiarmnd426qm2jj2cpsyafegwkunnq3qu2ugs2nqpihzlp7272hcm4.jpg",
-    "bafkreihj62fpumwbo6oyegyimtwqvh42xjchanogk6v5i7r2zg2jfb3npa.jpg"
+    "bafkreihj62fpumwbo6oyegyimtwqvh42xjchanogk6v5i7r2zg2jfb3npa.jpg",
+    "bafkreig6xiy7mjocxtdfwanw7k3jskg5lr7dvrmu7mykcdy7vnucgifur4.webp",
+    "bafkreig6xiy7mjocxtdfwanw7k3jskg5lr7dvrmu7mykcdy7vnucgifur4.jpg"
   ];
   let feature = [
     "240711_last-full-day_0.jpg",
@@ -66,7 +68,7 @@ function _page($$payload, $$props) {
   let filteredData = data.data.filter((item) => !removed.includes(item.img_path));
   function sorter(array, how) {
     if (how.toLowerCase() == "random") {
-      return shuffle(array);
+      return [...array];
     } else if (how.toLowerCase() == "date") {
       let outty = array.sort(function(a, b) {
         return descending(dateparser(a["Date"]), dateparser(b["Date"]));

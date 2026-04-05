@@ -2,7 +2,7 @@ import { s as stringify, p as pop, a as push, f as copy_payload, g as assign_pay
 import { timeParse, timeFormat } from "d3-time-format";
 import { a as attr } from "./attributes.js";
 import { I as IndexSlider } from "./IndexSlider.js";
-const borderColors = ["#DC5F00", "#B1C29E", "#789DBC", "#8967B3"];
+const borderColors = ["#ffb6c5", "#ffbb95", "#f2c877", "#c5d882", "#91e2ad", "#75e1de", "#91d8ff", "#c3c9ff", "#efbcf0"];
 function getRandomBorderColor() {
   return borderColors[Math.floor(Math.random() * borderColors.length)];
 }
@@ -23,13 +23,22 @@ function ImageSet($$payload, $$props) {
   push();
   let { datah, pageLimit, isSortTime = false } = $$props;
   let firstImage = 0;
-  let rows = [];
+  Math.min(pageLimit, datah?.length ?? 0);
+  datah?.length ?? 0;
+  let rows = datah ? datah.slice(0, Math.min(pageLimit, datah.length)) : [];
   let scrolly = void 0;
   let currentIndex = 0;
+  const columns = [
+    rows.map((row, i) => ({ row, i })).filter((_, i) => i % 3 === 0),
+    rows.map((row, i) => ({ row, i })).filter((_, i) => i % 3 === 1),
+    rows.map((row, i) => ({ row, i })).filter((_, i) => i % 3 === 2)
+  ];
+  let columnOffsets = [0, 0, 0];
   let $$settled = true;
   let $$inner_payload;
   function $$render_inner($$payload2) {
     const each_array = ensure_array_like(rows);
+    const each_array_1 = ensure_array_like(columns);
     $$payload2.out += `<div></div> <div class="container mx-auto pb-2.5">`;
     IndexSlider($$payload2, {
       sortedData: datah,
@@ -42,17 +51,37 @@ function ImageSet($$payload, $$props) {
         $$settled = false;
       }
     });
-    $$payload2.out += `<!----></div> <div class="container mx-auto image-columns svelte-bc8kr0"><!--[-->`;
+    $$payload2.out += `<!----></div> <div class="container mx-auto md:hidden"><!--[-->`;
     for (let index = 0, $$length = each_array.length; index < $$length; index++) {
       let row = each_array[index];
+      $$payload2.out += `<div class="mb-5">`;
       Card($$payload2, {
         index,
         row,
         currentIndex,
         selected: currentIndex === firstImage + index
       });
+      $$payload2.out += `<!----></div>`;
     }
-    $$payload2.out += `<!--]--></div> <div class="container mx-auto pb-2.5"><div class="mt-1.5 w-full flex items-center justify-between py-2.5"><button class="text-black cursor-pointer hover:opacity-70 select-none font-medium svelte-bc8kr0"${attr("disabled", currentIndex <= 0, true)}>Prev</button> <button class="text-black cursor-pointer hover:opacity-70 select-none font-medium svelte-bc8kr0"${attr("disabled", currentIndex >= datah.length - 1, true)}>Next</button></div></div>`;
+    $$payload2.out += `<!--]--></div> <div class="container mx-auto hidden md:flex gap-[5px] items-start"><!--[-->`;
+    for (let c = 0, $$length = each_array_1.length; c < $$length; c++) {
+      let col = each_array_1[c];
+      const each_array_2 = ensure_array_like(col);
+      $$payload2.out += `<div class="flex-1"${attr("style", `padding-top: ${stringify(columnOffsets[c])}px`)}><!--[-->`;
+      for (let $$index_1 = 0, $$length2 = each_array_2.length; $$index_1 < $$length2; $$index_1++) {
+        let { row, i } = each_array_2[$$index_1];
+        $$payload2.out += `<div class="mb-[5px]">`;
+        Card($$payload2, {
+          index: i,
+          row,
+          currentIndex,
+          selected: currentIndex === firstImage + i
+        });
+        $$payload2.out += `<!----></div>`;
+      }
+      $$payload2.out += `<!--]--></div>`;
+    }
+    $$payload2.out += `<!--]--></div> <div class="container mx-auto pb-2.5"><div class="mt-1.5 w-full flex items-center justify-between py-2.5"><button class="cursor-pointer hover:opacity-70 select-none font-medium svelte-xc3dtn"${attr("disabled", currentIndex <= 0, true)}>Prev</button> <button class="cursor-pointer hover:opacity-70 select-none font-medium svelte-xc3dtn"${attr("disabled", currentIndex >= datah.length - 1, true)}>Next</button></div></div>`;
   }
   do {
     $$settled = true;
