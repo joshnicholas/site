@@ -1,6 +1,5 @@
 <script>
 import { onMount } from 'svelte';
-import { browser } from '$app/environment';
 /** @type {{ data: import('./$types').PageData }} */
 
 let { data, imageDataArray } = $props();
@@ -65,7 +64,7 @@ function sorter(array, how){
     // console.log("how: ", how)
     if (how.toLowerCase() == 'random'){
         // console.log(`${how}: `, array)
-        return browser ? shuffle([...array]) : [...array]
+        return mounted ? shuffle([...array]) : [...array]
     }
 
     else if (how.toLowerCase() == 'date'){

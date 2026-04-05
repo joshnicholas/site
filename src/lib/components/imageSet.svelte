@@ -26,7 +26,7 @@
   $effect(() => {
     rows; // depend on rows so it re-randomises on each page/sort change
     const max = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--column-stagger')) || 40;
-    columnOffsets = [0, Math.random() * max, Math.random() * max];
+    columnOffsets = [Math.random() * max, Math.random() * max, Math.random() * max];
   });
 
   // Derived values

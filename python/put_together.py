@@ -189,6 +189,16 @@ def convert_jpg_to_webp_with_base_dir(df, base_dir="static/images/"):
 
 fumbo = convert_jpg_to_webp_with_base_dir(dumbo, base_dir=str(project_root / "static" / "images") + "/")
 
+# Merge manually added images from input/images.csv
+input_images_path = project_root / 'input' / 'images.csv'
+if input_images_path.exists():
+    input_images = pd.read_csv(input_images_path)
+    input_images = input_images.drop(columns=['webp_base64'], errors='ignore')
+    fumbo = pd.concat([fumbo, input_images], ignore_index=True)
+    fumbo.drop_duplicates(subset=['img_path'], keep='first', inplace=True)
+    fumbo.sort_values(by=['Date'], ascending=False, inplace=True)
+    fumbo = fumbo.where(pd.notnull(fumbo), None)
+
 # pp(fumbo)
 
 pp(fumbo)

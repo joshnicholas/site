@@ -9,7 +9,7 @@
     --image-border-color: #a595bd;
     --image-border-width: 10px;
     --color-ui-accent: #ffbb95;
-    --column-stagger: 40px;
+    --column-stagger: 80px;
 }
 
 @media (min-width: 768px) {
