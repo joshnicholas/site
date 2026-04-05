@@ -5,6 +5,6 @@ let component_cache;
 export const component = async () => component_cache ??= (await import('../entries/pages/tinkering/sinhalacards/_page.svelte.js')).default;
 export { universal };
 export const universal_id = "src/routes/tinkering/sinhalacards/+page.js";
-export const imports = ["_app/immutable/nodes/10.CQg3_KTw.js","_app/immutable/chunks/Sl3aqvhM.js","_app/immutable/chunks/T3-k3ynv.js","_app/immutable/chunks/Cjnfn7nr.js","_app/immutable/chunks/DNgivrdc.js","_app/immutable/chunks/B9QI8j-U.js","_app/immutable/chunks/CelpaW_X.js","_app/immutable/chunks/p7prt5q5.js","_app/immutable/chunks/CC8TX1Jq.js","_app/immutable/chunks/BudltVtX.js","_app/immutable/chunks/btzKrme9.js"];
-export const stylesheets = ["_app/immutable/assets/postList.DjdvdsIi.css"];
+export const imports = ["_app/immutable/nodes/10.DPA9rGaa.js","_app/immutable/chunks/Dg_Xarbj.js","_app/immutable/chunks/D8ABnQJ5.js","_app/immutable/chunks/L9Xe-XEh.js","_app/immutable/chunks/DTvAo5_-.js","_app/immutable/chunks/BhBUyOE9.js","_app/immutable/chunks/xD4mGxzm.js","_app/immutable/chunks/CfYdR1Gx.js","_app/immutable/chunks/BoOhwXCD.js"];
+export const stylesheets = ["_app/immutable/assets/postList.CO7EjeUI.css"];
 export const fonts = [];

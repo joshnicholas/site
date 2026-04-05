@@ -1,6 +1,5 @@
-import { n as noop } from "./utils.js";
+import { n as noop } from "./context.js";
 import { s as safe_not_equal } from "./equality.js";
-import "clsx";
 const internal = new URL("sveltekit-internal://");
 function resolve(base, path) {
   if (path[0] === "/" && path[1] === "/") return path;
@@ -96,21 +95,6 @@ function allow_nodejs_console_log(url) {
       return inspect(new URL(url), opts);
     };
   }
-}
-const DATA_SUFFIX = "/__data.json";
-const HTML_DATA_SUFFIX = ".html__data.json";
-function has_data_suffix(pathname) {
-  return pathname.endsWith(DATA_SUFFIX) || pathname.endsWith(HTML_DATA_SUFFIX);
-}
-function add_data_suffix(pathname) {
-  if (pathname.endsWith(".html")) return pathname.replace(/\.html$/, HTML_DATA_SUFFIX);
-  return pathname.replace(/\/$/, "") + DATA_SUFFIX;
-}
-function strip_data_suffix(pathname) {
-  if (pathname.endsWith(HTML_DATA_SUFFIX)) {
-    return pathname.slice(0, -HTML_DATA_SUFFIX.length) + ".html";
-  }
-  return pathname.slice(0, -DATA_SUFFIX.length);
 }
 const subscriber_queue = [];
 function readable(value, start) {
@@ -229,20 +213,17 @@ const validate_layout_server_exports = validator(valid_layout_server_exports);
 const validate_page_server_exports = validator(valid_page_server_exports);
 const validate_server_exports = validator(valid_server_exports);
 export {
-  add_data_suffix as a,
-  resolve as b,
-  decode_pathname as c,
+  decode_params as a,
+  validate_layout_exports as b,
+  validate_page_server_exports as c,
   disable_search as d,
-  decode_params as e,
-  validate_layout_exports as f,
-  validate_page_server_exports as g,
-  has_data_suffix as h,
-  validate_page_exports as i,
-  validate_server_exports as j,
+  validate_page_exports as e,
+  resolve as f,
+  decode_pathname as g,
+  validate_server_exports as h,
   make_trackable as m,
   normalize_path as n,
   readable as r,
-  strip_data_suffix as s,
   validate_layout_server_exports as v,
   writable as w
 };

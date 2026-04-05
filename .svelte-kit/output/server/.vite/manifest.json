@@ -12,19 +12,15 @@
     "file": "chunks/IndexSlider.js",
     "name": "IndexSlider",
     "imports": [
-      "_index.js",
-      "_attributes.js"
+      "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/IndexSlider.CsIv3fAU.css"
+      "_app/immutable/assets/IndexSlider.DnmFkkL8.css"
     ]
   },
-  "_attributes.js": {
-    "file": "chunks/attributes.js",
-    "name": "attributes",
-    "imports": [
-      "_index.js"
-    ]
+  "_context.js": {
+    "file": "chunks/context.js",
+    "name": "context"
   },
   "_equality.js": {
     "file": "chunks/equality.js",
@@ -34,7 +30,7 @@
     "file": "chunks/exports.js",
     "name": "exports",
     "imports": [
-      "_utils.js",
+      "_context.js",
       "_equality.js"
     ]
   },
@@ -43,16 +39,18 @@
     "name": "imageSet",
     "imports": [
       "_index.js",
-      "_attributes.js",
       "_IndexSlider.js"
     ],
     "css": [
-      "_app/immutable/assets/imageSet.DalCXP0D.css"
+      "_app/immutable/assets/imageSet.DT5ihRWD.css"
     ]
   },
   "_index.js": {
     "file": "chunks/index.js",
-    "name": "index"
+    "name": "index",
+    "imports": [
+      "_context.js"
+    ]
   },
   "_index2.js": {
     "file": "chunks/index2.js",
@@ -62,22 +60,18 @@
     "file": "chunks/internal.js",
     "name": "internal",
     "imports": [
-      "_utils.js",
-      "_equality.js",
-      "_index.js"
+      "_index.js",
+      "_context.js",
+      "_equality.js"
     ]
   },
   "_postList.svelte_svelte_type_style_lang.js": {
-    "file": "_app/immutable/assets/postList.DjdvdsIi.css",
+    "file": "_app/immutable/assets/postList.CO7EjeUI.css",
     "src": "_postList.svelte_svelte_type_style_lang.js"
   },
   "_scribbles.js": {
     "file": "chunks/scribbles.js",
     "name": "scribbles"
-  },
-  "_utils.js": {
-    "file": "chunks/utils.js",
-    "name": "utils"
   },
   "node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte": {
     "file": "entries/fallbacks/error.svelte.js",
@@ -85,8 +79,7 @@
     "src": "node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte",
     "isEntry": true,
     "imports": [
-      "_index.js",
-      "_utils.js",
+      "_context.js",
       "_exports.js"
     ]
   },
@@ -114,11 +107,10 @@
     "isEntry": true,
     "imports": [
       "_index.js",
-      "_utils.js",
-      "_attributes.js"
+      "_context.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.CBR3Ogzs.css"
+      "_app/immutable/assets/_layout.DBT6fp0e.css"
     ]
   },
   "src/routes/+page.js": {
@@ -137,11 +129,11 @@
     "isEntry": true,
     "imports": [
       "_index.js",
-      "_attributes.js",
+      "_context.js",
       "_imageSet.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.DhQftWuA.css"
+      "_app/immutable/assets/_page.DByjr2gD.css"
     ]
   },
   "src/routes/about/+page.js": {
@@ -157,10 +149,10 @@
     "isEntry": true,
     "imports": [
       "_index.js",
-      "_attributes.js"
+      "_context.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.CbvdES36.css"
+      "_app/immutable/assets/_page.BkXAyOZ8.css"
     ]
   },
   "src/routes/dash/+page.js": {
@@ -210,11 +202,11 @@
     "imports": [
       "_index.js",
       "_IndexSlider.js",
-      "_attributes.js"
+      "_context.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.CD0Vp3_Z.css",
-      "_app/immutable/assets/postList.DjdvdsIi.css"
+      "_app/immutable/assets/_page.BPGqINwr.css",
+      "_app/immutable/assets/postList.CO7EjeUI.css"
     ]
   },
   "src/routes/sitemap.xml/+server.js": {
@@ -247,12 +239,11 @@
     "src": "src/routes/tinkering/colourmatch/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index.js",
-      "_attributes.js"
+      "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.gPmmZy0Y.css",
-      "_app/immutable/assets/postList.DjdvdsIi.css"
+      "_app/immutable/assets/_page.BsHmBoem.css",
+      "_app/immutable/assets/postList.CO7EjeUI.css"
     ]
   },
   "src/routes/tinkering/filter/+page.js": {
@@ -271,11 +262,10 @@
     "isEntry": true,
     "imports": [
       "_index.js",
-      "_imageSet.js",
-      "_attributes.js"
+      "_imageSet.js"
     ],
     "css": [
-      "_app/immutable/assets/postList.DjdvdsIi.css"
+      "_app/immutable/assets/postList.CO7EjeUI.css"
     ]
   },
   "src/routes/tinkering/sinhalacards/+page.js": {
@@ -290,11 +280,10 @@
     "src": "src/routes/tinkering/sinhalacards/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index.js",
-      "_attributes.js"
+      "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/postList.DjdvdsIi.css"
+      "_app/immutable/assets/postList.CO7EjeUI.css"
     ]
   },
   "src/routes/weather/+page.js": {

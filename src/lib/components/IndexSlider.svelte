@@ -57,14 +57,14 @@
 
 <style>
   .index-slider {
-    border-color: var(--color-ui-accent);
+    border-color: var(--color-slider);
     height: 4px;
   }
   .index-slider::-webkit-slider-runnable-track {
     height: 4px;
-    background: var(--color-ui-accent);
+    background: var(--color-slider);
     border-radius: 2px;
-    opacity: 0.4;
+
   }
   .index-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -72,27 +72,27 @@
     width: 18px;
     height: 18px;
     border-radius: 50%;
-    background: var(--color-ui-accent);
+    background: var(--color-slider);
     cursor: pointer;
     margin-top: -7px;
   }
   .index-slider::-moz-range-track {
     height: 4px;
-    background: var(--color-ui-accent);
+    background: var(--color-slider);
     border-radius: 2px;
-    opacity: 0.4;
+    opacity: 0.6;
   }
   .index-slider::-moz-range-thumb {
     width: 18px;
     height: 18px;
     border-radius: 50%;
-    background: var(--color-ui-accent);
+    background: var(--color-slider);
     cursor: pointer;
     border: none;
   }
 
   button {
-    color: var(--color-ui-accent);
+    color: var(--color-slider);
   }
 
   button:disabled {
