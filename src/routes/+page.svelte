@@ -36,7 +36,10 @@ const options = ['Random', 'Date', 'Favs']
 let removed = ["240725_sending-a-whoooooole_0.jpg",'bafkreiarmnd426qm2jj2cpsyafegwkunnq3qu2ugs2nqpihzlp7272hcm4.webp', 'bafkreiarmnd426qm2jj2cpsyafegwkunnq3qu2ugs2nqpihzlp7272hcm4.jpg',
     'bafkreihj62fpumwbo6oyegyimtwqvh42xjchanogk6v5i7r2zg2jfb3npa.jpg',
     'bafkreig6xiy7mjocxtdfwanw7k3jskg5lr7dvrmu7mykcdy7vnucgifur4.webp',
-    'bafkreig6xiy7mjocxtdfwanw7k3jskg5lr7dvrmu7mykcdy7vnucgifur4.jpg'
+    'bafkreig6xiy7mjocxtdfwanw7k3jskg5lr7dvrmu7mykcdy7vnucgifur4.jpg',
+    'http://localhost:5173/images/rgxummhtp7miwr2h2z75gnego2a8kae5ivcr1odghybefp0yub9fip237pc.webp',
+'http://localhost:5173/images/oz45njtul6s74csqfx69qqwfvyn90dost48ta9yx6wv58wtr3w4mrzfa1vu.webp',
+'http://localhost:5173/images/dk3nrr4vba8fcuj8w8tbe2gxe71876roi2dvr1hwnvdqh6ddgx1am9fi3wg.webp',
 ]
 
 
