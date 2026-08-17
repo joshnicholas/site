@@ -20,6 +20,10 @@
 		"src/routes/links/+page.server.js",
 		"src/routes/+layout.js"
 	],
+	"/rmit": [
+		"src/routes/rmit/+page.js",
+		"src/routes/+layout.js"
+	],
 	"/sitemap.xml": [
 		"src/routes/sitemap.xml/+server.js"
 	],
