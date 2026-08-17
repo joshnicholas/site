@@ -74,24 +74,46 @@ $effect(() => {
 <ul>
 
   <li>
-<a href="https://docs.google.com/presentation/d/1EPw2tJB27Yy8dOVFkvF1w3FNsjzTzY4VIpPUYxtuuzQ/edit?usp=sharing">Presso</a>
+<a target='blank' href="https://docs.google.com/presentation/d/1EPw2tJB27Yy8dOVFkvF1w3FNsjzTzY4VIpPUYxtuuzQ/edit?usp=sharing">Presso</a>
   </li>
     <li>
-<a href="https://github.com/joshnicholas/rmit-data-journalism/tree/main/1_datawrapper_flourish">Github</a>
+<a target='blank' href="https://github.com/joshnicholas/rmit-data-journalism/tree/main/1_datawrapper_flourish">Github</a>
   </li>
     <li>
-<a href="https://ourworldindata.org/population-growth">Population</a>
+<a target='blank' href="https://ourworldindata.org/population-growth">OWID Population</a>
   </li>
-    <!-- <li>
-<a href="https://ourworldindata.org/grapher/population-with-un-projections?tab=table&time=1950..2023&country=AUS~CUW~JAM~AZE">Population</a>
-  </li> -->
+    <li>
+<a target='blank' href="https://www.theguardian.com/news/ng-interactive/2025/jun/19/north-west-shelf-project-greenhouse-gas-emissions-burrup-peninsula-western-australia">Emissions</a>
+  </li>
+    <li>
+<a target='blank' href="https://www.abc.net.au/news/2026-04-02/the-artemis-ii-mission-to-the-moon/106300532">Artemis</a>
+  </li>
+      <li>
+<a target='blank' href="https://www.datawrapper.de/blog/data-vis-dispatch-august-11-2026-solar-eclipses-chatgpt-and-ticks">Datavis dispatch</a>
+  </li>
 
+  
 
 </ul>
 
 </div>
 
 <style>
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
 
+  ul li {
+    padding-left: 1.2em;
+    position: relative;
+  }
+
+  ul li::before {
+    content: "–";
+    color: var(--color-link);
+    position: absolute;
+    left: 0;
+  }
 </style>
 
