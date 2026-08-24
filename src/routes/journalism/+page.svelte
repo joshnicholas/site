@@ -14,7 +14,7 @@
 		'https://www.theguardian.com/news/ng-interactive/2024/apr/18/as-190000-households-wait-for-social-housing-application-numbers-are-only-increasing',
 		'https://www.theguardian.com/news/ng-interactive/2025/jun/19/north-west-shelf-project-greenhouse-gas-emissions-burrup-peninsula-western-australia',
 		'https://www.theguardian.com/environment/2025/sep/27/make-your-own-origami-bird-simple-guide-australian-bird-of-the-year-2025',
-		'https://www.theguardian.com/sport/2025/nov/21/cricket-quiz-how-well-do-you-know-your-fielding-positions',
+		'https://www.theguardian.com/sport/2023/jan/04/silly-point-or-square-leg-how-well-do-you-know-your-way-around-a-cricket-field',
 		'https://www.theguardian.com/artanddesign/2026/jan/04/helen-wilding-artist-sketching-whole-melbourne-brunswick-street',
 		'https://www.theguardian.com/news/ng-interactive/2024/jul/17/quiz-whats-getting-better-for-australians-today-and-whats-getting-worse',
 		'https://www.theguardian.com/news/ng-interactive/2026/jun/08/australian-music-extinction-risk-data-listening-trends-aria-chart-history'
