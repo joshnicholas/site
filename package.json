@@ -4,8 +4,9 @@
 	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build",
+		"dev": "npm run build:journo-index && vite dev",
+		"build": "npm run build:journo-index && vite build",
+		"build:journo-index": "node scripts/build-journo-index.mjs",
 		"preview": "vite preview",
 		"test:unit": "vitest",
 		"test": "npm run test:unit -- --run",
@@ -38,6 +39,7 @@
 		"d3-scale": "^4.0.2",
 		"d3-time-format": "^4.1.0",
 		"layercake": "^8.4.3",
+		"minisearch": "^7.2.0",
 		"xmldom": "^0.6.0"
 	},
 	"engines": {

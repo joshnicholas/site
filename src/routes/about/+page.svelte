@@ -2,9 +2,9 @@
 // export let data
 /** @type {{ data: import('./$types').PageData }} */
 
-import RssFeed from '$lib/components/RssFeed.svelte'
+// import RssFeed from '$lib/components/RssFeed.svelte'
 
-let rssFeedLoading = $state(true);
+// let rssFeedLoading = $state(true);
 let borderColor = '#FF8C68'
 let mobileBreakpoint = 768;
 let innerWidth = $state(620);
@@ -102,11 +102,11 @@ $effect(() => {
 
       </div>
 
-      {#if !rssFeedLoading}<p>Some recent stories:</p>{/if}
+      <!-- {#if !rssFeedLoading}<p>Some recent stories:</p>{/if}
   <RssFeed url='https://www.theguardian.com/profile/josh-nicholas/rss' maxN={5} filter={['The Crunch:', 'australia-politics-live']} bind:loading={rssFeedLoading}/>      
 
 
-      <div style="clear: both; display: block; visibility: visible; width: 100%; height: 0; content: ''; overflow: hidden;"></div>
+      <div style="clear: both; display: block; visibility: visible; width: 100%; height: 0; content: ''; overflow: hidden;"></div> -->
 
       <!-- <hr class='mb-5' style='border-color:#000 !important;width:50%'>
 
