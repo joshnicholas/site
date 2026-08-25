@@ -20,6 +20,11 @@
 		'https://www.theguardian.com/news/ng-interactive/2026/jun/08/australian-music-extinction-risk-data-listening-trends-aria-chart-history'
 	];
 
+	// 'https://www.theguardian.com/australia-news/datablog/2023/may/23/which-australian-city-has-the-best-weather-climate-most-sunny-days-where-should-i-live-interactive'
+	// 'https://www.theguardian.com/news/ng-interactive/2025/jun/02/what-went-wrong-for-the-greens-in-the-australian-election'
+	// 'https://www.theguardian.com/australia-news/ng-interactive/2023/jan/30/how-immigration-changed-australia-an-interactive-journey-through-history'
+	// https://www.theguardian.com/world/2021/jun/09/australian-mining-companies-have-paid-little-or-no-corporate-income-tax-in-png-despite-huge-profits
+
 	const viewOptions = ['Select', 'All'];
 	let viewMode = $state('Select');
 
