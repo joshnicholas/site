@@ -96,8 +96,8 @@
 </script>
 
 <svelte:head>
-	<title>Journalism | Josh Nicholas</title>
-	<meta name="description" content="My journalism" />
+	<!-- <title>Journalism | Josh Nicholas</title> -->
+	<meta name="description" content="Journalism" />
 </svelte:head>
 
 <div>
