@@ -71,10 +71,32 @@ $effect(() => {
 
 <div style="clear: both; display: block; visibility: visible; width: 100%; height: 0; content: ''; overflow: hidden;"></div>
 
+<h1>Python 1</h1>
+<br>
+<ul>
+  <li><a href='https://docs.google.com/presentation/d/1dEomwRHS47eizHazcSsmFGzPwdN8nGKSudGf3Q9cPiA/edit?slide=id.g3d22f4bb1f83f052_0#slide=id.g3d22f4bb1f83f052_0'>Slides</a></li>
+
+<li><a href='https://jonathansoma.com/everything/setup/install-python/'>Jonathan Soma's guide to install Python</a></li>
+  <li><a href='https://automatetheboringstuff.com/'>Automate the boring stuff</a></li>
+    <li><a href='https://inventwithpython.com/'>Invent with Python</a></li>
+<li><a href='https://littlecolumns.com/'>Little columns</a></li>
+<li><a href='https://github.com/joshnicholas/audio-tools/blob/main/bottler.py'>Audio app code</a></li>
+<li><a href='https://github.com/joshnicholas/walking-scrubby/blob/main/crop_to_webp.py'>Image cut down code</a></li>
+
+
+
+
+</ul>
+
+<br>
+<hr>
+<br>
+<h1>Datavis</h1>
+<br>
 <ul>
 
   <li>
-<a target='blank' href="https://docs.google.com/presentation/d/1EPw2tJB27Yy8dOVFkvF1w3FNsjzTzY4VIpPUYxtuuzQ/edit?usp=sharing">Presso</a>
+<a target='blank' href="https://docs.google.com/presentation/d/1EPw2tJB27Yy8dOVFkvF1w3FNsjzTzY4VIpPUYxtuuzQ/edit?usp=sharing">Slides</a>
   </li>
     <li>
 <a target='blank' href="https://github.com/joshnicholas/rmit-data-journalism/tree/main/1_datawrapper_flourish">Github</a>
