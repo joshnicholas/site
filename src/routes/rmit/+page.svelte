@@ -74,6 +74,8 @@ $effect(() => {
 <br>
 <ul>
   <li><a href='https://docs.google.com/presentation/d/1QDDCUao6gPsBJFwuUwyvYRKowQmmBhQLVZUNPNRdR_g/edit?slide=id.g3fb3fb8a0b9_0_0#slide=id.g3fb3fb8a0b9_0_0'>Slides</a></li>
+<li><a href='https://github.com/joshnicholas/rmit-data-journalism'>Github repo</a></li>
+<br>
 
 <li><a href='https://pandas.pydata.org/docs/reference/index.html'>Pandas</a></li>
 <li><a href='https://matplotlib.org/'>Matplotlib</a></li>
