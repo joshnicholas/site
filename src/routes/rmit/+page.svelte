@@ -68,8 +68,23 @@ $effect(() => {
 
 
 
-
 <div style="clear: both; display: block; visibility: visible; width: 100%; height: 0; content: ''; overflow: hidden;"></div>
+
+<h1>Python 2</h1>
+<br>
+<ul>
+  <li><a href='https://docs.google.com/presentation/d/1QDDCUao6gPsBJFwuUwyvYRKowQmmBhQLVZUNPNRdR_g/edit?slide=id.g3fb3fb8a0b9_0_0#slide=id.g3fb3fb8a0b9_0_0'>Slides</a></li>
+
+<li><a href='https://pandas.pydata.org/docs/reference/index.html'>Pandas</a></li>
+<li><a href='https://matplotlib.org/'>Matplotlib</a></li>
+<li><a href='https://seaborn.pydata.org/'>Seaborn</a></li>
+<li><a href='https://plotly.com/graphs/'>Plotly</a></li>
+<li><a href='https://github.com/joshnicholas/sudulunu'>Josh's library</a></li>
+
+</ul>
+<br>
+<hr>
+<br>
 
 <h1>Python 1</h1>
 <br>
