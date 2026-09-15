@@ -21,12 +21,20 @@
     rows.map((row, i) => ({ row, i })).filter((_, i) => i % 3 === 2),
   ]);
 
-  // Random stagger offsets — re-roll whenever rows changes
+  // Random stagger offsets (relative to a vertically centered row) — re-roll whenever rows changes.
+  // Columns are assigned to three non-overlapping bands (shuffled) with jitter kept small enough
+  // that adjacent bands can never touch, so the columns can never all land flush with each other.
   let columnOffsets = $state([0, 0, 0]);
+  // Reserved space above/below the row so the most-offset column (translateY doesn't affect
+  // layout) never overlaps the slider above it or the buttons below it.
+  let clusterClearance = $state(0);
   $effect(() => {
     rows; // depend on rows so it re-randomises on each page/sort change
     const max = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--column-stagger')) || 40;
-    columnOffsets = [Math.random() * max, Math.random() * max, Math.random() * max];
+    const bandCenters = [-max / 2, 0, max / 2].sort(() => Math.random() - 0.5);
+    const jitter = max / 8; // max drift toward a neighboring band is max/8 + max/8 = max/4, well under the max/2 band spacing
+    columnOffsets = bandCenters.map((center) => center + (Math.random() * 2 - 1) * jitter);
+    clusterClearance = max / 2 + jitter; // largest possible |offset|
   });
 
   // Derived values
@@ -141,9 +149,12 @@ $effect(() => {
 </div>
 
 <!-- Desktop: 3 explicit staggered columns -->
-<div class="container mx-auto hidden md:flex gap-[5px] items-start">
+<div
+  class="container mx-auto hidden md:flex gap-[5px] items-center"
+  style="padding-top: {clusterClearance}px; padding-bottom: {clusterClearance}px"
+>
   {#each columns as col, c}
-    <div class="flex-1" style="padding-top: {columnOffsets[c]}px">
+    <div class="flex-1" style="transform: translateY({columnOffsets[c]}px)">
       {#each col as { row, i } (row.webp_path)}
         <div class="mb-[5px]">
           <Card index={i} {row} {currentIndex} selected={currentIndex === (firstImage + i)}/>

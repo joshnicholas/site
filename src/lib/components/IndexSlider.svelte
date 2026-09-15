@@ -36,10 +36,10 @@
     <input
       type="range"
       class="index-slider w-full cursor-pointer bg-transparent appearance-none"
-      min={minIndex} 
-      max={maxIndex} 
-      step={increment}
-      bind:value={selectedIndex}  
+      min={minIndex}
+      max={maxIndex}
+      step="1"
+      bind:value={selectedIndex}
       oninput={() => {
         scrolly?.scrollIntoView(false);
       }}

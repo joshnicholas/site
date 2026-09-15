@@ -26,7 +26,7 @@ let sortBy = $state()
 sortBy = 'Random'
 
 // const options = ['Random', 'Newest', 'Oldest', 'Favs']
-const options = ['Random', 'Date', 'Favs']
+const options = ['Random', 'Date', 'Select']
 
 // let containerWidth = $state();
 
@@ -58,7 +58,7 @@ let feature = ["240711_last-full-day_0.jpg","240714_escaping-the-hu_0.jpg","2401
         'bafkreig7mwkri7cii4lsf2d7b5y45ricnpyqsleun2p4tbjs3zwpxs6j7a.jpg','bafkreihhzksklqyyz5dh444fwwuvbm5shpaaqyma7tszc43e4ji4jcgbiu.jpg',
         'bafkreifjqcy2tfifsiasvvfp5ti5mvdjiueuvov247xnbi5bkkc6abupwa.jpg',
         'oz45njtul6s74csqfx69qqwfvyn90dost48ta9yx6wv58wtr3w4mrzfa1vu.jpg',
-
+'60h4n9f5endq6naxrkeqxnslmpb86oii8rd0z9flklsqkipwtk60sogy2g1.jpg'
         ]
 
         // http://localhost:5173/images/bafkreiebe4cdzj5eoovpgpf25yri6a3gcbe3pz4bepvd6ibquy22ihyb2u.webp
@@ -101,7 +101,7 @@ function sorter(array, how){
     // } 
     
     
-    else if (how.toLowerCase() == 'favs'){
+    else if (how.toLowerCase() == 'select'){
         
         let keep = [... new Set(feature.map(d => d))]
         // console.log("keep: ", keep)
