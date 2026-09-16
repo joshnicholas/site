@@ -30,9 +30,9 @@
   let clusterClearance = $state(0);
   $effect(() => {
     rows; // depend on rows so it re-randomises on each page/sort change
-    const max = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--column-stagger')) || 40;
+    const max = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--column-stagger')) || 20;
     const bandCenters = [-max / 2, 0, max / 2].sort(() => Math.random() - 0.5);
-    const jitter = max / 8; // max drift toward a neighboring band is max/8 + max/8 = max/4, well under the max/2 band spacing
+    const jitter = max / 12; // max drift toward a neighboring band is max/12 + max/12 = max/6, well under the max/2 band spacing
     columnOffsets = bandCenters.map((center) => center + (Math.random() * 2 - 1) * jitter);
     clusterClearance = max / 2 + jitter; // largest possible |offset|
   });
