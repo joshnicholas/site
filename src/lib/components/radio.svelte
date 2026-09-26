@@ -128,10 +128,27 @@
     input[type="radio"] + label::before {
         transition: background 0.3s ease-out;
     }
-  
-    input[type="radio"]:checked + label::before {
-      transition: background 0.3s ease-in;
-    }
+
+@keyframes radio-pulse {
+  from {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent-color) 80%, transparent);
+  }
+  to {
+    box-shadow: 0 0 0 8px color-mix(in srgb, var(--accent-color) 0%, transparent);
+  }
+}
+
+input[type="radio"]:checked + label::before {
+  border: 1px solid var(--gray, #ccc);
+  border-radius: 50%;
+  animation: radio-pulse 1.6s ease-out infinite;
+}    
+
+@media (prefers-reduced-motion: reduce) {
+  input[type="radio"]:checked + label::before {
+    animation: none;
+  }
+}
   
     input[type="radio"] + label::after {
       transition: transform 0.2s ease-out;
