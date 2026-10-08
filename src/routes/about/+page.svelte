@@ -57,8 +57,12 @@ $effect(() => {
       <!-- <img alt='about image' src='/new_about.jpg' class="max-h-[15rem] text-wrap  mx-auto rounded sm:rounded-2xl"/> -->
       <!-- <img alt='about image' src='/yellow.jpg' class=" md:max-h-[25rem] mx-auto rounded rounded-2xl"/> -->
 
-      <img alt='about image' src="/blueyellow200.jpg" srcset="/blueyellow200.jpg 200w, /blueyellow340.jpg 380w" sizes="(max-width: 600px) 190px,
-         190px" width="190" height="273" class="mx-auto mb-2.5" style='border-color:{borderColor};border-width:var(--image-border-width);border-style:solid;'/>
+      <!-- <img alt='about image' src="/blueyellow200.jpg" srcset="/blueyellow200.jpg 200w, /blueyellow340.jpg 380w" sizes="(max-width: 600px) 190px,
+         190px" width="190" height="273" class="mx-auto mb-2.5" style='border-color:{borderColor};border-width:var(--image-border-width);border-style:solid;'/> -->
+
+          <video src="/videos/profile.mp4" width="480" height="480" class="mx-auto mb-2.5"
+  style='border-color:#ffbb95;border-width:var(--image-border-width);border-style:solid;' autoplay
+  muted loop playsinline></video>
 
     </div>
 
@@ -66,9 +70,6 @@ $effect(() => {
 
   
     <div class=''>
-
-      <br>
-      <br>
 
       <p class='mt-2.5'>Ello.</p><br>
       <!-- , <a href='https://joshnicholas.com/projects'>projects</a> I'm working on -->
@@ -83,7 +84,7 @@ $effect(() => {
 
 <div style="clear: both; display: block; visibility: visible; width: 100%; height: 0; content: ''; overflow: hidden;"></div>
 
-<br>
+
     <p>Some current projects:</p>
 
     <ul class='list-disc pl-10 pb-10'>
