@@ -89,7 +89,7 @@ $effect(() => {
 
     <ul class='list-disc pl-10 pb-10'>
         
-      
+      <li class='pt-3'><a href='https://joshnicholas.github.io/drawing_values_checker/'>Value checker</a> for drawing/painting</li>
       <li class='pt-3'>Wynne prize finalist <a href='https://wynne-two.vercel.app/'>gallery</a></li>  
       <li class='pt-3'>2025 Audio advent <a href='https://audio-advent.vercel.app/'>calendar</a></li>      
       <li class='pt-3'>Four day workweek <a href='https://joshnicholas.github.io/four-day-calculator/'>calculator</a></li>
