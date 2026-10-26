@@ -73,13 +73,13 @@ $effect(() => {
 
       <p class='mt-2.5'>Ello.</p><br>
       <!-- , <a href='https://joshnicholas.com/projects'>projects</a> I'm working on -->
-      <p>My name is <span class="font-semibold">Josh</span>. I'm a scribbler and <a href='https://www.theguardian.com/profile/josh-nicholas' target='_blank' rel="me">journalist</a>.</p><br>
+      <p>My name is <span class="font-semibold">Josh</span>. I'm a scribbler and <a href='https://www.abc.net.au/news/josh-nicholas/107294250' target='_blank' rel="me">journalist</a>.</p><br>
 
-      <p>This is a collection of apps, including a <a href='http://joshnicholas.blog/' rel='me'>blog</a> and a collection of <a href='https://joshnicholas.com/' rel='me'>scribbles</a>. It's all a big experiment so things will randomly break.</p><br>
+      <p>This is a loose collection of apps, including a <a href='http://joshnicholas.blog/' rel='me'>blog</a>, <a href='https://links.joshnicholas.com/'>linklog</a> and <a href='https://joshnicholas.com/' rel='me'>scribble</a> gallery. Things will randomly break.</p><br>
 
       <!-- <p>I also use this site to <a href='https://joshnicholas.com/tinkering'>tinker</a> and learn new things. Things may randomly break.</p><br> -->
               
-      <p>I'm aiming to run an update script about once a week. I post more regularly on <a href='https://www.instagram.com/joshcnicholas' target='_blank' rel="me">insta</a>. You can follow my posts using rss <a href='https://joshnicholas.blog/feed'>here</a>.<br></p> 
+      <p>I also post scribbles on <a href='https://www.instagram.com/joshcnicholas' target='_blank' rel="me">insta</a>.</p> 
 
 
 <div style="clear: both; display: block; visibility: visible; width: 100%; height: 0; content: ''; overflow: hidden;"></div>
@@ -96,9 +96,7 @@ $effect(() => {
         <li class='pt-3'>Melbourne <a href='https://joshnicholas.github.io/oz_weather_scraper/'>weather dashboard</a></li>
         <li class='pt-3'>Dashboard of <a href='https://joshnicholas.github.io/dash/'>Australian news top stories</a></li>
         <!-- <li class='pt-3'>Google sheet populated <a href='/links'>linklog</a></li> -->
-        <li class='pt-3'>Filtering images <a href='/tinkering/filter'>by keyword</a></li>
-        <li class='pt-3'>Filtering images <a href='/tinkering/colourmatch'>by colour</a></li>
-        
+
     </ul>
 
       </div>
