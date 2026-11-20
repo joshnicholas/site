@@ -5,19 +5,13 @@
 // import RssFeed from '$lib/components/RssFeed.svelte'
 
 // let rssFeedLoading = $state(true);
-let borderColor = '#FF8C68'
+let borderColor = '#FFCBAD'
+let backgroundColor = '#4E5E6E'
+let linkColor = '#FFCBAD'
+let videoBorderColor = '#FFCBAD'
 let mobileBreakpoint = 768;
 let innerWidth = $state(620);
 let isNotMobile = $derived(innerWidth >= mobileBreakpoint);
-
-$effect(() => {
-  const originalBg = document.body.style.backgroundColor;
-  // document.body.style.backgroundColor = '#70CBFF'; 
-
-  return () => {
-    document.body.style.backgroundColor = originalBg;
-  };
-});
 
 
 // $inspect(innerWidth)
@@ -37,6 +31,10 @@ $effect(() => {
 
     // console.log("Hi!")
 </script>
+
+<svelte:head>
+  {@html `<style>body { background-color: ${backgroundColor} !important; --color-link: ${linkColor}; --color-ui-accent: ${linkColor}; --image-border-color: ${linkColor}; }</style>`}
+</svelte:head>
 
 <svelte:window bind:innerWidth />
 
@@ -60,8 +58,8 @@ $effect(() => {
       <!-- <img alt='about image' src="/blueyellow200.jpg" srcset="/blueyellow200.jpg 200w, /blueyellow340.jpg 380w" sizes="(max-width: 600px) 190px,
          190px" width="190" height="273" class="mx-auto mb-2.5" style='border-color:{borderColor};border-width:var(--image-border-width);border-style:solid;'/> -->
 
-          <video src="/videos/profile.mp4" width="480" height="480" class="mx-auto mb-2.5"
-  style='border-color:#ffbb95;border-width:var(--image-border-width);border-style:solid;' autoplay
+          <video src="/videos/profile.mp4" width="480" height="480" class="mx-auto mb-2.5 about-video"
+  style='border-color:{videoBorderColor};border-width:var(--video-border-width, var(--image-border-width));border-style:solid;' autoplay
   muted loop playsinline></video>
 
     </div>
@@ -75,17 +73,23 @@ $effect(() => {
       <!-- , <a href='https://joshnicholas.com/projects'>projects</a> I'm working on -->
       <p>My name is <span class="font-semibold">Josh</span>. I'm a scribbler and <a href='https://www.abc.net.au/news/josh-nicholas/107294250' target='_blank' rel="me">journalist</a>.</p><br>
 
-      <p>This is a loose collection of apps, including a <a href='http://joshnicholas.blog/' rel='me'>blog</a>, <a href='https://links.joshnicholas.com/'>linklog</a> and <a href='https://joshnicholas.com/' rel='me'>scribble</a> gallery. Things will randomly break.</p><br>
+      <p>This is a loose collection of apps and things will randomly break.</p><br>
 
       <!-- <p>I also use this site to <a href='https://joshnicholas.com/tinkering'>tinker</a> and learn new things. Things may randomly break.</p><br> -->
               
-      <p>I also post scribbles on <a href='https://www.instagram.com/joshcnicholas' target='_blank' rel="me">insta</a>.</p> 
+      <ul class='list-disc list-inside mb-5'>
+      <li><a href="https://links.joshnicholas.com/rss" rel="me">links rss</a></li>
+      <li><a rel='me' href="https://joshnicholas.blog/feed">blog rss</a></li>
+      </ul>
+
+
+      <!-- <p><a href='https://www.instagram.com/joshcnicholas' target='_blank' rel="me">Insta</a>.</p>  -->
 
 
 <div style="clear: both; display: block; visibility: visible; width: 100%; height: 0; content: ''; overflow: hidden;"></div>
 
 
-    <p>Some current projects:</p>
+    <p>Recent projects:</p>
 
     <ul class='list-disc pl-10 pb-10'>
         
@@ -117,6 +121,10 @@ $effect(() => {
 </div>
 
 <style>
-
+  @media (max-width: 767px) {
+    .about-video {
+      --video-border-width: 6px;
+    }
+  }
 </style>
 

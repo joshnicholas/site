@@ -28,12 +28,12 @@
   <div class="navblock" style={csso}>
     <ul class="navlinks">
       <li><a rel="me" href="/">scribbles</a></li>
-      <li><a href="https://links.joshnicholas.com/">linklog</a></li>
+      <li><a href="https://links.joshnicholas.com/">links</a></li>
       <li><a rel="me" href="http://joshnicholas.blog/">blog</a></li>
       <li><a rel="me" href="/journalism">journalism</a></li>
       <li><a rel="me" href="/about">about</a></li>
-      <li><a href="https://links.joshnicholas.com/rss">links rss</a></li>
-      <li><a rel='me' href="https://joshnicholas.blog/feed">blog rss</a></li>
+      <!-- <li><a href="https://links.joshnicholas.com/rss">links rss</a></li>
+      <li><a rel='me' href="https://joshnicholas.blog/feed">blog rss</a></li> -->
     </ul>
   </div>
 </div>
