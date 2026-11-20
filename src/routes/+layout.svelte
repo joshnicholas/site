@@ -13,10 +13,12 @@
 
 <div class='m-5'>
 
-	<div class="mx-auto max-w-[800px] min-h-[600px]">
+	<div class="mx-auto max-w-[800px] min-h-[calc(100dvh-2.5rem)] flex flex-col">
 
 
-		<slot />
+		<div class="flex-1">
+			<slot />
+		</div>
 
 		<Navvy/>
 
