@@ -150,13 +150,13 @@ $effect(() => {
 
 <!-- Desktop: 3 explicit staggered columns -->
 <div
-  class="container mx-auto hidden md:flex gap-[5px] items-center"
+  class="container mx-auto hidden md:flex gap-5 items-center"
   style="padding-top: {clusterClearance}px; padding-bottom: {clusterClearance}px"
 >
   {#each columns as col, c}
     <div class="flex-1" style="transform: translateY({columnOffsets[c]}px)">
       {#each col as { row, i } (row.webp_path)}
-        <div class="mb-[5px]">
+        <div class="mb-5">
           <Card index={i} {row} {currentIndex} selected={currentIndex === (firstImage + i)}/>
         </div>
       {/each}

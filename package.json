@@ -40,6 +40,7 @@
 		"d3-time-format": "^4.1.0",
 		"layercake": "^8.4.3",
 		"minisearch": "^7.2.0",
+		"roughjs": "^4.6.6",
 		"xmldom": "^0.6.0"
 	},
 	"engines": {
