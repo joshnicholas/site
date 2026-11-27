@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /dash
+Disallow: /weather
+Disallow: /rmit
+
+Sitemap: https://joshnicholas.com/sitemap.xml

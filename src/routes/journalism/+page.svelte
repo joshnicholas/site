@@ -2,6 +2,7 @@
 	import MiniSearch from 'minisearch';
 	import { journoSearchOptions, journoQueryOptions } from '$lib/journoSearchOptions.js';
 	import Radio from '$lib/components/radio.svelte';
+	import Seo from '$lib/components/Seo.svelte';
 
 	/** @type {{ data: import('./$types').PageData }} */
 	let { data } = $props();
@@ -95,10 +96,11 @@
 	}
 </script>
 
-<svelte:head>
-	<!-- <title>Journalism | Josh Nicholas</title> -->
-	<meta name="description" content="Journalism" />
-</svelte:head>
+<Seo
+	title="Journalism — Josh Nicholas"
+	description="Data journalism and interactive stories by Josh Nicholas for The Guardian, ABC News and other outlets."
+	path="/journalism"
+/>
 
 <div>
 	<!-- <h1 class="text-2xl font-bold text-center mb-6">Journalism</h1> -->

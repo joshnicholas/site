@@ -6,8 +6,6 @@
   </script>
 
 <svelte:head>
-	<title>Josh Nicholas</title>
-	<meta name="description" content="Josh Nicholas is a journalist and scribbler" />
 	<meta name="keywords" content="Josh Nicholas,data journalist,interactive journalist,interactive artist,visual journalist,visual journalism,data visualization,scribbles,scribbler,Guardian,ABC News,Guardian Australia,The Guardian,2ser,The Wire,The Conversation">
 
 	{@html `<script type="application/ld+json">${JSON.stringify({
@@ -26,7 +24,8 @@
 			"https://joshnicholas.com",
 			"https://joshnicholas.blog",
 			"https://www.abc.net.au/news/josh-nicholas/107294250",
-			"https://www.instagram.com/joshcnicholas/"
+			"https://www.instagram.com/joshcnicholas/",
+			"https://www.linkedin.com/in/joshnicholas/"
 		]
 	})}</script>`}
 </svelte:head>

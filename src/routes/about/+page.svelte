@@ -2,6 +2,8 @@
 // export let data
 /** @type {{ data: import('./$types').PageData }} */
 
+import Seo from '$lib/components/Seo.svelte'
+
 // import RssFeed from '$lib/components/RssFeed.svelte'
 
 // let rssFeedLoading = $state(true);
@@ -31,6 +33,12 @@ let isNotMobile = $derived(innerWidth >= mobileBreakpoint);
 
     // console.log("Hi!")
 </script>
+
+<Seo
+  title="About — Josh Nicholas"
+  description="Josh Nicholas is a journalist at ABC News and a scribbler. About page with links to his writing, blog and side projects."
+  path="/about"
+/>
 
 <svelte:head>
   {@html `<style>body { background-color: ${backgroundColor} !important; --color-link: ${linkColor}; --color-ui-accent: ${linkColor}; --image-border-color: ${linkColor}; }</style>`}

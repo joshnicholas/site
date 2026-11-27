@@ -1,4 +1,5 @@
 atproto
+beautifulsoup4
 pandas
 Pillow
 requests

@@ -1,7 +1,7 @@
 import data from '$lib/scribbles.json'
 // import { shuffle } from 'd3-array';
 
-export const prerender = false;
+export const prerender = true;
 
 /** @type {import('./$types').PageLoad} */
 export async function load({ fetch, params }) {

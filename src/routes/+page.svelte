@@ -18,6 +18,7 @@ onMount(() => { mounted = true; });
 let dateparser = timeParse("%Y-%m-%d")
 
 import Imageset from '$lib/components/imageSet.svelte'
+import Seo from '$lib/components/Seo.svelte'
 
 
 let pageLimit = 9
@@ -114,6 +115,12 @@ function sorter(array, how){
 
 
 </script>
+
+<Seo
+	title="Josh Nicholas — Scribbles"
+	description="A growing collection of daily sketches and scribbles by Josh Nicholas, data journalist."
+	path="/"
+/>
 
 <!-- <div id='Biggest' bind:clientWidth={containerWidth}> -->
 
