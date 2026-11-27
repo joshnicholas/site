@@ -1,4 +1,4 @@
-import { r as redirect } from "../../../chunks/index2.js";
+import { r as redirect } from "../../../chunks/index.js";
 function load() {
   throw redirect(302, "https://joshnicholas.github.io/dash/");
 }
